@@ -90,7 +90,7 @@ def create_stats_df(raw_df):
 # todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
 def NARS_data(stats_df, df):
     '''
-    Calculating NARS for all users.
+    Calculating NARS for all users
     http://uhra.herts.ac.uk/bitstream/handle/2299/9641/SyrdalDDautenhahn.pdf?sequence=1
     :param stats_df: dataframe for inferential statistics.
     :param df: raw dataframe
