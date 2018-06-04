@@ -27,5 +27,5 @@ Q20.1_6,,portfolio,,Which robot would you trust to manage your investments portf
 Q20.1_2,,member,,Which robot do you think will serve as a good jury member?,1.0,1.0
 Q20.1_7,,analyst,,Which robot do you think will be a better analyst?,2.0,1.0
 Q20.1_3,,bartender,,Which robot would you like as a bartender?,1.0,1.0
-0,red_robot,,,,"['left', 'irrational']","['left', 'irrational']"
-0,blue_robot,,,,"['right', 'rational']","['right', 'rational']"
+0,red_robot,deployment,,,"['left', 'irrational']","['left', 'irrational']"
+0,blue_robot,deployment,,,"['right', 'rational']","['right', 'rational']"

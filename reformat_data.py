@@ -65,10 +65,11 @@ def raw_data_extraction(path):
     raw_df.loc[raw_df.full_text == 'What does Liz enjoy doing?', 'question'] = 'trap_question'
 
     nu = raw_df.columns[4:].__len__() # number of participants
-    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', '', '', ''] + [robots_deployment['red']] * nu], columns = raw_df.columns))
-    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', '', '', ''] + [robots_deployment['blue']] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', 'deployment', '', ''] + [robots_deployment['red']] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', '', ''] + [robots_deployment['blue']] * nu], columns = raw_df.columns))
 
-    raw_df = trap_exclusion(raw_df)
+    raw_df, users_after_exclusion = trap_exclusion(raw_df)
+    raw_df = response_time_exclusion(raw_df, users_after_exclusion)
 
     raw_df.to_csv('data/raw_dataframe_'+rDeployment +'.csv')     # saving the data frame
     return raw_df, rDeployment
@@ -85,6 +86,22 @@ def trap_exclusion(raw_df):
     trap_value = '4'
     users_after_exclusion = set(a[a == trap_value].dropna(axis=1).columns)
     raw_df = raw_df.drop(all_users - users_after_exclusion, axis=1)
+    return raw_df, users_after_exclusion
+
+def response_time_exclusion(raw_df, users_after_exclusion):
+    '''
+    Removing users which had total response time bigger (smaller) than mean+-3std
+    :param raw_df:
+    :return:
+    '''
+    rt = {}
+    rt['total'] = raw_df.loc[raw_df[raw_df.option == 'response_time'][[5,6]].index, users_after_exclusion].astype('float').sum()
+    rt['std'] = rt['total'].std()
+    rt['mean'] = rt['total'].mean()
+
+    users_to_exclude = rt['total'][rt['total'] > rt['mean'] + 3 * rt['std']].index
+    raw_df = raw_df.drop(users_to_exclude, axis = 1)
+
     return raw_df
 
 def create_stats_df(raw_df, rDeployment):
@@ -253,8 +270,9 @@ def questions(stats_df, raw_df):
 
 if __name__ == "__main__":
     raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018.csv')
-    # raw_df = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018_text.csv')
+    # raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbilrr_June_4_2018.csv')
     stats_df = create_stats_df(raw_df, rDeployment)
+
     print('raw_df and stats_df were created!')
 
     # todo: response time, trap question
