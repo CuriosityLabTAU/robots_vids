@@ -1,0 +1,31 @@
+,robot,feature,sub_scale,meaning,R_aXocArydFBAUV93,R_8I0n9aHbDCurhop
+0.0,,gender,,,1.0,2.0
+0.0,,age,,,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.
+0.0,,education,,,1.0,5.0
+0.0,,NARS,S1,Situations and Interactions with Robots,0.7000000000000001,0.3666666666666667
+0.0,,NARS,S2,Social Influence of Robots,0.76,0.52
+0.0,,NARS,S3,Emotions in Interaction with Robots,0.3333333333333333,0.6666666666666666
+0.0,,BFI,S1,Extraversion,0.5750000000000001,0.6500000000000001
+0.0,,BFI,S2,Agreeableness,0.4666666666666667,0.5777777777777778
+0.0,,BFI,S3,Conscientiousness,0.5555555555555556,0.6
+0.0,,BFI,S4,Neuroticism,0.6000000000000001,0.5000000000000001
+0.0,,BFI,S5,Openness,0.64,0.58
+0.0,red,Godspeed,S1,Anthropomorphism,0.85,0.6
+0.0,red,Godspeed,S2,Animacy,0.6,0.43333333333333335
+0.0,red,Godspeed,S3,Likeability,0.6000000000000001,0.64
+0.0,red,Godspeed,S4,Perceived Intelligence,0.76,0.6
+0.0,red,Godspeed,S5,Perceived Safety,0.46666666666666673,0.4666666666666666
+0.0,blue,Godspeed,S1,Anthropomorphism,0.55,0.6
+0.0,blue,Godspeed,S2,Animacy,0.6000000000000001,0.46666666666666673
+0.0,blue,Godspeed,S3,Likeability,0.44000000000000006,0.6
+0.0,blue,Godspeed,S4,Perceived Intelligence,0.6,0.8
+0.0,blue,Godspeed,S5,Perceived Safety,0.39999999999999997,0.6666666666666666
+1.0,red,q_preference,,,0.7142857142857143,0.2857142857142857
+2.0,blue,q_preference,,,0.2857142857142857,0.7142857142857143
+Q20.1_1,,prefer,,Which robot would you prefer?,2.0,2.0
+Q20.1_6,,portfolio,,Which robot would you trust to manage your investments portfolio?,2.0,2.0
+Q20.1_2,,member,,Which robot do you think will serve as a good jury member?,1.0,1.0
+Q20.1_7,,analyst,,Which robot do you think will be a better analyst?,2.0,1.0
+Q20.1_3,,bartender,,Which robot would you like as a bartender?,1.0,1.0
+0,red_robot,,,,"['left', 'irrational']","['left', 'irrational']"
+0,blue_robot,,,,"['right', 'rational']","['right', 'rational']"

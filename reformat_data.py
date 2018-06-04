@@ -13,10 +13,13 @@ def raw_data_extraction(path):
     raw_df.insert(0, 'option', '')
     raw_df.insert(0, 'question', '')
 
-    # need to know what the question numbers of BFI, NARS and Godspeed for the reformatting_guide.csv
+    # get the robots deployment in specific questionnaire
+    rDeployment = path.split('_')[3]
+    d = {'colors':{'b':'blue','r':'red'}, 'side':{'l':'left','r':'right'}, 'rationality':{'r':'rational','h':'half','i':'irrational'}}
+    robots_deployment = {d['colors'][rDeployment[1]]: [d['side'][rDeployment[0]], d['rationality'][rDeployment[2]]],
+                         d['colors'][rDeployment[4]]: [d['side'][rDeployment[3]], d['rationality'][rDeployment[5]]]}
 
     for i in raw_df.index:
-        # todo: get this!!! how to choose the right row and split it!
         a = raw_df.loc[i, 'dict_text'].split(':')
         try:
             raw_df.loc[i, 'question'] = a[1].split('_')[0].replace('"', '')  # question
@@ -46,21 +49,45 @@ def raw_data_extraction(path):
     # Find the rows of the different questionnaires.
     i = 1
     for q in questions:
-        if raw_df[raw_df.question == q].__len__() == 44: #45 rt
+        if raw_df[raw_df.question == q].__len__() == 45:
             raw_df.question[raw_df.question == q] = 'BFI'
-        if raw_df[raw_df.question == q].__len__() == 14: #15 rt
+        if raw_df[raw_df.question == q].__len__() == 15:
             raw_df.question[raw_df.question == q] = 'NARS'
         if (raw_df[raw_df.question == q].__len__() == 24) | (raw_df[raw_df.question == q].__len__() == 25):
             raw_df.question[raw_df.question == q] = 'GODSPEED' + str(i)
             i+=1
 
     # Find the rows of the demographic questions.
-    raw_df.loc[raw_df.full_text == 'What is your age?' , 'question'] = 'age'
-    raw_df.loc[raw_df.full_text == 'To which gender identity do you most identify?' , 'question'] = 'gender'
+    raw_df.loc[raw_df.full_text == 'What is your age?', 'question'] = 'age'
+    raw_df.loc[raw_df.full_text == 'To which gender identity do you most identify?', 'question'] = 'gender'
+    raw_df.loc[raw_df.full_text == 'What is the highest degree or level of school you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received.)', 'question'] = 'education'
+
+    raw_df.loc[raw_df.full_text == 'What does Liz enjoy doing?', 'question'] = 'trap_question'
+
+    nu = raw_df.columns[4:].__len__() # number of participants
+    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', '', '', ''] + [robots_deployment['red']] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', '', '', ''] + [robots_deployment['blue']] * nu], columns = raw_df.columns))
+
+    raw_df = trap_exclusion(raw_df)
+
+    raw_df.to_csv('data/raw_dataframe_'+rDeployment +'.csv')     # saving the data frame
+    return raw_df, rDeployment
+
+def trap_exclusion(raw_df):
+    '''
+    Exclude users which answered the trap quesion wrong
+    :param raw_df: raw data dataframe
+    :return: raw_Df
+    '''
+    # trap question - exclude users
+    a = raw_df[raw_df.columns[5:]][raw_df.question == 'trap_question']
+    all_users = set(raw_df.columns[4:])
+    trap_value = '4'
+    users_after_exclusion = set(a[a == trap_value].dropna(axis=1).columns)
+    raw_df = raw_df.drop(all_users - users_after_exclusion, axis=1)
     return raw_df
 
-
-def create_stats_df(raw_df):
+def create_stats_df(raw_df, rDeployment):
     '''
     Creating statistical dataframe for inferential analysis.
     :param raw_df: dataframe containing the raw data
@@ -70,12 +97,14 @@ def create_stats_df(raw_df):
     # usersAGE = df[df.question == 'age'].drop(['question','option','full_text','dict_text'], axis=1).loc['Q1.4'].astype(float).tolist() # todo: uncomment on real age
     usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.4'].tolist()
     usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.3'].astype(float).tolist()
+    usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.5'].astype(float).tolist()
     cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
 
     stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
 
     stats_df = stats_df.append(pd.DataFrame(data = [['','gender','','']+usersGENDER], columns=cnames))
     stats_df = stats_df.append(pd.DataFrame(data = [['','age','','']+usersAGE], columns=cnames))
+    stats_df = stats_df.append(pd.DataFrame(data = [['','education','','']+usersEDUCATION], columns=cnames))
 
     stats_df = NARS_data(stats_df, raw_df)
     stats_df = BFI_data(stats_df, raw_df)
@@ -83,6 +112,13 @@ def create_stats_df(raw_df):
     stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
     stats_df = preference_data(stats_df, raw_df)
     stats_df = questions(stats_df, raw_df)
+
+    # Insert what was the robot deployment
+    a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
+    a.columns = stats_df.columns
+    stats_df = stats_df.append(a)
+
+    stats_df.to_csv('data/stats_dataframe_'+rDeployment +'.csv')     # saving the data frame
 
     return stats_df
 
@@ -145,6 +181,7 @@ def bfi_revrse(v):
 def GODSPEED_data(stats_df, df, robot):
     '''
         Calculating Goddspeed for all users
+        https://link.springer.com/content/pdf/10.1007%2Fs12369-008-0001-3.pdf
     :param stats_df: dataframe for inferential statistics.
     :param df: raw dataframe
     :param robot: which robot 'red', 'blue'
@@ -173,7 +210,7 @@ def preference_data(stats_df, df):
     :return: [red preference, blue preference]
     '''
     temps = df[df.full_text == 'Which robot do you agree with?'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
-    temps = temps.apply(pd.value_counts)/.7
+    temps = temps.apply(pd.value_counts)/7.
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
     temps.feature = 'q_preference'
@@ -204,6 +241,8 @@ def questions(stats_df, raw_df):
                                                            axis=1).astype('float')
         features += [q.split(' ')[-1].replace('?', '')]
 
+    temps[temps == 1.] = 2.
+    temps[temps == 4.] = 1.
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
     temps.meaning = qp
@@ -213,7 +252,9 @@ def questions(stats_df, raw_df):
 
 
 if __name__ == "__main__":
-    # todo: check red/ blue values!!!!
-    raw_df = raw_data_extraction('Emma_questionnaire_video_rbrlri_June_2_2018.csv')
-    stats_df = create_stats_df(raw_df)
-    print('end')
+    raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018.csv')
+    # raw_df = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018_text.csv')
+    stats_df = create_stats_df(raw_df, rDeployment)
+    print('raw_df and stats_df were created!')
+
+    # todo: response time, trap question
