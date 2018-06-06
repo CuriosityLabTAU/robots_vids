@@ -154,5 +154,7 @@ Q115#2_23,GODSPEED2,23,Please rate your impression of the robot on these scales:
 Q115#2_24,GODSPEED2,24,Please rate your impression of the robot on these scales: - red robot - Quiescent - Surprised,"{""ImportId"":""QID115#2_24""}",2,4
 Q21.3_Page Submit,GODSPEED2,response_time,Timing - Page Submit,"{""ImportId"":""QID116_PAGE_SUBMIT""}",9.91,9.01
 survey_code,survey,"code""}",survey_code,"{""ImportId"":""survey_code""}",36954693,15687847
-0,red_robot,deployment,,,"['left', 'irrational']","['left', 'irrational']"
-0,blue_robot,deployment,,,"['right', 'rational']","['right', 'rational']"
+0,red_robot,deployment,side,,left,left
+0,red_robot,deployment,rationality,,irrational,irrational
+0,blue_robot,deployment,side,,right,right
+0,blue_robot,deployment,rationality,,rational,rational

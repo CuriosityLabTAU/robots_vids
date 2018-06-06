@@ -65,8 +65,10 @@ def raw_data_extraction(path):
     raw_df.loc[raw_df.full_text == 'What does Liz enjoy doing?', 'question'] = 'trap_question'
 
     nu = raw_df.columns[4:].__len__() # number of participants
-    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', 'deployment', '', ''] + [robots_deployment['red']] * nu], columns = raw_df.columns))
-    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', '', ''] + [robots_deployment['blue']] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', 'deployment', 'side', ''] + [robots_deployment['red'][0]] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['red_robot', 'deployment', 'rationality', ''] + [robots_deployment['red'][1]] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'side', ''] + [robots_deployment['blue'][0]] * nu], columns = raw_df.columns))
+    raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'rationality', ''] + [robots_deployment['blue'][1]] * nu], columns = raw_df.columns))
 
     raw_df, users_after_exclusion = trap_exclusion(raw_df)
     raw_df = response_time_exclusion(raw_df, users_after_exclusion)
@@ -134,6 +136,13 @@ def create_stats_df(raw_df, rDeployment):
     a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
     a.columns = stats_df.columns
     stats_df = stats_df.append(a)
+
+    stats_df = stats_df.reset_index(drop=True)
+
+    # preference summary
+    t = stats_df[stats_df.sub_scale == 'summary']
+    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
 
     stats_df.to_csv('data/stats_dataframe_'+rDeployment +'.csv')     # saving the data frame
 
@@ -230,7 +239,9 @@ def preference_data(stats_df, df):
     temps = temps.apply(pd.value_counts)/7.
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
-    temps.feature = 'q_preference'
+    temps.feature = 'r_preference'
+    temps.sub_scale = 'summary'
+    temps.meaning = 'Normalized count number of times the participant chose this robot.'
     temps.robot = ['red', 'blue']
     stats_df = stats_df.append(temps)
     return stats_df
@@ -258,15 +269,24 @@ def questions(stats_df, raw_df):
                                                            axis=1).astype('float')
         features += [q.split(' ')[-1].replace('?', '')]
 
-    temps[temps == 1.] = 2.
-    temps[temps == 4.] = 1.
+    temps[temps == 1.] = 'blue'
+    temps[temps == 4.] = 'red'
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
     temps.meaning = qp
-    temps.feature = features
+    temps.sub_scale = features
+    temps.feature = 'q_preference'
     stats_df = stats_df.append(temps)
-    return stats_df
 
+
+    # count how many times in our question, each robot was chosen.
+    temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
+
+    meaning = 'Normalized count number of times the participant chose this robot.'
+    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc['blue'].tolist()], columns = stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc['red'].tolist()], columns = stats_df.columns))
+
+    return stats_df
 
 if __name__ == "__main__":
     raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018.csv')
