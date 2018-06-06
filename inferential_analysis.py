@@ -35,5 +35,7 @@ if __name__ == "__main__":
     raw_df = pd.read_csv('data/raw_dataframe_'+rDeployment+'.csv')
     stats_df = pd.read_csv('data/stats_dataframe_'+rDeployment+'.csv')
 
+
+    feel_the_data(stats_df)
     # a,drop(,axis=1)
     print('finished inferential analysis!')

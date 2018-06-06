@@ -20,15 +20,15 @@
 18,blue,Godspeed,S3,Likeability,0.44000000000000006,0.6
 19,blue,Godspeed,S4,Perceived Intelligence,0.6,0.8
 20,blue,Godspeed,S5,Perceived Safety,0.39999999999999997,0.6666666666666666
-21,red,r_preference,summary,Normalized count number of times the participant chose this robot.,0.7142857142857143,0.2857142857142857
-22,blue,r_preference,summary,Normalized count number of times the participant chose this robot.,0.2857142857142857,0.7142857142857143
+21,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,0.2857142857142857
+22,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,0.7142857142857143
 23,,q_preference,prefer,Which robot would you prefer?,blue,blue
 24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,blue,blue
 25,,q_preference,member,Which robot do you think will serve as a good jury member?,red,red
 26,,q_preference,analyst,Which robot do you think will be a better analyst?,blue,red
 27,,q_preference,bartender,Which robot would you like as a bartender?,red,red
-28,blue,q_preference,summary,Normalized count number of times the participant chose this robot.,0.6,0.4
-29,red,q_preference,summary,Normalized count number of times the participant chose this robot.,0.4,0.6
+28,blue,q_preference,summary,Count (Normalized) participant chose this robot,0.6,0.4
+29,red,q_preference,summary,Count (Normalized) participant chose this robot,0.4,0.6
 30,red_robot,deployment,side,,left,left
 31,red_robot,deployment,rationality,,irrational,irrational
 32,blue_robot,deployment,side,,right,right

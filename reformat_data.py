@@ -241,7 +241,7 @@ def preference_data(stats_df, df):
     temps = temps.reindex(columns=stats_df.columns)
     temps.feature = 'r_preference'
     temps.sub_scale = 'summary'
-    temps.meaning = 'Normalized count number of times the participant chose this robot.'
+    temps.meaning = 'Count (Normalized) participant chose this robot'
     temps.robot = ['red', 'blue']
     stats_df = stats_df.append(temps)
     return stats_df
@@ -282,7 +282,7 @@ def questions(stats_df, raw_df):
     # count how many times in our question, each robot was chosen.
     temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
 
-    meaning = 'Normalized count number of times the participant chose this robot.'
+    meaning = 'Count (Normalized) participant chose this robot'
     stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc['blue'].tolist()], columns = stats_df.columns))
     stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc['red'].tolist()], columns = stats_df.columns))
 
