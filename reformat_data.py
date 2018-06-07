@@ -135,28 +135,29 @@ def create_stats_df(raw_df, rDeployment):
 
     stats_df.robot[stats_df.robot == ''] = 'participant'
     stats_df = preference_data(stats_df, raw_df)
-    stats_df = questions(stats_df, raw_df)
+    if not(stats_df.empty):
+        stats_df = questions(stats_df, raw_df)
 
-    # Insert what was the robot deployment
-    a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
-    a.columns = stats_df.columns
-    stats_df = stats_df.append(a)
+        # Insert what was the robot deployment
+        a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
+        a.columns = stats_df.columns
+        stats_df = stats_df.append(a)
 
 
-    # preference summary
-    t = stats_df[stats_df.sub_scale == 'summary']
-    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'std', '']+t[t.robot == 'red'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'std', '']+t[t.robot == 'blue'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
+        # preference summary
+        t = stats_df[stats_df.sub_scale == 'summary']
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'std', '']+t[t.robot == 'red'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'std', '']+t[t.robot == 'blue'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
 
-    stats_df = stats_df.reset_index(drop=True)
+        stats_df = stats_df.reset_index(drop=True)
 
-    stats_df = stats_df_reformat(stats_df)
+        stats_df = stats_df_reformat(stats_df)
 
-    stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
+        stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
 
-    return stats_df
+        return stats_df
 
 
 # todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
@@ -240,20 +241,33 @@ def GODSPEED_data(stats_df, df, robot):
 
 def preference_data(stats_df, df):
     '''
-    Which robot the user preferred based on the questions during.
+    Which robot the user preferred based on the questions during the questonnaire.
     :param stats_df: dataframe for inferential statistics.
     :param df: raw dataframe
     :return: [red preference, blue preference]
     '''
     temps = df[df.full_text == 'Which robot do you agree with?'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
-    temps = temps.apply(pd.value_counts)/7.
-    temps.columns = stats_df.columns[4:]
-    temps = temps.reindex(columns=stats_df.columns)
-    temps.feature = 'r_preference'
-    temps.sub_scale = 'summary'
-    temps.meaning = 'Count (Normalized) participant chose this robot'
-    temps.robot = ['red', 'blue']
-    stats_df = stats_df.append(temps)
+    if temps.empty:
+        stats_df = temps
+    else:
+        # todo: uncomment this for summary
+        temps = temps.apply(pd.value_counts)/float(temps.__len__())
+        temps.columns = stats_df.columns[4:]
+        temps = temps.reindex(columns=stats_df.columns)
+        # temps = temps.reindex(columns=stats_df.columns)
+        temps.feature = 'r_preference'
+        temps.sub_scale = 'summary'
+        temps.meaning = 'Count (Normalized) participant chose this robot'
+        # temps.sub_scale = 'choice'
+        # temps.meaning = 'Which robot do you agree with?'
+        if temps.shape[0] == 2:
+            temps.robot = ['red', 'blue']
+        else:
+            if temps.index[0] == '1.':
+                temps.robot = 'red'
+            elif temps.index[0] == '2.':
+                temps.robot = 'blue'
+        stats_df = stats_df.append(temps)
     return stats_df
 
 
@@ -279,8 +293,10 @@ def questions(stats_df, raw_df):
                                                            axis=1).astype('float')
         features += [q.split(' ')[-1].replace('?', '')]
 
-    temps.replace(1, 'blue')
-    temps.replace(4, 'red')
+    # temps = temps.replace(1, 'blue')
+    # temps = temps.replace(4, 'red')
+    temps = temps.replace(1, 2.)
+    temps = temps.replace(4, 1.)
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
     temps.meaning = qp
@@ -300,11 +316,11 @@ def questions(stats_df, raw_df):
     #     pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning] + temps.loc['red'].tolist()],
     #                  columns=stats_df.columns))
     try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
     except:
         pass
     try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
     except:
         pass
 
@@ -342,6 +358,13 @@ def stats_df_reformat(stats_df):
             sdf = temp
         else:
             sdf = sdf.append(temp)
+
+        sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 1.), 'robot'] = 'red'
+        sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 2.), 'robot'] = 'blue'
+        sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'side'] = sdf[(sdf.robot == 'red')].side.unique()[0]
+        sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'red')].rationality.unique()[0]
+        sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'side'] = sdf[(sdf.robot == 'blue')].side.unique()[0]
+        sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'blue')].rationality.unique()[0]
     return sdf
 
 if __name__ == "__main__":
@@ -350,11 +373,12 @@ if __name__ == "__main__":
     for f in files:
         path = 'data/raw/'+f
         print(path)
-        if (f == 'Emma_questionnaire_video_rrrlbh.csv') | (f == 'Emma_questionnaire_video_rbrlrh.csv') | (f == 'Emma_questionnaire_video_rrhlbi.csv'):
-            continue
+        # (f == 'Emma_questionnaire_video_rrrlbh.csv') | (f == 'Emma_questionnaire_video_rbrlrh.csv') | (f == 'Emma_questionnaire_video_rrhlbi.csv'):
+        # if  (f == 'Emma_questionnaire_video_rrrlbh.csv'):
+        #     continue
         raw_df, rDeployment = raw_data_extraction(path)
-        # raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbilrr_June_4_2018.csv')
-        stats_df = create_stats_df(raw_df, rDeployment)
+        # stats_df = create_stats_df(raw_df, rDeployment)
+        create_stats_df(raw_df, rDeployment)
 
     print('raw_df and stats_df were created!')
 
