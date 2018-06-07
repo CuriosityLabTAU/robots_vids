@@ -1,63 +1,94 @@
 ,robot,feature,sub_scale,meaning,answers,userID,age,gender,education,side,rationality
-3,participant,NARS,S1,Situations and Interactions with Robots,0.7000000000000001,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-4,participant,NARS,S2,Social Influence of Robots,0.76,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-5,participant,NARS,S3,Emotions in Interaction with Robots,0.3333333333333333,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-6,participant,BFI,S1,Extraversion,0.5750000000000001,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-7,participant,BFI,S2,Agreeableness,0.4666666666666667,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-8,participant,BFI,S3,Conscientiousness,0.5555555555555556,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-9,participant,BFI,S4,Neuroticism,0.6000000000000001,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-10,participant,BFI,S5,Openness,0.64,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-11,red,Godspeed,S1,Anthropomorphism,0.85,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-12,red,Godspeed,S2,Animacy,0.6,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-13,red,Godspeed,S3,Likeability,0.6000000000000001,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-14,red,Godspeed,S4,Perceived Intelligence,0.76,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-15,red,Godspeed,S5,Perceived Safety,0.46666666666666673,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-16,blue,Godspeed,S1,Anthropomorphism,0.55,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-17,blue,Godspeed,S2,Animacy,0.6000000000000001,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-18,blue,Godspeed,S3,Likeability,0.44000000000000006,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-19,blue,Godspeed,S4,Perceived Intelligence,0.6,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-20,blue,Godspeed,S5,Perceived Safety,0.39999999999999997,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-21,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-22,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-23,,q_preference,prefer,Which robot would you prefer?,blue,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,blue,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-25,,q_preference,member,Which robot do you think will serve as a good jury member?,red,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-26,,q_preference,analyst,Which robot do you think will be a better analyst?,blue,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-27,,q_preference,bartender,Which robot would you like as a bartender?,red,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,,
-28,blue,q_preference,summary,Count (Normalized) participant chose this robot,0.6,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-29,red,q_preference,summary,Count (Normalized) participant chose this robot,0.4,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-34,red,preference,average,,0.5571428571428572,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-35,red,preference,std,,0.22223355980148635,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,left,irrational
-36,blue,preference,average,,0.44285714285714284,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-37,blue,preference,std,,0.22223355980148635,R_aXocArydFBAUV93,Natoque ligula vel pede pede. Accumsan dapibus ridiculus dictumst iaculis ac. Consectetuer sodales. Facilisis.,1.0,1.0,right,rational
-3,participant,NARS,S1,Situations and Interactions with Robots,0.3666666666666667,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-4,participant,NARS,S2,Social Influence of Robots,0.52,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-5,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-6,participant,BFI,S1,Extraversion,0.6500000000000001,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-7,participant,BFI,S2,Agreeableness,0.5777777777777778,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-8,participant,BFI,S3,Conscientiousness,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-9,participant,BFI,S4,Neuroticism,0.5000000000000001,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-10,participant,BFI,S5,Openness,0.58,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-11,red,Godspeed,S1,Anthropomorphism,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-12,red,Godspeed,S2,Animacy,0.43333333333333335,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-13,red,Godspeed,S3,Likeability,0.64,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-14,red,Godspeed,S4,Perceived Intelligence,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-15,red,Godspeed,S5,Perceived Safety,0.4666666666666666,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-16,blue,Godspeed,S1,Anthropomorphism,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-17,blue,Godspeed,S2,Animacy,0.46666666666666673,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-18,blue,Godspeed,S3,Likeability,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-19,blue,Godspeed,S4,Perceived Intelligence,0.8,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-20,blue,Godspeed,S5,Perceived Safety,0.6666666666666666,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-21,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-22,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-23,,q_preference,prefer,Which robot would you prefer?,blue,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,blue,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-25,,q_preference,member,Which robot do you think will serve as a good jury member?,red,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-26,,q_preference,analyst,Which robot do you think will be a better analyst?,red,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-27,,q_preference,bartender,Which robot would you like as a bartender?,red,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,,
-28,blue,q_preference,summary,Count (Normalized) participant chose this robot,0.4,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-29,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-34,red,preference,average,,0.44285714285714284,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-35,red,preference,std,,0.22223355980148635,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,left,irrational
-36,blue,preference,average,,0.5571428571428572,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
-37,blue,preference,std,,0.22223355980148635,R_8I0n9aHbDCurhop,A. Pellentesque scelerisque natoque vivamus per dui non faucibus rhoncus primis.,5.0,5.0,right,rational
+3,participant,NARS,S1,Situations and Interactions with Robots,0.2333333333333333,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+4,participant,NARS,S2,Social Influence of Robots,0.43999999999999995,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+5,participant,NARS,S3,Emotions in Interaction with Robots,0.7333333333333334,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+6,participant,BFI,S1,Extraversion,0.85,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+7,participant,BFI,S2,Agreeableness,0.9555555555555555,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+8,participant,BFI,S3,Conscientiousness,0.9777777777777779,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+9,participant,BFI,S4,Neuroticism,0.22499999999999998,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+10,participant,BFI,S5,Openness,0.82,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+11,red,Godspeed,S1,Anthropomorphism,0.6499999999999999,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+12,red,Godspeed,S2,Animacy,0.6,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+13,red,Godspeed,S3,Likeability,0.7600000000000001,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+14,red,Godspeed,S4,Perceived Intelligence,0.8,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+15,red,Godspeed,S5,Perceived Safety,0.8000000000000002,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+16,blue,Godspeed,S1,Anthropomorphism,0.75,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+17,blue,Godspeed,S2,Animacy,0.6,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+18,blue,Godspeed,S3,Likeability,0.68,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+19,blue,Godspeed,S4,Perceived Intelligence,0.76,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+20,blue,Godspeed,S5,Perceived Safety,0.6666666666666666,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+21,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+22,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+23,,q_preference,prefer,Which robot would you prefer?,1.0,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+25,,q_preference,member,Which robot do you think will serve as a good jury member?,1.0,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+26,,q_preference,analyst,Which robot do you think will be a better analyst?,4.0,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+27,,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_3kjmdYqKVTQmctW,59,2.0,3.0,,
+28,blue,q_preference,summary,Count (Normalized) participant chose this robot,0.8,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+29,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+34,red,preference,average,,0.24285714285714285,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+35,red,preference,std,,0.060609152673132625,R_3kjmdYqKVTQmctW,59,2.0,3.0,left,irrational
+36,blue,preference,average,,0.7571428571428571,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+37,blue,preference,std,,0.06060915267313267,R_3kjmdYqKVTQmctW,59,2.0,3.0,right,rational
+3,participant,NARS,S1,Situations and Interactions with Robots,0.4666666666666666,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+4,participant,NARS,S2,Social Influence of Robots,0.68,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+5,participant,NARS,S3,Emotions in Interaction with Robots,0.7999999999999999,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+6,participant,BFI,S1,Extraversion,0.7999999999999999,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+7,participant,BFI,S2,Agreeableness,0.7333333333333333,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+8,participant,BFI,S3,Conscientiousness,0.6222222222222221,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+9,participant,BFI,S4,Neuroticism,0.6,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+10,participant,BFI,S5,Openness,0.8399999999999999,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+11,red,Godspeed,S1,Anthropomorphism,0.2,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+12,red,Godspeed,S2,Animacy,0.19999999999999998,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+13,red,Godspeed,S3,Likeability,0.32,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+14,red,Godspeed,S4,Perceived Intelligence,0.27999999999999997,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+15,red,Godspeed,S5,Perceived Safety,0.20000000000000004,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+16,blue,Godspeed,S1,Anthropomorphism,0.2,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+17,blue,Godspeed,S2,Animacy,0.19999999999999998,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+18,blue,Godspeed,S3,Likeability,0.32,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+19,blue,Godspeed,S4,Perceived Intelligence,0.27999999999999997,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+20,blue,Godspeed,S5,Perceived Safety,0.20000000000000004,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+21,red,r_preference,summary,Count (Normalized) participant chose this robot,,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+22,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+23,,q_preference,prefer,Which robot would you prefer?,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+25,,q_preference,member,Which robot do you think will serve as a good jury member?,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+26,,q_preference,analyst,Which robot do you think will be a better analyst?,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+27,,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,,
+28,blue,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+29,red,q_preference,summary,Count (Normalized) participant chose this robot,,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+34,red,preference,average,,,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+35,red,preference,std,,,R_1H7z3OpAcVKon5o,34,2.0,5.0,left,irrational
+36,blue,preference,average,,1.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+37,blue,preference,std,,0.0,R_1H7z3OpAcVKon5o,34,2.0,5.0,right,rational
+3,participant,NARS,S1,Situations and Interactions with Robots,0.5666666666666668,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+4,participant,NARS,S2,Social Influence of Robots,0.5999999999999999,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+5,participant,NARS,S3,Emotions in Interaction with Robots,0.7333333333333334,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+6,participant,BFI,S1,Extraversion,0.6,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+7,participant,BFI,S2,Agreeableness,0.6000000000000001,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+8,participant,BFI,S3,Conscientiousness,0.6444444444444444,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+9,participant,BFI,S4,Neuroticism,0.8,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+10,participant,BFI,S5,Openness,0.5800000000000001,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+11,red,Godspeed,S1,Anthropomorphism,0.7,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+12,red,Godspeed,S2,Animacy,0.43333333333333335,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+13,red,Godspeed,S3,Likeability,0.64,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+14,red,Godspeed,S4,Perceived Intelligence,0.64,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+15,red,Godspeed,S5,Perceived Safety,0.6666666666666666,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+16,blue,Godspeed,S1,Anthropomorphism,0.65,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+17,blue,Godspeed,S2,Animacy,0.6333333333333334,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+18,blue,Godspeed,S3,Likeability,0.4,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+19,blue,Godspeed,S4,Perceived Intelligence,0.6799999999999999,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+20,blue,Godspeed,S5,Perceived Safety,0.39999999999999997,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+21,red,r_preference,summary,Count (Normalized) participant chose this robot,,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+22,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+23,,q_preference,prefer,Which robot would you prefer?,1.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+24,,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+25,,q_preference,member,Which robot do you think will serve as a good jury member?,1.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+26,,q_preference,analyst,Which robot do you think will be a better analyst?,1.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+27,,q_preference,bartender,Which robot would you like as a bartender?,4.0,R_3rYeFmjlA6JRzCz,35,2.0,6.0,,
+28,blue,q_preference,summary,Count (Normalized) participant chose this robot,0.8,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+29,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+34,red,preference,average,,0.2,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+35,red,preference,std,,,R_3rYeFmjlA6JRzCz,35,2.0,6.0,left,irrational
+36,blue,preference,average,,0.9,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational
+37,blue,preference,std,,0.14142135623730948,R_3rYeFmjlA6JRzCz,35,2.0,6.0,right,rational

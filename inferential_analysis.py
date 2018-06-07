@@ -41,7 +41,8 @@ def preference_plot(stats_df, column, option):
     '''
 
     b = stats_df[stats_df[column] == option]
-    cnames = b.columns[[0,6,7,8,9,10]]
+    cnames = b.columns[[0,4,7,8,9]]
+    # cnames = b.columns[[0,7,8,9,10]] # userID
     m = 2
     n = int(round(float(cnames.__len__())/m))
     print(m,n)
@@ -49,24 +50,29 @@ def preference_plot(stats_df, column, option):
     for i, c in enumerate(cnames):
         b.answers = b.answers.astype('float64')
         print([i,(i)/(n), i%n])
-        sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
+        sns.barplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
     print('t')
 
 
 
 if __name__ == "__main__":
     rDeployment = ['rrrlbh', 'rbhlrr', 'rbilrh', 'rbilrr', 'rbrlrh', 'rbrlri', 'rrhlbi', 'rrilbh', 'rrhlbr', 'rrilbr', 'rrrlbi', 'rbhlri']
-    for rd in rDeployment:
-        pass
+    for i, rd in enumerate(rDeployment):
+        raw_path   = 'data/raw_dataframe_' + rd + '.csv'
+        stats_path = 'data/stats_dataframe_'+rd+'.csv'
+        print(stats_path, os.path.isfile(raw_path), i)
+        if (os.path.isfile(raw_path)) & (os.path.isfile(stats_path)):
+            raw_df = pd.read_csv(raw_path)
+            stats_df = pd.read_csv(stats_path)
 
-    raw_df = pd.read_csv('data/raw_dataframe_'+rDeployment[10]+'.csv')
-    stats_df = pd.read_csv('data/stats_dataframe_'+rDeployment[10]+'.csv')
-    stats_df1 = pd.read_csv('data/stats_dataframe_'+rDeployment[10]+'.csv')
-    # stats_df = stats_df.drop(stats_df.columns[0], axis=1)
-
+            if 'crdf' in locals():
+                crdf = combine_dataframes(crdf, raw_df)
+                cdf = combine_dataframes(cdf, stats_df)
+            else:
+                crdf = raw_df
+                cdf = stats_df
 
     # feel_the_data(stats_df)
-    cdf = combine_dataframes(stats_df, stats_df1)
     preference_plot(cdf, 'sub_scale', 'average')
     plt.show()
 

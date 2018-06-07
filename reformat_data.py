@@ -62,7 +62,8 @@ def raw_data_extraction(path):
     raw_df.loc[raw_df.full_text == 'What is your age?', 'question'] = 'age'
     raw_df.loc[raw_df.full_text == 'To which gender identity do you most identify?', 'question'] = 'gender'
     # raw_df.loc[raw_df.full_text == 'What is the highest degree or level of school you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received.)', 'question'] = 'education'
-    raw_df.loc['Q1.5', 'question'] = 'education'
+    raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]
+    raw_df.loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0], 'question'] = 'education'
 
     raw_df.loc[raw_df.full_text == 'What does Liz enjoy doing?', 'question'] = 'trap_question'
 
@@ -114,11 +115,11 @@ def create_stats_df(raw_df, rDeployment):
     :param raw_df: dataframe containing the raw data
     :return: stats_df: dataframe with for inferential analysis.
     '''
+    # raw_df = raw_df.replace(np.nan, 1000)
     usersID = raw_df[raw_df.question == 'ID'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1)
-    # usersAGE = df[df.question == 'age'].drop(['question','option','full_text','dict_text'], axis=1).loc['Q1.4'].astype(float).tolist() # todo: uncomment on real age
-    usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.4'].tolist()
-    usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.3'].astype(float).tolist()
-    usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc['Q1.5'].astype(float).tolist()
+    usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]].tolist()
+    usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('gender')].index.tolist()[0]].astype(float).tolist()
+    usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0]].astype(float).tolist()
     cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
 
     stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
@@ -298,8 +299,14 @@ def questions(stats_df, raw_df):
     # stats_df = stats_df.append(
     #     pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning] + temps.loc['red'].tolist()],
     #                  columns=stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
+    try:
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
+    except:
+        pass
+    try:
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
+    except:
+        pass
 
     return stats_df
 
@@ -325,7 +332,7 @@ def stats_df_reformat(stats_df):
 
         temp['rationality'] = temp['rationality'].astype('category')
         temp['side'] = temp['side'].astype('category')
-        temp['gender'] = temp['education'].astype('category')
+        temp['gender'] = temp['gender'].astype('category')
         temp['education'] = temp['education'].astype('category')
 
         temp = temp.drop(temp[(temp.feature=='age') | (temp.feature=='education') | (temp.feature=='gender') | (temp.robot=='red_robot') | (temp.robot=='blue_robot')].index.tolist())
@@ -341,7 +348,11 @@ if __name__ == "__main__":
 
     files = os.listdir('data/raw/')
     for f in files:
-        raw_df, rDeployment = raw_data_extraction('data/raw/'+f)
+        path = 'data/raw/'+f
+        print(path)
+        if (f == 'Emma_questionnaire_video_rrrlbh.csv') | (f == 'Emma_questionnaire_video_rbrlrh.csv') | (f == 'Emma_questionnaire_video_rrhlbi.csv'):
+            continue
+        raw_df, rDeployment = raw_data_extraction(path)
         # raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbilrr_June_4_2018.csv')
         stats_df = create_stats_df(raw_df, rDeployment)
 
