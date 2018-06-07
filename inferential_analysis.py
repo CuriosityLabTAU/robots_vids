@@ -1,19 +1,20 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
+import os
 
 
 
-def combine_dataframes(df1, df2, nf):
+def combine_dataframes(df1, df2):
     '''
     :param df: data frames to combine
     :param nf: index of the features
     :return:
     '''
-    usersID = df2.columns[nf:]
-    features = df2.columns[:nf]
-    tempd_df = df2.drop(features, axis=1)
-    return pd.concat([df1, tempd_df], axis=1)
+    temp = pd.concat([df1, df2])
+    temp = temp.drop(columns = temp.columns[0])
+    return temp
 
 def feel_the_data(stats_df):
     '''
@@ -30,12 +31,45 @@ def feel_the_data(stats_df):
     sdf = sdf.reset_index(drop=True)
     sns.pairplot(sdf)
 
+def preference_plot(stats_df, column, option):
+    '''
+    plot preferenec
+    :param stats_df:
+    :param column: which column (ex. 'sub_scale')
+    :param option: which option (ex. 'average')
+    :return:
+    '''
+
+    b = stats_df[stats_df[column] == option]
+    cnames = b.columns[[0,6,7,8,9,10]]
+    m = 2
+    n = int(round(float(cnames.__len__())/m))
+    print(m,n)
+    fig, ax = plt.subplots(m,n)
+    for i, c in enumerate(cnames):
+        b.answers = b.answers.astype('float64')
+        print([i,(i)/(n), i%n])
+        sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
+    print('t')
+
+
+
 if __name__ == "__main__":
-    rDeployment = 'rbrlri'
-    raw_df = pd.read_csv('data/raw_dataframe_'+rDeployment+'.csv')
-    stats_df = pd.read_csv('data/stats_dataframe_'+rDeployment+'.csv')
+    rDeployment = ['rrrlbh', 'rbhlrr', 'rbilrh', 'rbilrr', 'rbrlrh', 'rbrlri', 'rrhlbi', 'rrilbh', 'rrhlbr', 'rrilbr', 'rrrlbi', 'rbhlri']
+    for rd in rDeployment:
+        pass
+
+    raw_df = pd.read_csv('data/raw_dataframe_'+rDeployment[10]+'.csv')
+    stats_df = pd.read_csv('data/stats_dataframe_'+rDeployment[10]+'.csv')
+    stats_df1 = pd.read_csv('data/stats_dataframe_'+rDeployment[10]+'.csv')
+    # stats_df = stats_df.drop(stats_df.columns[0], axis=1)
 
 
-    feel_the_data(stats_df)
-    # a,drop(,axis=1)
+    # feel_the_data(stats_df)
+    cdf = combine_dataframes(stats_df, stats_df1)
+    preference_plot(cdf, 'sub_scale', 'average')
+    plt.show()
+
+
+
     print('finished inferential analysis!')

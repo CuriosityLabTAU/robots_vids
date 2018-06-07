@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 
 def raw_data_extraction(path):
     '''
@@ -60,7 +61,8 @@ def raw_data_extraction(path):
     # Find the rows of the demographic questions.
     raw_df.loc[raw_df.full_text == 'What is your age?', 'question'] = 'age'
     raw_df.loc[raw_df.full_text == 'To which gender identity do you most identify?', 'question'] = 'gender'
-    raw_df.loc[raw_df.full_text == 'What is the highest degree or level of school you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received.)', 'question'] = 'education'
+    # raw_df.loc[raw_df.full_text == 'What is the highest degree or level of school you have completed? (If you are currently enrolled in school, please indicate the highest degree you have received.)', 'question'] = 'education'
+    raw_df.loc['Q1.5', 'question'] = 'education'
 
     raw_df.loc[raw_df.full_text == 'What does Liz enjoy doing?', 'question'] = 'trap_question'
 
@@ -73,7 +75,7 @@ def raw_data_extraction(path):
     raw_df, users_after_exclusion = trap_exclusion(raw_df)
     raw_df = response_time_exclusion(raw_df, users_after_exclusion)
 
-    raw_df.to_csv('data/raw_dataframe_'+rDeployment +'.csv')     # saving the data frame
+    raw_df.to_csv('data/raw_dataframe_'+rDeployment)     # saving the data frame
     return raw_df, rDeployment
 
 def trap_exclusion(raw_df):
@@ -97,7 +99,7 @@ def response_time_exclusion(raw_df, users_after_exclusion):
     :return:
     '''
     rt = {}
-    rt['total'] = raw_df.loc[raw_df[raw_df.option == 'response_time'][[5,6]].index, users_after_exclusion].astype('float').sum()
+    rt['total'] = raw_df.loc[raw_df[raw_df.option == 'response_time'][raw_df.columns[4:].tolist()].index, users_after_exclusion].astype('float').sum()
     rt['std'] = rt['total'].std()
     rt['mean'] = rt['total'].mean()
 
@@ -129,6 +131,8 @@ def create_stats_df(raw_df, rDeployment):
     stats_df = BFI_data(stats_df, raw_df)
     stats_df = GODSPEED_data(stats_df, raw_df, 'red')
     stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
+
+    stats_df.robot[stats_df.robot == ''] = 'participant'
     stats_df = preference_data(stats_df, raw_df)
     stats_df = questions(stats_df, raw_df)
 
@@ -137,14 +141,19 @@ def create_stats_df(raw_df, rDeployment):
     a.columns = stats_df.columns
     stats_df = stats_df.append(a)
 
-    stats_df = stats_df.reset_index(drop=True)
 
     # preference summary
     t = stats_df[stats_df.sub_scale == 'summary']
     stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'std', '']+t[t.robot == 'red'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
     stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'std', '']+t[t.robot == 'blue'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
 
-    stats_df.to_csv('data/stats_dataframe_'+rDeployment +'.csv')     # saving the data frame
+    stats_df = stats_df.reset_index(drop=True)
+
+    stats_df = stats_df_reformat(stats_df)
+
+    stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
 
     return stats_df
 
@@ -269,8 +278,8 @@ def questions(stats_df, raw_df):
                                                            axis=1).astype('float')
         features += [q.split(' ')[-1].replace('?', '')]
 
-    temps[temps == 1.] = 'blue'
-    temps[temps == 4.] = 'red'
+    temps.replace(1, 'blue')
+    temps.replace(4, 'red')
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
     temps.meaning = qp
@@ -283,15 +292,58 @@ def questions(stats_df, raw_df):
     temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
 
     meaning = 'Count (Normalized) participant chose this robot'
-    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc['blue'].tolist()], columns = stats_df.columns))
-    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc['red'].tolist()], columns = stats_df.columns))
+    # stats_df = stats_df.append(
+    #     pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning] + temps.loc['blue'].tolist()],
+    #                  columns=stats_df.columns))
+    # stats_df = stats_df.append(
+    #     pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning] + temps.loc['red'].tolist()],
+    #                  columns=stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
+    stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
 
     return stats_df
 
+
+def stats_df_reformat(stats_df):
+    '''
+    Reformat to much easier dataframe to work with.
+    '''
+    for i, user in enumerate(stats_df.columns[4:]):
+        temp = stats_df[stats_df.columns[:4]]
+        temp['answers'] = stats_df[user]
+        temp['userID']      = user
+        temp['age']         = stats_df[stats_df.feature == 'age'][user].tolist()[0]
+        temp['gender']         = stats_df[stats_df.feature == 'gender'][user].tolist()[0]
+        temp['education']   = stats_df[stats_df.feature == 'education'][user].tolist()[0]
+        # temp['rationality'] = stats_df[stats_df.feature == 'rationality'][user].tolist()[0]
+        temp['side'] = ''
+        temp['rationality'] = ''
+        temp.loc[temp.robot == 'red', 'side']         = stats_df[user][(stats_df.robot == 'red_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'side')].tolist()[0]
+        temp.loc[stats_df.robot == 'red', 'rationality']  = stats_df[user][(stats_df.robot == 'red_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'rationality')].tolist()[0]
+        temp.loc[stats_df.robot == 'blue', 'side']        = stats_df[user][(stats_df.robot == 'blue_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'side')].tolist()[0]
+        temp.loc[stats_df.robot == 'blue', 'rationality'] = stats_df[user][(stats_df.robot == 'blue_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'rationality')].tolist()[0]
+
+        temp['rationality'] = temp['rationality'].astype('category')
+        temp['side'] = temp['side'].astype('category')
+        temp['gender'] = temp['education'].astype('category')
+        temp['education'] = temp['education'].astype('category')
+
+        temp = temp.drop(temp[(temp.feature=='age') | (temp.feature=='education') | (temp.feature=='gender') | (temp.robot=='red_robot') | (temp.robot=='blue_robot')].index.tolist())
+
+
+        if i == 0:
+            sdf = temp
+        else:
+            sdf = sdf.append(temp)
+    return sdf
+
 if __name__ == "__main__":
-    raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbrlri_June_2_2018.csv')
-    # raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbilrr_June_4_2018.csv')
-    stats_df = create_stats_df(raw_df, rDeployment)
+
+    files = os.listdir('data/raw/')
+    for f in files:
+        raw_df, rDeployment = raw_data_extraction('data/raw/'+f)
+        # raw_df, rDeployment = raw_data_extraction('data/Emma_questionnaire_video_rbilrr_June_4_2018.csv')
+        stats_df = create_stats_df(raw_df, rDeployment)
 
     print('raw_df and stats_df were created!')
 
