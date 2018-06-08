@@ -32,7 +32,7 @@ def feel_the_data(stats_df):
     sdf = sdf.reset_index(drop=True)
     sns.pairplot(sdf)
 
-def preference_plot(stats_df, column, option):
+def preference_plot(stats_df, column, option, deployment=False):
     '''
     plot preferenec
     :param stats_df:
@@ -42,11 +42,6 @@ def preference_plot(stats_df, column, option):
     '''
 
     b = stats_df[stats_df[column] == option]
-    # b1 = stats_df[(stats_df[column] == 'prefer') & (stats_df.feature == 'q_preference')]
-    # b1.answers = b1.answers.replace(b1.answers.unique().max(), 2.)
-    # b = b.append(b1)
-    # b = b.reset_index(drop=True)
-    # b = stats_df[(stats_df[column] == option) & (stats_df.feature == 'r_preference')]
     b.answers.replace(np.nan, 0)
     cnames = b.columns[[0,4,7,8,9]]
     m = 2
@@ -54,12 +49,30 @@ def preference_plot(stats_df, column, option):
     fig, ax = plt.subplots(m,n)
     for i, c in enumerate(cnames):
         b.answers = b.answers.astype('float64')
-        sns.barplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
+        if deployment:
+            sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
+        else:
+            sns.barplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
+
         # sns.countplot(x = 'answers', hue='rationality', data=b, ax = ax[i/n, i%n])
         # sns.factorplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
-
+    fig.suptitle('n = '+str(cdf.userID.unique().__len__()))
     return fig
 
+def see_the_data(cdf):
+    '''
+    Plot histogram of the parameters of the participants.
+    :param cdf: dataframe of the data from robots vids questionnaire.
+    '''
+    fig, ax = plt.subplots(1,3)
+    users_data = cdf[(cdf.feature == 'BFI') & (cdf.sub_scale == 'S1') ]
+    sns.distplot(users_data.age, kde=False, ax=ax[0])
+    pd.value_counts(users_data.gender)
+    sns.distplot(users_data.gender, kde=False, ax=ax[1])
+    pd.value_counts(users_data.education)
+    sns.distplot(users_data.education, kde=False, ax=ax[2])
+    save_maxfig(fig, 'participants_histogram')
+    print('t')
 
 def save_maxfig(fig, fig_name, ax=None, save_plotly=None, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''Save figure in high resultion'''
@@ -86,13 +99,14 @@ def save_maxfig(fig, fig_name, ax=None, save_plotly=None, save_pkl = 1, transper
         pickle.dump(fig, file(p_fname, 'wb'))
 
 if __name__ == "__main__":
-    rDeployment_rh = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
-    rDeployment_ih = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
-    rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
-    rDeployment = [rDeployment_ri, rDeployment_rh, rDeployment_ih, rDeployment_ih+rDeployment_rh+rDeployment_ri]
+    rDeployment_rh  = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
+    rDeployment_ih  = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
+    rDeployment_ri  = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
+    rDeployment_tot =  rDeployment_ih + rDeployment_rh + rDeployment_ri
+    rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
 
-    for j, rDep in enumerate(rDeployment):
-        for i, rd in enumerate(rDep):
+    for rDep in rDeployment:
+        for i, rd in enumerate(rDeployment[rDep]):
             raw_path   = 'data/raw_dataframe_' + rd + '.csv'
             stats_path = 'data/stats_dataframe_' + rd + '.csv'
             if (os.path.isfile(raw_path)) & (os.path.isfile(stats_path)):
@@ -106,20 +120,22 @@ if __name__ == "__main__":
                     crdf = raw_df
                     cdf = stats_df
 
+                # print(rDep, rd, cdf.userID.unique().__len__())
+
         # feel_the_data(stats_df)
         fig = preference_plot(cdf, 'sub_scale', 'summary')
+        save_maxfig(fig, rDep + '_barplot_only_choices')
+        fig1 = preference_plot(cdf, 'sub_scale', 'summary', deployment = True)
+        save_maxfig(fig1, rDep + '_summary')
 
-        # preference_plot(cdf, 'sub_scale', 'prefer')
-        # preference_plot(cdf, 'sub_scale', 'choice')
-        if j!=3:
-            save_maxfig(fig, rDep[0][2]+rDep[0][5] + '_barplot_only_choices')
-        else:
-            save_maxfig(fig, 'tot_barplot_only_choices')
+        if rDep == 'rDeployment_tot':
+            see_the_data(cdf)
+
         del(crdf)
     # todo: wha is the total number of participants. how many were excluded? gender?
 
 
-    plt.show()
+    # plt.show()
 
 
 

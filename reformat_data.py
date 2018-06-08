@@ -73,9 +73,10 @@ def raw_data_extraction(path):
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'side', ''] + [robots_deployment['blue'][0]] * nu], columns = raw_df.columns))
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'rationality', ''] + [robots_deployment['blue'][1]] * nu], columns = raw_df.columns))
 
+    before = raw_df.columns[4:].__len__()
     raw_df, users_after_exclusion = trap_exclusion(raw_df)
-    raw_df = response_time_exclusion(raw_df, users_after_exclusion)
-
+    # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
+    print('exclude:',before - users_after_exclusion.__len__())
     raw_df.to_csv('data/raw_dataframe_'+rDeployment)     # saving the data frame
     return raw_df, rDeployment
 
