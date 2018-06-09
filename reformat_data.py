@@ -73,10 +73,18 @@ def raw_data_extraction(path):
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'side', ''] + [robots_deployment['blue'][0]] * nu], columns = raw_df.columns))
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'rationality', ''] + [robots_deployment['blue'][1]] * nu], columns = raw_df.columns))
 
-    before = raw_df.columns[4:].__len__()
-    raw_df, users_after_exclusion = trap_exclusion(raw_df)
-    # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
-    print('exclude:',before - users_after_exclusion.__len__())
+    # before = raw_df.columns[4:].__len__()
+    # raw_df, users_after_exclusion = trap_exclusion(raw_df)
+    # # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
+    # excluded = before - users_after_exclusion.__len__()
+    # print('exclude:', excluded,'out of', before)
+
+    # cleaning users that didn;t complete to fill the questionnaire.
+    a = raw_df[raw_df['full_text'].str.contains('talkative?')]
+    b = pd.isnull(a).any()
+    empty_users = b[b].index.tolist()
+    raw_df = raw_df.drop(empty_users, axis=1)
+
     raw_df.to_csv('data/raw_dataframe_'+rDeployment)     # saving the data frame
     return raw_df, rDeployment
 
@@ -88,7 +96,7 @@ def trap_exclusion(raw_df):
     '''
     # trap question - exclude users
     a = raw_df[raw_df.columns[5:]][raw_df.question == 'trap_question']
-    all_users = set(raw_df.columns[4:])
+    all_users = set(raw_df.columns[5:])
     trap_value = '4'
     users_after_exclusion = set(a[a == trap_value].dropna(axis=1).columns)
     raw_df = raw_df.drop(all_users - users_after_exclusion, axis=1)
@@ -121,7 +129,9 @@ def create_stats_df(raw_df, rDeployment):
     usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]].tolist()
     usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('gender')].index.tolist()[0]].astype(float).tolist()
     usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0]].astype(float).tolist()
-    cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
+    # cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
+    tempa = usersID.transpose()
+    cnames = ['robot','feature', 'sub_scale', 'meaning'] + tempa[tempa.columns.tolist()[0]].tolist()
 
     stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
 
@@ -171,12 +181,11 @@ def NARS_data(stats_df, df):
     :return:
     '''
     NARS_sub_meaning = {'S1': 'Situations and Interactions with Robots', 'S2':'Social Influence of Robots', 'S3': 'Emotions in Interaction with Robots'}
-    NARS_sub = {'S1': [4,7,8,9,10,12], 'S2':[1,2,11,13,14], 'S3': [3,5,6]}
+    NARS_sub = {'S1': ['4','7','8','9','10','12'], 'S2':['1','2','11','13','14'], 'S3': ['3','5','6']}
     NARS = pd.DataFrame.from_dict([NARS_sub_meaning,NARS_sub])
     NARS = NARS.rename({0:'meaning',1:'average'}, axis='index')
     for s in NARS:
-        temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(
-            ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
+        temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
         temps = temps/5. # Normalization
         ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
@@ -192,8 +201,8 @@ def BFI_data(stats_df, df):
         :return:
         '''
     BFI_sub_meaning = {'S1':'Extraversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
-    BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
-    BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
+    BFI_rev = {'S1':['0','1','0','0','1','0','1','0'], 'S2':['1','0','1','0','0','1','0','1','0'], 'S3':['0','1','0','1','1','0','0','0','1'],'S4':['0','1','0','0','1','0','1','0'],'S5':['0','0','0','0','0','0','1','0','1','0']}
+    BFI_sub = {'S1':['1','6','11','16','21','26','31','36'], 'S2':['2','7','12','17','22','27','32','37','42'], 'S3':['3','8','13','18','23','28','33','38','43'],'S4':['4','9','14','19','24','29','34','39'],'S5':['5','10','15','20','25','30','35','40','41','44']}
     BFI = pd.DataFrame.from_dict([BFI_sub_meaning, BFI_sub])
     BFI = BFI.rename({0:'meaning',1:'average'}, axis='index')
 
@@ -383,4 +392,4 @@ if __name__ == "__main__":
 
     print('raw_df and stats_df were created!')
 
-    # todo: response time, trap question
+    # todo: response time, fix the trap to use it in analysis

@@ -103,7 +103,8 @@ if __name__ == "__main__":
     rDeployment_ih  = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
     rDeployment_ri  = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment_tot =  rDeployment_ih + rDeployment_rh + rDeployment_ri
-    rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
+    # rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
+    rDeployment = {'rDeployment_tot': rDeployment_tot}
 
     for rDep in rDeployment:
         for i, rd in enumerate(rDeployment[rDep]):
@@ -114,13 +115,28 @@ if __name__ == "__main__":
                 stats_df = pd.read_csv(stats_path)
 
                 if 'crdf' in locals():
-                    crdf = combine_dataframes(crdf, raw_df)
+                    # crdf = combine_dataframes(crdf, raw_df)
+                    a = raw_df[raw_df.columns[5:]]
+                    a.columns = (np.arange(a.columns.__len__()) + 1) + i*100
+                    crdf = pd.concat([crdf, a], axis=1)
                     cdf = combine_dataframes(cdf, stats_df)
                 else:
                     crdf = raw_df
                     cdf = stats_df
 
                 # print(rDep, rd, cdf.userID.unique().__len__())
+
+        # filtering out trap question
+        from reformat_data import trap_exclusion, create_stats_df
+        before = crdf[crdf.columns[:-5]].columns.__len__()
+        crdf, users_after_exclusion = trap_exclusion(crdf)
+        # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
+        excluded = before - users_after_exclusion.__len__()
+        print('exclude: ', excluded,'out of: ', before, 'left: ', users_after_exclusion.__len__())
+
+        crdf = crdf[crdf.columns[1:]]
+        cdf = create_stats_df(crdf, rDep)
+
 
         # feel_the_data(stats_df)
         fig = preference_plot(cdf, 'sub_scale', 'summary')
@@ -132,10 +148,9 @@ if __name__ == "__main__":
             see_the_data(cdf)
 
         del(crdf)
-    # todo: wha is the total number of participants. how many were excluded? gender?
 
 
-    # plt.show()
+    plt.show()
 
 
 
