@@ -43,7 +43,7 @@ def preference_plot(stats_df, column, option, deployment=False):
 
     b = stats_df[stats_df[column] == option]
     b.answers.replace(np.nan, 0)
-    cnames = b.columns[[0,4,7,8,9]]
+    cnames = ['education','robot','gender','side','sub_scale']
     m = 2
     n = int(round(float(cnames.__len__())/m))
     fig, ax = plt.subplots(m,n)
@@ -64,15 +64,17 @@ def see_the_data(cdf):
     Plot histogram of the parameters of the participants.
     :param cdf: dataframe of the data from robots vids questionnaire.
     '''
+    print('Plot histogram of the parameters of the participants...')
+    # todo: change ticks of gender andd age
+
     fig, ax = plt.subplots(1,3)
     users_data = cdf[(cdf.feature == 'BFI') & (cdf.sub_scale == 'S1') ]
-    sns.distplot(users_data.age, kde=False, ax=ax[0])
+    sns.distplot(pd.to_numeric(users_data.age), kde=False, ax=ax[0])
     pd.value_counts(users_data.gender)
-    sns.distplot(users_data.gender, kde=False, ax=ax[1])
+    sns.countplot(users_data.gender, ax=ax[1])
     pd.value_counts(users_data.education)
-    sns.distplot(users_data.education, kde=False, ax=ax[2])
+    sns.countplot(users_data.education, ax=ax[2])
     save_maxfig(fig, 'participants_histogram')
-    print('t')
 
 def save_maxfig(fig, fig_name, ax=None, save_plotly=None, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''Save figure in high resultion'''
@@ -104,7 +106,8 @@ if __name__ == "__main__":
     rDeployment_ri  = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment_tot =  rDeployment_ih + rDeployment_rh + rDeployment_ri
     # rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
-    rDeployment = {'rDeployment_tot': rDeployment_tot}
+    rDeployment     = {'rDeployment_tot':rDeployment_tot}
+    # rDeployment     = {'rDeployment_tot':rDeployment_ri}
 
     for rDep in rDeployment:
         for i, rd in enumerate(rDeployment[rDep]):
@@ -117,26 +120,28 @@ if __name__ == "__main__":
                 if 'crdf' in locals():
                     # crdf = combine_dataframes(crdf, raw_df)
                     a = raw_df[raw_df.columns[5:]]
-                    a.columns = (np.arange(a.columns.__len__()) + 1) + i*100
+                    a.columns = (np.arange(a.columns.__len__()) + 1) + i * 100
                     crdf = pd.concat([crdf, a], axis=1)
-                    cdf = combine_dataframes(cdf, stats_df)
+
+                    # cdf = combine_dataframes(cdf, stats_df)
                 else:
                     crdf = raw_df
-                    cdf = stats_df
-
-                # print(rDep, rd, cdf.userID.unique().__len__())
+                    # cdf = stats_df
 
         # filtering out trap question
-        from reformat_data import trap_exclusion, create_stats_df
+        from reformat_data import trap_exclusion1, create_stats_df1, create_stats_df
         before = crdf[crdf.columns[:-5]].columns.__len__()
-        crdf, users_after_exclusion = trap_exclusion(crdf)
+        crdf, users_after_exclusion = trap_exclusion1(crdf)
         # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
         excluded = before - users_after_exclusion.__len__()
-        print('exclude: ', excluded,'out of: ', before, 'left: ', users_after_exclusion.__len__())
+        print('exclude:', excluded,'out of', before)
 
+        crdf = crdf.set_index(crdf[crdf.columns[0]])
         crdf = crdf[crdf.columns[1:]]
-        cdf = create_stats_df(crdf, rDep)
 
+        cdf = create_stats_df(crdf,rDep)
+        cdf.loc[:, 'gender'] = cdf.loc[:, 'gender'].replace({1.0: 'female', 2.0: 'male'})
+        cdf.loc[:, 'education'] = cdf.loc[:, 'education'].replace({1.0: '<HS', 2.0: 'HS', 3.0:'<BA', 4.0:'BA', 5.0:'MA', 6.0:'professional',7.0:'PhD'})
 
         # feel_the_data(stats_df)
         fig = preference_plot(cdf, 'sub_scale', 'summary')
@@ -148,6 +153,7 @@ if __name__ == "__main__":
             see_the_data(cdf)
 
         del(crdf)
+    # todo: wha is the total number of participants. how many were excluded? gender?
 
 
     plt.show()

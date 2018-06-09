@@ -95,6 +95,20 @@ def trap_exclusion(raw_df):
     :return: raw_Df
     '''
     # trap question - exclude users
+    a = raw_df[raw_df.columns[:-5]][raw_df.question == 'trap_question']
+    all_users = set(raw_df.columns[:-5])
+    trap_value = '4'
+    users_after_exclusion = set(a[a == trap_value].dropna(axis=1).columns)
+    raw_df = raw_df.drop(all_users - users_after_exclusion, axis=1)
+    return raw_df, users_after_exclusion
+
+def trap_exclusion1(raw_df):
+    '''
+    Exclude users which answered the trap quesion wrong
+    :param raw_df: raw data dataframe
+    :return: raw_Df
+    '''
+    # trap question - exclude users
     a = raw_df[raw_df.columns[5:]][raw_df.question == 'trap_question']
     all_users = set(raw_df.columns[5:])
     trap_value = '4'
@@ -129,9 +143,7 @@ def create_stats_df(raw_df, rDeployment):
     usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]].tolist()
     usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('gender')].index.tolist()[0]].astype(float).tolist()
     usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0]].astype(float).tolist()
-    # cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
-    tempa = usersID.transpose()
-    cnames = ['robot','feature', 'sub_scale', 'meaning'] + tempa[tempa.columns.tolist()[0]].tolist()
+    cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
 
     stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
 
@@ -170,6 +182,55 @@ def create_stats_df(raw_df, rDeployment):
 
         return stats_df
 
+def create_stats_df1(raw_df, rDeployment):
+    '''
+    Creating statistical dataframe for inferential analysis.
+    :param raw_df: dataframe containing the raw data
+    :return: stats_df: dataframe with for inferential analysis.
+    '''
+    # raw_df = raw_df.replace(np.nan, 1000)
+    usersID = raw_df[raw_df.question == 'ID'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1)
+    usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]].tolist()
+    usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('gender')].index.tolist()[0]].astype(float).tolist()
+    usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0]].astype(float).tolist()
+    cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
+
+    stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
+
+    stats_df = stats_df.append(pd.DataFrame(data = [['','gender','','']+usersGENDER], columns=cnames))
+    stats_df = stats_df.append(pd.DataFrame(data = [['','age','','']+usersAGE], columns=cnames))
+    stats_df = stats_df.append(pd.DataFrame(data = [['','education','','']+usersEDUCATION], columns=cnames))
+
+    stats_df = NARS_data(stats_df, raw_df)
+    stats_df = BFI_data(stats_df, raw_df)
+    stats_df = GODSPEED_data(stats_df, raw_df, 'red')
+    stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
+
+    stats_df.robot[stats_df.robot == ''] = 'participant'
+    stats_df = preference_data(stats_df, raw_df)
+    if not(stats_df.empty):
+        stats_df = questions(stats_df, raw_df)
+
+        # Insert what was the robot deployment
+        a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
+        a.columns = stats_df.columns
+        stats_df = stats_df.append(a)
+
+
+        # preference summary
+        t = stats_df[stats_df.sub_scale == 'summary']
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'std', '']+t[t.robot == 'red'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'std', '']+t[t.robot == 'blue'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
+
+        stats_df = stats_df.reset_index(drop=True)
+
+        stats_df = stats_df_reformat(stats_df)
+
+        stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
+
+        return stats_df
 
 # todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
 def NARS_data(stats_df, df):
@@ -181,11 +242,12 @@ def NARS_data(stats_df, df):
     :return:
     '''
     NARS_sub_meaning = {'S1': 'Situations and Interactions with Robots', 'S2':'Social Influence of Robots', 'S3': 'Emotions in Interaction with Robots'}
-    NARS_sub = {'S1': ['4','7','8','9','10','12'], 'S2':['1','2','11','13','14'], 'S3': ['3','5','6']}
+    NARS_sub = {'S1': [4,7,8,9,10,12], 'S2':[1,2,11,13,14], 'S3': [3,5,6]}
     NARS = pd.DataFrame.from_dict([NARS_sub_meaning,NARS_sub])
     NARS = NARS.rename({0:'meaning',1:'average'}, axis='index')
     for s in NARS:
-        temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
+        temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(
+            ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
         temps = temps/5. # Normalization
         ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
@@ -201,14 +263,14 @@ def BFI_data(stats_df, df):
         :return:
         '''
     BFI_sub_meaning = {'S1':'Extraversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
-    BFI_rev = {'S1':['0','1','0','0','1','0','1','0'], 'S2':['1','0','1','0','0','1','0','1','0'], 'S3':['0','1','0','1','1','0','0','0','1'],'S4':['0','1','0','0','1','0','1','0'],'S5':['0','0','0','0','0','0','1','0','1','0']}
-    BFI_sub = {'S1':['1','6','11','16','21','26','31','36'], 'S2':['2','7','12','17','22','27','32','37','42'], 'S3':['3','8','13','18','23','28','33','38','43'],'S4':['4','9','14','19','24','29','34','39'],'S5':['5','10','15','20','25','30','35','40','41','44']}
+    BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
+    BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
     BFI = pd.DataFrame.from_dict([BFI_sub_meaning, BFI_sub])
     BFI = BFI.rename({0:'meaning',1:'average'}, axis='index')
 
     for s in BFI:
-        temps = df[df.question == 'BFI'][df['option'][df.question == 'BFI'].isin(BFI[s]['average'])].drop(
-            ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
+        a = df['option'][df.question == 'BFI'][:-1].astype('int')
+        temps = df[df.question == 'BFI'][:-1][a.isin(BFI[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
         rev = np.array(BFI_rev[s], dtype=bool)
         temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_revrse)
         temps = temps / 5.  # Normalization
@@ -343,14 +405,14 @@ def stats_df_reformat(stats_df):
     '''
     for i, user in enumerate(stats_df.columns[4:]):
         temp = stats_df[stats_df.columns[:4]]
+        # temp['answers'] = stats_df[user]
         temp['answers'] = stats_df[user]
         temp['userID']      = user
         temp['age']         = stats_df[stats_df.feature == 'age'][user].tolist()[0]
         temp['gender']         = stats_df[stats_df.feature == 'gender'][user].tolist()[0]
         temp['education']   = stats_df[stats_df.feature == 'education'][user].tolist()[0]
-        # temp['rationality'] = stats_df[stats_df.feature == 'rationality'][user].tolist()[0]
-        temp['side'] = ''
-        temp['rationality'] = ''
+        temp.insert(0,'side',np.nan)
+        temp.insert(0,'rationality',np.nan)
         temp.loc[temp.robot == 'red', 'side']         = stats_df[user][(stats_df.robot == 'red_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'side')].tolist()[0]
         temp.loc[stats_df.robot == 'red', 'rationality']  = stats_df[user][(stats_df.robot == 'red_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'rationality')].tolist()[0]
         temp.loc[stats_df.robot == 'blue', 'side']        = stats_df[user][(stats_df.robot == 'blue_robot') & (stats_df.feature == 'deployment') & (stats_df.sub_scale == 'side')].tolist()[0]
@@ -363,18 +425,27 @@ def stats_df_reformat(stats_df):
 
         temp = temp.drop(temp[(temp.feature=='age') | (temp.feature=='education') | (temp.feature=='gender') | (temp.robot=='red_robot') | (temp.robot=='blue_robot')].index.tolist())
 
+        temp.loc[((temp.feature == 'r_preference') | (temp.feature == 'q_preference')) & (temp.answers == 1.), 'robot'] = 'red'
+        temp.loc[((temp.feature == 'r_preference') | (temp.feature == 'q_preference')) & (temp.answers == 2.), 'robot'] = 'blue'
+        temp.loc[temp[temp.robot == 'red'].index.tolist(), 'side'] = temp[(temp.robot == 'red')].side.unique()[0]
+        temp.loc[temp[temp.robot == 'red'].index.tolist(), 'rationality'] = temp[(temp.robot == 'red')].rationality.unique()[0]
+        temp.loc[temp[temp.robot == 'red'].index.tolist(), 'rationality'] = temp[(temp.robot == 'red')].rationality.unique()[0]
+        temp.loc[temp[temp.robot == 'blue'].index.tolist(), 'side'] = temp[(temp.robot == 'blue')].side.unique()[0]
+        temp.loc[temp[temp.robot == 'blue'].index.tolist(), 'rationality'] = temp[(temp.robot == 'blue')].rationality.unique()[0]
 
         if i == 0:
             sdf = temp
         else:
             sdf = sdf.append(temp)
 
-        sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 1.), 'robot'] = 'red'
-        sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 2.), 'robot'] = 'blue'
-        sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'side'] = sdf[(sdf.robot == 'red')].side.unique()[0]
-        sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'red')].rationality.unique()[0]
-        sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'side'] = sdf[(sdf.robot == 'blue')].side.unique()[0]
-        sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'blue')].rationality.unique()[0]
+        # sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 1.), 'robot'] = 'red'
+        # sdf.loc[((sdf.feature == 'r_preference') | (sdf.feature == 'q_preference')) & (sdf.answers == 2.), 'robot'] = 'blue'
+        # sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'side'] = sdf[(sdf.robot == 'red')].side.unique()[0]
+        # sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'red')].rationality.unique()[0]
+        # sdf.loc[sdf[sdf.robot == 'red'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'red')].rationality.unique()[0]
+        # sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'side'] = sdf[(sdf.robot == 'blue')].side.unique()[0]
+        # sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'blue')].rationality.unique()[0]
+ 
     return sdf
 
 if __name__ == "__main__":
