@@ -130,12 +130,13 @@ def response_time_exclusion(raw_df, users_after_exclusion):
     users_to_exclude = rt['total'][rt['total'] > rt['mean'] + 3 * rt['std']].index
     raw_df = raw_df.drop(users_to_exclude, axis = 1)
 
-    return raw_df
+    return raw_df, users_to_exclude
 
 def create_stats_df(raw_df, rDeployment):
     '''
     Creating statistical dataframe for inferential analysis.
     :param raw_df: dataframe containing the raw data
+    :param rDeployment:  string of the setup
     :return: stats_df: dataframe with for inferential analysis.
     '''
     # raw_df = raw_df.replace(np.nan, 1000)
@@ -177,6 +178,10 @@ def create_stats_df(raw_df, rDeployment):
         stats_df = stats_df.reset_index(drop=True)
 
         stats_df = stats_df_reformat(stats_df)
+
+        stats_df.loc[:, 'gender'] = stats_df.loc[:, 'gender'].replace({1.0: 'female', 2.0: 'male'})
+        stats_df.loc[:, 'education'] = stats_df.loc[:, 'education'].replace(
+            {1.0: '<HS', 2.0: 'HS', 3.0: '<BA', 4.0: 'BA', 5.0: 'MA', 6.0: 'professional', 7.0: 'PhD'})
 
         stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
 

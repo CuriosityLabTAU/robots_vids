@@ -32,7 +32,7 @@ def feel_the_data(stats_df):
     sdf = sdf.reset_index(drop=True)
     sns.pairplot(sdf)
 
-def preference_plot(stats_df, column, option, deployment=False):
+def preference_plot(stats_df, column, option, fname, deployment=False):
     '''
     plot preferenec
     :param stats_df:
@@ -59,7 +59,8 @@ def preference_plot(stats_df, column, option, deployment=False):
 
         # sns.countplot(x = 'answers', hue='rationality', data=b, ax = ax[i/n, i%n])
         # sns.factorplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
-    fig.suptitle('n = '+str(cdf.userID.unique().__len__()))
+    fig.suptitle('n = '+str(stats_df.userID.unique().__len__()))
+    save_maxfig(fig, fname)
     return fig
 
 def see_the_data(cdf):
@@ -157,7 +158,6 @@ if __name__ == "__main__":
             see_the_data(cdf)
 
         del(crdf)
-    # todo: wha is the total number of participants. how many were excluded? gender?
 
 
     plt.show()
