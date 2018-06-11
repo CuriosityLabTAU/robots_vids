@@ -386,8 +386,8 @@ def stats_df_reformat(stats_df):
 
         temp = temp.drop(temp[(temp.feature=='age') | (temp.feature=='education') | (temp.feature=='gender') | (temp.robot=='red_robot') | (temp.robot=='blue_robot')].index.tolist())
 
-        temp.loc[((temp.feature == 'r_preference') | (temp.feature == 'q_preference')) & (temp.answers == 1.), 'robot'] = 'red' #todo the problem is here
-        temp.loc[((temp.feature == 'r_preference') | (temp.feature == 'q_preference')) & (temp.answers == 2.), 'robot'] = 'blue'
+        temp.loc[(temp.feature == 'q_preference') & (temp.answers == 1.), 'robot'] = 'red'
+        temp.loc[(temp.feature == 'q_preference') & (temp.answers == 2.), 'robot'] = 'blue'
         temp.loc[temp[temp.robot == 'red'].index.tolist(), 'side'] = temp[(temp.robot == 'red')].side.unique()[0]
         temp.loc[temp[temp.robot == 'red'].index.tolist(), 'rationality'] = temp[(temp.robot == 'red')].rationality.unique()[0]
         temp.loc[temp[temp.robot == 'red'].index.tolist(), 'rationality'] = temp[(temp.robot == 'red')].rationality.unique()[0]
