@@ -291,7 +291,12 @@ def preference_data(stats_df, df):
         temps.feature = 'r_preference'
         temps.sub_scale = 'summary'
         temps.meaning = 'Count (Normalized) participant chose this robot'
+        # add diff()
 
+        # users2exclude = temps.sum()[temps.sum() != 1].index[4:]
+
+        # temps.loc[temps.index[0], :][4:] - temps.loc[temps.index[1], :][4:]
+        # temps['3.0',:] = temps.sum()
 
         if temps.shape[0] == 2:
             temps.robot = ['red', 'blue']

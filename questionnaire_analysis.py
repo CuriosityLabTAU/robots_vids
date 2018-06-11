@@ -56,9 +56,9 @@ if __name__ == "__main__":
             raw_df, rDeployment = raw_data_extraction(path)
             rDeployment_tot += [rDeployment.split('.')[0]]
         print('raw_df')
-        rDeployment = {'rDeployment_tot': rDeployment_tot}
+        # rDeployment = {'rDeployment_tot': rDeployment_tot}
 
-        rDeployment = {'rDeployment_ri': rDeployment_ri,'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih}
+        rDeployment = {'rDeployment_ri': rDeployment_ri,'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih, 'rDeployment_tot': rDeployment_tot}
 
         for rDep in rDeployment:
             raw_df = comine_raw_data2dataframe(rDeployment[rDep])
