@@ -291,6 +291,7 @@ def preference_data(stats_df, df):
         temps.meaning = 'Count (Normalized) participant chose this robot'
         # temps.sub_scale = 'choice'
         # temps.meaning = 'Which robot do you agree with?'
+        print(temps.shape) # todo continue work here
         if temps.shape[0] == 2:
             temps.robot = ['red', 'blue']
         else:
