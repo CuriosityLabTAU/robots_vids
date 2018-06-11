@@ -49,6 +49,9 @@ def preference_plot(stats_df, column, option, deployment=False):
     fig, ax = plt.subplots(m,n)
     for i, c in enumerate(cnames):
         b.answers = b.answers.astype('float64')
+        # (b.groupby(c).size() / 3).tolist()
+        # d = b.groupby(c)['rationality']
+        # d.groups.keys()
         if deployment:
             sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
         else:
@@ -144,6 +147,7 @@ if __name__ == "__main__":
         cdf.loc[:, 'education'] = cdf.loc[:, 'education'].replace({1.0: '<HS', 2.0: 'HS', 3.0:'<BA', 4.0:'BA', 5.0:'MA', 6.0:'professional',7.0:'PhD'})
 
         # feel_the_data(stats_df)
+        # todo: add n to the bars in the graphs!!!
         fig = preference_plot(cdf, 'sub_scale', 'summary')
         save_maxfig(fig, rDep + '_barplot_only_choices')
         fig1 = preference_plot(cdf, 'sub_scale', 'summary', deployment = True)
