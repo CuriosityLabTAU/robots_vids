@@ -109,8 +109,8 @@ if __name__ == "__main__":
     rDeployment_ih  = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
     rDeployment_ri  = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment_tot =  rDeployment_ih + rDeployment_rh + rDeployment_ri
-    # rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
-    rDeployment     = {'rDeployment_tot':rDeployment_tot}
+    rDeployment     = {'rDeployment_tot':rDeployment_tot, 'rDeployment_ri':rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih':rDeployment_ih}
+    # rDeployment     = {'rDeployment_tot':rDeployment_tot}
     # rDeployment     = {'rDeployment_tot':rDeployment_ri}
 
     for rDep in rDeployment:
@@ -133,7 +133,7 @@ if __name__ == "__main__":
                     # cdf = stats_df
 
         # filtering out trap question
-        from reformat_data import trap_exclusion1, create_stats_df1, create_stats_df
+        from reformat_data import trap_exclusion1, create_stats_df
         before = crdf[crdf.columns[:-5]].columns.__len__()
         crdf, users_after_exclusion = trap_exclusion1(crdf)
         # raw_df = response_time_exclusion(raw_df, users_after_exclusion)

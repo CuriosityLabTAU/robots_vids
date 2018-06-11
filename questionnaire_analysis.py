@@ -41,8 +41,8 @@ if __name__ == "__main__":
     rDeployment_ih = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
     rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
 
-    # reformat = True
-    reformat = False
+    reformat = True
+    # reformat = False
     fn = '_combined.csv'
     rDeployment_tot = []
 
@@ -58,17 +58,23 @@ if __name__ == "__main__":
         print('raw_df')
         rDeployment = {'rDeployment_tot': rDeployment_tot}
 
-        raw_df = comine_raw_data2dataframe(rDeployment['rDeployment_tot'])
-        raw_df.to_csv('data/raw_dataframe'+fn)
+        rDeployment = {'rDeployment_ri': rDeployment_ri,'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih}
 
-        stats_df = create_full_stats_df(raw_df, fn)
+        for rDep in rDeployment:
+            raw_df = comine_raw_data2dataframe(rDeployment[rDep])
+            raw_df.to_csv('data/raw_dataframe'+fn)
+
+            stats_df, users_after_exclusion = create_full_stats_df(raw_df, fn)
+
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
     else:
         raw_df = pd.read_csv('data/raw_dataframe'+fn, index_col=0)
         stats_df = pd.read_csv('data/stats_dataframe_'+fn, index_col=0)
 
-    if infer:
-        preference_plot(stats_df, 'sub_scale', 'summary', fname = '_barplot_only_choices')
-        preference_plot(stats_df, 'sub_scale', 'summary', fname = '_summary', deployment=True)
+    # if infer:
+    #     preference_plot(stats_df, 'sub_scale', 'summary', fname = '_barplot_only_choices')
+    #     preference_plot(stats_df, 'sub_scale', 'summary', fname = '_summary', deployment=True)
 
     plt.show()
 

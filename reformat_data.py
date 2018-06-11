@@ -183,55 +183,9 @@ def create_stats_df(raw_df, rDeployment):
         stats_df.loc[:, 'education'] = stats_df.loc[:, 'education'].replace(
             {1.0: '<HS', 2.0: 'HS', 3.0: '<BA', 4.0: 'BA', 5.0: 'MA', 6.0: 'professional', 7.0: 'PhD'})
 
-        stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
-
-        return stats_df
-
-def create_stats_df1(raw_df, rDeployment):
-    '''
-    Creating statistical dataframe for inferential analysis.
-    :param raw_df: dataframe containing the raw data
-    :return: stats_df: dataframe with for inferential analysis.
-    '''
-    # raw_df = raw_df.replace(np.nan, 1000)
-    usersID = raw_df[raw_df.question == 'ID'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1)
-    usersAGE = raw_df[raw_df.question == 'age'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('What is your age?')].index.tolist()[0]].tolist()
-    usersGENDER = raw_df[raw_df.question == 'gender'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('gender')].index.tolist()[0]].astype(float).tolist()
-    usersEDUCATION = raw_df[raw_df.question == 'education'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[raw_df[raw_df.full_text.str.contains('school')].index.tolist()[0]].astype(float).tolist()
-    cnames = ['robot','feature', 'sub_scale', 'meaning'] + usersID.transpose()['ResponseId'].tolist()
-
-    stats_df = pd.DataFrame(columns = cnames) # Inferential dataframe
-
-    stats_df = stats_df.append(pd.DataFrame(data = [['','gender','','']+usersGENDER], columns=cnames))
-    stats_df = stats_df.append(pd.DataFrame(data = [['','age','','']+usersAGE], columns=cnames))
-    stats_df = stats_df.append(pd.DataFrame(data = [['','education','','']+usersEDUCATION], columns=cnames))
-
-    stats_df = NARS_data(stats_df, raw_df)
-    stats_df = BFI_data(stats_df, raw_df)
-    stats_df = GODSPEED_data(stats_df, raw_df, 'red')
-    stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
-
-    stats_df.robot[stats_df.robot == ''] = 'participant'
-    stats_df = preference_data(stats_df, raw_df)
-    if not(stats_df.empty):
-        stats_df = questions(stats_df, raw_df)
-
-        # Insert what was the robot deployment
-        a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
-        a.columns = stats_df.columns
-        stats_df = stats_df.append(a)
-
-
-        # preference summary
-        t = stats_df[stats_df.sub_scale == 'summary']
-        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'average', '']+t[t.robot == 'red'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
-        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'preference', 'std', '']+t[t.robot == 'red'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
-        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'average', '']+t[t.robot == 'blue'][t.columns[4:]].mean().tolist()], columns = stats_df.columns))
-        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'preference', 'std', '']+t[t.robot == 'blue'][t.columns[4:]].std().tolist()], columns = stats_df.columns))
 
         stats_df = stats_df.reset_index(drop=True)
-
-        stats_df = stats_df_reformat(stats_df)
+        stats_df.answers = stats_df.answers.fillna(0)
 
         stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
 
