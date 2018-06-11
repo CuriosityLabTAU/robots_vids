@@ -278,20 +278,21 @@ def preference_data(stats_df, df):
     :return: [red preference, blue preference]
     '''
     temps = df[df.full_text == 'Which robot do you agree with?'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+    print(temps.shape)  # todo continue work here
+
     if temps.empty:
         stats_df = temps
     else:
         # todo: uncomment this for summary
         temps = temps.apply(pd.value_counts)/float(temps.__len__())
+        temps = temps.fillna(0)
         temps.columns = stats_df.columns[4:]
         temps = temps.reindex(columns=stats_df.columns)
-        # temps = temps.reindex(columns=stats_df.columns)
         temps.feature = 'r_preference'
         temps.sub_scale = 'summary'
         temps.meaning = 'Count (Normalized) participant chose this robot'
-        # temps.sub_scale = 'choice'
-        # temps.meaning = 'Which robot do you agree with?'
-        print(temps.shape) # todo continue work here
+
+
         if temps.shape[0] == 2:
             temps.robot = ['red', 'blue']
         else:
