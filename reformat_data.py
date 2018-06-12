@@ -319,7 +319,7 @@ def preference_data(stats_df, df):
         stats_df = stats_df.append(temps)
         # stats_df = stats_df.drop(users2exclude, axis=1)
         # df = df.drop(df.loc['ResponseId', df.loc['ResponseId'].isin(users2exclude)].index, axis=1)
-    return stats_df, df # , users2exclude
+    return stats_df #, df , users2exclude
 
 def prefernce_dataframe_index(raw_df):
     '''
@@ -344,8 +344,8 @@ def prefernce_dataframe_index(raw_df):
     blue_rationality = raw_df[(raw_df.question == 'blue_robot') & (raw_df.full_text == 'rationality')]
     red_rationality = raw_df[(raw_df.question == 'red_robot') & (raw_df.full_text == 'rationality')]
     for c in temps.columns:
-        temps[c] = temps[c].replace(1.0, red_rationality[c][0])
-        temps[c] = temps[c].replace(2.0, blue_rationality[c][0])
+        temps[c] = temps[c].replace(1.0, red_rationality[c].tolist()[0])
+        temps[c] = temps[c].replace(2.0, blue_rationality[c].tolist()[0])
 
     for r in temps.index:
         pref_ix = pd.value_counts(temps.loc[r, :]).diff(-1) / pd.value_counts(temps.loc[r, :]).sum()

@@ -39,13 +39,13 @@ def create_full_stats_df(raw_df, fn):
 
 
 if __name__ == "__main__":
+    # reformat, infer = True, False
+    reformat, infer = False, True
+
     rDeployment_rh = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
     rDeployment_ih = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
     rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment = {'rDeployment_ri': rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih}
-
-    reformat, infer = True, False
-    # reformat, infer = False, True
 
     rDeployment_tot = []
 
@@ -68,6 +68,7 @@ if __name__ == "__main__":
             raw_df.to_csv(df_dir+'raw_dataframe'+fn)
 
             stats_df, users_after_exclusion = create_full_stats_df(raw_df, fn)
+            raw_df = raw_df.drop(raw_df.columns[0], axis=1)
             pref_df = prefernce_dataframe_index(raw_df)
 
             #  crating preference datafrmae
@@ -87,15 +88,15 @@ if __name__ == "__main__":
         pref_df_tot = pd.read_csv(df_dir+'pref_dataframe', index_col=0)
 
     if infer:
-        # for i in sf:
-        #     stats_df = sf[i]
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
+        for i in sf:
+            stats_df = sf[i]
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
         preference_per_question(pref_df_tot)
     plt.show()
 
     #
     # if rDep == 'rDeployment_tot':
-    #     see_the_data(stats_df)
+    #     see_the_data(stats_df) £ todo: contonue working on descriptive of the BFI, NARS and Godspeed
 
     print('t')
