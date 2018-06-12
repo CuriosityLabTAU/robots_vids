@@ -79,13 +79,24 @@ def raw_data_extraction(path):
     # excluded = before - users_after_exclusion.__len__()
     # print('exclude:', excluded,'out of', before)
 
-    # cleaning users that didn;t complete to fill the questionnaire.
+    # cleaning users that didn't answer all the questions
+    a = raw_df.loc[raw_df.question == 'locationLatitude', :]
+    df_temp = a[a.columns[5:]]
+    df_temp.columns = df_temp.columns.astype('int')
+    filter_nan_users = pd.isna(df_temp).any(axis=0).tolist()
+    if filter_nan_users != False:
+        unanswered_users = df_temp.T[filter_nan_users].index.tolist()
+        raw_df = raw_df.drop(unanswered_users, axis=1)
+        print('unanswered users ', unanswered_users.__len__())
+
+    # cleaning users that didn't complete to fill the questionnaire.
     a = raw_df[raw_df['full_text'].str.contains('talkative?')]
     b = pd.isnull(a).any()
     empty_users = b[b].index.tolist()
+    print('empty users',empty_users.__len__())
     raw_df = raw_df.drop(empty_users, axis=1)
 
-    raw_df.to_csv('data/raw_dataframe_'+rDeployment)     # saving the data frame
+    raw_df.to_csv('data/dataframes/raw_dataframe_'+rDeployment)     # saving the data frame
     return raw_df, rDeployment
 
 def trap_exclusion(raw_df):
@@ -132,11 +143,11 @@ def response_time_exclusion(raw_df, users_after_exclusion):
 
     return raw_df, users_to_exclude
 
-def create_stats_df(raw_df, rDeployment):
+def create_stats_df(raw_df, fn):
     '''
     Creating statistical dataframe for inferential analysis.
     :param raw_df: dataframe containing the raw data
-    :param rDeployment:  string of the setup
+    :param fn:  string of the setup for file name
     :return: stats_df: dataframe with for inferential analysis.
     '''
     # raw_df = raw_df.replace(np.nan, 1000)
@@ -158,7 +169,8 @@ def create_stats_df(raw_df, rDeployment):
     stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
 
     stats_df.robot[stats_df.robot == ''] = 'participant'
-    stats_df = preference_data(stats_df, raw_df)
+    stats_df = preference_data(stats_df, raw_df) # todo clean raw_df outside this function.
+    # pref_df = prefernce_dataframe_index(raw_df)
     if not(stats_df.empty):
         stats_df = questions(stats_df, raw_df)
 
@@ -187,7 +199,7 @@ def create_stats_df(raw_df, rDeployment):
         stats_df = stats_df.reset_index(drop=True)
         stats_df.answers = stats_df.answers.fillna(0)
 
-        stats_df.to_csv('data/stats_dataframe_'+rDeployment)     # saving the data frame
+        stats_df.to_csv('data/dataframes/stats_dataframe'+ fn)     # saving the data frame
 
         return stats_df
 
@@ -275,15 +287,13 @@ def preference_data(stats_df, df):
     Which robot the user preferred based on the questions during the questonnaire.
     :param stats_df: dataframe for inferential statistics.
     :param df: raw dataframe
-    :return: [red preference, blue preference]
+    :return: stats_df, raw_df - updated, users2exclude - users that were excluded because they didn't answer all preference questions.
     '''
     temps = df[df.full_text == 'Which robot do you agree with?'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
-    print(temps.shape)  # todo continue work here
 
     if temps.empty:
         stats_df = temps
     else:
-        # todo: uncomment this for summary
         temps = temps.apply(pd.value_counts)/float(temps.__len__())
         temps = temps.fillna(0)
         temps.columns = stats_df.columns[4:]
@@ -294,6 +304,7 @@ def preference_data(stats_df, df):
         # add diff()
 
         # users2exclude = temps.sum()[temps.sum() != 1].index[4:]
+        # print(str(users2exclude.__len__())+' users were excluded because they did not answer all the preference questions.')
 
         # temps.loc[temps.index[0], :][4:] - temps.loc[temps.index[1], :][4:]
         # temps['3.0',:] = temps.sum()
@@ -306,9 +317,52 @@ def preference_data(stats_df, df):
             elif temps.index[0] == '2.':
                 temps.robot = 'blue'
         stats_df = stats_df.append(temps)
-    return stats_df
+        # stats_df = stats_df.drop(users2exclude, axis=1)
+        # df = df.drop(df.loc['ResponseId', df.loc['ResponseId'].isin(users2exclude)].index, axis=1)
+    return stats_df, df # , users2exclude
+
+def prefernce_dataframe_index(raw_df):
+    '''
+    crating dataframe with the preference index per question
+    :param raw_df: dataframe of raw data
+    :return: 
+    '''
+    temps = raw_df[(raw_df.full_text == 'Which robot do you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+    qs = ['prefer', 'investments', 'jury', 'analyst', 'bartender']
+    for q in qs:
+        if 'temps1' in locals():
+            temps1 = temps1.append(raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float'))
+        else:
+            temps1 = raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
 
 
+    temps1 = temps1.replace(1, 2.)
+    temps1 = temps1.replace(4, 1.)
+    temps1.index = qs
+    temps = temps.append(temps1)
+
+    blue_rationality = raw_df[(raw_df.question == 'blue_robot') & (raw_df.full_text == 'rationality')]
+    red_rationality = raw_df[(raw_df.question == 'red_robot') & (raw_df.full_text == 'rationality')]
+    for c in temps.columns:
+        temps[c] = temps[c].replace(1.0, red_rationality[c][0])
+        temps[c] = temps[c].replace(2.0, blue_rationality[c][0])
+
+    for r in temps.index:
+        pref_ix = pd.value_counts(temps.loc[r, :]).diff(-1) / pd.value_counts(temps.loc[r, :]).sum()
+        if pref_ix.isna()[0]:
+            pref_ix = pd.value_counts(temps.loc[r, :]) / pd.value_counts(temps.loc[r, :]).sum()
+        if 'pref_df' in locals():
+            temp_df = pd.DataFrame(data=[[r, '_'.join(pref_ix.index.tolist()), pref_ix[0]]],
+                         columns=['question', 'rationality', 'preference'])
+            pref_df = pref_df.append(temp_df)
+        else:
+            pref_df = pd.DataFrame(data=[[r, '_'.join(pref_ix.index.tolist()), pref_ix[0]]],
+                                   columns=['question', 'rationality', 'preference'])
+    pref_df = pref_df.reset_index(drop=True)
+    rat = pd.value_counts(pref_df.rationality).index[0]
+    pref_df.rationality = rat
+    return pref_df
+    
 def questions(stats_df, raw_df):
     '''
     Analyzing our questions.

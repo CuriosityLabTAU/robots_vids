@@ -80,6 +80,17 @@ def see_the_data(cdf):
     sns.countplot(users_data.education, ax=ax[2])
     save_maxfig(fig, 'participants_histogram')
 
+def preference_per_question(pref_df):
+    '''
+    plot the preference index per question
+    :param pref_df: preference data frames of all the questions
+    :return:
+    '''
+    fig,ax = plt.subplots(1,1)
+    sns.pointplot(x='question', y='preference', hue='rationality', data=pref_df, legend_out=True,ax=ax)
+    save_maxfig(fig, 'preference')
+
+
 def save_maxfig(fig, fig_name, ax=None, save_plotly=None, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''Save figure in high resultion'''
     # matplotlib.rcParams.update({'font.size': 40})
