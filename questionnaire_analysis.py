@@ -24,16 +24,7 @@ def create_full_stats_df(raw_df, fn):
     :param fn - string for file name
     :return:
     '''
-    before = raw_df[raw_df.columns[:-5]].columns.__len__()
-    raw_df, users_after_exclusion = trap_exclusion1(raw_df)
-    # raw_df, excluded_users = response_time_exclusion(raw_df, users_after_exclusion)
-    excluded = before - users_after_exclusion.__len__()
-    print('exclude:', excluded, 'out of', before)
 
-    raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
-    raw_df = raw_df[raw_df.columns[1:]]
-
-    stats_df = create_stats_df(raw_df, fn)
 
     return stats_df, users_after_exclusion
 
@@ -67,36 +58,53 @@ if __name__ == "__main__":
             raw_df = comine_raw_data2dataframe(rDeployment[rDep])
             raw_df.to_csv(df_dir+'raw_dataframe'+fn)
 
-            stats_df, users_after_exclusion = create_full_stats_df(raw_df, fn)
+            # cleaning trap question
+            before = raw_df[raw_df.columns[:-5]].columns.__len__()
+            raw_df, users_after_exclusion = trap_exclusion1(raw_df)
+            # raw_df, excluded_users = response_time_exclusion(raw_df, users_after_exclusion)
+            excluded = before - users_after_exclusion.__len__()
+            print('exclude:', excluded, 'out of', before)
+            raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
             raw_df = raw_df.drop(raw_df.columns[0], axis=1)
-            pref_df = prefernce_dataframe_index(raw_df)
+
+            stats_df = create_stats_df(raw_df, fn)
+
+            pref_df, users_pref = prefernce_dataframe_index(raw_df)
 
             #  crating preference datafrmae
             if 'pref_df_tot' in locals():
                 pref_df_tot = pref_df_tot.append(pref_df)
+                users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
             else:
                 pref_df_tot = pref_df.copy()
+                users_pref_tot = users_pref.copy()
 
         pref_df_tot.to_csv(df_dir+'pref_dataframe')
+        users_pref_tot.to_csv(df_dir+'users_pref_dataframe')
+
     else:
         rf, sf = {}, {}
-        for i, rDep in enumerate(rDeployment):
+        for rDep in rDeployment:
             fn = '_'+rDep[-2:]
-            rf[i] = pd.read_csv(df_dir+'raw_dataframe'+fn, index_col=0)
-            sf[i] = pd.read_csv(df_dir+'stats_dataframe'+fn, index_col=0)
+            rf[rDep] = pd.read_csv(df_dir+'raw_dataframe'+fn, index_col=0)
+            sf[rDep] = pd.read_csv(df_dir+'stats_dataframe'+fn, index_col=0)
 
         pref_df_tot = pd.read_csv(df_dir+'pref_dataframe', index_col=0)
+        users_pref_tot = pd.read_csv(df_dir+'users_pref_dataframe', index_col=0)
 
     if infer:
         for i in sf:
             stats_df = sf[i]
-            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
-            preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
-        preference_per_question(pref_df_tot)
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
+        #     pair_plot(stats_df, ['BFI','NARS'])
+        preference_cinsistency(users_pref_tot)
+        # preference_per_question(pref_df_tot)
+
     plt.show()
 
     #
     # if rDep == 'rDeployment_tot':
-    #     see_the_data(stats_df) £ todo: contonue working on descriptive of the BFI, NARS and Godspeed
+    #     see_the_data(stats_df) # todo: contonue working on descriptive of the BFI, NARS and Godspeed
 
     print('t')

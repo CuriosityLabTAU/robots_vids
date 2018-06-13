@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import os
+from sklearn import preprocessing
+
 
 def raw_data_extraction(path):
     '''
@@ -169,8 +171,7 @@ def create_stats_df(raw_df, fn):
     stats_df = GODSPEED_data(stats_df, raw_df, 'blue')
 
     stats_df.robot[stats_df.robot == ''] = 'participant'
-    stats_df = preference_data(stats_df, raw_df) # todo clean raw_df outside this function.
-    # pref_df = prefernce_dataframe_index(raw_df)
+    stats_df = preference_data(stats_df, raw_df)
     if not(stats_df.empty):
         stats_df = questions(stats_df, raw_df)
 
@@ -178,7 +179,6 @@ def create_stats_df(raw_df, fn):
         a = raw_df[(raw_df.question == 'red_robot') | (raw_df.question == 'blue_robot')]
         a.columns = stats_df.columns
         stats_df = stats_df.append(a)
-
 
         # preference summary
         t = stats_df[stats_df.sub_scale == 'summary']
@@ -203,8 +203,9 @@ def create_stats_df(raw_df, fn):
 
         return stats_df
 
-# todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
+
 def NARS_data(stats_df, df):
+    # todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
     '''
     Calculating NARS for all users
     http://uhra.herts.ac.uk/bitstream/handle/2299/9641/SyrdalDDautenhahn.pdf?sequence=1
@@ -214,12 +215,14 @@ def NARS_data(stats_df, df):
     '''
     NARS_sub_meaning = {'S1': 'Situations and Interactions with Robots', 'S2':'Social Influence of Robots', 'S3': 'Emotions in Interaction with Robots'}
     NARS_sub = {'S1': [4,7,8,9,10,12], 'S2':[1,2,11,13,14], 'S3': [3,5,6]}
+    for n in NARS_sub:
+        NARS_sub[n] = map(str,NARS_sub[n])
     NARS = pd.DataFrame.from_dict([NARS_sub_meaning,NARS_sub])
     NARS = NARS.rename({0:'meaning',1:'average'}, axis='index')
     for s in NARS:
         temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(
             ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
-        temps = temps/5. # Normalization
+        temps = min_max_norm(temps) # Normalization
         ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
         pass
@@ -236,6 +239,8 @@ def BFI_data(stats_df, df):
     BFI_sub_meaning = {'S1':'Extraversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
     BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
     BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
+    for n in BFI_sub:
+        BFI_sub[n] = map(str,BFI_sub[n])
     BFI = pd.DataFrame.from_dict([BFI_sub_meaning, BFI_sub])
     BFI = BFI.rename({0:'meaning',1:'average'}, axis='index')
 
@@ -244,7 +249,7 @@ def BFI_data(stats_df, df):
         temps = df[df.question == 'BFI'][:-1][a.isin(BFI[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
         rev = np.array(BFI_rev[s], dtype=bool)
         temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_revrse)
-        temps = temps / 5.  # Normalization
+        temps = min_max_norm(temps) # Normalization
         ms = pd.DataFrame(data=[['','BFI', s, BFI[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
@@ -269,6 +274,8 @@ def GODSPEED_data(stats_df, df, robot):
     '''
     Godspeed_sub_meaning = {'S1':'Anthropomorphism', 'S2':'Animacy', 'S3':'Likeability', 'S4':'Perceived Intelligence', 'S5':'Perceived Safety'}
     Godspeed_sub = {'S1':np.arange(0,5), 'S2':np.arange(5,11), 'S3':np.arange(11,16),'S4':np.arange(16,21),'S5':np.arange(21,24)}
+    for n in Godspeed_sub:
+        Godspeed_sub[n] = map(str,Godspeed_sub[n])
     Godspeed = pd.DataFrame.from_dict([Godspeed_sub_meaning, Godspeed_sub])
     Godspeed = Godspeed.rename({0:'meaning',1:'average'}, axis='index')
     for s in Godspeed:
@@ -277,8 +284,9 @@ def GODSPEED_data(stats_df, df, robot):
         else:
             q = 'GODSPEED2'
         temps = df[df.question == q][df['option'][df.question == q].isin(Godspeed[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
-        temps = temps/5. # Normalization
-        ms = pd.DataFrame(data=[[robot,'Godspeed', s, Godspeed[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
+        temps = temps.fillna(0)
+        temps = min_max_norm(temps) # Normalization
+        ms = pd.DataFrame(data=[[robot,q, s, Godspeed[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
 
@@ -361,7 +369,8 @@ def prefernce_dataframe_index(raw_df):
     pref_df = pref_df.reset_index(drop=True)
     rat = pd.value_counts(pref_df.rationality).index[0]
     pref_df.rationality = rat
-    return pref_df
+    users_pref = temps.copy()
+    return pref_df, users_pref
     
 def questions(stats_df, raw_df):
     '''
@@ -467,6 +476,14 @@ def stats_df_reformat(stats_df):
         # sdf.loc[sdf[sdf.robot == 'blue'].index.tolist(), 'rationality'] = sdf[(sdf.robot == 'blue')].rationality.unique()[0]
  
     return sdf
+
+def min_max_norm(df):
+    min_max_scaler = preprocessing.MinMaxScaler()
+    np_scaled = min_max_scaler.fit_transform(df)
+    df_normalized = pd.DataFrame(np_scaled)
+    df_normalized.columns = df.columns
+    df_normalized.index = df.index
+    return df_normalized
 
 if __name__ == "__main__":
 

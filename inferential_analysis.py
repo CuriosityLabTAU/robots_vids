@@ -87,9 +87,65 @@ def preference_per_question(pref_df):
     :return:
     '''
     fig,ax = plt.subplots(1,1)
+
+    # todo: for pilot only
+    pref_df = pref_df.reset_index(drop=True)
+    a = pref_df.loc[pref_df.question.isin(['89', '91', '95'])].rationality
+    a = a.str.replace('irrational', 'abc')
+    a = a.str.replace('rational', 'irrational')
+    a = a.str.replace('abc', 'rational')
+    pref_df.loc[pref_df.question.isin(['89', '91', '95']), 'rationality'] = a.tolist()
+    pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference'] = -pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference']
+    pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'rationality'] = 'rational_irrational'
+
     sns.pointplot(x='question', y='preference', hue='rationality', data=pref_df, legend_out=True,ax=ax)
     save_maxfig(fig, 'preference')
 
+def pair_plot(stats_df, surveys):
+    '''
+    create dataframe in the shape, columns: ('NARS1,NARS2,...,GODSPEED2')
+    :param stats_df:  stats dataframe
+    :param surveys: which surveys we are intrested in (BFI,NARS,GODSPEED1,GODSPEED2)
+    :return: pairplot
+    '''
+    fig,ax = plt.subplots(1,1)
+    g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2') | (stats_df['feature'] == 'BFI') | (
+            stats_df['feature'] == 'NARS')][['feature', 'sub_scale', 'answers']]
+    g['feature'] = g[['feature', 'sub_scale']].sum(axis=1)
+    g = g.drop('sub_scale', axis=1)
+
+    d = {}
+    for gg in g['feature'].unique():
+        d[gg] = g[g['feature'] == gg].answers.tolist()
+    dff = pd.DataFrame.from_dict(d)
+    cnames = []
+    for c in surveys:
+        cnames += dff.columns[dff.columns.str.contains(c)].tolist()
+    sns.pairplot(dff[cnames],ax = ax)
+    save_maxfig(fig, 'pairplot_participant')
+
+    # sns.pairplot(g, hue='feature')
+
+def preference_cinsistency(users_pref_tot):
+    '''
+    show the dynamics of choice of all the users per question
+    :param users_pref_tot:
+    :return:
+    '''
+    users_pref_tot = users_pref_tot.replace('rational', 0)
+    users_pref_tot = users_pref_tot.replace('half', 1)
+    users_pref_tot = users_pref_tot.replace('irrational', 2)
+    users_pref_tot = users_pref_tot.astype('int')
+
+    fig,ax = plt.subplots(1,1)
+
+    p = ax.pcolor(users_pref_tot, edgecolors='k')
+    y_labels = users_pref_tot.index.tolist()
+    N = y_labels.__len__()
+    ax.set_yticks(np.linspace(0.5, N - 0.5, N))
+    ax.set_yticklabels(y_labels)
+
+    save_maxfig(fig, 'users_preference_per_question')
 
 def save_maxfig(fig, fig_name, ax=None, save_plotly=None, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''Save figure in high resultion'''
