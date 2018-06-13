@@ -139,11 +139,14 @@ def preference_cinsistency(users_pref_tot):
 
     fig,ax = plt.subplots(1,1)
 
-    p = ax.pcolor(users_pref_tot, edgecolors='k')
+    p = ax.pcolor(users_pref_tot, edgecolors='k', cmap='tab20b')
+
     y_labels = users_pref_tot.index.tolist()
     N = y_labels.__len__()
     ax.set_yticks(np.linspace(0.5, N - 0.5, N))
     ax.set_yticklabels(y_labels)
+
+    fig.colorbar(p, ax=ax)
 
     save_maxfig(fig, 'users_preference_per_question')
 
