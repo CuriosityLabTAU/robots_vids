@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 import pickle
+from matplotlib.colors import LinearSegmentedColormap
 plt.style.use('ggplot')
 # plt.xkcd();
 
@@ -139,14 +140,26 @@ def preference_cinsistency(users_pref_tot):
 
     fig,ax = plt.subplots(1,1)
 
-    p = ax.pcolor(users_pref_tot, edgecolors='k', cmap='tab20b')
+    # creating custom colormap
+    colors = [(.36, .65, .93), (.36, .93, .65), (.925, .365, .365)]
+    cmap_name = 'my_list'
+    cm = LinearSegmentedColormap.from_list(cmap_name, colors, N=3)
+
+    p = ax.pcolor(users_pref_tot, edgecolors='k', cmap=cm)
 
     y_labels = users_pref_tot.index.tolist()
     N = y_labels.__len__()
-    ax.set_yticks(np.linspace(0.5, N - 0.5, N))
+    l = np.linspace(0.5, N - 0.5, N)
+    ax.set_yticks(l)
     ax.set_yticklabels(y_labels)
+    ax.set_xlabel('Participants')
+    ax.set_ylabel('Question')
 
-    fig.colorbar(p, ax=ax)
+    ax.hlines((l[3],l[4],l[6]), *ax.get_xlim())
+
+
+    cbar = fig.colorbar(p, ax=ax, ticks=[0.25, 1, 1.75])
+    cbar.ax.set_yticklabels(['Rational', 'Half', 'Irrational'])
 
     save_maxfig(fig, 'users_preference_per_question')
 
