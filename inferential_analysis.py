@@ -122,7 +122,7 @@ def pair_plot(stats_df, surveys):
     cnames = []
     for c in surveys:
         cnames += dff.columns[dff.columns.str.contains(c)].tolist()
-    sns.pairplot(dff[cnames],ax = ax)
+    sns.pairplot(dff[cnames])
     save_maxfig(fig, 'pairplot_participant')
 
     # sns.pairplot(g, hue='feature')

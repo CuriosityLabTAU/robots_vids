@@ -97,9 +97,9 @@ if __name__ == "__main__":
             stats_df = sf[i]
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
-            # qdf = pair_plot(stats_df, ['BFI','NARS'])
-            # questionnaires_boplot(qdf, 'feature', 'answers', 'gender')
-        preference_cinsistency(users_pref_tot, sf)
+            qdf = pair_plot(stats_df, ['BFI','NARS'])
+            questionnaires_boplot(qdf, 'feature', 'answers', 'gender')
+        # preference_cinsistency(users_pref_tot, sf)
         # preference_per_question(pref_df_tot)
 
     plt.show()
