@@ -370,6 +370,9 @@ def prefernce_dataframe_index(raw_df):
     rat = pd.value_counts(pref_df.rationality).index[0]
     pref_df.rationality = rat
     users_pref = temps.copy()
+    users_pref.columns = \
+        raw_df[(raw_df.question == 'ID')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[
+            'ResponseId']
     return pref_df, users_pref
     
 def questions(stats_df, raw_df):

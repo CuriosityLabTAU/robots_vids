@@ -210,6 +210,15 @@ def preference_cinsistency(users_pref_tot, sf, ignore = True):
     save_maxfig(fig, 'users_preference_per_question')
 
 def creating_dataframe4manova(sf, users_pref_tot):
+    '''
+    Creating a dataframe for manova.
+    Each participants donate 2 points for each question because of the godspeed (rationality)
+    :param sf: stats dataframe
+    :param users_pref_tot: preference in the questions.
+    :return: data frame for manova
+    '''
+
+    upt = users_pref_tot.transpose().reset_index(drop=True)
     stats_df = sf['rDeployment_tt']
     g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2') | (
             stats_df['feature'] == 'BFI') | (
@@ -228,6 +237,10 @@ def creating_dataframe4manova(sf, users_pref_tot):
         manova_df.insert(loc = manova_df.columns.__len__(), column=s , value = temp_col)
 
     # data frame for 1st robot
+    manova_df = manova_df.reset_index(drop=True)
+    manova_df1 = manova_df.sort_values(by='userID')
+    manova_df = pd.concat((upt,manova_df1), axis=1)
+
     manova_df2 = manovadf_drop_support(manova_df, 'GODSPEED1')
     manova_df2 = manovadf_robot_support(manova_df2, 'GODSPEED2_S1', g)
 
@@ -240,8 +253,11 @@ def creating_dataframe4manova(sf, users_pref_tot):
     manova_df = manova_df.append(manova_df2)
 
     manova_df = manova_df.reset_index(drop=True)
-    # todo: add which robot was chosen 0 if robot wasn't chosen, 1 if robot was chosen
-    return g
+
+    for c in upt.columns:
+        manova_df[c] = (manova_df[c] == manova_df.rationality).astype('int')
+
+    return manova_df
 
 def manovadf_robot_support(manova_df, s, g):
     '''
