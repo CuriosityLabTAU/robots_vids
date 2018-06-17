@@ -241,7 +241,6 @@ def creating_dataframe4manova(sf, users_pref_tot):
 
     manova_df = manova_df.reset_index(drop=True)
 
-
     return g
 
 def manovadf_robot_support(manova_df, s, g):
