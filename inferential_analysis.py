@@ -209,6 +209,71 @@ def preference_cinsistency(users_pref_tot, sf, ignore = True):
 
     save_maxfig(fig, 'users_preference_per_question')
 
+def creating_dataframe4manova(sf, users_pref_tot):
+    stats_df = sf['rDeployment_tt']
+    g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2') | (
+            stats_df['feature'] == 'BFI') | (
+                         stats_df['feature'] == 'NARS')][
+        ['feature', 'sub_scale', 'answers', 'gender', 'education', 'age', 'userID','robot','rationality', 'side']]
+    g['f'] = g['feature'] + '_' + g['sub_scale']
+    g['f1'] = g['feature'] + '_' + g['sub_scale'] + '_' + g['robot'] +'_'+g['rationality']
+    g = g.drop(['feature', 'sub_scale'], axis=1)
+
+    for s in g.f.unique():
+        temp_col = g[g.f == s].answers.tolist()
+        if 'manova_df' not in locals():
+            manova_df = g[g.f == s][['gender','education', 'age', 'userID']]
+
+
+        manova_df.insert(loc = manova_df.columns.__len__(), column=s , value = temp_col)
+
+    # data frame for 1st robot
+    manova_df2 = manovadf_drop_support(manova_df, 'GODSPEED1')
+    manova_df2 = manovadf_robot_support(manova_df2, 'GODSPEED2_S1', g)
+
+    # data frame for 2nd robot
+    manova_df = manovadf_drop_support(manova_df, 'GODSPEED2')
+    manova_df = manovadf_robot_support(manova_df, 'GODSPEED1_S1', g)
+
+    manova_df2 = manova_df2.rename(columns=dict(zip(manova_df2.columns[-5:], manova_df.columns[-5:])))
+
+    manova_df = manova_df.append(manova_df2)
+
+    manova_df = manova_df.reset_index(drop=True)
+
+
+    return g
+
+def manovadf_robot_support(manova_df, s, g):
+    '''
+    inserting robot's parmeters
+    :param manova_df:
+    :param s: feature
+    :param g: dataframe we take the information from.
+    :return:
+    '''
+    temp_col_rationality = g[g.f == s].rationality.tolist()
+    temp_col_color = g[g.f == s].robot.tolist()
+    temp_col_side = g[g.f == s].side.tolist()
+    manova_df.insert(loc=0, column='side', value=temp_col_side)
+    manova_df.insert(loc=0, column='color', value=temp_col_color)
+    manova_df.insert(loc=0, column='rationality', value=temp_col_rationality)
+    return manova_df
+
+def manovadf_drop_support(manova_df, s):
+    '''
+    drop columns with s
+    :param manovadf:
+    :param s:
+    :return:
+    '''
+
+    a = pd.DataFrame(manova_df.columns).astype('str')
+    manova_df1 = manova_df.copy()
+    manova_df1 = manova_df1.drop(manova_df.columns[a.loc[:,0].str.contains(s)], axis=1)
+
+    return manova_df1
+
 def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''
     Save figure in high resolution
