@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
             pref_df, users_pref = prefernce_dataframe_index(raw_df)
 
-            #  crating preference datafrmae
+            #  crating preference dataframe
             if 'pref_df_tot' in locals():
                 pref_df_tot = pref_df_tot.append(pref_df)
                 users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
