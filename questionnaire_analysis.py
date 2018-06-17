@@ -80,8 +80,8 @@ if __name__ == "__main__":
                     pref_df_tot = pref_df.copy()
                     users_pref_tot = users_pref.copy()
 
-        pref_df_tot.to_csv(df_dir+'pref_dataframe')
-        users_pref_tot.to_csv(df_dir+'users_pref_dataframe')
+        pref_df_tot.to_csv(df_dir+'pref_dataframe'+'.csv')
+        users_pref_tot.to_csv(df_dir+'users_pref_dataframe'+'.csv')
 
     else:
         rDeployment_tot = rDeployment_ih+rDeployment_rh+rDeployment_ri
@@ -98,6 +98,7 @@ if __name__ == "__main__":
 
     if infer:
         manova_df = creating_dataframe4manova(sf, users_pref_tot)
+        manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
         sf.pop('rDeployment_tt')
         for i in sf:
             stats_df = sf[i]
