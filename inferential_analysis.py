@@ -240,7 +240,7 @@ def creating_dataframe4manova(sf, users_pref_tot):
     manova_df = manova_df.append(manova_df2)
 
     manova_df = manova_df.reset_index(drop=True)
-
+    # todo: add which robot was chosen 0 if robot wasn't chosen, 1 if robot was chosen
     return g
 
 def manovadf_robot_support(manova_df, s, g):
