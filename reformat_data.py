@@ -333,7 +333,7 @@ def prefernce_dataframe_index(raw_df):
     '''
     crating dataframe with the preference index per question
     :param raw_df: dataframe of raw data
-    :return: 
+    :return: pref_df, users_pref
     '''
     temps = raw_df[(raw_df.full_text == 'Which robot do you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
     qs = ['prefer', 'investments', 'jury', 'analyst', 'bartender']
