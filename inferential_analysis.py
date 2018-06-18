@@ -209,7 +209,7 @@ def preference_cinsistency(users_pref_tot, sf, ignore = True):
 
     save_maxfig(fig, 'users_preference_per_question')
 
-def creating_dataframe4manova(sf, users_pref_tot):
+def creating_dataframe4manova(sf, users_pref_tot, numeric = True):
     '''
     Creating a dataframe for manova.
     Each participants donate 2 points for each question because of the godspeed (rationality)
@@ -256,7 +256,15 @@ def creating_dataframe4manova(sf, users_pref_tot):
 
     for c in upt.columns:
         manova_df[c] = (manova_df[c] == manova_df.rationality).astype('int')
-
+    if numeric:
+        cls = {'red':0, 'blue':1}
+        rat = {'rational':0, 'half':1, 'irrational':2}
+        sides = {'left':0, 'right':1}
+        genders = {'female':0, 'male':1}
+        edu = {'<HS':1, 'HS':2, '<BA':3, 'BA':4, 'MA':5, 'professional':6, 'PhD':7}
+        rdict = {'rationality':rat, 'color':cls, 'side':sides, 'gender':genders, 'education':edu}
+        for c in manova_df.columns[[0, 1, 2, 15, 16]]:
+            manova_df.loc[:, c] = manova_df.loc[:, c].replace(rdict[c])
     return manova_df
 
 def manovadf_robot_support(manova_df, s, g):
