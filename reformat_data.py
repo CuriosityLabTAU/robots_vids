@@ -98,7 +98,7 @@ def raw_data_extraction(path):
     print('empty users',empty_users.__len__())
     raw_df = raw_df.drop(empty_users, axis=1)
 
-    raw_df.to_csv('data/dataframes/raw_dataframe_'+rDeployment)     # saving the data frame
+    raw_df.to_csv('data/dataframes/raw_dataframe_'+rDeployment+'.csv')     # saving the data frame
     return raw_df, rDeployment
 
 def trap_exclusion(raw_df):

@@ -54,7 +54,7 @@ if __name__ == "__main__":
         # rDeployment['rDeployment_tot'] = rDeployment_tot
 
         for i, rDep in enumerate(rDeployment):
-            fn = '_'+rDep[-2:]
+            fn = '_'+rDep[-2:]+'.csv'
             raw_df = comine_raw_data2dataframe(rDeployment[rDep])
             raw_df.to_csv(df_dir+'raw_dataframe'+fn)
 
@@ -67,7 +67,7 @@ if __name__ == "__main__":
             raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
             raw_df = raw_df.drop(raw_df.columns[0], axis=1)
 
-            stats_df = create_stats_df(raw_df, fn)
+            stats_df = create_stats_df(raw_df, fn+'.csv')
 
             if rDep != 'rDeployment_tt':
                 pref_df, users_pref = prefernce_dataframe_index(raw_df)
@@ -89,12 +89,12 @@ if __name__ == "__main__":
 
         rf, sf = {}, {}
         for rDep in rDeployment:
-            fn = '_'+rDep[-2:]
+            fn = '_'+rDep[-2:]+'.csv'
             rf[rDep] = pd.read_csv(df_dir+'raw_dataframe'+fn, index_col=0)
             sf[rDep] = pd.read_csv(df_dir+'stats_dataframe'+fn, index_col=0)
 
-        pref_df_tot = pd.read_csv(df_dir+'pref_dataframe', index_col=0)
-        users_pref_tot = pd.read_csv(df_dir+'users_pref_dataframe', index_col=0)
+        pref_df_tot = pd.read_csv(df_dir+'pref_dataframe'+'.csv', index_col=0)
+        users_pref_tot = pd.read_csv(df_dir+'users_pref_dataframe'+'.csv', index_col=0)
 
     if infer:
         manova_df = creating_dataframe4manova(sf, users_pref_tot)
@@ -106,8 +106,8 @@ if __name__ == "__main__":
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
             # qdf = pair_plot(stats_df, ['BFI','NARS'])
             # questionnaires_boplot(qdf, 'feature', 'answers', 'gender')
-        # preference_cinsistency(users_pref_tot, sf)
-        preference_per_question(pref_df_tot)
+        preference_cinsistency(users_pref_tot, sf)
+        # preference_per_question(pref_df_tot)
 
     plt.show()
 
