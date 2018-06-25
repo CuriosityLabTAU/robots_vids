@@ -129,7 +129,7 @@ def pair_plot(stats_df, surveys):
 
     return g
 
-def questionnaires_boplot(qdf,y,x,hue):
+def questionnaires_boxplot(qdf,y,x,hue):
     '''
     Plotting boxplot of the questionnaires answers by sub scale by hue.
     :param qdf: questionnaires dataframe

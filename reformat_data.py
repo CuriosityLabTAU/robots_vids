@@ -336,7 +336,7 @@ def prefernce_dataframe_index(raw_df):
     :return: pref_df, users_pref
     '''
     temps = raw_df[(raw_df.full_text == 'Which robot do you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
-    qs = ['prefer', 'investments', 'jury', 'analyst', 'bartender']
+    qs = ['investments', 'analyst', 'jury', 'bartender', 'prefer']
     for q in qs:
         if 'temps1' in locals():
             temps1 = temps1.append(raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float'))
@@ -351,10 +351,12 @@ def prefernce_dataframe_index(raw_df):
 
     blue_rationality = raw_df[(raw_df.question == 'blue_robot') & (raw_df.full_text == 'rationality')]
     red_rationality = raw_df[(raw_df.question == 'red_robot') & (raw_df.full_text == 'rationality')]
+    # reversing the DON'T question
+    temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(1.0,3.0).replace(2.0,1.0)
+    temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(3.0,2.0)
     for c in temps.columns:
-        temps[c] = temps[c].replace(1.0, red_rationality[c].tolist()[0])
-        temps[c] = temps[c].replace(2.0, blue_rationality[c].tolist()[0])
-
+        temps[c] = temps[c].replace(1.0, blue_rationality[c].tolist()[0])
+        temps[c] = temps[c].replace(2.0, red_rationality[c].tolist()[0])
     for r in temps.index:
         pref_ix = pd.value_counts(temps.loc[r, :]).diff(-1) / pd.value_counts(temps.loc[r, :]).sum()
         if pref_ix.isna()[0]:
@@ -503,4 +505,3 @@ if __name__ == "__main__":
 
     print('raw_df and stats_df were created!')
 
-    # todo: response time, fix the trap to use it in analysis

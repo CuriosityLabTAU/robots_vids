@@ -38,7 +38,7 @@ if __name__ == "__main__":
     rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment_tt = []
     rDeployment = {'rDeployment_ri': rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih,'rDeployment_tt': rDeployment_tt}
-
+    # rDeployment = {'rDeployment_rh':['rrrlbh']}
 
     # infer = False
     df_dir = 'data/dataframes/'
@@ -63,7 +63,7 @@ if __name__ == "__main__":
             raw_df, users_after_exclusion = trap_exclusion1(raw_df)
             # raw_df, excluded_users = response_time_exclusion(raw_df, users_after_exclusion)
             excluded = before - users_after_exclusion.__len__()
-            print('exclude:', excluded, 'out of', before)
+            print('exclude from trap question:', excluded, 'out of', before)
             raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
             raw_df = raw_df.drop(raw_df.columns[0], axis=1)
 
@@ -80,8 +80,14 @@ if __name__ == "__main__":
                     pref_df_tot = pref_df.copy()
                     users_pref_tot = users_pref.copy()
 
+        # reverse DON'T question answers
+        # pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference'] = 1 - pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference']
+
+
         pref_df_tot.to_csv(df_dir+'pref_dataframe'+'.csv')
+
         users_pref_tot.to_csv(df_dir+'users_pref_dataframe'+'.csv')
+        print('Done reformating the data.')
 
     else:
         rDeployment_tot = rDeployment_ih+rDeployment_rh+rDeployment_ri
@@ -105,14 +111,13 @@ if __name__ == "__main__":
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
             # qdf = pair_plot(stats_df, ['BFI','NARS'])
-            # questionnaires_boplot(qdf, 'feature', 'answers', 'gender')
-        preference_cinsistency(users_pref_tot, sf)
+            # questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
+        preference_cinsistency(users_pref_tot, sf, ignore = True)
         # preference_per_question(pref_df_tot)
 
     plt.show()
 
-    #
-    # if rDep == 'rDeployment_tot':
+    #todo: word cloud for the open question
+    # if rDep == 'rDeployment_tt':
     #     see_the_data(stats_df) # todo: contonue working on descriptive of the BFI, NARS and Godspeed
 
-    print('t')
