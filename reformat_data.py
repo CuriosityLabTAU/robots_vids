@@ -75,12 +75,6 @@ def raw_data_extraction(path):
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'side', ''] + [robots_deployment['blue'][0]] * nu], columns = raw_df.columns))
     raw_df = raw_df.append(pd.DataFrame(data=[['blue_robot', 'deployment', 'rationality', ''] + [robots_deployment['blue'][1]] * nu], columns = raw_df.columns))
 
-    # before = raw_df.columns[4:].__len__()
-    # raw_df, users_after_exclusion = trap_exclusion(raw_df)
-    # # raw_df = response_time_exclusion(raw_df, users_after_exclusion)
-    # excluded = before - users_after_exclusion.__len__()
-    # print('exclude:', excluded,'out of', before)
-
     # cleaning users that didn't answer all the questions
     a = raw_df.loc[raw_df.question == 'locationLatitude', :]
     df_temp = a[a.columns[5:]]
@@ -98,7 +92,7 @@ def raw_data_extraction(path):
     print('empty users',empty_users.__len__())
     raw_df = raw_df.drop(empty_users, axis=1)
 
-    raw_df.to_csv('data/dataframes/raw_dataframe_'+rDeployment+'.csv')     # saving the data frame
+    raw_df.to_csv('data/dataframes/raw_dataframe_'+rDeployment)     # saving the data frame
     return raw_df, rDeployment
 
 def trap_exclusion(raw_df):
@@ -124,8 +118,8 @@ def trap_exclusion1(raw_df):
     # trap question - exclude users
     a = raw_df[raw_df.columns[5:]][raw_df.question == 'trap_question']
     all_users = set(raw_df.columns[5:])
-    trap_value = '4'
-    users_after_exclusion = set(a[a == trap_value].dropna(axis=1).columns)
+    trap_value = ['4','1']
+    users_after_exclusion = set(a[(a == trap_value[0]) | (a == trap_value[1])].dropna(axis=1).columns)
     raw_df = raw_df.drop(all_users - users_after_exclusion, axis=1)
     return raw_df, users_after_exclusion
 
@@ -249,7 +243,8 @@ def BFI_data(stats_df, df):
         temps = df[df.question == 'BFI'][:-1][a.isin(BFI[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
         rev = np.array(BFI_rev[s], dtype=bool)
         temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_revrse)
-        temps = min_max_norm(temps) # Normalization
+        # temps = min_max_norm(temps) # Normalization todo: fix this
+        temps / temps.max()
         ms = pd.DataFrame(data=[['','BFI', s, BFI[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
@@ -335,17 +330,24 @@ def prefernce_dataframe_index(raw_df):
     :param raw_df: dataframe of raw data
     :return: pref_df, users_pref
     '''
-    temps = raw_df[(raw_df.full_text == 'Which robot do you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+    temps = raw_df[raw_df.full_text.str.contains('agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
     qs = ['investments', 'analyst', 'jury', 'bartender', 'prefer']
     for q in qs:
-        if 'temps1' in locals():
-            temps1 = temps1.append(raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float'))
+        if q == 'prefer':
+            a = raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'],axis=1)
+            preference = a.loc[a.index[0],:]
+            open_answers = a.loc[a.index[1],:]
+            temps1 = temps1.append(preference.astype('float'))
         else:
-            temps1 = raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+            if 'temps1' in locals():
+                temps1 = temps1.append(raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float'))
+            else:
+                temps1 = raw_df[(raw_df.full_text.str.contains(q))].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
 
 
     temps1 = temps1.replace(1, 2.)
     temps1 = temps1.replace(4, 1.)
+    temps1 = temps1.replace(5, 2.)
     temps1.index = qs
     temps = temps.append(temps1)
 
@@ -369,13 +371,14 @@ def prefernce_dataframe_index(raw_df):
             pref_df = pd.DataFrame(data=[[r, '_'.join(pref_ix.index.tolist()), pref_ix[0]]],
                                    columns=['question', 'rationality', 'preference'])
     pref_df = pref_df.reset_index(drop=True)
+    pref_df.loc[pref_df.rationality != pref_df.rationality[0], 'preference'] = -pref_df.loc[pref_df.rationality != pref_df.rationality[0], 'preference']
     rat = pd.value_counts(pref_df.rationality).index[0]
     pref_df.rationality = rat
     users_pref = temps.copy()
     users_pref.columns = \
         raw_df[(raw_df.question == 'ID')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[
             'ResponseId']
-    return pref_df, users_pref
+    return pref_df, users_pref, open_answers
     
 def questions(stats_df, raw_df):
     '''

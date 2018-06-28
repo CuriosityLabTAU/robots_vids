@@ -89,15 +89,15 @@ def preference_per_question(pref_df):
     '''
     fig,ax = plt.subplots(1,1)
 
-    # todo: for pilot only
+    # # todo: for pilot only (reverse disjunction)
     pref_df = pref_df.reset_index(drop=True)
-    a = pref_df.loc[pref_df.question.isin(['89', '91', '95'])].rationality
-    a = a.str.replace('irrational', 'abc')
-    a = a.str.replace('rational', 'irrational')
-    a = a.str.replace('abc', 'rational')
-    pref_df.loc[pref_df.question.isin(['89', '91', '95']), 'rationality'] = a.tolist()
-    pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference'] = -pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference']
-    pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'rationality'] = 'rational_irrational'
+    # a = pref_df.loc[pref_df.question.isin(['89', '91', '95'])].rationality
+    # a = a.str.replace('irrational', 'abc')
+    # a = a.str.replace('rational', 'irrational')
+    # a = a.str.replace('abc', 'rational')
+    # pref_df.loc[pref_df.question.isin(['89', '91', '95']), 'rationality'] = a.tolist()
+    # pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference'] = -pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'preference']
+    # pref_df.loc[pref_df.rationality.isin(['irrational_rational']), 'rationality'] = 'rational_irrational'
 
     sns.pointplot(x='question', y='preference', hue='rationality', data=pref_df, legend_out=True,ax=ax)
     save_maxfig(fig, 'preference')
@@ -205,7 +205,7 @@ def preference_cinsistency(users_pref_tot, sf, ignore = True):
 
 
     cbar = fig.axes[1]
-    cbar.set_yticklabels(['Rational', 'Half', 'Irrational']) # colorbar text
+    cbar.set_yticklabels(['Rational', 'Single Irrationality', 'Double Irrationality']) # colorbar text
 
     save_maxfig(fig, 'users_preference_per_question')
 
@@ -269,7 +269,7 @@ def creating_dataframe4manova(sf, users_pref_tot, numeric = True):
 
 def manovadf_robot_support(manova_df, s, g):
     '''
-    inserting robot's parmeters
+    Inserting robot's parmeters
     :param manova_df:
     :param s: feature
     :param g: dataframe we take the information from.
