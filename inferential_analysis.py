@@ -297,32 +297,68 @@ def manovadf_drop_support(manova_df, s):
 
     return manova_df1
 
-def word_cloud(open_answers_tot):
+def word_cloud(open_answers_tot, cloud = 1, inside = True, number_of_words = 30):
     '''
     creating word clouds by rationality.
     :param open_answers_tot: data frame with all the full answers
     :return:
     '''
     from wordcloud import WordCloud
+    import matplotlib.gridspec as gridspec
+    from mpl_toolkits.axes_grid.inset_locator import inset_axes
 
+    N = number_of_words # how many words to plot
 
     rationalities = open_answers_tot.rationality.unique()
-    fig, ax = plt.subplots(1,rationalities.__len__())
+
+    fig = plt.figure()
+    gs = gridspec.GridSpec(4, rationalities.__len__())
+    gs.update(hspace=0.5)
+
     wordclouds = []
     for i, rat in enumerate(rationalities):
-        # fig, ax = plt.subplots(1, 1)
         txt = open_answers_tot.loc[open_answers_tot.rationality == rat, 'answer'].str.cat(sep=' ')
-        wordcloud = WordCloud(max_font_size=60, min_font_size=12).generate(txt)
-        ax[i].imshow(wordcloud, interpolation="bilinear")
-        ax[i].set_title(rat)
-        ax[i].axis("off")
+        wordcloud = WordCloud(max_font_size=40, max_words=N).generate(txt)  # min_font_size=12,
+
+        ax_wfreq = fig.add_subplot(gs[cloud:4, i]) # freq axes
+        if cloud != 0:
+            # wordcloud
+            if inside:
+                ax_wcloud = inset_axes(ax_wfreq,
+                                       width='60%',  # width = 30% of parent_bbox
+                                       height='60%',  # height : 1 inch
+                                       loc=4)
+            else:
+                ax_wcloud = fig.add_subplot(gs[0, i])
+                ax_wcloud.set_title(rat)
+            ax_wcloud.imshow(wordcloud, cmap=plt.cm.gray, interpolation="bilinear")
+            ax_wcloud.axis("off")
+
+
+        # frequency plot
+        words_names = wordcloud.words_.keys()
+        words_count = wordcloud.words_.values()
+        a = np.array([words_count, words_names]).T
+        a = a[a[:, 0].argsort()]
+        words_names = a[:, 1].tolist()
+        words_count = a[:, 0].astype('float').tolist()
+
+        ax_wfreq.set_ylabel('Top ' + str(N) + ' Words')
+        ax_wfreq.set_xlabel('Frequency')
+        ax_wfreq.set_title(rationalities[i])
+        indexes = np.arange(len(words_names))
+        width = .4
+        ax_wfreq.barh(indexes, words_count, width)
+        ax_wfreq.set_yticks(indexes)
+        ax_wfreq.set_yticklabels(words_names)
+
         wordclouds.append(wordcloud)
 
     a = set(wordclouds[0].words_.keys()) # rational words
     b = set(wordclouds[1].words_.keys()) # irrational words
     c = a.intersection(b).__len__()      # how many words in both?
 
-    save_maxfig(fig, 'rationalities_wrodclouds')
+    save_maxfig(fig, 'rationalities_wrodclouds_freq', save_pkl=0)
 
 def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''
