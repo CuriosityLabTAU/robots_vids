@@ -297,10 +297,13 @@ def manovadf_drop_support(manova_df, s):
 
     return manova_df1
 
-def word_cloud(open_answers_tot, cloud = 1, inside = True, number_of_words = 30):
+def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     '''
     creating word clouds by rationality.
     :param open_answers_tot: data frame with all the full answers
+    :param cloud: 1, plot cloud, 0 don't plot.
+    :param inside: 1, not inside, 0 inside.
+    :param number_of_words: N top number of words to analyze
     :return:
     '''
     from wordcloud import WordCloud
@@ -320,10 +323,10 @@ def word_cloud(open_answers_tot, cloud = 1, inside = True, number_of_words = 30)
         txt = open_answers_tot.loc[open_answers_tot.rationality == rat, 'answer'].str.cat(sep=' ')
         wordcloud = WordCloud(max_font_size=40, max_words=N).generate(txt)  # min_font_size=12,
 
-        ax_wfreq = fig.add_subplot(gs[cloud:4, i]) # freq axes
+        ax_wfreq = fig.add_subplot(gs[cloud*inside:4, i]) # freq axes
         if cloud != 0:
             # wordcloud
-            if inside:
+            if inside == 0:
                 ax_wcloud = inset_axes(ax_wfreq,
                                        width='60%',  # width = 30% of parent_bbox
                                        height='60%',  # height : 1 inch
