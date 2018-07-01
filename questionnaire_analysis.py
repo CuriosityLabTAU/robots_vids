@@ -109,6 +109,9 @@ if __name__ == "__main__":
 
     if infer:
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
+
+        word_cloud(open_answers_tot)
+
         sf['rDeployment_tt'] = sf['rDeployment_ri']
         manova_df = creating_dataframe4manova(sf, users_pref_tot)
         manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')

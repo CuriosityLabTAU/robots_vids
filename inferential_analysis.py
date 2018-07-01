@@ -297,6 +297,33 @@ def manovadf_drop_support(manova_df, s):
 
     return manova_df1
 
+def word_cloud(open_answers_tot):
+    '''
+    creating word clouds by rationality.
+    :param open_answers_tot: data frame with all the full answers
+    :return:
+    '''
+    from wordcloud import WordCloud
+
+
+    rationalities = open_answers_tot.rationality.unique()
+    fig, ax = plt.subplots(1,rationalities.__len__())
+    wordclouds = []
+    for i, rat in enumerate(rationalities):
+        # fig, ax = plt.subplots(1, 1)
+        txt = open_answers_tot.loc[open_answers_tot.rationality == rat, 'answer'].str.cat(sep=' ')
+        wordcloud = WordCloud(max_font_size=60, min_font_size=12).generate(txt)
+        ax[i].imshow(wordcloud, interpolation="bilinear")
+        ax[i].set_title(rat)
+        ax[i].axis("off")
+        wordclouds.append(wordcloud)
+
+    a = set(wordclouds[0].words_.keys()) # rational words
+    b = set(wordclouds[1].words_.keys()) # irrational words
+    c = a.intersection(b).__len__()      # how many words in both?
+
+    save_maxfig(fig, 'rationalities_wrodclouds')
+
 def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''
     Save figure in high resolution
