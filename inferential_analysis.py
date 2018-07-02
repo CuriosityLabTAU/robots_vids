@@ -363,6 +363,18 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
 
     save_maxfig(fig, 'rationalities_wrodclouds_freq', save_pkl=0)
 
+    # if   open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe_v1' + '.csv', index_col=0)
+    # fig, ax = plt.subplots(1,1)
+    # answers_counts = (open_answers_tot.groupby(['rationality'])['answer']
+    #                      .value_counts(normalize=True)
+    #                      .rename('percentage')
+    #                      .mul(100)
+    #                      .reset_index()
+    #                      .sort_values('answer'))
+    # sns.barplot(x="answer", y="percentage", hue="rationality", data=answers_counts, ax=ax)
+    # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
+
+
 def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', resize=None):
     '''
     Save figure in high resolution

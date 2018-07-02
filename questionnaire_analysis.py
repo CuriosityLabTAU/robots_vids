@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
         pref_df_tot = pd.read_csv(df_dir + 'pref_dataframe' + '.csv', index_col=0)
         users_pref_tot = pd.read_csv(df_dir + 'users_pref_dataframe' + '.csv', index_col=0)
-        open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe' + '.csv', index_col=0)
+        open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe_v1' + '.csv', index_col=0)
 
 
     if infer:
