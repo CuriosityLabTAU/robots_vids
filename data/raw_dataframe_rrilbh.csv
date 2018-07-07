@@ -1,0 +1,162 @@
+,question,option,full_text,dict_text,2,3,4,5,6,7,8
+StartDate,"startDate,timeZone",,Start Date,"{""ImportId"":""startDate"",""timeZone"":""America/Denver""}",2018-06-07 04:37:17,2018-06-07 04:27:54,2018-06-07 04:25:14,2018-06-07 04:41:17,2018-06-07 04:58:23,2018-06-07 05:31:33,2018-06-07 04:29:18
+EndDate,"endDate,timeZone",,End Date,"{""ImportId"":""endDate"",""timeZone"":""America/Denver""}",2018-06-07 04:47:51,2018-06-07 04:52:23,2018-06-07 05:00:01,2018-06-07 05:02:50,2018-06-07 05:09:45,2018-06-07 05:48:33,2018-06-07 04:31:06
+Status,status,,Response Type,"{""ImportId"":""status""}",0,0,0,0,0,0,0
+IPAddress,ipAddress,,IP Address,"{""ImportId"":""ipAddress""}",124.123.56.217,38.132.117.104,167.160.123.107,23.81.209.106,107.172.196.4,73.94.236.206,167.160.123.107
+Progress,progress,,Progress,"{""ImportId"":""progress""}",100,100,100,100,100,100,26
+Duration (in seconds),duration,,Duration (in seconds),"{""ImportId"":""duration""}",633,1469,2087,1292,681,1020,108
+Finished,finished,,Finished,"{""ImportId"":""finished""}",1,1,1,1,1,1,0
+RecordedDate,"recordedDate,timeZone",,Recorded Date,"{""ImportId"":""recordedDate"",""timeZone"":""America/Denver""}",2018-06-07 04:47:52,2018-06-07 04:52:24,2018-06-07 05:00:02,2018-06-07 05:02:51,2018-06-07 05:09:46,2018-06-07 05:48:33,2018-06-08 04:31:18
+ResponseId,ID,"recordId""}",Response ID,"{""ImportId"":""_recordId""}",R_3NOsQmrn8CVVjHX,R_2Y99vmvmZD9Igrn,R_2urGHxwWAlyGdHu,R_1l011tD1Bg8DQy2,R_3fdaKyucMA6ueH8,R_2OJD0HQHgnW7TIm,R_38KUXmSBY0qHy4p
+RecipientLastName,recipientLastName,,Recipient Last Name,"{""ImportId"":""recipientLastName""}",,,,,,,
+RecipientFirstName,recipientFirstName,,Recipient First Name,"{""ImportId"":""recipientFirstName""}",,,,,,,
+RecipientEmail,recipientEmail,,Recipient Email,"{""ImportId"":""recipientEmail""}",,,,,,,
+ExternalReference,externalDataReference,,External Data Reference,"{""ImportId"":""externalDataReference""}",,,,,,,
+LocationLatitude,locationLatitude,,Location Latitude,"{""ImportId"":""locationLatitude""}",17.375305175781,37.751007080078,32.291198730469,33.6748046875,42.88639831543,45.010101318359,
+LocationLongitude,locationLongitude,,Location Longitude,"{""ImportId"":""locationLongitude""}",78.474395751953,-97.821998596191,-90.18440246582,-111.95189666748,-78.87809753418,-93.151901245117,
+DistributionChannel,distributionChannel,,Distribution Channel,"{""ImportId"":""distributionChannel""}",anonymous,anonymous,anonymous,anonymous,anonymous,anonymous,anonymous
+UserLanguage,userLanguage,,User Language,"{""ImportId"":""userLanguage""}",EN,EN,EN,EN,EN,EN,EN
+Q1.2,QID97,,"I am age 18 or older, I have read and understood the information above, I want to participate in this research and continue with the survey:","{""ImportId"":""QID97""}",1,1,1,1,1,1,1
+Q1.3,gender,,To which gender identity do you most identify?,"{""ImportId"":""QID98""}",2,1,2,1,2,2,2
+Q1.4,age,"TEXT""}",What is your age?,"{""ImportId"":""QID99_TEXT""}",29,29,30,33,28,32,30
+Q1.5,education,,"What is the highest degree or level of school you have completed? (If 
+you’re currently enrolled in school, please indicate the highest degree 
+you have received.)","{""ImportId"":""QID100""}",6,5,5,5,7,5,5
+Q2.1_1,BFI,1,I see myself as someone who is: - Is talkative,"{""ImportId"":""QID91_1""}",4,1,4,3,4,3,4
+Q2.1_2,BFI,2,I see myself as someone who is: - Tends to find fault with others,"{""ImportId"":""QID91_2""}",3,2,2,2,1,4,2
+Q2.1_3,BFI,3,I see myself as someone who is: - Does a thorough job,"{""ImportId"":""QID91_3""}",4,5,4,4,5,5,4
+Q2.1_4,BFI,4,"I see myself as someone who is: - Is depressed, blue","{""ImportId"":""QID91_4""}",4,1,2,1,1,5,2
+Q2.1_5,BFI,5,"I see myself as someone who is: - Is original, comes up with new ideas","{""ImportId"":""QID91_5""}",5,4,4,3,5,2,4
+Q2.1_6,BFI,6,I see myself as someone who is: - Is reserved,"{""ImportId"":""QID91_6""}",4,4,2,4,3,4,2
+Q2.1_7,BFI,7,I see myself as someone who is: - Is helpful and unselfish with others,"{""ImportId"":""QID91_7""}",3,5,4,4,5,3,4
+Q2.1_8,BFI,8,I see myself as someone who is: - Can be somewhat careless,"{""ImportId"":""QID91_8""}",4,1,2,2,1,5,4
+Q2.1_9,BFI,9,"I see myself as someone who is: - Is relaxed, handles stress well","{""ImportId"":""QID91_9""}",4,4,4,4,5,1,2
+Q2.1_10,BFI,10,I see myself as someone who is: - Is curious about many different things,"{""ImportId"":""QID91_10""}",4,5,4,4,5,5,4
+Q2.1_11,BFI,11,I see myself as someone who is: - Is full of energy,"{""ImportId"":""QID91_11""}",3,4,4,4,5,2,4
+Q2.1_12,BFI,12,I see myself as someone who is: - Starts quarrels with others,"{""ImportId"":""QID91_12""}",4,1,2,2,1,3,2
+Q2.1_13,BFI,13,I see myself as someone who is: - Is a reliable worker,"{""ImportId"":""QID91_13""}",5,5,4,4,5,3,4
+Q2.1_14,BFI,14,I see myself as someone who is: - Can be tense,"{""ImportId"":""QID91_14""}",4,1,2,2,2,5,4
+Q2.1_15,BFI,15,"I see myself as someone who is: - Is ingenious, a deep thinker","{""ImportId"":""QID91_15""}",4,5,4,3,5,3,2
+Q2.1_16,BFI,16,I see myself as someone who is: - Generates a lot of enthusiasm,"{""ImportId"":""QID91_16""}",3,4,4,4,5,2,2
+Q2.1_17,BFI,17,I see myself as someone who is: - Has a forgiving nature,"{""ImportId"":""QID91_17""}",4,2,4,4,5,5,4
+Q2.1_18,BFI,18,I see myself as someone who is: - Tends to be disorganized,"{""ImportId"":""QID91_18""}",5,1,2,2,1,5,2
+Q2.1_19,BFI,19,I see myself as someone who is: - Worries a lot,"{""ImportId"":""QID91_19""}",4,1,2,2,3,5,4
+Q2.1_20,BFI,20,I see myself as someone who is: - Has ana active imagination,"{""ImportId"":""QID91_20""}",3,5,4,3,5,2,2
+Q2.1_21,BFI,21,I see myself as someone who is: - Tends to be quiet,"{""ImportId"":""QID91_21""}",4,4,2,4,5,4,4
+Q2.1_22,BFI,22,I see myself as someone who is: - Is generally trusting,"{""ImportId"":""QID91_22""}",4,4,4,4,5,5,2
+Q2.1_23,BFI,23,I see myself as someone who is: - Tends to be lazy,"{""ImportId"":""QID91_23""}",3,1,2,2,1,5,4
+Q2.1_24,BFI,24,"I see myself as someone who is: - Is emotionally stable, not easily upset","{""ImportId"":""QID91_24""}",4,4,4,4,3,1,2
+Q2.1_25,BFI,25,I see myself as someone who is: - Is inventive,"{""ImportId"":""QID91_25""}",5,5,4,3,5,2,4
+Q2.1_26,BFI,26,I see myself as someone who is: - Has an assertive personality,"{""ImportId"":""QID91_26""}",4,5,4,4,5,2,2
+Q2.1_27,BFI,27,I see myself as someone who is: - Can be cold and aloof,"{""ImportId"":""QID91_27""}",3,1,2,1,5,3,4
+Q2.1_28,BFI,28,I see myself as someone who is: - Preseveres until the task is finished,"{""ImportId"":""QID91_28""}",4,4,4,4,5,3,2
+Q2.1_29,BFI,29,I see myself as someone who is: - Can be moody,"{""ImportId"":""QID91_29""}",3,1,2,2,3,4,4
+Q2.1_30,BFI,30,"I see myself as someone who is: - Values artistic, aesthetic experiences","{""ImportId"":""QID91_30""}",4,5,4,3,5,3,2
+Q2.1_31,BFI,31,"I see myself as someone who is: - Is sometimes shy, inhibited","{""ImportId"":""QID91_31""}",4,1,2,4,1,4,4
+Q2.1_32,BFI,32,I see myself as someone who is: - Is considerate and kind to almost everyone,"{""ImportId"":""QID91_32""}",3,5,4,4,5,5,2
+Q2.1_33,BFI,33,I see myself as someone who is: - Does things efficiently,"{""ImportId"":""QID91_33""}",4,5,4,4,5,2,4
+Q2.1_34,BFI,34,I see myself as someone who is: - Remains calm in tense situations,"{""ImportId"":""QID91_34""}",3,4,4,3,5,1,2
+Q2.1_35,BFI,35,I see myself as someone who is: - Prefers work that is routine,"{""ImportId"":""QID91_35""}",4,2,2,4,5,3,4
+Q2.1_36,BFI,36,"I see myself as someone who is: - Is outgoing, sociable","{""ImportId"":""QID91_36""}",4,2,4,4,5,3,2
+Q2.1_37,BFI,37,I see myself as someone who is: - Is sometimes rude to others,"{""ImportId"":""QID91_37""}",3,1,2,2,1,3,4
+Q2.1_38,BFI,38,I see myself as someone who is: - Makes plans and follows through with them,"{""ImportId"":""QID91_38""}",4,4,4,4,5,3,2
+Q2.1_39,BFI,39,I see myself as someone who is: - Gets nervous easily,"{""ImportId"":""QID91_39""}",3,1,2,2,1,5,4
+Q2.1_40,BFI,40,"I see myself as someone who is: - Likes to reflect, play with ideas","{""ImportId"":""QID91_40""}",4,4,4,4,5,3,2
+Q2.1_41,BFI,41,I see myself as someone who is: - Has few artistic interests,"{""ImportId"":""QID91_41""}",3,1,2,3,5,4,4
+Q2.1_42,BFI,42,I see myself as someone who is: - Likes to cooperate with others,"{""ImportId"":""QID91_42""}",4,4,4,5,5,3,3
+Q2.1_43,BFI,43,I see myself as someone who is: - Is easily disracted,"{""ImportId"":""QID91_43""}",3,1,2,2,1,4,4
+Q2.1_44,BFI,44,"I see myself as someone who is: - Is sophisticated in art, music, or literature","{""ImportId"":""QID91_44""}",4,4,4,3,5,2,2
+Q2.2_Page Submit,BFI,response_time,Timing - Page Submit,"{""ImportId"":""QID92_PAGE_SUBMIT""}",35.487,192.675,113.29,119.123,51.197,128.132,47.12
+Q3.1_1,NARS,1,Click to write the question text - I would feel uneasy if robots really had emotions.,"{""ImportId"":""QID102_1""}",4,4,4,2,1,3,3
+Q3.1_2,NARS,2,Click to write the question text - Something bad might happen if robots developed into living beings.,"{""ImportId"":""QID102_2""}",3,4,4,3,1,3,3
+Q3.1_3,NARS,3,Click to write the question text - I would feel relaxed talking with robots.,"{""ImportId"":""QID102_3""}",5,2,2,4,5,4,3
+Q3.1_4,NARS,4,Click to write the question text - I would feel uneasy if I was given a job where I had to use robots.,"{""ImportId"":""QID102_4""}",4,4,4,2,4,2,3
+Q3.1_5,NARS,5,"Click to write the question text - If robots had emotions, I would be able to make friends with them.","{""ImportId"":""QID102_5""}",3,2,2,3,5,4,3
+Q3.1_6,NARS,6,Click to write the question text - I (would?) feel comforted being with robots that have emotions.,"{""ImportId"":""QID102_6""}",4,2,1,3,4,3,3
+Q3.1_7,NARS,7,"Click to write the question text - The word ""robot"" means nothing to me.","{""ImportId"":""QID102_7""}",5,2,4,2,1,2,3
+Q3.1_8,NARS,8,Click to write the question text - I would feel nervous operating a robot in front of other people.,"{""ImportId"":""QID102_8""}",4,4,3,2,3,3,3
+Q3.1_9,NARS,9,Click to write the question text - I would hate the idea that robots or artificial intelligence were making judgments about things.,"{""ImportId"":""QID102_9""}",3,4,3,3,1,3,3
+Q3.1_10,NARS,10,Click to write the question text - I would feel very nervous just standing in front of a robot.,"{""ImportId"":""QID102_10""}",5,4,3,2,1,1,3
+Q3.1_11,NARS,11,"Click to write the question text - I feel that if I depend on robots too much, something bad might happen.","{""ImportId"":""QID102_11""}",4,4,3,4,1,3,3
+Q3.1_12,NARS,12,Click to write the question text - I would feel paranoid talking with a robot.,"{""ImportId"":""QID102_12""}",3,4,3,2,4,2,3
+Q3.1_13,NARS,13,Click to write the question text - I am concerned that robots would be a bad influence on children.,"{""ImportId"":""QID102_13""}",4,2,3,3,5,3,3
+Q3.1_14,NARS,14,Click to write the question text - I feel that in the future society will be dominated by robots.,"{""ImportId"":""QID102_14""}",4,2,3,3,3,3,3
+Q3.2_Page Submit,NARS,response_time,Timing - Page Submit,"{""ImportId"":""QID103_PAGE_SUBMIT""}",16.328,57.443,45.981,106.984,26.758,68.322,9.735
+Q5.1,QID77,,Which robot do you agree with?,"{""ImportId"":""QID77""}",2,1,1,2,1,1,
+Q5.2_Page Submit,QID77,response_time,Timing - Page Submit,"{""ImportId"":""QID78_PAGE_SUBMIT""}",5.254,109.183,275.562,14.838,1.976,7.736,
+Q7.1,QID79,,Which robot do you agree with?,"{""ImportId"":""QID79""}",2,1,1,2,1,2,
+Q7.2_Page Submit,QID79,response_time,Timing - Page Submit,"{""ImportId"":""QID80_PAGE_SUBMIT""}",3.009,22.008,1.782,11.787,2.107,2.023,
+Q8.1,trap_question,,What does Liz enjoy doing?,"{""ImportId"":""QID106""}",1,4,1,4,3,4,
+Q8.2_Page Submit,QID106,response_time,Timing - Page Submit,"{""ImportId"":""QID107_PAGE_SUBMIT""}",21.268,17.863,25.304,152.927,19.723,16.929,
+Q10.1,QID81,,Which robot do you agree with?,"{""ImportId"":""QID81""}",2,1,1,2,1,2,
+Q10.2_Page Submit,QID81,response_time,Timing - Page Submit,"{""ImportId"":""QID82_PAGE_SUBMIT""}",3.195,44.139,17.536,2.684,0.985,5.779,
+Q12.1,QID83,,Which robot do you agree with?,"{""ImportId"":""QID83""}",2,2,1,2,1,1,
+Q12.2_Page Submit,QID83,response_time,Timing - Page Submit,"{""ImportId"":""QID84_PAGE_SUBMIT""}",2.724,14.603,2.561,1.567,1.667,1.926,
+Q14.1,QID85,,Which robot do you agree with?,"{""ImportId"":""QID85""}",2,1,2,2,1,1,
+Q14.2_Page Submit,QID85,response_time,Timing - Page Submit,"{""ImportId"":""QID86_PAGE_SUBMIT""}",2.395,17.393,2.192,1.385,2.25,1.796,
+Q16.1,QID87,,Which robot do you agree with?,"{""ImportId"":""QID87""}",1,1,1,2,1,1,
+Q16.2_Page Submit,QID87,response_time,Timing - Page Submit,"{""ImportId"":""QID88_PAGE_SUBMIT""}",2.5,14.772,5.056,1.496,1.189,1.616,
+Q18.1,QID89,,Which robot do you agree with?,"{""ImportId"":""QID89""}",1,2,1,1,1,1,
+Q18.2_Page Submit,QID89,response_time,Timing - Page Submit,"{""ImportId"":""QID90_PAGE_SUBMIT""}",3.07,14.447,18.254,1.46,0.802,1.127,
+Q19.1_1,QID104,1,Click to write the question text - Which robot would you prefer?,"{""ImportId"":""QID104_1""}",1,4,4,1,4,4,
+Q19.1_6,QID104,6,Click to write the question text - Which robot would you trust to manage your investments portfolio?,"{""ImportId"":""QID104_6""}",1,4,4,1,4,4,
+Q19.1_2,QID104,2,Click to write the question text - Which robot do you think will serve as a good jury member?,"{""ImportId"":""QID104_2""}",4,1,4,1,4,4,
+Q19.1_7,QID104,7,Click to write the question text - Which robot do you think will be a better analyst?,"{""ImportId"":""QID104_7""}",1,4,4,1,4,4,
+Q19.1_3,QID104,3,Click to write the question text - Which robot would you like as a bartender?,"{""ImportId"":""QID104_3""}",4,1,4,1,4,1,
+Q19.2_Page Submit,QID104,response_time,Timing - Page Submit,"{""ImportId"":""QID105_PAGE_SUBMIT""}",8.033,12.647,8.292,32.161,5.615,16.889,
+Q93#1_1,QID93#1,1,In the question below you will be asked about the two robots. In each question the left column re... - Click to write Column 1 - Fake - Natrual,"{""ImportId"":""QID93#1_1""}",4,3,4,,4,3,
+Q93#2_1,QID93#2,1,In the question below you will be asked about the two robots. In each question the left column re... - Click to write Column 2 - Fake - Natrual,"{""ImportId"":""QID93#2_1""}",4,2,3,,5,5,
+Q94#1_1,GODSPEED1,1,Please rate your impression of the robot on these scales: - blue robot - Fake - Natrual,"{""ImportId"":""QID94#1_1""}",4,4,4,3,4,3,
+Q94#1_2,GODSPEED1,2,Please rate your impression of the robot on these scales: - blue robot - Machinlike - Humnalike,"{""ImportId"":""QID94#1_2""}",5,5,4,4,3,3,
+Q94#1_3,GODSPEED1,3,Please rate your impression of the robot on these scales: - blue robot - Unconscious - Conscious,"{""ImportId"":""QID94#1_3""}",4,4,4,4,4,4,
+Q94#1_4,GODSPEED1,4,Please rate your impression of the robot on these scales: - blue robot - Artificial - Lifelike,"{""ImportId"":""QID94#1_4""}",5,3,4,3,3,3,
+Q94#1_5,GODSPEED1,5,Please rate your impression of the robot on these scales: - blue robot - Moving rigidly - Moving elegantly,"{""ImportId"":""QID94#1_5""}",4,,4,2,2,2,
+Q94#1_6,GODSPEED1,6,Please rate your impression of the robot on these scales: - blue robot - Dead - Alive,"{""ImportId"":""QID94#1_6""}",5,5,4,2,3,3,
+Q94#1_7,GODSPEED1,7,Please rate your impression of the robot on these scales: - blue robot - Stagnant - Lively,"{""ImportId"":""QID94#1_7""}",5,,4,3,2,3,
+Q94#1_8,GODSPEED1,8,Please rate your impression of the robot on these scales: - blue robot - Mechanical - Organic,"{""ImportId"":""QID94#1_8""}",4,4,4,1,1,1,
+Q94#1_9,GODSPEED1,9,Please rate your impression of the robot on these scales: - blue robot - Artificial - Lifelike,"{""ImportId"":""QID94#1_9""}",5,3,4,3,2,2,
+Q94#1_10,GODSPEED1,10,Please rate your impression of the robot on these scales: - blue robot - Inert - Interactive,"{""ImportId"":""QID94#1_10""}",5,,4,4,3,5,
+Q94#1_11,GODSPEED1,11,Please rate your impression of the robot on these scales: - blue robot - Apathetic - Responsive,"{""ImportId"":""QID94#1_11""}",4,,4,4,2,5,
+Q94#1_12,GODSPEED1,12,Please rate your impression of the robot on these scales: - blue robot - Dislike - Like,"{""ImportId"":""QID94#1_12""}",5,5,4,4,3,5,
+Q94#1_13,GODSPEED1,13,Please rate your impression of the robot on these scales: - blue robot - Unfriendly - Friendly,"{""ImportId"":""QID94#1_13""}",4,3,4,3,2,5,
+Q94#1_14,GODSPEED1,14,Please rate your impression of the robot on these scales: - blue robot - Unkind - Kind,"{""ImportId"":""QID94#1_14""}",5,,4,4,1,5,
+Q94#1_15,GODSPEED1,15,Please rate your impression of the robot on these scales: - blue robot - Unpleasant - Pleasant,"{""ImportId"":""QID94#1_15""}",5,3,4,4,2,5,
+Q94#1_16,GODSPEED1,16,Please rate your impression of the robot on these scales: - blue robot - Awful - Nice,"{""ImportId"":""QID94#1_16""}",4,4,4,4,4,5,
+Q94#1_17,GODSPEED1,17,Please rate your impression of the robot on these scales: - blue robot - Incompetent - Competent,"{""ImportId"":""QID94#1_17""}",5,2,4,4,3,3,
+Q94#1_18,GODSPEED1,18,Please rate your impression of the robot on these scales: - blue robot - Ignorant - Knowledgeable,"{""ImportId"":""QID94#1_18""}",4,3,4,4,2,3,
+Q94#1_19,GODSPEED1,19,Please rate your impression of the robot on these scales: - blue robot - Irresponsible - Responsible,"{""ImportId"":""QID94#1_19""}",4,,4,3,1,4,
+Q94#1_20,GODSPEED1,20,Please rate your impression of the robot on these scales: - blue robot - Unintelligent - Intelligent,"{""ImportId"":""QID94#1_20""}",5,,4,4,2,3,
+Q94#1_21,GODSPEED1,21,Please rate your impression of the robot on these scales: - blue robot - Foolish - Sensible,"{""ImportId"":""QID94#1_21""}",4,4,4,2,3,3,
+Q94#1_22,GODSPEED1,22,Please rate your impression of the robot on these scales: - blue robot - Anxious - Relaxed,"{""ImportId"":""QID94#1_22""}",5,4,,3,2,5,
+Q94#1_23,GODSPEED1,23,Please rate your impression of the robot on these scales: - blue robot - Agitated - Calm,"{""ImportId"":""QID94#1_23""}",5,3,4,5,1,5,
+Q94#1_24,GODSPEED1,24,Please rate your impression of the robot on these scales: - blue robot - Quiescent - Surprised,"{""ImportId"":""QID94#1_24""}",4,2,4,3,2,3,
+Q94#2_1,GODSPEED2,1,Please rate your impression of the robot on these scales: - red robot - Fake - Natrual,"{""ImportId"":""QID94#2_1""}",4,2,3,2,3,5,
+Q94#2_2,GODSPEED2,2,Please rate your impression of the robot on these scales: - red robot - Machinlike - Humnalike,"{""ImportId"":""QID94#2_2""}",3,,3,2,4,4,
+Q94#2_3,GODSPEED2,3,Please rate your impression of the robot on these scales: - red robot - Unconscious - Conscious,"{""ImportId"":""QID94#2_3""}",4,3,3,3,5,5,
+Q94#2_4,GODSPEED2,4,Please rate your impression of the robot on these scales: - red robot - Artificial - Lifelike,"{""ImportId"":""QID94#2_4""}",5,3,3,3,5,4,
+Q94#2_5,GODSPEED2,5,Please rate your impression of the robot on these scales: - red robot - Moving rigidly - Moving elegantly,"{""ImportId"":""QID94#2_5""}",5,1,3,2,4,2,
+Q94#2_6,GODSPEED2,6,Please rate your impression of the robot on these scales: - red robot - Dead - Alive,"{""ImportId"":""QID94#2_6""}",4,,3,2,4,3,
+Q94#2_7,GODSPEED2,7,Please rate your impression of the robot on these scales: - red robot - Stagnant - Lively,"{""ImportId"":""QID94#2_7""}",5,3,3,3,5,3,
+Q94#2_8,GODSPEED2,8,Please rate your impression of the robot on these scales: - red robot - Mechanical - Organic,"{""ImportId"":""QID94#2_8""}",5,,3,1,4,1,
+Q94#2_9,GODSPEED2,9,Please rate your impression of the robot on these scales: - red robot - Artificial - Lifelike,"{""ImportId"":""QID94#2_9""}",4,3,3,3,3,2,
+Q94#2_10,GODSPEED2,10,Please rate your impression of the robot on these scales: - red robot - Inert - Interactive,"{""ImportId"":""QID94#2_10""}",3,1,3,4,4,5,
+Q94#2_11,GODSPEED2,11,Please rate your impression of the robot on these scales: - red robot - Apathetic - Responsive,"{""ImportId"":""QID94#2_11""}",4,3,3,4,5,5,
+Q94#2_12,GODSPEED2,12,Please rate your impression of the robot on these scales: - red robot - Dislike - Like,"{""ImportId"":""QID94#2_12""}",5,,3,3,4,5,
+Q94#2_13,GODSPEED2,13,Please rate your impression of the robot on these scales: - red robot - Unfriendly - Friendly,"{""ImportId"":""QID94#2_13""}",4,,3,3,3,5,
+Q94#2_14,GODSPEED2,14,Please rate your impression of the robot on these scales: - red robot - Unkind - Kind,"{""ImportId"":""QID94#2_14""}",5,2,2,4,4,5,
+Q94#2_15,GODSPEED2,15,Please rate your impression of the robot on these scales: - red robot - Unpleasant - Pleasant,"{""ImportId"":""QID94#2_15""}",4,3,2,4,4,5,
+Q94#2_16,GODSPEED2,16,Please rate your impression of the robot on these scales: - red robot - Awful - Nice,"{""ImportId"":""QID94#2_16""}",5,,2,4,3,5,
+Q94#2_17,GODSPEED2,17,Please rate your impression of the robot on these scales: - red robot - Incompetent - Competent,"{""ImportId"":""QID94#2_17""}",4,,2,3,4,4,
+Q94#2_18,GODSPEED2,18,Please rate your impression of the robot on these scales: - red robot - Ignorant - Knowledgeable,"{""ImportId"":""QID94#2_18""}",5,,2,4,5,4,
+Q94#2_19,GODSPEED2,19,Please rate your impression of the robot on these scales: - red robot - Irresponsible - Responsible,"{""ImportId"":""QID94#2_19""}",5,3,,3,5,5,
+Q94#2_20,GODSPEED2,20,Please rate your impression of the robot on these scales: - red robot - Unintelligent - Intelligent,"{""ImportId"":""QID94#2_20""}",3,3,3,3,4,4,
+Q94#2_21,GODSPEED2,21,Please rate your impression of the robot on these scales: - red robot - Foolish - Sensible,"{""ImportId"":""QID94#2_21""}",4,2,3,2,5,5,
+Q94#2_22,GODSPEED2,22,Please rate your impression of the robot on these scales: - red robot - Anxious - Relaxed,"{""ImportId"":""QID94#2_22""}",4,,3,3,5,5,
+Q94#2_23,GODSPEED2,23,Please rate your impression of the robot on these scales: - red robot - Agitated - Calm,"{""ImportId"":""QID94#2_23""}",5,3,3,5,5,5,
+Q94#2_24,GODSPEED2,24,Please rate your impression of the robot on these scales: - red robot - Quiescent - Surprised,"{""ImportId"":""QID94#2_24""}",4,3,3,3,5,3,
+Q20.3_Page Submit,GODSPEED2,response_time,Timing - Page Submit,"{""ImportId"":""QID95_PAGE_SUBMIT""}",114.587,40.226,85.41,153.363,43.131,152.329,
+survey_code,survey,"code""}",survey_code,"{""ImportId"":""survey_code""}",42805285,31171206,85629612,43824042,94831333,12986632,96620316
+0,red_robot,deployment,side,,right,right,right,right,right,right,right
+0,red_robot,deployment,rationality,,irrational,irrational,irrational,irrational,irrational,irrational,irrational
+0,blue_robot,deployment,side,,left,left,left,left,left,left,left
+0,blue_robot,deployment,rationality,,half,half,half,half,half,half,half

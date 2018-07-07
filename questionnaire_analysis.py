@@ -8,7 +8,7 @@ def prepare_data(df_dir ):
     rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
     rDeployment_tt = []
     rDeployment = {'rDeployment_ri': rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih,'rDeployment_tt': rDeployment_tt}
-    rDeployment = {'rDeployment_ri': rDeployment_ri}
+    # rDeployment = {'rDeployment_ri': rDeployment_ri}
 
     # infer = False
     if reformat:
@@ -46,7 +46,7 @@ def prepare_data(df_dir ):
                 if 'pref_df_tot' in locals():
                     pref_df_tot = pref_df_tot.append(pref_df)
                     users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
-                    open_answers_tot = pd.concat([open_answers_tot, open_answers],axis=1)
+                    open_answers_tot = pd.concat([open_answers_tot, open_answers],axis=0)
                 else:
                     pref_df_tot = pref_df.copy()
                     users_pref_tot = users_pref.copy()
@@ -76,8 +76,8 @@ def comine_raw_data2dataframe(rDeployment):
                 crdf = pd.concat([crdf, a], axis=1)
             else:
                 crdf = raw_df
-    crdf
-    return crdf
+                ix = crdf.index
+    return crdf.loc[ix,:]
 
 
 if __name__ == "__main__":
@@ -92,8 +92,8 @@ if __name__ == "__main__":
         rDeployment = pickle.load(open(df_dir + 'robot_deployments','rb'))
 
         # rDeployment_tot = rDeployment_ih+rDeployment_rh+rDeployment_ri
-        rDeployment_tot = rDeployment['rDeployment_ri']
-        rDeployment.pop('rDeployment_tt')
+        # rDeployment_tot = rDeployment['rDeployment_ri']
+        # rDeployment.pop('rDeployment_tt')
         # rDeployment['rDeployment_tt'] = rDeployment_tot
 
         rf, sf = {}, {}
@@ -110,20 +110,20 @@ if __name__ == "__main__":
     if infer:
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        word_cloud(open_answers_tot)
+        # word_cloud(open_answers_tot)
 
-        # sf['rDeployment_tt'] = sf['rDeployment_ri']
+        # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
         # manova_df = creating_dataframe4manova(sf, users_pref_tot)
         # manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
-        # sf.pop('rDeployment_tt')
-        # for i in sf:
-        #     stats_df = sf[i]
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
-        #     # qdf = pair_plot(stats_df, ['BFI','NARS'])
-        #     # questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
-        # preference_cinsistency(users_pref_tot, sf, ignore = False)
-        # preference_per_question(pref_df_tot) # todo: i think there is something wrong with the order - rationality_irrationality
+        sf.pop('rDeployment_tt')
+        for i in sf:
+            stats_df = sf[i]
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices')
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary', deployment=True)
+            # qdf = pair_plot(stats_df, ['BFI','NARS'])
+            # questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
+        preference_cinsistency(users_pref_tot, sf, ignore = False)
+        preference_per_question(pref_df_tot) # todo: i think there is something wrong with the order - rationality_irrationality
 
     plt.show()
 

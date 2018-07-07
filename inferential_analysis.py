@@ -375,7 +375,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
 
 
-def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', resize=None):
+def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''
     Save figure in high resolution
     :param fig: which figure to save
@@ -397,11 +397,6 @@ def save_maxfig(fig, fig_name, save_pkl = 1, transperent = False, frmt='png', re
 
     fig_name+='.'+frmt
     plt.savefig(p_fname+fig_name, dpi=300, transperent=transperent, format=frmt)
-    fig.set_size_inches(5, 5)
-
-    if save_pkl == 1:
-        p_fname = p_fname + fig_name + 'fig.pckl'
-        pickle.dump(fig, file(p_fname, 'wb'))
 
 if __name__ == "__main__":
     rDeployment_rh  = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
