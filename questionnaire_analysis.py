@@ -104,27 +104,27 @@ if __name__ == "__main__":
 
         pref_df_tot = pd.read_csv(df_dir + 'pref_dataframe' + '.csv', index_col=0)
         users_pref_tot = pd.read_csv(df_dir + 'users_pref_dataframe' + '.csv', index_col=0)
-        open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe_v1' + '.csv', index_col=0)
+        open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe' + '.csv', index_col=0)
 
 
     if infer:
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        # word_cloud(open_answers_tot)
+        word_cloud(open_answers_tot)
 
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
-        # manova_df = creating_dataframe4manova(sf, users_pref_tot)
-        # manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
-        sf.pop('rDeployment_tt')
+        manova_df = creating_dataframe4manova(sf, users_pref_tot)
+        manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
+        # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
-        # for i in sf:
-        #     stats_df = sf[i]
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
+        for i in sf:
+            stats_df = sf[i]
+            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
         #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], deployment=True)
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
         preference_cinsistency(users_pref_tot, sf, ignore = False)
-        preference_per_question(pref_df_tot) # todo: i think there is something wrong with the order - rationality_irrationality
+        # preference_per_question(pref_df_tot) # todo: i think there is something wrong with the order - rationality_irrationality
 
     plt.show()
 

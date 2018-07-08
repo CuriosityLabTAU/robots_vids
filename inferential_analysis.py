@@ -361,7 +361,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     b = set(wordclouds[1].words_.keys()) # irrational words
     c = a.intersection(b).__len__()      # how many words in both?
 
-    save_maxfig(fig, 'rationalities_wrodclouds_freq', save_pkl=0)
+    save_maxfig(fig, 'rationalities_wrodclouds_freq')
 
     # if   open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe_v1' + '.csv', index_col=0)
     # fig, ax = plt.subplots(1,1)
@@ -380,7 +380,6 @@ def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     Save figure in high resolution
     :param fig: which figure to save
     :param fig_name: name of the figure
-    :param save_pkl: save the figure's data to pickle?
     :param transperent: background
     :param frmt: file's format
     :param resize: give size (width, height)
