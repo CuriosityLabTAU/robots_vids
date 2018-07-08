@@ -65,6 +65,11 @@ def prepare_data(df_dir ):
         print('Done reformating the data.')
 
 def comine_raw_data2dataframe(rDeployment):
+    '''
+    combines raw dataframe to total dataframe.
+    :param rDeployment: dictionary of all the deployments
+    :return:
+    '''
     for i, rd in enumerate(rDeployment):
         raw_path = 'data/dataframes/raw_dataframe_' + rd + '.csv'
         if os.path.isfile(raw_path):
@@ -81,8 +86,8 @@ def comine_raw_data2dataframe(rDeployment):
 
 
 if __name__ == "__main__":
-    # reformat, infer = True, False
-    reformat, infer = False, True
+    reformat, infer = True, False
+    # reformat, infer = False, True
 
     df_dir = 'data/dataframes/'
 
@@ -108,23 +113,31 @@ if __name__ == "__main__":
 
 
     if infer:
+        # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
+
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        word_cloud(open_answers_tot)
+        # word_cloud(open_answers_tot)
+        # stacked_plot(users_pref_tot)
 
-        # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
         manova_df = creating_dataframe4manova(sf, users_pref_tot)
         manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
+
+        for gs in manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]:
+            manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]
+            preference_plot(manova_df, 'sub_scale', 'summary', yy = gs, fname='_barplot_only_choices_'+'GS'+gs[-2:])
+
         for i in sf:
             stats_df = sf[i]
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
+            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
         #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], deployment=True)
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
-        preference_cinsistency(users_pref_tot, sf, ignore = False)
-        # preference_per_question(pref_df_tot) # todo: i think there is something wrong with the order - rationality_irrationality
+        # preference_cinsistency(users_pref_tot, sf, ignore = False)
+        # preference_per_question(pref_df_tot)
 
     plt.show()
 

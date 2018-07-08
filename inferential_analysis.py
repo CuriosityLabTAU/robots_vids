@@ -33,7 +33,7 @@ def feel_the_data(stats_df):
     sdf = sdf.reset_index(drop=True)
     sns.pairplot(sdf)
 
-def preference_plot(stats_df, column, option, fname, deployment=False):
+def preference_plot(stats_df, column, option, fname, yy = 'answers', deployment=False):
     '''
     plot preferenec
     :param stats_df:
@@ -41,22 +41,27 @@ def preference_plot(stats_df, column, option, fname, deployment=False):
     :param option: which option (ex. 'average')
     :return:
     '''
-
-    b = stats_df[stats_df[column] == option]
-    b.answers.replace(np.nan, 0)
-    cnames = ['education','robot','gender','side','sub_scale']
     m = 2
-    n = int(round(float(cnames.__len__())/m))
+    cnames = ['education','robot','gender','side','sub_scale']
+    if yy == 'answers':
+        b = stats_df[stats_df[column] == option]
+        b.answers.replace(np.nan, 0)
+        n = int(round(float(cnames.__len__())/m))
+        b.answers = b.answers.astype('float64')
+    else:
+        # for maniva_df
+        cnames = ['education', 'gender', 'side', 'color']
+        n = int(round(float(cnames.__len__()) / m))
+        b = stats_df
     fig, ax = plt.subplots(m,n)
     for i, c in enumerate(cnames):
-        b.answers = b.answers.astype('float64')
         # (b.groupby(c).size() / 3).tolist()
         # d = b.groupby(c)['rationality']
         # d.groups.keys()
         if deployment:
             sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
         else:
-            sns.barplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
+            sns.barplot(hue = c,x = 'rationality', y = yy, data = b, ax = ax[i/n, i%n])
 
         # sns.countplot(x = 'answers', hue='rationality', data=b, ax = ax[i/n, i%n])
         # sns.factorplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
@@ -374,6 +379,38 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     # sns.barplot(x="answer", y="percentage", hue="rationality", data=answers_counts, ax=ax)
     # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
 
+def stacked_plot(users_pref_tot):
+    '''
+    Stacked barplot of choices per intuition questions,
+    :param users_pref_tot: Dataframe of which robot each user chose in each question.
+    :return:
+    '''
+    fig, ax = plt.subplots(1,1)
+    qs = ['investments', 'analyst', 'jury', 'bartender', 'prefer']
+    nq = np.arange(0,qs.__len__())
+    barWidth = .4
+    yy1, yy2, yy3 = np.array([]), np.array([]), np.array([])
+    for i, q in enumerate(qs):
+        temp = pd.value_counts(users_pref_tot.loc[q, :])
+        y1, y2, y3 = temp['rational'], temp['half'], temp['irrational']
+        yy1, yy2, yy3 = np.append(yy1, y1), np.append(yy2, y2), np.append(yy3, y3)
+        tot = y1 + y2 + y3
+        ax.annotate(str(np.round(float(y1) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 / 2), annotation_clip=False, fontsize=12)
+        ax.annotate(str(np.round(float(y2) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 / 2), annotation_clip=False, fontsize=12)
+        ax.annotate(str(np.round(float(y3) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 + y3 / 2), annotation_clip=False, fontsize=12)
+
+    ax.bar(nq, yy1, width=barWidth, color = 'darkgrey', label = 'rational')
+    ax.bar(nq, yy2, bottom=yy1, width=barWidth, color = 'slategrey', label = 'irrationalty type 1')
+    ax.bar(nq, yy3, bottom=yy1 + yy2, width=barWidth, color = 'darkslategrey', label = 'irrationalty type 2')
+
+
+    ax.vlines(i-.5, *ax.get_ylim(), lw = 4., linestyle='-.')
+    ax.set_xticks(nq)
+    ax.set_xticklabels(qs)
+    ax.set_ylabel('Number of people')
+    ax.set_xlabel('Question')
+    ax.legend()
+    save_maxfig(fig, 'stacked_choices_per_rationality')
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''

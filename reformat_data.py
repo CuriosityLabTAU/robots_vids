@@ -197,6 +197,37 @@ def create_stats_df(raw_df, fn):
 
         return stats_df
 
+def long_answers(stats_df):
+    '''
+    Adding were was the answer that the user cose
+    :param stats_df: statistical datframe,
+    :return:
+    '''
+
+    # todo: long answers
+    stats_df['long_answer'] = ''
+    stats_df[stats_df.feature == 'q_pref'].answers = stats_df[stats_df.feature == 'q_pref'].rationality
+    # stats_df = stats_df.drop(users2exclude, axis=1)
+    # df = df.drop(df.loc['ResponseId', df.loc['ResponseId'].isin(users2exclude)].index, axis=1)
+
+    stats_df[stats_df.sub_scale == 'Q16.1'].rationality = stats_df[stats_df.sub_scale == 'Q16.1'].rationality.replace('irrational', 'two')
+    stats_df[stats_df.sub_scale == 'Q16.1'].rationality = stats_df[stats_df.sub_scale == 'Q16.1'].rationality.replace('rational', 'irrational')
+    stats_df[stats_df.sub_scale == 'Q16.1'].rationality = stats_df[stats_df.sub_scale == 'Q16.1'].rationality.replace('two', 'rational')
+
+
+    conj = stats_df[(stats_df.sub_scale == 'Q5.1') | (stats_df.sub_scale == 'Q7.1') | (stats_df.sub_scale == 'Q10.1') | (stats_df.sub_scale == 'Q16.1')]
+    stats_df[(stats_df.sub_scale == 'Q5.1') | (stats_df.sub_scale == 'Q7.1') | (stats_df.sub_scale == 'Q10.1') | (
+                stats_df.sub_scale == 'Q16.1')][conj.rationality == 'irrational'].long_answer = 1
+    stats_df[(stats_df.sub_scale == 'Q5.1') | (stats_df.sub_scale == 'Q7.1') | (stats_df.sub_scale == 'Q10.1') | (
+                stats_df.sub_scale == 'Q16.1')][conj.rationality == 'half'].long_answer = 2
+    stats_df[(stats_df.sub_scale == 'Q5.1') | (stats_df.sub_scale == 'Q7.1') | (stats_df.sub_scale == 'Q10.1') | (
+                stats_df.sub_scale == 'Q16.1')][conj.rationality == 'rational'].long_answer = 3
+    disj = stats_df[(stats_df.sub_scale == 'Q12.1') | (stats_df.sub_scale == 'Q14.1') | (stats_df.sub_scale == 'Q18.1')]
+    stats_df[(stats_df.sub_scale == 'Q12.1') | (stats_df.sub_scale == 'Q14.1') | (stats_df.sub_scale == 'Q18.1')][disj.rationality == 'irrational'].long_answer = 3
+    stats_df[(stats_df.sub_scale == 'Q12.1') | (stats_df.sub_scale == 'Q14.1') | (stats_df.sub_scale == 'Q18.1')][disj.rationality == 'half'].long_answer = 2
+    stats_df[(stats_df.sub_scale == 'Q12.1') | (stats_df.sub_scale == 'Q14.1') | (stats_df.sub_scale == 'Q18.1')][disj.rationality == 'rational'].long_answer = 1
+
+    return stats_df
 
 def NARS_data(stats_df, df):
     # todo FOR NARS: www.statisticshowto.com/cronbachs-alpha-spss/
@@ -292,7 +323,15 @@ def preference_data(stats_df, df):
     :param df: raw dataframe
     :return: stats_df, raw_df - updated, users2exclude - users that were excluded because they didn't answer all preference questions.
     '''
-    temps = df[df.full_text == 'Which robot do you agree with?'].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+    temps = df[df.full_text.str.contains('you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+
+    temps_qs = temps.copy()
+    qs = temps_qs.index
+    temps_qs.columns = stats_df.columns[4:]
+    temps_qs = temps_qs.reindex(columns=stats_df.columns)
+    temps_qs.feature = 'q_pref'
+    temps_qs.sub_scale = qs
+    temps_qs.meaning = ''
 
     if temps.empty:
         stats_df = temps
@@ -320,8 +359,9 @@ def preference_data(stats_df, df):
             elif temps.index[0] == '2.':
                 temps.robot = 'blue'
         stats_df = stats_df.append(temps)
-        # stats_df = stats_df.drop(users2exclude, axis=1)
-        # df = df.drop(df.loc['ResponseId', df.loc['ResponseId'].isin(users2exclude)].index, axis=1)
+
+        stats_df = stats_df.append(temps_qs)
+
     return stats_df #, df , users2exclude
 
 def prefernce_dataframe_index(raw_df):
@@ -357,8 +397,8 @@ def prefernce_dataframe_index(raw_df):
     temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(1.0,3.0).replace(2.0,1.0)
     temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(3.0,2.0)
     for c in temps.columns:
-        temps[c] = temps[c].replace(1.0, blue_rationality[c].tolist()[0])
-        temps[c] = temps[c].replace(2.0, red_rationality[c].tolist()[0])
+        temps[c] = temps[c].replace(1.0, red_rationality[c].tolist()[0])
+        temps[c] = temps[c].replace(2.0, blue_rationality[c].tolist()[0])
     for r in temps.index:
         pref_ix = pd.value_counts(temps.loc[r, :]).diff(-1) / pd.value_counts(temps.loc[r, :]).sum()
         if pref_ix.isna()[0]:
