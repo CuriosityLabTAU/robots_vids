@@ -40,7 +40,7 @@ def prepare_data(df_dir ):
             stats_df = create_stats_df(raw_df, fn)
 
             if rDep != 'rDeployment_tt':
-                pref_df, users_pref, open_answers = prefernce_dataframe_index(raw_df)
+                pref_df, users_pref, open_answers = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
 
                 #  crating preference dataframe
                 if 'pref_df_tot' in locals():
@@ -53,10 +53,7 @@ def prepare_data(df_dir ):
                     open_answers_tot = open_answers.copy()
 
             if rDep == 'rDeployment_tt':
-                manova_df = creating_dataframe4manova(stats_df, users_pref_tot)
-
-        # reverse DON'T question answers
-        pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference'] = 1 - pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference']
+                manova_df, mdf_small = creating_dataframe4manova(stats_df, users_pref_tot)
 
         # saving dataframes of answers
         pref_df_tot.to_csv(df_dir+'pref_dataframe'+'.csv')
@@ -65,6 +62,8 @@ def prepare_data(df_dir ):
         open_answers_tot.index = users_pref_tot.columns
         open_answers_tot.to_csv(df_dir+'open_answers_dataframe'+'.csv')
         manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
+        mdf_small.to_csv(df_dir + 'mdf_small.csv')
+
         pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
         print('Done reformating the data.')
 
@@ -90,8 +89,8 @@ def comine_raw_data2dataframe(rDeployment):
 
 
 if __name__ == "__main__":
-    reformat, infer = True, False
-    # reformat, infer = False, True
+    # reformat, infer = True, False
+    reformat, infer = False, True
 
     df_dir = 'data/dataframes/'
 
@@ -114,7 +113,8 @@ if __name__ == "__main__":
         pref_df_tot = pd.read_csv(df_dir + 'pref_dataframe' + '.csv', index_col=0)
         users_pref_tot = pd.read_csv(df_dir + 'users_pref_dataframe' + '.csv', index_col=0)
         open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe' + '.csv', index_col=0)
-
+        manova_df = pd.read_csv(df_dir + 'manova_df_dataframe.csv', index_col = 0)
+        manova_df_small = pd.read_csv(df_dir + 'mdf_small.csv', index_col = 0)
 
     if infer:
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
@@ -122,22 +122,28 @@ if __name__ == "__main__":
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
         # word_cloud(open_answers_tot)
-        # stacked_plot(users_pref_tot)
+        stacked_plot(users_pref_tot)
 
-        # manova_df = creating_dataframe4manova(sf, users_pref_tot)
-        manova_df = pd.read_csv(df_dir + 'manova_df_dataframe.csv', index_col = 0)
+        # manova_df = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
 
-        for gs in manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]:
-            manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]
-            preference_plot(manova_df, 'sub_scale', 'summary', yy = gs, fname='_barplot_only_choices_'+'GS'+gs[-2:])
+        # for gs in manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]:
+        #     manova_df.keys()[manova_df.keys().str.contains('GODSPEED')]
+        #     preference_plot(manova_df, 'sub_scale', 'summary', yy = gs, fname='_barplot_only_choices_'+'GS'+gs[-2:])
+
+        # sff = sf['rDeployment_tt']
+        # for gs in pd.Series(sff.sub_scale.unique())[pd.Series(sff.sub_scale.unique()).str.contains('Q')]:
+        #     # fig, ax = plt.subplots(1,1)
+        #     # sns.countplot(hue='robot', x='rationality', data=sff[sff.sub_scale == gs], ax = ax)
+        #     # save_maxfig(fig, 'pref'+gs.replace('.','_'))
+        #     preference_plot(sff, 'sub_scale', gs, fname='countplot_only_choices_'+gs.replace('.','_'), p = 'countplot')
 
         for i in sf:
             stats_df = sf[i]
-            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
-            preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:])
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], deployment=True)
+            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
+            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], p='deployment')
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
         # preference_cinsistency(users_pref_tot, sf, ignore = False)

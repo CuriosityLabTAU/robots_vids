@@ -33,7 +33,7 @@ def feel_the_data(stats_df):
     sdf = sdf.reset_index(drop=True)
     sns.pairplot(sdf)
 
-def preference_plot(stats_df, column, option, fname, yy = 'answers', deployment=False):
+def preference_plot(stats_df, column, option, fname, yy = 'answers', p='deployment'):
     '''
     plot preferenec
     :param stats_df:
@@ -58,9 +58,11 @@ def preference_plot(stats_df, column, option, fname, yy = 'answers', deployment=
         # (b.groupby(c).size() / 3).tolist()
         # d = b.groupby(c)['rationality']
         # d.groups.keys()
-        if deployment:
+        if p == 'coutnplot':
+            sns.countplot(hue = c, x='rationality', data = b, ax = ax[i/n, i%n])
+        elif p == 'deployment':
             sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
-        else:
+        elif p == 'default':
             sns.barplot(hue = c,x = 'rationality', y = yy, data = b, ax = ax[i/n, i%n])
 
         # sns.countplot(x = 'answers', hue='rationality', data=b, ax = ax[i/n, i%n])
@@ -225,10 +227,9 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
 
     upt = users_pref_tot.transpose().reset_index(drop=True)
     # stats_df = sf['rDeployment_tt']
-    g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2') | (
-            stats_df['feature'] == 'BFI') | (
-                         stats_df['feature'] == 'NARS')][
-        ['feature', 'sub_scale', 'answers', 'gender', 'education', 'age', 'userID','robot','rationality', 'side']]
+    g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2')
+                 | (stats_df['feature'] == 'BFI') | (stats_df['feature'] == 'NARS')]
+    [['feature', 'sub_scale', 'answers', 'gender', 'education', 'age', 'userID','robot','rationality', 'side']]
     g['f'] = g['feature'] + '_' + g['sub_scale']
     g['f1'] = g['feature'] + '_' + g['sub_scale'] + '_' + g['robot'] +'_'+g['rationality']
     g = g.drop(['feature', 'sub_scale'], axis=1)
@@ -270,7 +271,10 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
         rdict = {'rationality':rat, 'color':cls, 'side':sides, 'gender':genders, 'education':edu}
         for c in manova_df.columns[[0, 1, 2, 15, 16]]:
             manova_df.loc[:, c] = manova_df.loc[:, c].replace(rdict[c])
-    return manova_df
+
+    manova_df_small = manova_df.loc[:manova_df.shape[0]/2 - 1].copy()
+
+    return manova_df, manova_df_small
 
 def manovadf_robot_support(manova_df, s, g):
     '''
