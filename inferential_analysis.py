@@ -214,7 +214,7 @@ def preference_cinsistency(users_pref_tot, sf, ignore = True):
 
     save_maxfig(fig, 'users_preference_per_question')
 
-def creating_dataframe4manova(sf, users_pref_tot, numeric = True):
+def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     '''
     Creating a dataframe for manova.
     Each participants donate 2 points for each question because of the godspeed (rationality)
@@ -224,7 +224,7 @@ def creating_dataframe4manova(sf, users_pref_tot, numeric = True):
     '''
 
     upt = users_pref_tot.transpose().reset_index(drop=True)
-    stats_df = sf['rDeployment_tt']
+    # stats_df = sf['rDeployment_tt']
     g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2') | (
             stats_df['feature'] == 'BFI') | (
                          stats_df['feature'] == 'NARS')][

@@ -52,8 +52,11 @@ def prepare_data(df_dir ):
                     users_pref_tot = users_pref.copy()
                     open_answers_tot = open_answers.copy()
 
-                    # reverse DON'T question answers
-        # pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference'] = 1 - pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference']
+            if rDep == 'rDeployment_tt':
+                manova_df = creating_dataframe4manova(stats_df, users_pref_tot)
+
+        # reverse DON'T question answers
+        pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference'] = 1 - pref_df_tot.loc[pref_df_tot['question'] == 'Q16.1', 'preference']
 
         # saving dataframes of answers
         pref_df_tot.to_csv(df_dir+'pref_dataframe'+'.csv')
@@ -61,6 +64,7 @@ def prepare_data(df_dir ):
         open_answers_tot = pd.DataFrame(dict(answer = open_answers_tot, rationality=users_pref_tot.loc['prefer', :].tolist()))
         open_answers_tot.index = users_pref_tot.columns
         open_answers_tot.to_csv(df_dir+'open_answers_dataframe'+'.csv')
+        manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
         pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
         print('Done reformating the data.')
 
@@ -120,8 +124,8 @@ if __name__ == "__main__":
         # word_cloud(open_answers_tot)
         # stacked_plot(users_pref_tot)
 
-        manova_df = creating_dataframe4manova(sf, users_pref_tot)
-        manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
+        # manova_df = creating_dataframe4manova(sf, users_pref_tot)
+        manova_df = pd.read_csv(df_dir + 'manova_df_dataframe.csv', index_col = 0)
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
 

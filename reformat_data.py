@@ -329,7 +329,7 @@ def preference_data(stats_df, df):
     qs = temps_qs.index
     temps_qs.columns = stats_df.columns[4:]
     temps_qs = temps_qs.reindex(columns=stats_df.columns)
-    temps_qs.feature = 'q_pref'
+    temps_qs.feature = 'q_preference'
     temps_qs.sub_scale = qs
     temps_qs.meaning = ''
 
