@@ -1849,43 +1849,43 @@
 1847,rational,left,red,preference,std,,0.9495433918790783,R_sgISXfVot6yZlyp,53,female,BA
 1848,half,right,blue,preference,average,,0.14285714285714285,R_sgISXfVot6yZlyp,53,female,BA
 1849,half,right,blue,preference,std,,0.0,R_sgISXfVot6yZlyp,53,female,BA
-1850,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1851,,,participant,NARS,S2,Social Influence of Robots,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1852,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_3NQhwl9KFmBDxX6,43,female,MA
-1853,,,participant,BFI,S1,Extraversion,2.75,R_3NQhwl9KFmBDxX6,43,female,MA
-1854,,,participant,BFI,S2,Agreeableness,5.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1855,,,participant,BFI,S3,Conscientiousness,5.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1856,,,participant,BFI,S4,Neuroticism,1.125,R_3NQhwl9KFmBDxX6,43,female,MA
-1857,,,participant,BFI,S5,Openness,5.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1858,rational,left,red,GODSPEED1,S1,Anthropomorphism,0.25,R_3NQhwl9KFmBDxX6,43,female,MA
-1859,rational,left,red,GODSPEED1,S2,Animacy,0.8333333333333334,R_3NQhwl9KFmBDxX6,43,female,MA
-1860,rational,left,red,GODSPEED1,S3,Likeability,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1861,rational,left,red,GODSPEED1,S4,Perceived Intelligence,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1862,rational,left,red,GODSPEED1,S5,Perceived Safety,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1863,half,right,blue,GODSPEED2,S1,Anthropomorphism,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1864,half,right,blue,GODSPEED2,S2,Animacy,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1865,half,right,blue,GODSPEED2,S3,Likeability,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1866,half,right,blue,GODSPEED2,S4,Perceived Intelligence,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1867,half,right,blue,GODSPEED2,S5,Perceived Safety,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1868,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_3NQhwl9KFmBDxX6,43,female,MA
-1869,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3NQhwl9KFmBDxX6,43,female,MA
-1870,rational,left,red,q_preference,Q5.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1871,rational,left,red,q_preference,Q7.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1872,rational,left,red,q_preference,Q10.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1873,rational,left,red,q_preference,Q12.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1874,rational,left,red,q_preference,Q14.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1875,half,right,blue,q_preference,Q16.1,,2.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1876,rational,left,red,q_preference,Q18.1,,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1877,rational,left,red,q_preference,prefer,choice,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1878,rational,left,red,q_preference,portfolio,choice,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1879,rational,left,red,q_preference,member,choice,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1880,rational,left,red,q_preference,analyst,choice,1.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1881,half,right,blue,q_preference,bartender,choice,2.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1882,half,right,blue,q_preference,summary,Count (Normalized) participant chose this robot,2.0,R_3NQhwl9KFmBDxX6,43,female,MA
-1883,rational,left,red,preference,average,,1.4285714285714286,R_3NQhwl9KFmBDxX6,43,female,MA
-1884,rational,left,red,preference,std,,0.8081220356417687,R_3NQhwl9KFmBDxX6,43,female,MA
-1885,half,right,blue,preference,average,,0.14285714285714285,R_3NQhwl9KFmBDxX6,43,female,MA
-1886,half,right,blue,preference,std,,0.0,R_3NQhwl9KFmBDxX6,43,female,MA
+1850,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1851,,,participant,NARS,S2,Social Influence of Robots,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1852,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_3NQhwl9KFmBDxX6,A43,female,MA
+1853,,,participant,BFI,S1,Extraversion,2.75,R_3NQhwl9KFmBDxX6,A43,female,MA
+1854,,,participant,BFI,S2,Agreeableness,5.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1855,,,participant,BFI,S3,Conscientiousness,5.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1856,,,participant,BFI,S4,Neuroticism,1.125,R_3NQhwl9KFmBDxX6,A43,female,MA
+1857,,,participant,BFI,S5,Openness,5.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1858,rational,left,red,GODSPEED1,S1,Anthropomorphism,0.25,R_3NQhwl9KFmBDxX6,A43,female,MA
+1859,rational,left,red,GODSPEED1,S2,Animacy,0.8333333333333334,R_3NQhwl9KFmBDxX6,A43,female,MA
+1860,rational,left,red,GODSPEED1,S3,Likeability,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1861,rational,left,red,GODSPEED1,S4,Perceived Intelligence,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1862,rational,left,red,GODSPEED1,S5,Perceived Safety,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1863,half,right,blue,GODSPEED2,S1,Anthropomorphism,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1864,half,right,blue,GODSPEED2,S2,Animacy,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1865,half,right,blue,GODSPEED2,S3,Likeability,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1866,half,right,blue,GODSPEED2,S4,Perceived Intelligence,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1867,half,right,blue,GODSPEED2,S5,Perceived Safety,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1868,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_3NQhwl9KFmBDxX6,A43,female,MA
+1869,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3NQhwl9KFmBDxX6,A43,female,MA
+1870,rational,left,red,q_preference,Q5.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1871,rational,left,red,q_preference,Q7.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1872,rational,left,red,q_preference,Q10.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1873,rational,left,red,q_preference,Q12.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1874,rational,left,red,q_preference,Q14.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1875,half,right,blue,q_preference,Q16.1,,2.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1876,rational,left,red,q_preference,Q18.1,,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1877,rational,left,red,q_preference,prefer,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1878,rational,left,red,q_preference,portfolio,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1879,rational,left,red,q_preference,member,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1880,rational,left,red,q_preference,analyst,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1881,half,right,blue,q_preference,bartender,choice,2.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1882,half,right,blue,q_preference,summary,Count (Normalized) participant chose this robot,2.0,R_3NQhwl9KFmBDxX6,A43,female,MA
+1883,rational,left,red,preference,average,,1.4285714285714286,R_3NQhwl9KFmBDxX6,A43,female,MA
+1884,rational,left,red,preference,std,,0.8081220356417687,R_3NQhwl9KFmBDxX6,A43,female,MA
+1885,half,right,blue,preference,average,,0.14285714285714285,R_3NQhwl9KFmBDxX6,A43,female,MA
+1886,half,right,blue,preference,std,,0.0,R_3NQhwl9KFmBDxX6,A43,female,MA
 1887,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_7OO0mpvGEPOjwA1,29,male,MA
 1888,,,participant,NARS,S2,Social Influence of Robots,0.8,R_7OO0mpvGEPOjwA1,29,male,MA
 1889,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_7OO0mpvGEPOjwA1,29,male,MA
