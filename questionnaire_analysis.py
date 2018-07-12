@@ -40,31 +40,41 @@ def prepare_data(df_dir ):
             stats_df = create_stats_df(raw_df, fn)
 
             if rDep != 'rDeployment_tt':
-                pref_df, users_pref, open_answers = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
+                pref_df, users_pref, open_answers, rat_pref_df = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
 
                 #  crating preference dataframe
                 if 'pref_df_tot' in locals():
                     pref_df_tot = pref_df_tot.append(pref_df)
                     users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
                     open_answers_tot = pd.concat([open_answers_tot, open_answers],axis=0)
+                    rat_pref_df_tot  = rat_pref_df_tot.append(rat_pref_df)
                 else:
                     pref_df_tot = pref_df.copy()
                     users_pref_tot = users_pref.copy()
                     open_answers_tot = open_answers.copy()
+                    rat_pref_df_tot = rat_pref_df.copy()
 
             if rDep == 'rDeployment_tt':
                 manova_df, mdf_small = creating_dataframe4manova(stats_df, users_pref_tot)
 
         # saving dataframes of answers
-        pref_df_tot.to_csv(df_dir+'pref_dataframe'+'.csv')
-        users_pref_tot.to_csv(df_dir+'users_pref_dataframe'+'.csv')
+        pref_df_tot.to_csv(df_dir+'__pref_dataframe'+'.csv')
+        rat_pref_df_tot.to_csv(df_dir+'__rat_pref_dataframe'+'.csv')
+        users_pref_tot.to_csv(df_dir+'__users_pref_dataframe'+'.csv')
         open_answers_tot = pd.DataFrame(dict(answer = open_answers_tot, rationality=users_pref_tot.loc['prefer', :].tolist()))
         open_answers_tot.index = users_pref_tot.columns
-        open_answers_tot.to_csv(df_dir+'open_answers_dataframe'+'.csv')
-        manova_df.to_csv(df_dir + 'manova_df_dataframe.csv')
-        mdf_small.to_csv(df_dir + 'mdf_small.csv')
+        open_answers_tot.to_csv(df_dir+'__open_answers_dataframe'+'.csv')
+        manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
+        mdf_small.to_csv(df_dir + '__mdf_small.csv')
 
         pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
+
+        r,c = users_pref_tot.shape
+        temp = pd.DataFrame(data = np.zeros([c * r, 2]), columns = ['question','preference'])
+        for i,row in enumerate(users_pref_tot.index):
+            temp.loc[i * c : (i+1) * c - 1, 'preference'] = users_pref_tot.loc[row, :].tolist()
+            temp.loc[i * c : (i+1) * c - 1, 'question']   = row
+        temp.to_csv(df_dir + '__pref_df_long.csv')
         print('Done reformating the data.')
 
 def comine_raw_data2dataframe(rDeployment):
@@ -89,8 +99,8 @@ def comine_raw_data2dataframe(rDeployment):
 
 
 if __name__ == "__main__":
-    # reformat, infer = True, False
-    reformat, infer = False, True
+    reformat, infer = True, False
+    # reformat, infer = False, True
 
     df_dir = 'data/dataframes/'
 

@@ -1,0 +1,361 @@
+,rationality,side,robot,feature,sub_scale,meaning,answers,userID,age,gender,education
+0,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_2Ce9onUvQQjCiGS,26,male,MA
+1,,,participant,NARS,S2,Social Influence of Robots,0.8,R_2Ce9onUvQQjCiGS,26,male,MA
+2,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_2Ce9onUvQQjCiGS,26,male,MA
+3,,,participant,BFI,S1,Extraversion,0.4166666666666667,R_2Ce9onUvQQjCiGS,26,male,MA
+4,,,participant,BFI,S2,Agreeableness,0.5,R_2Ce9onUvQQjCiGS,26,male,MA
+5,,,participant,BFI,S3,Conscientiousness,0.6666666666666666,R_2Ce9onUvQQjCiGS,26,male,MA
+6,,,participant,BFI,S4,Neuroticism,0.75,R_2Ce9onUvQQjCiGS,26,male,MA
+7,,,participant,BFI,S5,Openness,0.7,R_2Ce9onUvQQjCiGS,26,male,MA
+8,half,left,red,GODSPEED1,S1,Anthropomorphism,0.5,R_2Ce9onUvQQjCiGS,26,male,MA
+9,half,left,red,GODSPEED1,S2,Animacy,0.3333333333333333,R_2Ce9onUvQQjCiGS,26,male,MA
+10,half,left,red,GODSPEED1,S3,Likeability,0.4,R_2Ce9onUvQQjCiGS,26,male,MA
+11,half,left,red,GODSPEED1,S4,Perceived Intelligence,0.5,R_2Ce9onUvQQjCiGS,26,male,MA
+12,half,left,red,GODSPEED1,S5,Perceived Safety,0.3333333333333333,R_2Ce9onUvQQjCiGS,26,male,MA
+13,irrational,right,blue,GODSPEED2,S1,Anthropomorphism,0.6666666666666666,R_2Ce9onUvQQjCiGS,26,male,MA
+14,irrational,right,blue,GODSPEED2,S2,Animacy,0.6666666666666666,R_2Ce9onUvQQjCiGS,26,male,MA
+15,irrational,right,blue,GODSPEED2,S3,Likeability,0.6,R_2Ce9onUvQQjCiGS,26,male,MA
+16,irrational,right,blue,GODSPEED2,S4,Perceived Intelligence,0.5333333333333333,R_2Ce9onUvQQjCiGS,26,male,MA
+17,irrational,right,blue,GODSPEED2,S5,Perceived Safety,0.6666666666666666,R_2Ce9onUvQQjCiGS,26,male,MA
+18,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_2Ce9onUvQQjCiGS,26,male,MA
+19,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_2Ce9onUvQQjCiGS,26,male,MA
+20,irrational,right,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_2Ce9onUvQQjCiGS,26,male,MA
+21,half,left,red,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_2Ce9onUvQQjCiGS,26,male,MA
+22,irrational,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_2Ce9onUvQQjCiGS,26,male,MA
+23,irrational,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_2Ce9onUvQQjCiGS,26,male,MA
+24,half,left,red,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_2Ce9onUvQQjCiGS,26,male,MA
+25,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.4,R_2Ce9onUvQQjCiGS,26,male,MA
+26,half,left,red,preference,average,,0.41428571428571426,R_2Ce9onUvQQjCiGS,26,male,MA
+27,half,left,red,preference,std,,0.020203050891044183,R_2Ce9onUvQQjCiGS,26,male,MA
+28,irrational,right,blue,preference,average,,0.5714285714285714,R_2Ce9onUvQQjCiGS,26,male,MA
+29,irrational,right,blue,preference,std,,0.0,R_2Ce9onUvQQjCiGS,26,male,MA
+30,,,participant,NARS,S1,Situations and Interactions with Robots,0.8333333333333334,R_27x7GeRCFbfA0Ps,41,male,MA
+31,,,participant,NARS,S2,Social Influence of Robots,0.2,R_27x7GeRCFbfA0Ps,41,male,MA
+32,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_27x7GeRCFbfA0Ps,41,male,MA
+33,,,participant,BFI,S1,Extraversion,0.125,R_27x7GeRCFbfA0Ps,41,male,MA
+34,,,participant,BFI,S2,Agreeableness,0.6666666666666666,R_27x7GeRCFbfA0Ps,41,male,MA
+35,,,participant,BFI,S3,Conscientiousness,0.7222222222222222,R_27x7GeRCFbfA0Ps,41,male,MA
+36,,,participant,BFI,S4,Neuroticism,0.125,R_27x7GeRCFbfA0Ps,41,male,MA
+37,,,participant,BFI,S5,Openness,0.55,R_27x7GeRCFbfA0Ps,41,male,MA
+38,half,left,red,GODSPEED1,S1,Anthropomorphism,0.25,R_27x7GeRCFbfA0Ps,41,male,MA
+39,half,left,red,GODSPEED1,S2,Animacy,0.4444444444444445,R_27x7GeRCFbfA0Ps,41,male,MA
+40,half,left,red,GODSPEED1,S3,Likeability,0.8,R_27x7GeRCFbfA0Ps,41,male,MA
+41,half,left,red,GODSPEED1,S4,Perceived Intelligence,0.6,R_27x7GeRCFbfA0Ps,41,male,MA
+42,half,left,red,GODSPEED1,S5,Perceived Safety,0.6666666666666666,R_27x7GeRCFbfA0Ps,41,male,MA
+43,irrational,right,blue,GODSPEED2,S1,Anthropomorphism,0.25,R_27x7GeRCFbfA0Ps,41,male,MA
+44,irrational,right,blue,GODSPEED2,S2,Animacy,0.4444444444444445,R_27x7GeRCFbfA0Ps,41,male,MA
+45,irrational,right,blue,GODSPEED2,S3,Likeability,0.6,R_27x7GeRCFbfA0Ps,41,male,MA
+46,irrational,right,blue,GODSPEED2,S4,Perceived Intelligence,0.4,R_27x7GeRCFbfA0Ps,41,male,MA
+47,irrational,right,blue,GODSPEED2,S5,Perceived Safety,0.6666666666666666,R_27x7GeRCFbfA0Ps,41,male,MA
+48,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_27x7GeRCFbfA0Ps,41,male,MA
+49,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_27x7GeRCFbfA0Ps,41,male,MA
+50,irrational,right,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_27x7GeRCFbfA0Ps,41,male,MA
+51,irrational,right,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_27x7GeRCFbfA0Ps,41,male,MA
+52,irrational,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_27x7GeRCFbfA0Ps,41,male,MA
+53,irrational,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_27x7GeRCFbfA0Ps,41,male,MA
+54,irrational,right,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_27x7GeRCFbfA0Ps,41,male,MA
+55,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_27x7GeRCFbfA0Ps,41,male,MA
+56,half,left,red,preference,average,,0.14285714285714285,R_27x7GeRCFbfA0Ps,41,male,MA
+57,half,left,red,preference,std,,0.0,R_27x7GeRCFbfA0Ps,41,male,MA
+58,irrational,right,blue,preference,average,,0.8571428571428571,R_27x7GeRCFbfA0Ps,41,male,MA
+59,irrational,right,blue,preference,std,,0.0,R_27x7GeRCFbfA0Ps,41,male,MA
+60,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3Rf85R89Bo46ARh,33,male,MA
+61,,,participant,NARS,S2,Social Influence of Robots,0.4,R_3Rf85R89Bo46ARh,33,male,MA
+62,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_3Rf85R89Bo46ARh,33,male,MA
+63,,,participant,BFI,S1,Extraversion,0.65625,R_3Rf85R89Bo46ARh,33,male,MA
+64,,,participant,BFI,S2,Agreeableness,0.5833333333333334,R_3Rf85R89Bo46ARh,33,male,MA
+65,,,participant,BFI,S3,Conscientiousness,0.5277777777777778,R_3Rf85R89Bo46ARh,33,male,MA
+66,,,participant,BFI,S4,Neuroticism,0.46875,R_3Rf85R89Bo46ARh,33,male,MA
+67,,,participant,BFI,S5,Openness,0.475,R_3Rf85R89Bo46ARh,33,male,MA
+68,half,left,red,GODSPEED1,S1,Anthropomorphism,0.375,R_3Rf85R89Bo46ARh,33,male,MA
+69,half,left,red,GODSPEED1,S2,Animacy,0.5000000000000001,R_3Rf85R89Bo46ARh,33,male,MA
+70,half,left,red,GODSPEED1,S3,Likeability,0.4,R_3Rf85R89Bo46ARh,33,male,MA
+71,half,left,red,GODSPEED1,S4,Perceived Intelligence,0.45,R_3Rf85R89Bo46ARh,33,male,MA
+72,half,left,red,GODSPEED1,S5,Perceived Safety,0.5,R_3Rf85R89Bo46ARh,33,male,MA
+73,irrational,right,blue,GODSPEED2,S1,Anthropomorphism,0.25,R_3Rf85R89Bo46ARh,33,male,MA
+74,irrational,right,blue,GODSPEED2,S2,Animacy,0.3888888888888889,R_3Rf85R89Bo46ARh,33,male,MA
+75,irrational,right,blue,GODSPEED2,S3,Likeability,0.4,R_3Rf85R89Bo46ARh,33,male,MA
+76,irrational,right,blue,GODSPEED2,S4,Perceived Intelligence,0.4,R_3Rf85R89Bo46ARh,33,male,MA
+77,irrational,right,blue,GODSPEED2,S5,Perceived Safety,0.5,R_3Rf85R89Bo46ARh,33,male,MA
+78,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_3Rf85R89Bo46ARh,33,male,MA
+79,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3Rf85R89Bo46ARh,33,male,MA
+80,irrational,right,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_3Rf85R89Bo46ARh,33,male,MA
+81,irrational,right,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_3Rf85R89Bo46ARh,33,male,MA
+82,irrational,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_3Rf85R89Bo46ARh,33,male,MA
+83,irrational,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_3Rf85R89Bo46ARh,33,male,MA
+84,irrational,right,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_3Rf85R89Bo46ARh,33,male,MA
+85,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_3Rf85R89Bo46ARh,33,male,MA
+86,half,left,red,preference,average,,0.0,R_3Rf85R89Bo46ARh,33,male,MA
+87,half,left,red,preference,std,,0.0,R_3Rf85R89Bo46ARh,33,male,MA
+88,irrational,right,blue,preference,average,,1.0,R_3Rf85R89Bo46ARh,33,male,MA
+89,irrational,right,blue,preference,std,,0.0,R_3Rf85R89Bo46ARh,33,male,MA
+90,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_3QGhT2z79AhcQ7w,26,female,BA
+91,,,participant,NARS,S2,Social Influence of Robots,0.5,R_3QGhT2z79AhcQ7w,26,female,BA
+92,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_3QGhT2z79AhcQ7w,26,female,BA
+93,,,participant,BFI,S1,Extraversion,0.6875,R_3QGhT2z79AhcQ7w,26,female,BA
+94,,,participant,BFI,S2,Agreeableness,0.4444444444444444,R_3QGhT2z79AhcQ7w,26,female,BA
+95,,,participant,BFI,S3,Conscientiousness,0.6666666666666666,R_3QGhT2z79AhcQ7w,26,female,BA
+96,,,participant,BFI,S4,Neuroticism,0.5625,R_3QGhT2z79AhcQ7w,26,female,BA
+97,,,participant,BFI,S5,Openness,0.6,R_3QGhT2z79AhcQ7w,26,female,BA
+98,half,left,red,GODSPEED1,S1,Anthropomorphism,0.75,R_3QGhT2z79AhcQ7w,26,female,BA
+99,half,left,red,GODSPEED1,S2,Animacy,0.5,R_3QGhT2z79AhcQ7w,26,female,BA
+100,half,left,red,GODSPEED1,S3,Likeability,0.5,R_3QGhT2z79AhcQ7w,26,female,BA
+101,half,left,red,GODSPEED1,S4,Perceived Intelligence,0.4,R_3QGhT2z79AhcQ7w,26,female,BA
+102,half,left,red,GODSPEED1,S5,Perceived Safety,0.0,R_3QGhT2z79AhcQ7w,26,female,BA
+103,irrational,right,blue,GODSPEED2,S1,Anthropomorphism,0.0,R_3QGhT2z79AhcQ7w,26,female,BA
+104,irrational,right,blue,GODSPEED2,S2,Animacy,0.5833333333333334,R_3QGhT2z79AhcQ7w,26,female,BA
+105,irrational,right,blue,GODSPEED2,S3,Likeability,0.2,R_3QGhT2z79AhcQ7w,26,female,BA
+106,irrational,right,blue,GODSPEED2,S4,Perceived Intelligence,0.6,R_3QGhT2z79AhcQ7w,26,female,BA
+107,irrational,right,blue,GODSPEED2,S5,Perceived Safety,0.6666666666666666,R_3QGhT2z79AhcQ7w,26,female,BA
+108,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3QGhT2z79AhcQ7w,26,female,BA
+109,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3QGhT2z79AhcQ7w,26,female,BA
+110,irrational,right,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_3QGhT2z79AhcQ7w,26,female,BA
+111,irrational,right,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_3QGhT2z79AhcQ7w,26,female,BA
+112,irrational,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_3QGhT2z79AhcQ7w,26,female,BA
+113,irrational,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_3QGhT2z79AhcQ7w,26,female,BA
+114,irrational,right,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_3QGhT2z79AhcQ7w,26,female,BA
+115,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_3QGhT2z79AhcQ7w,26,female,BA
+116,half,left,red,preference,average,,0.2857142857142857,R_3QGhT2z79AhcQ7w,26,female,BA
+117,half,left,red,preference,std,,0.0,R_3QGhT2z79AhcQ7w,26,female,BA
+118,irrational,right,blue,preference,average,,0.7142857142857143,R_3QGhT2z79AhcQ7w,26,female,BA
+119,irrational,right,blue,preference,std,,0.0,R_3QGhT2z79AhcQ7w,26,female,BA
+120,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+121,,,participant,NARS,S2,Social Influence of Robots,0.4,R_1jvUWvCVrHxOPaP,25,male,<BA
+122,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_1jvUWvCVrHxOPaP,25,male,<BA
+123,,,participant,BFI,S1,Extraversion,0.25,R_1jvUWvCVrHxOPaP,25,male,<BA
+124,,,participant,BFI,S2,Agreeableness,0.7222222222222222,R_1jvUWvCVrHxOPaP,25,male,<BA
+125,,,participant,BFI,S3,Conscientiousness,0.4444444444444444,R_1jvUWvCVrHxOPaP,25,male,<BA
+126,,,participant,BFI,S4,Neuroticism,0.75,R_1jvUWvCVrHxOPaP,25,male,<BA
+127,,,participant,BFI,S5,Openness,0.45,R_1jvUWvCVrHxOPaP,25,male,<BA
+128,half,right,red,GODSPEED1,S1,Anthropomorphism,0.5,R_1jvUWvCVrHxOPaP,25,male,<BA
+129,half,right,red,GODSPEED1,S2,Animacy,0.16666666666666666,R_1jvUWvCVrHxOPaP,25,male,<BA
+130,half,right,red,GODSPEED1,S3,Likeability,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+131,half,right,red,GODSPEED1,S4,Perceived Intelligence,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+132,half,right,red,GODSPEED1,S5,Perceived Safety,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+133,irrational,left,blue,GODSPEED2,S1,Anthropomorphism,0.5,R_1jvUWvCVrHxOPaP,25,male,<BA
+134,irrational,left,blue,GODSPEED2,S2,Animacy,0.4166666666666667,R_1jvUWvCVrHxOPaP,25,male,<BA
+135,irrational,left,blue,GODSPEED2,S3,Likeability,0.6,R_1jvUWvCVrHxOPaP,25,male,<BA
+136,irrational,left,blue,GODSPEED2,S4,Perceived Intelligence,0.2,R_1jvUWvCVrHxOPaP,25,male,<BA
+137,irrational,left,blue,GODSPEED2,S5,Perceived Safety,0.5,R_1jvUWvCVrHxOPaP,25,male,<BA
+138,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_1jvUWvCVrHxOPaP,25,male,<BA
+139,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_1jvUWvCVrHxOPaP,25,male,<BA
+140,irrational,left,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+141,irrational,left,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+142,irrational,left,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+143,irrational,left,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+144,half,right,red,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+145,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2,R_1jvUWvCVrHxOPaP,25,male,<BA
+146,half,right,red,preference,average,,0.3142857142857143,R_1jvUWvCVrHxOPaP,25,male,<BA
+147,half,right,red,preference,std,,0.1616244071283537,R_1jvUWvCVrHxOPaP,25,male,<BA
+148,irrational,left,blue,preference,average,,0.5714285714285714,R_1jvUWvCVrHxOPaP,25,male,<BA
+149,irrational,left,blue,preference,std,,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+150,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_26evzLJuqRk5deP,29,male,HS
+151,,,participant,NARS,S2,Social Influence of Robots,0.6,R_26evzLJuqRk5deP,29,male,HS
+152,,,participant,NARS,S3,Emotions in Interaction with Robots,0.5,R_26evzLJuqRk5deP,29,male,HS
+153,,,participant,BFI,S1,Extraversion,0.5625,R_26evzLJuqRk5deP,29,male,HS
+154,,,participant,BFI,S2,Agreeableness,0.8888888888888888,R_26evzLJuqRk5deP,29,male,HS
+155,,,participant,BFI,S3,Conscientiousness,0.0,R_26evzLJuqRk5deP,29,male,HS
+156,,,participant,BFI,S4,Neuroticism,0.125,R_26evzLJuqRk5deP,29,male,HS
+157,,,participant,BFI,S5,Openness,0.8,R_26evzLJuqRk5deP,29,male,HS
+158,half,right,red,GODSPEED1,S1,Anthropomorphism,0.75,R_26evzLJuqRk5deP,29,male,HS
+159,half,right,red,GODSPEED1,S2,Animacy,0.0,R_26evzLJuqRk5deP,29,male,HS
+160,half,right,red,GODSPEED1,S3,Likeability,0.0,R_26evzLJuqRk5deP,29,male,HS
+161,half,right,red,GODSPEED1,S4,Perceived Intelligence,0.0,R_26evzLJuqRk5deP,29,male,HS
+162,half,right,red,GODSPEED1,S5,Perceived Safety,0.0,R_26evzLJuqRk5deP,29,male,HS
+163,irrational,left,blue,GODSPEED2,S1,Anthropomorphism,0.0,R_26evzLJuqRk5deP,29,male,HS
+164,irrational,left,blue,GODSPEED2,S2,Animacy,0.0,R_26evzLJuqRk5deP,29,male,HS
+165,irrational,left,blue,GODSPEED2,S3,Likeability,0.0,R_26evzLJuqRk5deP,29,male,HS
+166,irrational,left,blue,GODSPEED2,S4,Perceived Intelligence,0.0,R_26evzLJuqRk5deP,29,male,HS
+167,irrational,left,blue,GODSPEED2,S5,Perceived Safety,0.0,R_26evzLJuqRk5deP,29,male,HS
+168,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_26evzLJuqRk5deP,29,male,HS
+169,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_26evzLJuqRk5deP,29,male,HS
+170,irrational,left,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_26evzLJuqRk5deP,29,male,HS
+171,irrational,left,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_26evzLJuqRk5deP,29,male,HS
+172,irrational,left,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_26evzLJuqRk5deP,29,male,HS
+173,irrational,left,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_26evzLJuqRk5deP,29,male,HS
+174,irrational,left,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_26evzLJuqRk5deP,29,male,HS
+175,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_26evzLJuqRk5deP,29,male,HS
+176,half,right,red,preference,average,,0.2857142857142857,R_26evzLJuqRk5deP,29,male,HS
+177,half,right,red,preference,std,,0.0,R_26evzLJuqRk5deP,29,male,HS
+178,irrational,left,blue,preference,average,,0.7142857142857143,R_26evzLJuqRk5deP,29,male,HS
+179,irrational,left,blue,preference,std,,0.0,R_26evzLJuqRk5deP,29,male,HS
+180,,,participant,NARS,S1,Situations and Interactions with Robots,0.8333333333333334,R_2Y99vmvmZD9Igrn,29,female,MA
+181,,,participant,NARS,S2,Social Influence of Robots,0.6,R_2Y99vmvmZD9Igrn,29,female,MA
+182,,,participant,NARS,S3,Emotions in Interaction with Robots,0.0,R_2Y99vmvmZD9Igrn,29,female,MA
+183,,,participant,BFI,S1,Extraversion,0.53125,R_2Y99vmvmZD9Igrn,29,female,MA
+184,,,participant,BFI,S2,Agreeableness,0.7777777777777778,R_2Y99vmvmZD9Igrn,29,female,MA
+185,,,participant,BFI,S3,Conscientiousness,0.7777777777777778,R_2Y99vmvmZD9Igrn,29,female,MA
+186,,,participant,BFI,S4,Neuroticism,0.375,R_2Y99vmvmZD9Igrn,29,female,MA
+187,,,participant,BFI,S5,Openness,0.6,R_2Y99vmvmZD9Igrn,29,female,MA
+188,irrational,right,red,GODSPEED1,S1,Anthropomorphism,0.5,R_2Y99vmvmZD9Igrn,29,female,MA
+189,irrational,right,red,GODSPEED1,S2,Animacy,0.4000000000000001,R_2Y99vmvmZD9Igrn,29,female,MA
+190,irrational,right,red,GODSPEED1,S3,Likeability,0.44000000000000006,R_2Y99vmvmZD9Igrn,29,female,MA
+191,irrational,right,red,GODSPEED1,S4,Perceived Intelligence,0.45,R_2Y99vmvmZD9Igrn,29,female,MA
+192,irrational,right,red,GODSPEED1,S5,Perceived Safety,0.6666666666666666,R_2Y99vmvmZD9Igrn,29,female,MA
+193,half,left,blue,GODSPEED2,S1,Anthropomorphism,0.6666666666666666,R_2Y99vmvmZD9Igrn,29,female,MA
+194,half,left,blue,GODSPEED2,S2,Animacy,0.4444444444444444,R_2Y99vmvmZD9Igrn,29,female,MA
+195,half,left,blue,GODSPEED2,S3,Likeability,0.5333333333333333,R_2Y99vmvmZD9Igrn,29,female,MA
+196,half,left,blue,GODSPEED2,S4,Perceived Intelligence,0.4,R_2Y99vmvmZD9Igrn,29,female,MA
+197,half,left,blue,GODSPEED2,S5,Perceived Safety,0.5555555555555555,R_2Y99vmvmZD9Igrn,29,female,MA
+198,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2Y99vmvmZD9Igrn,29,female,MA
+199,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2Y99vmvmZD9Igrn,29,female,MA
+200,irrational,right,red,q_preference,prefer,Which robot would you prefer?,1.0,R_2Y99vmvmZD9Igrn,29,female,MA
+201,irrational,right,red,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_2Y99vmvmZD9Igrn,29,female,MA
+202,half,left,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_2Y99vmvmZD9Igrn,29,female,MA
+203,irrational,right,red,q_preference,analyst,Which robot do you think will be a better analyst?,1.0,R_2Y99vmvmZD9Igrn,29,female,MA
+204,half,left,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_2Y99vmvmZD9Igrn,29,female,MA
+205,irrational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6,R_2Y99vmvmZD9Igrn,29,female,MA
+206,irrational,right,red,preference,average,,0.6571428571428571,R_2Y99vmvmZD9Igrn,29,female,MA
+207,irrational,right,red,preference,std,,0.08081220356417688,R_2Y99vmvmZD9Igrn,29,female,MA
+208,half,left,blue,preference,average,,0.2857142857142857,R_2Y99vmvmZD9Igrn,29,female,MA
+209,half,left,blue,preference,std,,0.0,R_2Y99vmvmZD9Igrn,29,female,MA
+210,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1l011tD1Bg8DQy2,33,female,MA
+211,,,participant,NARS,S2,Social Influence of Robots,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+212,,,participant,NARS,S3,Emotions in Interaction with Robots,0.3333333333333333,R_1l011tD1Bg8DQy2,33,female,MA
+213,,,participant,BFI,S1,Extraversion,0.5625,R_1l011tD1Bg8DQy2,33,female,MA
+214,,,participant,BFI,S2,Agreeableness,0.2222222222222222,R_1l011tD1Bg8DQy2,33,female,MA
+215,,,participant,BFI,S3,Conscientiousness,0.0,R_1l011tD1Bg8DQy2,33,female,MA
+216,,,participant,BFI,S4,Neuroticism,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+217,,,participant,BFI,S5,Openness,0.55,R_1l011tD1Bg8DQy2,33,female,MA
+218,irrational,right,red,GODSPEED1,S1,Anthropomorphism,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+219,irrational,right,red,GODSPEED1,S2,Animacy,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+220,irrational,right,red,GODSPEED1,S3,Likeability,0.8,R_1l011tD1Bg8DQy2,33,female,MA
+221,irrational,right,red,GODSPEED1,S4,Perceived Intelligence,0.8,R_1l011tD1Bg8DQy2,33,female,MA
+222,irrational,right,red,GODSPEED1,S5,Perceived Safety,0.4444444444444444,R_1l011tD1Bg8DQy2,33,female,MA
+223,half,left,blue,GODSPEED2,S1,Anthropomorphism,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+224,half,left,blue,GODSPEED2,S2,Animacy,0.5,R_1l011tD1Bg8DQy2,33,female,MA
+225,half,left,blue,GODSPEED2,S3,Likeability,0.6,R_1l011tD1Bg8DQy2,33,female,MA
+226,half,left,blue,GODSPEED2,S4,Perceived Intelligence,0.4,R_1l011tD1Bg8DQy2,33,female,MA
+227,half,left,blue,GODSPEED2,S5,Perceived Safety,0.4444444444444444,R_1l011tD1Bg8DQy2,33,female,MA
+228,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1l011tD1Bg8DQy2,33,female,MA
+229,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_1l011tD1Bg8DQy2,33,female,MA
+230,half,left,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_1l011tD1Bg8DQy2,33,female,MA
+231,half,left,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_1l011tD1Bg8DQy2,33,female,MA
+232,half,left,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_1l011tD1Bg8DQy2,33,female,MA
+233,half,left,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_1l011tD1Bg8DQy2,33,female,MA
+234,half,left,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_1l011tD1Bg8DQy2,33,female,MA
+235,irrational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_1l011tD1Bg8DQy2,33,female,MA
+236,irrational,right,red,preference,average,,0.14285714285714285,R_1l011tD1Bg8DQy2,33,female,MA
+237,irrational,right,red,preference,std,,0.0,R_1l011tD1Bg8DQy2,33,female,MA
+238,half,left,blue,preference,average,,0.8571428571428571,R_1l011tD1Bg8DQy2,33,female,MA
+239,half,left,blue,preference,std,,0.0,R_1l011tD1Bg8DQy2,33,female,MA
+240,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_2OJD0HQHgnW7TIm,32,male,MA
+241,,,participant,NARS,S2,Social Influence of Robots,0.0,R_2OJD0HQHgnW7TIm,32,male,MA
+242,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_2OJD0HQHgnW7TIm,32,male,MA
+243,,,participant,BFI,S1,Extraversion,0.25,R_2OJD0HQHgnW7TIm,32,male,MA
+244,,,participant,BFI,S2,Agreeableness,0.5185185185185185,R_2OJD0HQHgnW7TIm,32,male,MA
+245,,,participant,BFI,S3,Conscientiousness,0.3333333333333333,R_2OJD0HQHgnW7TIm,32,male,MA
+246,,,participant,BFI,S4,Neuroticism,0.875,R_2OJD0HQHgnW7TIm,32,male,MA
+247,,,participant,BFI,S5,Openness,0.23333333333333334,R_2OJD0HQHgnW7TIm,32,male,MA
+248,irrational,right,red,GODSPEED1,S1,Anthropomorphism,0.25,R_2OJD0HQHgnW7TIm,32,male,MA
+249,irrational,right,red,GODSPEED1,S2,Animacy,0.4166666666666667,R_2OJD0HQHgnW7TIm,32,male,MA
+250,irrational,right,red,GODSPEED1,S3,Likeability,0.0,R_2OJD0HQHgnW7TIm,32,male,MA
+251,irrational,right,red,GODSPEED1,S4,Perceived Intelligence,0.3,R_2OJD0HQHgnW7TIm,32,male,MA
+252,irrational,right,red,GODSPEED1,S5,Perceived Safety,0.6666666666666666,R_2OJD0HQHgnW7TIm,32,male,MA
+253,half,left,blue,GODSPEED2,S1,Anthropomorphism,0.5,R_2OJD0HQHgnW7TIm,32,male,MA
+254,half,left,blue,GODSPEED2,S2,Animacy,0.4166666666666667,R_2OJD0HQHgnW7TIm,32,male,MA
+255,half,left,blue,GODSPEED2,S3,Likeability,0.0,R_2OJD0HQHgnW7TIm,32,male,MA
+256,half,left,blue,GODSPEED2,S4,Perceived Intelligence,0.4,R_2OJD0HQHgnW7TIm,32,male,MA
+257,half,left,blue,GODSPEED2,S5,Perceived Safety,0.0,R_2OJD0HQHgnW7TIm,32,male,MA
+258,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2OJD0HQHgnW7TIm,32,male,MA
+259,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2OJD0HQHgnW7TIm,32,male,MA
+260,irrational,right,red,q_preference,prefer,Which robot would you prefer?,1.0,R_2OJD0HQHgnW7TIm,32,male,MA
+261,irrational,right,red,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_2OJD0HQHgnW7TIm,32,male,MA
+262,irrational,right,red,q_preference,member,Which robot do you think will serve as a good jury member?,1.0,R_2OJD0HQHgnW7TIm,32,male,MA
+263,irrational,right,red,q_preference,analyst,Which robot do you think will be a better analyst?,1.0,R_2OJD0HQHgnW7TIm,32,male,MA
+264,half,left,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_2OJD0HQHgnW7TIm,32,male,MA
+265,irrational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8,R_2OJD0HQHgnW7TIm,32,male,MA
+266,irrational,right,red,preference,average,,0.7571428571428571,R_2OJD0HQHgnW7TIm,32,male,MA
+267,irrational,right,red,preference,std,,0.06060915267313267,R_2OJD0HQHgnW7TIm,32,male,MA
+268,half,left,blue,preference,average,,0.2857142857142857,R_2OJD0HQHgnW7TIm,32,male,MA
+269,half,left,blue,preference,std,,0.0,R_2OJD0HQHgnW7TIm,32,male,MA
+270,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+271,,,participant,NARS,S2,Social Influence of Robots,0.3,R_3sgkqeXS5mSH5qt,31,female,MA
+272,,,participant,NARS,S3,Emotions in Interaction with Robots,0.6666666666666666,R_3sgkqeXS5mSH5qt,31,female,MA
+273,,,participant,BFI,S1,Extraversion,0.75,R_3sgkqeXS5mSH5qt,31,female,MA
+274,,,participant,BFI,S2,Agreeableness,0.5555555555555556,R_3sgkqeXS5mSH5qt,31,female,MA
+275,,,participant,BFI,S3,Conscientiousness,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+276,,,participant,BFI,S4,Neuroticism,0.24999999999999997,R_3sgkqeXS5mSH5qt,31,female,MA
+277,,,participant,BFI,S5,Openness,0.525,R_3sgkqeXS5mSH5qt,31,female,MA
+278,irrational,left,red,GODSPEED1,S1,Anthropomorphism,0.75,R_3sgkqeXS5mSH5qt,31,female,MA
+279,irrational,left,red,GODSPEED1,S2,Animacy,0.3333333333333333,R_3sgkqeXS5mSH5qt,31,female,MA
+280,irrational,left,red,GODSPEED1,S3,Likeability,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+281,irrational,left,red,GODSPEED1,S4,Perceived Intelligence,0.2,R_3sgkqeXS5mSH5qt,31,female,MA
+282,irrational,left,red,GODSPEED1,S5,Perceived Safety,0.6666666666666666,R_3sgkqeXS5mSH5qt,31,female,MA
+283,half,right,blue,GODSPEED2,S1,Anthropomorphism,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+284,half,right,blue,GODSPEED2,S2,Animacy,0.16666666666666666,R_3sgkqeXS5mSH5qt,31,female,MA
+285,half,right,blue,GODSPEED2,S3,Likeability,0.8,R_3sgkqeXS5mSH5qt,31,female,MA
+286,half,right,blue,GODSPEED2,S4,Perceived Intelligence,0.3,R_3sgkqeXS5mSH5qt,31,female,MA
+287,half,right,blue,GODSPEED2,S5,Perceived Safety,0.6666666666666666,R_3sgkqeXS5mSH5qt,31,female,MA
+288,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3sgkqeXS5mSH5qt,31,female,MA
+289,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3sgkqeXS5mSH5qt,31,female,MA
+290,half,right,blue,q_preference,prefer,Which robot would you prefer?,2.0,R_3sgkqeXS5mSH5qt,31,female,MA
+291,half,right,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_3sgkqeXS5mSH5qt,31,female,MA
+292,half,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_3sgkqeXS5mSH5qt,31,female,MA
+293,half,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_3sgkqeXS5mSH5qt,31,female,MA
+294,half,right,blue,q_preference,bartender,Which robot would you like as a bartender?,2.0,R_3sgkqeXS5mSH5qt,31,female,MA
+295,irrational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+296,irrational,left,red,preference,average,,0.42857142857142855,R_3sgkqeXS5mSH5qt,31,female,MA
+297,irrational,left,red,preference,std,,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+298,half,right,blue,preference,average,,0.5714285714285714,R_3sgkqeXS5mSH5qt,31,female,MA
+299,half,right,blue,preference,std,,0.0,R_3sgkqeXS5mSH5qt,31,female,MA
+300,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3nHt10lYNAiQigG,34,male,MA
+301,,,participant,NARS,S2,Social Influence of Robots,0.8,R_3nHt10lYNAiQigG,34,male,MA
+302,,,participant,NARS,S3,Emotions in Interaction with Robots,0.3333333333333333,R_3nHt10lYNAiQigG,34,male,MA
+303,,,participant,BFI,S1,Extraversion,0.3125,R_3nHt10lYNAiQigG,34,male,MA
+304,,,participant,BFI,S2,Agreeableness,0.48148148148148145,R_3nHt10lYNAiQigG,34,male,MA
+305,,,participant,BFI,S3,Conscientiousness,0.8518518518518519,R_3nHt10lYNAiQigG,34,male,MA
+306,,,participant,BFI,S4,Neuroticism,0.5,R_3nHt10lYNAiQigG,34,male,MA
+307,,,participant,BFI,S5,Openness,0.6666666666666667,R_3nHt10lYNAiQigG,34,male,MA
+308,irrational,left,red,GODSPEED1,S1,Anthropomorphism,0.5833333333333333,R_3nHt10lYNAiQigG,34,male,MA
+309,irrational,left,red,GODSPEED1,S2,Animacy,0.5833333333333334,R_3nHt10lYNAiQigG,34,male,MA
+310,irrational,left,red,GODSPEED1,S3,Likeability,0.4,R_3nHt10lYNAiQigG,34,male,MA
+311,irrational,left,red,GODSPEED1,S4,Perceived Intelligence,0.4,R_3nHt10lYNAiQigG,34,male,MA
+312,irrational,left,red,GODSPEED1,S5,Perceived Safety,0.3333333333333333,R_3nHt10lYNAiQigG,34,male,MA
+313,half,right,blue,GODSPEED2,S1,Anthropomorphism,0.5,R_3nHt10lYNAiQigG,34,male,MA
+314,half,right,blue,GODSPEED2,S2,Animacy,0.5,R_3nHt10lYNAiQigG,34,male,MA
+315,half,right,blue,GODSPEED2,S3,Likeability,0.8,R_3nHt10lYNAiQigG,34,male,MA
+316,half,right,blue,GODSPEED2,S4,Perceived Intelligence,0.8,R_3nHt10lYNAiQigG,34,male,MA
+317,half,right,blue,GODSPEED2,S5,Perceived Safety,0.6666666666666666,R_3nHt10lYNAiQigG,34,male,MA
+318,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3nHt10lYNAiQigG,34,male,MA
+319,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3nHt10lYNAiQigG,34,male,MA
+320,irrational,left,red,q_preference,prefer,Which robot would you prefer?,1.0,R_3nHt10lYNAiQigG,34,male,MA
+321,irrational,left,red,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,1.0,R_3nHt10lYNAiQigG,34,male,MA
+322,irrational,left,red,q_preference,member,Which robot do you think will serve as a good jury member?,1.0,R_3nHt10lYNAiQigG,34,male,MA
+323,irrational,left,red,q_preference,analyst,Which robot do you think will be a better analyst?,1.0,R_3nHt10lYNAiQigG,34,male,MA
+324,irrational,left,red,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_3nHt10lYNAiQigG,34,male,MA
+325,irrational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3nHt10lYNAiQigG,34,male,MA
+326,irrational,left,red,preference,average,,0.7142857142857143,R_3nHt10lYNAiQigG,34,male,MA
+327,irrational,left,red,preference,std,,0.4040610178208843,R_3nHt10lYNAiQigG,34,male,MA
+328,half,right,blue,preference,average,,0.5714285714285714,R_3nHt10lYNAiQigG,34,male,MA
+329,half,right,blue,preference,std,,0.0,R_3nHt10lYNAiQigG,34,male,MA
+330,,,participant,NARS,S1,Situations and Interactions with Robots,0.2222222222222222,R_3RgVGyKsN0qt4Hf,36,male,HS
+331,,,participant,NARS,S2,Social Influence of Robots,0.5333333333333333,R_3RgVGyKsN0qt4Hf,36,male,HS
+332,,,participant,NARS,S3,Emotions in Interaction with Robots,0.5,R_3RgVGyKsN0qt4Hf,36,male,HS
+333,,,participant,BFI,S1,Extraversion,0.3125,R_3RgVGyKsN0qt4Hf,36,male,HS
+334,,,participant,BFI,S2,Agreeableness,0.6296296296296297,R_3RgVGyKsN0qt4Hf,36,male,HS
+335,,,participant,BFI,S3,Conscientiousness,0.7777777777777778,R_3RgVGyKsN0qt4Hf,36,male,HS
+336,,,participant,BFI,S4,Neuroticism,0.5416666666666667,R_3RgVGyKsN0qt4Hf,36,male,HS
+337,,,participant,BFI,S5,Openness,0.725,R_3RgVGyKsN0qt4Hf,36,male,HS
+338,irrational,left,red,GODSPEED1,S1,Anthropomorphism,0.75,R_3RgVGyKsN0qt4Hf,36,male,HS
+339,irrational,left,red,GODSPEED1,S2,Animacy,0.5,R_3RgVGyKsN0qt4Hf,36,male,HS
+340,irrational,left,red,GODSPEED1,S3,Likeability,0.5999999999999999,R_3RgVGyKsN0qt4Hf,36,male,HS
+341,irrational,left,red,GODSPEED1,S4,Perceived Intelligence,0.5333333333333333,R_3RgVGyKsN0qt4Hf,36,male,HS
+342,irrational,left,red,GODSPEED1,S5,Perceived Safety,0.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+343,half,right,blue,GODSPEED2,S1,Anthropomorphism,0.41666666666666663,R_3RgVGyKsN0qt4Hf,36,male,HS
+344,half,right,blue,GODSPEED2,S2,Animacy,0.5833333333333334,R_3RgVGyKsN0qt4Hf,36,male,HS
+345,half,right,blue,GODSPEED2,S3,Likeability,0.5,R_3RgVGyKsN0qt4Hf,36,male,HS
+346,half,right,blue,GODSPEED2,S4,Perceived Intelligence,0.5333333333333333,R_3RgVGyKsN0qt4Hf,36,male,HS
+347,half,right,blue,GODSPEED2,S5,Perceived Safety,0.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+348,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3RgVGyKsN0qt4Hf,36,male,HS
+349,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3RgVGyKsN0qt4Hf,36,male,HS
+350,irrational,left,red,q_preference,prefer,Which robot would you prefer?,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+351,half,right,blue,q_preference,portfolio,Which robot would you trust to manage your investments portfolio?,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+352,half,right,blue,q_preference,member,Which robot do you think will serve as a good jury member?,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+353,half,right,blue,q_preference,analyst,Which robot do you think will be a better analyst?,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+354,irrational,left,red,q_preference,bartender,Which robot would you like as a bartender?,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+355,irrational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.4,R_3RgVGyKsN0qt4Hf,36,male,HS
+356,irrational,left,red,preference,average,,0.5571428571428572,R_3RgVGyKsN0qt4Hf,36,male,HS
+357,irrational,left,red,preference,std,,0.22223355980148635,R_3RgVGyKsN0qt4Hf,36,male,HS
+358,half,right,blue,preference,average,,0.2857142857142857,R_3RgVGyKsN0qt4Hf,36,male,HS
+359,half,right,blue,preference,std,,0.0,R_3RgVGyKsN0qt4Hf,36,male,HS

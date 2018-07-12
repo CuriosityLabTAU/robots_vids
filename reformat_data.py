@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from sklearn import preprocessing
+from scipy import stats
 
 
 def raw_data_extraction(path):
@@ -399,17 +400,35 @@ def prefernce_dataframe_index(raw_df):
     for c in temps.columns:
         temps[c] = temps[c].replace(1.0, red_rationality[c].tolist()[0])
         temps[c] = temps[c].replace(2.0, blue_rationality[c].tolist()[0])
+
     for r in temps.index:
         pref_ix = pd.value_counts(temps.loc[r, :]).diff(-1) / pd.value_counts(temps.loc[r, :]).sum()
         if pref_ix.isna()[0]:
             pref_ix = pd.value_counts(temps.loc[r, :]) / pd.value_counts(temps.loc[r, :]).sum()
         if 'pref_df' in locals():
             temp_df = pd.DataFrame(data=[[r, '_'.join(pref_ix.index.tolist()), pref_ix[0]]],
-                         columns=['question', 'rationality', 'preference'])
+                                   columns=['question', 'rationality', 'preference'])
             pref_df = pref_df.append(temp_df)
         else:
             pref_df = pd.DataFrame(data=[[r, '_'.join(pref_ix.index.tolist()), pref_ix[0]]],
                                    columns=['question', 'rationality', 'preference'])
+        x = pd.value_counts(temps.loc[r, :])
+
+        for i in range(x.__len__()):
+            if 'rat_pref_df' in locals():
+                rat_pref_df = rat_pref_df.append(pd.DataFrame(data = [[r, x.keys()[i], x[x.keys()[i]]]], columns=['question', 'rationality', 'preference']))
+            else:
+                rat_pref_df = pd.DataFrame(data = [[r, x.keys()[i], x[x.keys()[i]]]], columns=['question', 'rationality', 'preference'])
+
+    rat_pref_df['zscore'], rat_pref_df['zprob'], rat_pref_df['binomal'], rat_pref_df['size'] = '', '', '', ''
+
+    rat_pref_df.zscore  = stats.mstats.zscore(rat_pref_df.preference)
+    rat_pref_df.zprob   = stats.norm.cdf(rat_pref_df.preference)
+
+    rat_pref_df.size = temps.shape[1]
+
+    rat_pref_df.binomal = stats.binom.cdf(rat_pref_df.preference, rat_pref_df.size, p = .5)
+
     pref_df = pref_df.reset_index(drop=True)
     pref_df.loc[pref_df.rationality != pref_df.rationality[0], 'preference'] = -pref_df.loc[pref_df.rationality != pref_df.rationality[0], 'preference']
     rat = pd.value_counts(pref_df.rationality).index[0]
@@ -418,7 +437,7 @@ def prefernce_dataframe_index(raw_df):
     users_pref.columns = \
         raw_df[(raw_df.question == 'ID')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[
             'ResponseId']
-    return pref_df, users_pref, open_answers
+    return pref_df, users_pref, open_answers, rat_pref_df
     
 def questions(stats_df, raw_df):
     '''
@@ -434,11 +453,10 @@ def questions(stats_df, raw_df):
     features = []
     for q in qp:
         try:
-            temps = temps.append(
-                raw_df[raw_df.full_text == p + q].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype(
+            temps = temps.append(raw_df[raw_df.full_text.str.contains(q)].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype(
                     'float'))
         except:
-            temps = raw_df[raw_df.full_text == p + q].drop(['question', 'option', 'full_text', 'dict_text'],
+            temps = raw_df[raw_df.full_text.str.contains(q)].drop(['question', 'option', 'full_text', 'dict_text'],
                                                            axis=1).astype('float')
         features += [q.split(' ')[-1].replace('?', '')]
 
@@ -448,7 +466,7 @@ def questions(stats_df, raw_df):
     temps = temps.replace(4, 1.)
     temps.columns = stats_df.columns[4:]
     temps = temps.reindex(columns=stats_df.columns)
-    temps.meaning = qp
+    temps.meaning = 'choice'
     temps.sub_scale = features
     temps.feature = 'q_preference'
     stats_df = stats_df.append(temps)
@@ -502,7 +520,7 @@ def stats_df_reformat(stats_df):
 
         temp = temp.drop(temp[(temp.feature=='age') | (temp.feature=='education') | (temp.feature=='gender') | (temp.robot=='red_robot') | (temp.robot=='blue_robot')].index.tolist())
 
-        temp.loc[(temp.feature == 'q_preference') & (temp.answers == 1.), 'robot'] = 'red'
+        temp.loc[(temp.feature == 'q_preference') & ((temp.answers == 1.) | (temp.answers == 5.)), 'robot'] = 'red'
         temp.loc[(temp.feature == 'q_preference') & (temp.answers == 2.), 'robot'] = 'blue'
         temp.loc[temp[temp.robot == 'red'].index.tolist(), 'side'] = temp[(temp.robot == 'red')].side.unique()[0]
         temp.loc[temp[temp.robot == 'red'].index.tolist(), 'rationality'] = temp[(temp.robot == 'red')].rationality.unique()[0]

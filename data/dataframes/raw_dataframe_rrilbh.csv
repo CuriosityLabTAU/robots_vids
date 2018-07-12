@@ -19,8 +19,8 @@ UserLanguage,userLanguage,,User Language,"{""ImportId"":""userLanguage""}",EN,EN
 Q1.2,QID97,,"I am age 18 or older, I have read and understood the information above, I want to participate in this research and continue with the survey:","{""ImportId"":""QID97""}",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 Q1.3,gender,,To which gender identity do you most identify?,"{""ImportId"":""QID98""}",2,2,1,2,1,1,1,2,1,1,1,2,1,1,1,2,2,2,1,2,2,2,1,1,2,2,1,1,2,2
 Q1.4,age,"TEXT""}",What is your age?,"{""ImportId"":""QID99_TEXT""}",31,56,48,64,54,33,37,21,28,29,54,43,55,42,54,51,36,55,21,28,39,34,56,26,28,29,32,61,47,35
-Q1.5,education,,"What is the highest degree or level of school you have completed? (If 
-you’re currently enrolled in school, please indicate the highest degree 
+Q1.5,education,,"What is the highest degree or level of school you have completed? (If 
+you’re currently enrolled in school, please indicate the highest degree 
 you have received.)","{""ImportId"":""QID100""}",2,4,5,4,5,5,5,5,3,3,4,4,4,2,2,6,6,5,5,3,4,2,5,3,5,2,3,3,3,2
 Q2.1_1,BFI,1,I see myself as someone who is: - Is talkative,"{""ImportId"":""QID91_1""}",4,2,3,2,4,4,1,4,2,2,1,4,2,4,2,4,3,1,5,2,4,4,4,1,5,5,1,2,4,2
 Q2.1_2,BFI,2,I see myself as someone who is: - Tends to find fault with others,"{""ImportId"":""QID91_2""}",5,3,1,1,1,1,3,4,3,2,4,2,1,3,4,4,2,3,1,2,1,2,1,2,3,1,1,2,5,1
