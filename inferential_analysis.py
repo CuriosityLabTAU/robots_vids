@@ -383,7 +383,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     # sns.barplot(x="answer", y="percentage", hue="rationality", data=answers_counts, ax=ax)
     # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
 
-def stacked_plot(users_pref_tot):
+def stacked_plot(users_pref_tot,  rat_pref_df_tot):
     '''
     Stacked barplot of choices per intuition questions,
     :param users_pref_tot: Dataframe of which robot each user chose in each question.
@@ -394,6 +394,7 @@ def stacked_plot(users_pref_tot):
     nq = np.arange(0,qs.__len__())
     barWidth = .4
     yy1, yy2, yy3 = np.array([]), np.array([]), np.array([])
+    deps = rat_pref_df_tot.deployment.unique()
     for i, q in enumerate(qs):
         temp = pd.value_counts(users_pref_tot.loc[q, :])
         y1, y2, y3 = temp['rational'], temp['half'], temp['irrational']
@@ -402,6 +403,15 @@ def stacked_plot(users_pref_tot):
         ax.annotate(str(np.round(float(y1) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 / 2), annotation_clip=False, fontsize=12)
         ax.annotate(str(np.round(float(y2) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 / 2), annotation_clip=False, fontsize=12)
         ax.annotate(str(np.round(float(y3) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 + y3 / 2), annotation_clip=False, fontsize=12)
+
+        # significance plot
+        t = rat_pref_df_tot[rat_pref_df_tot.question == q]
+        y = (y1 / 2, y1 + y2 / 2, y1 + y2 + y3 / 2)
+        x = i-barWidth/4
+        for k, dep in enumerate(deps):
+            print(t[t.deployment == dep].sig[:1].values[0])
+            if t[t.deployment == dep].sig[:1].values[0]:
+                ax.annotate('*'*k, xy=(x + .2*k , y[k]+.2*k), annotation_clip=False, fontsize=12)
 
     ax.bar(nq, yy1, width=barWidth, color = 'darkgrey', label = 'rational')
     ax.bar(nq, yy2, bottom=yy1, width=barWidth, color = 'slategrey', label = 'irrationalty type 1')
