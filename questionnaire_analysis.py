@@ -1,6 +1,8 @@
 from reformat_data import *
 from inferential_analysis import *
 import pickle
+from matplotlib import style
+
 
 def prepare_data(df_dir ):
     rDeployment_rh = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
@@ -98,10 +100,64 @@ def comine_raw_data2dataframe(rDeployment):
     return crdf.loc[ix,:]
 
 
-if __name__ == "__main__":
-    reformat, infer = True, False
-    # reformat, infer = False, True
+def rat3_df(rat_pref_df_tot):
+    '''
+    creating dataframe for comparision between 3 rationalities for each question
+    :param rat_pref_df_tot: dataframe containing the preference for each rationality.
+    :return:
+    '''
+    nu = rat_pref_df_tot.num_users.unique().sum()
+    binomal_df = pd.DataFrame(data=[], columns = ['rh', 'ri', 'ih', 'rih'])
+    rat_pref_df_tot = rat_pref_df_tot.reset_index(drop=True)
+    qs = rat_pref_df_tot.question.unique()
+    for q in qs:
+        t = rat_pref_df_tot[rat_pref_df_tot.question == q]
+        rat = t.rationality.unique()
+        bin_temp = []
+        for r in rat:
+            a = t[t.rationality == r]
+            temp = pd.DataFrame(a.loc[a.index[0]]).transpose()
+            temp.preference = a.preference.sum()
+            if 'rat3_df' in locals():
+                rat3_df = rat3_df.append(temp)
+            else:
+                rat3_df = temp.copy()
 
+        temp_rat = rat3_df[rat3_df.question == q]
+        bin_temp.append(stats.binom_test(x=temp_rat.loc[temp_rat.rationality == 'rational', 'preference'],
+                                         n=temp_rat.loc[(temp_rat.rationality == 'rational') | (temp_rat.rationality == 'half'), 'preference'].sum(), p=.5))
+        bin_temp.append(stats.binom_test(x=temp_rat.loc[temp_rat.rationality == 'rational', 'preference'],
+                                         n=temp_rat.loc[(temp_rat.rationality == 'rational') | (temp_rat.rationality == 'irrational'), 'preference'].sum(), p=.5))
+        bin_temp.append(stats.binom_test(x=temp_rat.loc[temp_rat.rationality == 'irrational', 'preference'],
+                                         n=temp_rat.loc[(temp_rat.rationality == 'irrational') | (temp_rat.rationality == 'half'), 'preference'].sum(), p=.5))
+        bin_temp.append(stats.binom_test(x=temp_rat.loc[temp_rat.rationality == 'irrational', 'preference'],
+                                         n=temp_rat.loc[:, 'preference'].sum(), p=.5))
+
+        if 'binomal_df' in locals():
+            binomal_df = binomal_df.append(pd.DataFrame(data=[bin_temp], columns = binomal_df.columns))
+        else:
+            binomal_df = pd.DataFrame(data=[bin_temp], columns=binomal_df.columns)
+
+    return rat3_df, binomal_df
+
+def creating_new_style():
+    import matplotlib
+    import os
+    from shutil import copy2
+    style_path = matplotlib.get_configdir()
+    style_path = os.path.join(style_path, 'stylelib')
+
+    if not os.path.exists(style_path):
+        os.makedirs(style_path)
+
+    copy2('presentation.mplstyle', style_path)
+
+
+if __name__ == "__main__":
+    # reformat, infer = True, False
+    reformat, infer = False, True
+
+    creating_new_style()
     df_dir = 'data/dataframes/'
 
     if reformat:
@@ -120,21 +176,28 @@ if __name__ == "__main__":
             rf[rDep] = pd.read_csv(df_dir + 'raw_dataframe' + fn, index_col=0)
             sf[rDep] = pd.read_csv(df_dir + 'stats_dataframe' + fn, index_col=0)
 
-        pref_df_tot = pd.read_csv(df_dir + 'pref_dataframe' + '.csv', index_col=0)
-        users_pref_tot = pd.read_csv(df_dir + 'users_pref_dataframe' + '.csv', index_col=0)
-        open_answers_tot = pd.read_csv(df_dir + 'open_answers_dataframe' + '.csv', index_col=0)
-        manova_df = pd.read_csv(df_dir + 'manova_df_dataframe.csv', index_col = 0)
-        manova_df_small = pd.read_csv(df_dir + 'mdf_small.csv', index_col = 0)
-        rat_pref_df_tot = pd.read_csv(df_dir+'__rat_pref_dataframe.csv', index_col = 0)
+
+        pref_df_tot          = pd.read_csv(df_dir + '__pref_dataframe' + '.csv', index_col=0)
+        users_pref_tot       = pd.read_csv(df_dir + '__users_pref_dataframe' + '.csv', index_col=0)
+        open_answers_tot     = pd.read_csv(df_dir + '__open_answers_dataframe' + '.csv', index_col=0)
+        manova_df            = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col = 0)
+        manova_df_small      = pd.read_csv(df_dir + '__mdf_small.csv', index_col = 0)
+        rat_pref_df_tot      = pd.read_csv(df_dir+'__rat_pref_dataframe.csv', index_col = 0)
+
+        rat_pref_df_tot_3rat, binomal_df = rat3_df(rat_pref_df_tot)
+        rat_pref_df_tot_3rat.to_csv(df_dir+'__rat_pref_dataframe_3rat.csv')
+        binomal_df.index = users_pref_tot.index
+        binomal_df.to_csv(df_dir+'__binomal_df.csv')
 
 
     if infer:
+        style.use(['ggplot', 'presentation'])
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
         # word_cloud(open_answers_tot)
-        stacked_plot(users_pref_tot, rat_pref_df_tot)
+        stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df, show_sig=False)
 
         # manova_df = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
@@ -155,7 +218,7 @@ if __name__ == "__main__":
             stats_df = sf[i]
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
             # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], p='deployment')
+            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], p='deployment')
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
         # preference_cinsistency(users_pref_tot, sf, ignore = False)

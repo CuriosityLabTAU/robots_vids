@@ -420,16 +420,16 @@ def prefernce_dataframe_index(raw_df):
             else:
                 rat_pref_df = pd.DataFrame(data = [[r, x.keys()[i], x[x.keys()[i]]]], columns=['question', 'rationality', 'preference'])
 
-    rat_pref_df['zscore'], rat_pref_df['zprob'], rat_pref_df['binomal'], rat_pref_df['size'], rat_pref_df['sig'] = '', '', '', '', ''
+    rat_pref_df['zscore'], rat_pref_df['zprob'], rat_pref_df['binomal'], rat_pref_df['num_users'], rat_pref_df['sig'] = '', '', '', '', ''
     rat_pref_df['deployment'] = rat_pref_df['rationality'].tolist()[0] + '_' + rat_pref_df['rationality'].tolist()[1]
     rat_pref_df.zscore  = stats.mstats.zscore(rat_pref_df.preference)
     rat_pref_df.zprob   = stats.norm.cdf(rat_pref_df.preference)
 
-    rat_pref_df.size = temps.shape[1]
+    rat_pref_df.num_users = temps.shape[1]
     rat_pref_df = rat_pref_df.reset_index(drop=True)
 
     for i in rat_pref_df.index:
-        rat_pref_df.loc[i, 'binomal'] = stats.binom_test(x=rat_pref_df.loc[i, 'preference'], n=rat_pref_df.loc[i, 'size'], p=.5)
+        rat_pref_df.loc[i, 'binomal'] = stats.binom_test(x=rat_pref_df.loc[i, 'preference'], n=rat_pref_df.loc[i, 'num_users'], p=.5)
         rat_pref_df.loc[i, 'sig'] = rat_pref_df.loc[i, 'binomal'] < 0.05
 
     pref_df = pref_df.reset_index(drop=True)
@@ -440,6 +440,7 @@ def prefernce_dataframe_index(raw_df):
     users_pref.columns = \
         raw_df[(raw_df.question == 'ID')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).loc[
             'ResponseId']
+
     return pref_df, users_pref, open_answers, rat_pref_df
     
 def questions(stats_df, raw_df):
