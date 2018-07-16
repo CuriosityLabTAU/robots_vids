@@ -99,8 +99,8 @@ def comine_raw_data2dataframe(rDeployment):
 
 
 if __name__ == "__main__":
-    # reformat, infer = True, False
-    reformat, infer = False, True
+    reformat, infer = True, False
+    # reformat, infer = False, True
 
     df_dir = 'data/dataframes/'
 
