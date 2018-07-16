@@ -386,7 +386,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
     # sns.barplot(x="answer", y="percentage", hue="rationality", data=answers_counts, ax=ax)
     # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
 
-def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df):
+def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
     '''
     Stacked barplot of choices per intuition questions,
     :param users_pref_tot: Dataframe of which robot each user chose in each question.
@@ -412,25 +412,27 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df):
         ax.annotate(str(np.round(float(y2) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 / 2), annotation_clip=False, fontsize=ft)
         ax.annotate(str(np.round(float(y3) / tot * 100,1))+'%', xy=(i-barWidth/4 , y1 + y2 + y3 / 2), annotation_clip=False, fontsize=ft)
 
-        y = (y1 + y2 / 2, y1 / 2, y1 + y2 / 2 - 8)
-        x = i-barWidth/4
-        for k, dep in enumerate(deps): # comparison on 3 groups
-            dep1 = dep.split('_')[0][0] + dep.split('_')[1][0]
-            print(k, dep, binomal_sig.loc[q,dep1])
-            if binomal_sig.loc[q, dep1]:
-                # print(k, dep, '*'*k)
-                ax.annotate('*'*(k+1), xy=(x + barWidth , y[k]), annotation_clip=False, fontsize=ft)
-        if binomal_sig.loc[q, 'rih']: # difference between rational and all the irrationaltogther
-            ax.annotate('*'*4, xy=(x + barWidth , y[1]-8), annotation_clip=False, fontsize=ft)
+
+        if show_sig:
+            y = (y1 + y2 / 2, y1 / 2, y1 + y2 / 2 - 8)
+            x = i-barWidth/4
+            for k, dep in enumerate(deps): # comparison on 3 groups
+                dep1 = dep.split('_')[0][0] + dep.split('_')[1][0]
+                print(k, dep, binomal_sig.loc[q,dep1])
+                if binomal_sig.loc[q, dep1]:
+                    # print(k, dep, '*'*k)
+                    ax.annotate('*'*(k+1), xy=(x + barWidth , y[k]), annotation_clip=False, fontsize=ft)
+            if binomal_sig.loc[q, 'rih']: # difference between rational and all the irrationaltogther
+                ax.annotate('*'*4, xy=(x + barWidth , y[1]-8), annotation_clip=False, fontsize=ft)
 
 
-        # significance *** plot
-        t = rat_pref_df_tot[rat_pref_df_tot.question == q]
+            # significance *** plot
+            t = rat_pref_df_tot[rat_pref_df_tot.question == q]
 
-        # for k, dep in enumerate(deps): # based on the original two groups
-        #     if t[t.deployment == dep].sig.values[0]:
-        #         print(k, dep, '*'*k)
-        #         ax.annotate('*'*(k+1), xy=(x + barWidth , y[k]), annotation_clip=False, fontsize=12)
+            # for k, dep in enumerate(deps): # based on the original two groups
+            #     if t[t.deployment == dep].sig.values[0]:
+            #         print(k, dep, '*'*k)
+            #         ax.annotate('*'*(k+1), xy=(x + barWidth , y[k]), annotation_clip=False, fontsize=12)
 
     ax.bar(nq, yy1, width=barWidth, color = 'darkgrey', label = 'rational')
     ax.bar(nq, yy2, bottom=yy1, width=barWidth, color = 'slategrey', label = 'irrationalty type 1')
