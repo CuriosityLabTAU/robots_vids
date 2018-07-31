@@ -198,7 +198,7 @@ if __name__ == "__main__":
         # word_cloud(open_answers_tot, cloud=0)
         stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
-        manova_df = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
+        # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
 
