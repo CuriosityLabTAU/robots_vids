@@ -189,15 +189,16 @@ if __name__ == "__main__":
 
 
     if infer:
-        style.use(['ggplot', 'presentation'])
+        # style.use(['ggplot', 'presentation'])
+        style.use(['ggplot'])
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        # word_cloud(open_answers_tot)
+        # word_cloud(open_answers_tot, cloud=0)
         stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
-        # manova_df = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
+        manova_df = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
 
@@ -212,13 +213,13 @@ if __name__ == "__main__":
         #     # save_maxfig(fig, 'pref'+gs.replace('.','_'))
         #     preference_plot(sff, 'sub_scale', gs, fname='countplot_only_choices_'+gs.replace('.','_'), p = 'countplot')
 
-        for i in sf:
-            stats_df = sf[i]
-            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
-            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+i[-2:], p='default')
-            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+i[-2:], p='deployment')
+        # for _, stats_df in sf.items():
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+_[-2:], p='default')
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+_[-2:], p='default')
+        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+_[-2:], p='deployment')
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
+
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
         # preference_per_question(pref_df_tot)
 

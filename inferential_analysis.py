@@ -49,24 +49,25 @@ def preference_plot(stats_df, column, option, fname, yy = 'answers', p='deployme
     if yy == 'answers':
         b = stats_df[stats_df[column] == option]
         b.answers.replace(np.nan, 0)
-        n = int(round(float(cnames.__len__())/m))
+        n = int(np.ceil(float(cnames.__len__())/m))
         b.answers = b.answers.astype('float64')
     else:
         # for maniva_df
         cnames = ['education', 'gender', 'side', 'color']
-        n = int(round(float(cnames.__len__()) / m))
+        n = int(np.ceil(float(cnames.__len__()) / m))
         b = stats_df
     fig, ax = plt.subplots(m,n)
     for i, c in enumerate(cnames):
+        axc = ax[int(i / n), int(i % n)]
         # (b.groupby(c).size() / 3).tolist()
         # d = b.groupby(c)['rationality']
         # d.groups.keys()
         if p == 'coutnplot':
-            sns.countplot(hue = c, x='rationality', data = b, ax = ax[i/n, i%n])
+            sns.countplot(hue = c, x='rationality', data = b, ax =axc)
         elif p == 'deployment':
-            sns.barplot(x = c, y = 'answers', data = b, ax = ax[i/n, i%n])
+            sns.barplot(x = c, y = 'answers', data = b, ax = axc)
         elif p == 'default':
-            sns.barplot(hue = c,x = 'rationality', y = yy, data = b, ax = ax[i/n, i%n])
+            sns.barplot(hue = c,x = 'rationality', y = yy, data = b, ax = axc)
 
         # sns.countplot(x = 'answers', hue='rationality', data=b, ax = ax[i/n, i%n])
         # sns.factorplot(hue = c,x = 'rationality', y = 'answers', data = b, ax = ax[i/n, i%n])
