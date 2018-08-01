@@ -399,7 +399,12 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
     binomal_df.index = rat_pref_df_tot.question.unique().tolist()
     binomal_sig = binomal_df < .05
     fig, ax = plt.subplots(1,1)
+    #
+    # fig = plt.figure()
+    # ax = fig.add_axes((.1, .4, .8, .5))
+
     qs = ['investments', 'analyst', 'jury', 'bartender', 'prefer']
+    qs = users_pref_tot.index.tolist()
     nq = np.arange(0,qs.__len__())
     barWidth = .4
     yy1, yy2, yy3 = np.array([]), np.array([]), np.array([])
@@ -422,9 +427,9 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
                 print(k, dep, binomal_sig.loc[q,dep1])
                 if binomal_sig.loc[q, dep1]:
                     # print(k, dep, '*'*k)
-                    ax.annotate('*'*(k+1), xy=(x + barWidth , y[k]), annotation_clip=False, fontsize=ft)
+                    ax.annotate('*'*(k+1), xy=(x , y[k] - 8), annotation_clip=False, fontsize=ft)
             if binomal_sig.loc[q, 'rih']: # difference between rational and all the irrationaltogther
-                ax.annotate('*'*4, xy=(x + barWidth , y[1]-8), annotation_clip=False, fontsize=ft)
+                ax.annotate('*'*4, xy=(x, y[1] - 16), annotation_clip=False, fontsize=ft)
 
 
             # significance *** plot
@@ -445,8 +450,14 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
     ax.set_xticklabels(qs)
     ax.set_ylabel('Number of people')
     ax.set_xlabel('Question')
-    ax.legend()
-    save_maxfig(fig, 'stacked_choices_per_rationality')
+    box = ax.get_position() # get the axis position
+    ax.set_position([box.x0, box.y0, box.width * 0.8, box.height]) # shrink the axes for the legend
+    ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.) # put legend outside the plot
+
+    an = '* rational - type I\n** rational - type II\n*** type II - type I\n**** rational - (type II + type I)'
+    fig.text(.78, .7, an, bbox={'facecolor':'lightgrey', 'alpha':0.5})
+
+    save_maxfig(fig, 'stacked_choices_per_rationality', resize=(24,12))
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''
