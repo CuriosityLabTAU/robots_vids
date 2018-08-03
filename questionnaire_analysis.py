@@ -195,8 +195,8 @@ if __name__ == "__main__":
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        # word_cloud(open_answers_tot, cloud=0)
-        stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
+        word_cloud(open_answers_tot, cloud=1)
+        # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
         # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')

@@ -354,19 +354,22 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
         # frequency plot
         words_names = wordcloud.words_.keys()
         words_count = wordcloud.words_.values()
-        a = np.array([words_count, words_names]).T
-        a = a[a[:, 0].argsort()]
-        words_names = a[:, 1].tolist()
-        words_count = a[:, 0].astype('float').tolist()
+        wc, wn = [], []
+        for w in zip(words_names, words_count):
+            wc.append(w[1])
+            wn.append(w[0])
+
+        wc.reverse()
+        wn.reverse()
 
         ax_wfreq.set_ylabel('Top ' + str(N) + ' Words')
         ax_wfreq.set_xlabel('Frequency')
         ax_wfreq.set_title(rationalities[i])
-        indexes = np.arange(len(words_names))
+        indexes = np.arange(N)
         width = .4
-        ax_wfreq.barh(indexes, words_count, width)
+        ax_wfreq.barh(indexes, wc, width)
         ax_wfreq.set_yticks(indexes)
-        ax_wfreq.set_yticklabels(words_names)
+        ax_wfreq.set_yticklabels(wn)
 
         wordclouds.append(wordcloud)
 
