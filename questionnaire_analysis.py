@@ -43,6 +43,8 @@ def prepare_data(df_dir ):
 
             if rDep != 'rDeployment_tt':
                 pref_df, users_pref, open_answers, rat_pref_df = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
+                mdf, ___ = creating_dataframe4manova(stats_df, users_pref)
+                mdf.to_csv('data/dataframes/mdf_'+rDep[-2:]+'.csv')
 
                 #  crating preference dataframe
                 if 'pref_df_tot' in locals():
@@ -195,7 +197,7 @@ if __name__ == "__main__":
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        word_cloud(open_answers_tot, cloud=1)
+        # word_cloud(open_answers_tot, cloud=1)
         # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
         # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
@@ -222,6 +224,8 @@ if __name__ == "__main__":
 
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
         # preference_per_question(pref_df_tot)
+
+    statistical_diff(df_dir)
 
     plt.show()
 

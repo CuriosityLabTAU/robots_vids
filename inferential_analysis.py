@@ -234,6 +234,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2')
                  | (stats_df['feature'] == 'BFI') | (stats_df['feature'] == 'NARS')]
     [['feature', 'sub_scale', 'answers', 'gender', 'education', 'age', 'userID','robot','rationality', 'side']]
+    g['rationality'] = g['rationality'].astype('str')
     g['f'] = g['feature'] + '_' + g['sub_scale']
     g['f1'] = g['feature'] + '_' + g['sub_scale'] + '_' + g['robot'] +'_'+g['rationality']
     g = g.drop(['feature', 'sub_scale'], axis=1)
@@ -461,6 +462,34 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
     fig.text(.78, .7, an, bbox={'facecolor':'lightgrey', 'alpha':0.5})
 
     save_maxfig(fig, 'stacked_choices_per_rationality', resize=(24,12))
+
+def statistical_diff(df_dir):
+    '''
+    calculating statistical difference between the different questionnaires parameters
+    :param df_dir: path to where the desired dataframes are
+    :return: stats_diff.csv
+    '''
+    # loading dataframes for statistical analysis of all the couple combinations.
+
+
+    mdfd = {}
+    for f in os.listdir(df_dir):
+        if ('mdf_' in f) & (len(f) == 10):
+            mdfd[f.split('.')[0].split('_')[1]] = pd.read_csv(df_dir + f)
+
+
+    st = pd.DataFrame({'deployment':[], 'measurement':[], 'statistics':[], 'p_value':[]})
+    from scipy.stats import mannwhitneyu
+    for key, m in mdfd.items():
+        r1, r2 = m.rationality.unique()
+        # for c in m.columns[m.columns.str.contains('GOD').tolist()]:
+        for c in m.columns:
+            # s, p = mannwhitneyu(m.query('rationality==str(r1)')[c], m.query('rationality==str(r2)')[c])
+            # m.groupby('rationality') # learn how to use this for statistics.
+            s, p = mannwhitneyu(m[m.rationality==r1][c], m[m.rationality==r2][c])
+            st = st.append(pd.DataFrame(data = [[key, c, s, p]], columns = st.columns))
+    st.to_csv(df_dir+'stats_diff.csv')
+
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''
