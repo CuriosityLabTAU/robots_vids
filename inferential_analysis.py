@@ -489,6 +489,7 @@ def statistical_diff(df_dir):
             s, p = mannwhitneyu(m[m.rationality==r1][c], m[m.rationality==r2][c])
             st = st.append(pd.DataFrame(data = [[key, c, s, p]], columns = st.columns))
     st.to_csv(df_dir+'stats_diff.csv')
+    print('statistics saved to data/dataframes/stats_diff.csv')
 
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
