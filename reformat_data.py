@@ -477,7 +477,9 @@ def questions(stats_df, raw_df):
 
 
     # count how many times in our question, each robot was chosen.
-    temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
+    # temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
+    temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/7. # normalization by number of questions
+    # todo: check if I flipped the question - I think I did
 
     meaning = 'Count (Normalized) participant chose this robot'
     # stats_df = stats_df.append(

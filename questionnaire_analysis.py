@@ -217,17 +217,17 @@ if __name__ == "__main__":
 
         # for _, stats_df in sf.items():
         #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+_[-2:], p='default')
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_barplot_only_choices_'+_[-2:], p='default')
-        #     preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+_[-2:], p='deployment')
+            # preference_plot(stats_df, 'sub_scale', 'summary', fname='_summary_'+_[-2:], p='deployment') # summary plot
         #     qdf = pair_plot(stats_df, ['BFI','NARS'])
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
 
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
         # preference_per_question(pref_df_tot)
 
-    statistical_diff(df_dir)
+        # statistical_diff(df_dir)
+        summary_diff(sf, df_dir)
 
-    plt.show()
+        plt.show()
 
     #todo: word cloud for the open question
     # if rDep == 'rDeployment_tt':

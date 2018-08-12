@@ -6,7 +6,7 @@ import os
 import pickle
 from matplotlib.colors import LinearSegmentedColormap
 # plt.style.use('ggplot')
-
+from scipy.stats import mannwhitneyu
 
 # plt.xkcd();
 ft = 12 # annotate fontsize
@@ -479,7 +479,6 @@ def statistical_diff(df_dir):
 
 
     st = pd.DataFrame({'deployment':[], 'measurement':[], 'statistics':[], 'p_value':[]})
-    from scipy.stats import mannwhitneyu
     for key, m in mdfd.items():
         r1, r2 = m.rationality.unique()
         # for c in m.columns[m.columns.str.contains('GOD').tolist()]:
@@ -488,10 +487,48 @@ def statistical_diff(df_dir):
             # m.groupby('rationality') # learn how to use this for statistics.
             s, p = mannwhitneyu(m[m.rationality==r1][c], m[m.rationality==r2][c])
             st = st.append(pd.DataFrame(data = [[key, c, s, p]], columns = st.columns))
-    st.to_csv(df_dir+'stats_diff.csv')
+    st.to_csv(df_dir+'stats_diff_mannwhitney.csv')
 
     print(st)
-    print('statistics saved to data/dataframes/stats_diff.csv')
+    print('statistics saved to data/dataframes/stats_diff_mannwhitney.csv')
+
+def summary_diff(sf, df_dir):
+    '''
+    calculating and plotting statistical difference between the summary
+    :param stats_df: dictionary of statistical dataframe
+    :return: summary_mannwhitney.csv and figure
+    '''
+    categories = ['side', 'robot', 'rationality']
+    st = pd.DataFrame({'deployment':[], 'category_by': [], 'statistics':[], 'p_value':[]})
+    st = st[st.columns]
+    for deployment, stats_df in sf.items():
+        if deployment != 'rDeployment_tt':
+            m = stats_df[stats_df.sub_scale == 'summary']
+            for categ in categories:
+                psig = False
+                r1, r2 = m[categ].unique()
+                s, p = mannwhitneyu(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
+                st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
+                if (categ == 'rationality') and(p < 0.05):
+                    psig = True
+                    graph_highet = m['answers'].mean() #+ m['answers'].std()
+
+            # figure for the article
+            fig, ax = plt.subplots(1,1)
+            fig.canvas.set_window_title(deployment)
+            sns.barplot(x='rationality', y='answers', data=m, ax=ax)
+            if psig:
+                cxt = ax.get_xticks()
+                ax.hlines(ax.get_ylim()[1], cxt[0], cxt[1])
+                ax.annotate('*', xy=(np.mean(cxt), ax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                # ax.hlines((l[3], l[4], l[6]), *ax.get_xlim(), lw=4., linestyle='-.')
+
+            save_maxfig(fig, 'rationality_diff' + deployment[-2:])
+
+    st.to_csv(df_dir+'summary_mannwhitney.csv')
+    print('statistics saved to data/dataframes/summary_mannwhitney.csv')
+
+
 
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
