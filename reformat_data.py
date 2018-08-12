@@ -188,7 +188,7 @@ def create_stats_df(raw_df, fn):
 
         stats_df.loc[:, 'gender'] = stats_df.loc[:, 'gender'].replace({1.0: 'female', 2.0: 'male'})
         stats_df.loc[:, 'education'] = stats_df.loc[:, 'education'].replace(
-            {1.0: '<HS', 2.0: 'HS', 3.0: '<BA', 4.0: 'BA', 5.0: 'MA', 6.0: 'professional', 7.0: 'PhD'})
+            {1.0: '<HS', 2.0: 'HS', 3.0: '<BA', 4.0: 'Associate degree', 5.0: 'BA', 6.0: 'MA', 7.0: 'professional', 8.0: 'PhD'})
 
 
         stats_df = stats_df.reset_index(drop=True)
