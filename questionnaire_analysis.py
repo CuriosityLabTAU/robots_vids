@@ -229,7 +229,6 @@ if __name__ == "__main__":
 
         plt.show()
 
-    #todo: word cloud for the open question
     # if rDep == 'rDeployment_tt':
-    #     see_the_data(stats_df) # todo: contonue working on descriptive of the BFI, NARS and Godspeed
+    #     see_the_data(stats_df) # todo: continue working on descriptive of the BFI, NARS and Godspeed
 
