@@ -450,6 +450,11 @@ def questions(stats_df, raw_df):
     :param raw_df: raw dataframe
     :return:
     '''
+
+    # count how many times in our question, each robot was chosen.
+    # temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
+    temps1 = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/7. # normalization by number of questions
+
     p = 'Click to write the question text - '
     qp = ['Which robot would you prefer?', 'Which robot would you trust to manage your investments portfolio?',
           'Which robot do you think will serve as a good jury member?',
@@ -475,25 +480,16 @@ def questions(stats_df, raw_df):
     temps.feature = 'q_preference'
     stats_df = stats_df.append(temps)
 
-
-    # count how many times in our question, each robot was chosen.
-    # temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/5.
-    temps = stats_df.loc[stats_df[stats_df.feature == 'q_preference'].index,stats_df.columns[4:]].apply(pd.value_counts)/7. # normalization by number of questions
     # todo: check if I flipped the question - I think I did
 
     meaning = 'Count (Normalized) participant chose this robot'
-    # stats_df = stats_df.append(
-    #     pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning] + temps.loc['blue'].tolist()],
-    #                  columns=stats_df.columns))
-    # stats_df = stats_df.append(
-    #     pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning] + temps.loc['red'].tolist()],
-    #                  columns=stats_df.columns))
+
     try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps.loc[4.].tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps1.loc[4.].tolist()], columns = stats_df.columns))
     except:
         pass
     try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps.loc[1.].tolist()], columns = stats_df.columns))
+        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps1.loc[1.].tolist()], columns = stats_df.columns))
     except:
         pass
 

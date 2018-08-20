@@ -221,13 +221,13 @@ if __name__ == "__main__":
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
 
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
-        preference_per_question(pref_df_tot)
+        # preference_per_question(pref_df_tot)
 
         # statistical_diff(df_dir)
         summary_diff(sf, df_dir)
 
         # word_cloud(open_answers_tot, cloud=1)
-        stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
+        # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
         plt.show()
 
