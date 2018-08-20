@@ -533,16 +533,16 @@ def summary_diff(sf, df_dir):
 
     q_pref_df = pd.DataFrame.from_dict(d)
 
-    a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'hr'], var_name='rationality', value_name='preference')
+    a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
     a['group'] = 1
     a = a[~a['preference'].isna()]
-    b = pd.melt(q_pref_df, id_vars='group', value_vars=['ih', 'hi'], var_name='rationality', value_name='preference')
+    b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
     b = b[~b['preference'].isna()]
     b['group'] = 2
     q_pref_df1 = pd.concat([a, b])
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ih','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','i1')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i1')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','i2')
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','i1')
 
     fig, ax = plt.subplots(1, 1)
