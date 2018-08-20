@@ -498,12 +498,14 @@ def summary_diff(sf, df_dir):
     :param stats_df: dictionary of statistical dataframe
     :return: summary_mannwhitney.csv and figure
     '''
+    d = {} # preference dictionary
     categories = ['side', 'robot', 'rationality']
     st = pd.DataFrame({'deployment':[], 'category_by': [], 'statistics':[], 'p_value':[]})
     st = st[st.columns]
     for deployment, stats_df in sf.items():
         if deployment != 'rDeployment_tt':
             m = stats_df[stats_df.sub_scale == 'summary']
+            m = m[m['feature'] == 'r_preference'] # todo: where the q_preference from?
             for categ in categories:
                 psig = False
                 r1, r2 = m[categ].unique()
@@ -511,7 +513,11 @@ def summary_diff(sf, df_dir):
                 st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
                 if (categ == 'rationality') and(p < 0.05):
                     psig = True
-                    graph_highet = m['answers'].mean() #+ m['answers'].std()
+
+                if categ == 'rationality':
+                    d[r1[0] + r2[0]] = m[m[categ] == r1]['answers'].reset_index(drop=True)
+                    d[r2[0] + r1[0]] = m[m[categ] == r2]['answers'].reset_index(drop=True)
+
 
             # figure for the article
             fig, ax = plt.subplots(1,1)
@@ -525,8 +531,24 @@ def summary_diff(sf, df_dir):
 
             save_maxfig(fig, 'rationality_diff' + deployment[-2:])
 
+    q_pref_df = pd.DataFrame.from_dict(d)
+
+    a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
+    a['group'] = 1
+    a = a[~a['preference'].isna()]
+    b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
+    b = b[~b['preference'].isna()]
+    b['group'] = 2
+    q_pref_df1 = pd.concat([a, b])
+
+    fig, ax = plt.subplots(1, 1)
+    sns.barplot(data=q_pref_df1, x='rationality', y='preference', hue='group', ax=ax)
+    # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
+
     st.to_csv(df_dir+'summary_mannwhitney.csv')
+    q_pref_df.to_csv(df_dir + '__q_pref_df.csv')
     print('statistics saved to data/dataframes/summary_mannwhitney.csv')
+    print('questions preference saved to data/dataframes/__q_pref_df.csv')
 
 
 

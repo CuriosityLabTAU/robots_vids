@@ -484,14 +484,15 @@ def questions(stats_df, raw_df):
 
     meaning = 'Count (Normalized) participant chose this robot'
 
-    try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps1.loc[4.].tolist()], columns = stats_df.columns))
-    except:
-        pass
-    try:
-        stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps1.loc[1.].tolist()], columns = stats_df.columns))
-    except:
-        pass
+    # todo: uncomment???
+    # try:
+    #     stats_df = stats_df.append(pd.DataFrame(data=[['blue', 'q_preference', 'summary', meaning]+temps1.loc[4.].tolist()], columns = stats_df.columns))
+    # except:
+    #     pass
+    # try:
+    #     stats_df = stats_df.append(pd.DataFrame(data=[['red', 'q_preference', 'summary', meaning]+temps1.loc[1.].tolist()], columns = stats_df.columns))
+    # except:
+    #     pass
 
     return stats_df
 

@@ -156,8 +156,8 @@ def creating_new_style():
 
 
 if __name__ == "__main__":
-    reformat, infer = True, False
-    # reformat, infer = False, True
+    # reformat, infer = True, False
+    reformat, infer = False, True
     creating_new_style()
     df_dir = 'data/dataframes/'
 
@@ -178,11 +178,11 @@ if __name__ == "__main__":
             sf[rDep] = pd.read_csv(df_dir + 'stats_dataframe' + fn, index_col=0)
 
 
-        pref_df_tot          = pd.read_csv(df_dir + 'pref_dataframe' + '.csv', index_col=0)
-        users_pref_tot       = pd.read_csv(df_dir + 'users_pref_dataframe' + '.csv', index_col=0)
-        open_answers_tot     = pd.read_csv(df_dir + 'open_answers_dataframe' + '.csv', index_col=0)
-        manova_df            = pd.read_csv(df_dir + 'manova_df_dataframe.csv', index_col = 0)
-        manova_df_small      = pd.read_csv(df_dir + 'mdf_small.csv', index_col = 0)
+        pref_df_tot          = pd.read_csv(df_dir + '__pref_dataframe' + '.csv', index_col=0)
+        users_pref_tot       = pd.read_csv(df_dir + '__users_pref_dataframe' + '.csv', index_col=0)
+        open_answers_tot     = pd.read_csv(df_dir + '__open_answers_dataframe' + '.csv', index_col=0)
+        manova_df            = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col = 0)
+        manova_df_small      = pd.read_csv(df_dir + '__mdf_small.csv', index_col = 0)
         rat_pref_df_tot      = pd.read_csv(df_dir+'__rat_pref_dataframe.csv', index_col = 0)
 
         rat_pref_df_tot_3rat, binomal_df = rat3_df(rat_pref_df_tot)
@@ -224,7 +224,7 @@ if __name__ == "__main__":
         # preference_per_question(pref_df_tot)
 
         # statistical_diff(df_dir)
-        summary_diff(sf, df_dir)
+        q_pref_df = summary_diff(sf, df_dir)
 
         # word_cloud(open_answers_tot, cloud=1)
         # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
