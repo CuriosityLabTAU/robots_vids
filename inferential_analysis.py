@@ -533,12 +533,13 @@ def summary_diff(sf, df_dir):
 
     q_pref_df = pd.DataFrame.from_dict(d)
 
-    a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
-    a['group'] = 1
-    a = a[~a['preference'].isna()]
     b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
     b = b[~b['preference'].isna()]
-    b['group'] = 2
+    b['group'] = 1
+    a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
+    a['group'] = 2
+    a = a[~a['preference'].isna()]
+
     q_pref_df1 = pd.concat([a, b])
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ih','i2')
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i1')
