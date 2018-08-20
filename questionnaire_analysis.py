@@ -156,8 +156,8 @@ def creating_new_style():
 
 
 if __name__ == "__main__":
-    # reformat, infer = True, False
-    reformat, infer = False, True
+    reformat, infer = True, False
+    # reformat, infer = False, True
     creating_new_style()
     df_dir = 'data/dataframes/'
 
@@ -197,8 +197,7 @@ if __name__ == "__main__":
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-        # word_cloud(open_answers_tot, cloud=1)
-        # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
+
 
         manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
@@ -222,10 +221,13 @@ if __name__ == "__main__":
         #     questionnaires_boxplot(qdf, 'feature', 'answers', 'gender')
 
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
-        # preference_per_question(pref_df_tot)
+        preference_per_question(pref_df_tot)
 
         # statistical_diff(df_dir)
         summary_diff(sf, df_dir)
+
+        # word_cloud(open_answers_tot, cloud=1)
+        stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
 
         plt.show()
 

@@ -31,9 +31,9 @@
 29,rational,right,red,q_preference,member,choice,1.0,R_2fwWymlJrfVh3SC,37,female,Associate degree
 30,half,left,blue,q_preference,analyst,choice,2.0,R_2fwWymlJrfVh3SC,37,female,Associate degree
 31,rational,right,red,q_preference,bartender,choice,1.0,R_2fwWymlJrfVh3SC,37,female,Associate degree
-32,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2fwWymlJrfVh3SC,37,female,Associate degree
-33,rational,right,red,preference,average,,0.5714285714285714,R_2fwWymlJrfVh3SC,37,female,Associate degree
-34,rational,right,red,preference,std,,0.20203050891044216,R_2fwWymlJrfVh3SC,37,female,Associate degree
+32,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_2fwWymlJrfVh3SC,37,female,Associate degree
+33,rational,right,red,preference,average,,0.6309523809523809,R_2fwWymlJrfVh3SC,37,female,Associate degree
+34,rational,right,red,preference,std,,0.28620988762312644,R_2fwWymlJrfVh3SC,37,female,Associate degree
 35,half,left,blue,preference,average,,0.5714285714285714,R_2fwWymlJrfVh3SC,37,female,Associate degree
 36,half,left,blue,preference,std,,0.0,R_2fwWymlJrfVh3SC,37,female,Associate degree
 37,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_3MDyFl7SXwGlfUi,32,male,BA
@@ -68,9 +68,9 @@
 66,rational,right,red,q_preference,member,choice,1.0,R_3MDyFl7SXwGlfUi,32,male,BA
 67,half,left,blue,q_preference,analyst,choice,2.0,R_3MDyFl7SXwGlfUi,32,male,BA
 68,rational,right,red,q_preference,bartender,choice,1.0,R_3MDyFl7SXwGlfUi,32,male,BA
-69,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_3MDyFl7SXwGlfUi,32,male,BA
-70,rational,right,red,preference,average,,0.6428571428571428,R_3MDyFl7SXwGlfUi,32,male,BA
-71,rational,right,red,preference,std,,0.3030457633656632,R_3MDyFl7SXwGlfUi,32,male,BA
+69,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3MDyFl7SXwGlfUi,32,male,BA
+70,rational,right,red,preference,average,,0.7142857142857143,R_3MDyFl7SXwGlfUi,32,male,BA
+71,rational,right,red,preference,std,,0.4040610178208843,R_3MDyFl7SXwGlfUi,32,male,BA
 72,half,left,blue,preference,average,,0.5714285714285714,R_3MDyFl7SXwGlfUi,32,male,BA
 73,half,left,blue,preference,std,,0.0,R_3MDyFl7SXwGlfUi,32,male,BA
 74,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1oklEFUUXdXoCIs,29,male,Associate degree
@@ -105,9 +105,9 @@
 103,half,left,blue,q_preference,member,choice,2.0,R_1oklEFUUXdXoCIs,29,male,Associate degree
 104,half,left,blue,q_preference,analyst,choice,2.0,R_1oklEFUUXdXoCIs,29,male,Associate degree
 105,rational,right,red,q_preference,bartender,choice,1.0,R_1oklEFUUXdXoCIs,29,male,Associate degree
-106,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1oklEFUUXdXoCIs,29,male,Associate degree
-107,rational,right,red,preference,average,,0.21428571428571427,R_1oklEFUUXdXoCIs,29,male,Associate degree
-108,rational,right,red,preference,std,,0.10101525445522107,R_1oklEFUUXdXoCIs,29,male,Associate degree
+106,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_1oklEFUUXdXoCIs,29,male,Associate degree
+107,rational,right,red,preference,average,,0.23809523809523808,R_1oklEFUUXdXoCIs,29,male,Associate degree
+108,rational,right,red,preference,std,,0.13468700594029476,R_1oklEFUUXdXoCIs,29,male,Associate degree
 109,half,left,blue,preference,average,,0.8571428571428571,R_1oklEFUUXdXoCIs,29,male,Associate degree
 110,half,left,blue,preference,std,,0.0,R_1oklEFUUXdXoCIs,29,male,Associate degree
 111,,,participant,NARS,S1,Situations and Interactions with Robots,0.75,R_bvxDNT0B8LUyW5P,46,female,HS
@@ -142,9 +142,9 @@
 140,rational,right,red,q_preference,member,choice,1.0,R_bvxDNT0B8LUyW5P,46,female,HS
 141,rational,right,red,q_preference,analyst,choice,1.0,R_bvxDNT0B8LUyW5P,46,female,HS
 142,rational,right,red,q_preference,bartender,choice,1.0,R_bvxDNT0B8LUyW5P,46,female,HS
-143,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_bvxDNT0B8LUyW5P,46,female,HS
-144,rational,right,red,preference,average,,1.2142857142857142,R_bvxDNT0B8LUyW5P,46,female,HS
-145,rational,right,red,preference,std,,0.5050762722761054,R_bvxDNT0B8LUyW5P,46,female,HS
+143,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_bvxDNT0B8LUyW5P,46,female,HS
+144,rational,right,red,preference,average,,1.3452380952380951,R_bvxDNT0B8LUyW5P,46,female,HS
+145,rational,right,red,preference,std,,0.6902709054440107,R_bvxDNT0B8LUyW5P,46,female,HS
 146,half,left,blue,preference,average,,0.14285714285714285,R_bvxDNT0B8LUyW5P,46,female,HS
 147,half,left,blue,preference,std,,0.0,R_bvxDNT0B8LUyW5P,46,female,HS
 148,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_2w4EgoJ8AVydxdy,35,male,BA
@@ -179,9 +179,9 @@
 177,rational,right,red,q_preference,member,choice,1.0,R_2w4EgoJ8AVydxdy,35,male,BA
 178,rational,right,red,q_preference,analyst,choice,1.0,R_2w4EgoJ8AVydxdy,35,male,BA
 179,rational,right,red,q_preference,bartender,choice,1.0,R_2w4EgoJ8AVydxdy,35,male,BA
-180,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_2w4EgoJ8AVydxdy,35,male,BA
-181,rational,right,red,preference,average,,1.2142857142857142,R_2w4EgoJ8AVydxdy,35,male,BA
-182,rational,right,red,preference,std,,0.5050762722761054,R_2w4EgoJ8AVydxdy,35,male,BA
+180,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_2w4EgoJ8AVydxdy,35,male,BA
+181,rational,right,red,preference,average,,1.3452380952380951,R_2w4EgoJ8AVydxdy,35,male,BA
+182,rational,right,red,preference,std,,0.6902709054440107,R_2w4EgoJ8AVydxdy,35,male,BA
 183,half,left,blue,preference,average,,0.14285714285714285,R_2w4EgoJ8AVydxdy,35,male,BA
 184,half,left,blue,preference,std,,0.0,R_2w4EgoJ8AVydxdy,35,male,BA
 185,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_1qgOW38YevjYc4Y,30,male,BA
@@ -216,9 +216,9 @@
 214,rational,right,red,q_preference,member,choice,1.0,R_1qgOW38YevjYc4Y,30,male,BA
 215,rational,right,red,q_preference,analyst,choice,1.0,R_1qgOW38YevjYc4Y,30,male,BA
 216,half,left,blue,q_preference,bartender,choice,2.0,R_1qgOW38YevjYc4Y,30,male,BA
-217,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1qgOW38YevjYc4Y,30,male,BA
-218,rational,right,red,preference,average,,0.7142857142857143,R_1qgOW38YevjYc4Y,30,male,BA
-219,rational,right,red,preference,std,,0.4040610178208843,R_1qgOW38YevjYc4Y,30,male,BA
+217,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_1qgOW38YevjYc4Y,30,male,BA
+218,rational,right,red,preference,average,,0.7976190476190477,R_1qgOW38YevjYc4Y,30,male,BA
+219,rational,right,red,preference,std,,0.5219121480186423,R_1qgOW38YevjYc4Y,30,male,BA
 220,half,left,blue,preference,average,,0.5714285714285714,R_1qgOW38YevjYc4Y,30,male,BA
 221,half,left,blue,preference,std,,0.0,R_1qgOW38YevjYc4Y,30,male,BA
 222,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_30cqnT68XKtYGfh,38,male,HS
@@ -253,9 +253,9 @@
 251,rational,right,red,q_preference,member,choice,1.0,R_30cqnT68XKtYGfh,38,male,HS
 252,rational,right,red,q_preference,analyst,choice,1.0,R_30cqnT68XKtYGfh,38,male,HS
 253,rational,right,red,q_preference,bartender,choice,1.0,R_30cqnT68XKtYGfh,38,male,HS
-254,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_30cqnT68XKtYGfh,38,male,HS
-255,rational,right,red,preference,average,,1.2142857142857142,R_30cqnT68XKtYGfh,38,male,HS
-256,rational,right,red,preference,std,,0.5050762722761054,R_30cqnT68XKtYGfh,38,male,HS
+254,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_30cqnT68XKtYGfh,38,male,HS
+255,rational,right,red,preference,average,,1.3452380952380951,R_30cqnT68XKtYGfh,38,male,HS
+256,rational,right,red,preference,std,,0.6902709054440107,R_30cqnT68XKtYGfh,38,male,HS
 257,half,left,blue,preference,average,,0.14285714285714285,R_30cqnT68XKtYGfh,38,male,HS
 258,half,left,blue,preference,std,,0.0,R_30cqnT68XKtYGfh,38,male,HS
 259,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3oyZMxNSCZTNGzn,23,male,<BA
@@ -290,9 +290,9 @@
 288,rational,right,red,q_preference,member,choice,1.0,R_3oyZMxNSCZTNGzn,23,male,<BA
 289,rational,right,red,q_preference,analyst,choice,1.0,R_3oyZMxNSCZTNGzn,23,male,<BA
 290,rational,right,red,q_preference,bartender,choice,1.0,R_3oyZMxNSCZTNGzn,23,male,<BA
-291,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_3oyZMxNSCZTNGzn,23,male,<BA
-292,rational,right,red,preference,average,,1.0714285714285714,R_3oyZMxNSCZTNGzn,23,male,<BA
-293,rational,right,red,preference,std,,0.5050762722761054,R_3oyZMxNSCZTNGzn,23,male,<BA
+291,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_3oyZMxNSCZTNGzn,23,male,<BA
+292,rational,right,red,preference,average,,1.1904761904761905,R_3oyZMxNSCZTNGzn,23,male,<BA
+293,rational,right,red,preference,std,,0.6734350297014738,R_3oyZMxNSCZTNGzn,23,male,<BA
 294,half,left,blue,preference,average,,0.2857142857142857,R_3oyZMxNSCZTNGzn,23,male,<BA
 295,half,left,blue,preference,std,,0.0,R_3oyZMxNSCZTNGzn,23,male,<BA
 296,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_vIfUBtuxCLd1YPL,22,male,HS
@@ -327,9 +327,9 @@
 325,half,left,blue,q_preference,member,choice,2.0,R_vIfUBtuxCLd1YPL,22,male,HS
 326,rational,right,red,q_preference,analyst,choice,1.0,R_vIfUBtuxCLd1YPL,22,male,HS
 327,half,left,blue,q_preference,bartender,choice,2.0,R_vIfUBtuxCLd1YPL,22,male,HS
-328,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_vIfUBtuxCLd1YPL,22,male,HS
-329,rational,right,red,preference,average,,0.9285714285714286,R_vIfUBtuxCLd1YPL,22,male,HS
-330,rational,right,red,preference,std,,0.3030457633656632,R_vIfUBtuxCLd1YPL,22,male,HS
+328,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_vIfUBtuxCLd1YPL,22,male,HS
+329,rational,right,red,preference,average,,1.0238095238095237,R_vIfUBtuxCLd1YPL,22,male,HS
+330,rational,right,red,preference,std,,0.43773276930595795,R_vIfUBtuxCLd1YPL,22,male,HS
 331,half,left,blue,preference,average,,0.2857142857142857,R_vIfUBtuxCLd1YPL,22,male,HS
 332,half,left,blue,preference,std,,0.0,R_vIfUBtuxCLd1YPL,22,male,HS
 333,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_vCSc9egjQy6RPDH,50,female,<BA
@@ -364,9 +364,9 @@
 362,half,left,blue,q_preference,member,choice,2.0,R_vCSc9egjQy6RPDH,50,female,<BA
 363,rational,right,red,q_preference,analyst,choice,1.0,R_vCSc9egjQy6RPDH,50,female,<BA
 364,half,left,blue,q_preference,bartender,choice,2.0,R_vCSc9egjQy6RPDH,50,female,<BA
-365,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_vCSc9egjQy6RPDH,50,female,<BA
-366,rational,right,red,preference,average,,0.9285714285714286,R_vCSc9egjQy6RPDH,50,female,<BA
-367,rational,right,red,preference,std,,0.3030457633656632,R_vCSc9egjQy6RPDH,50,female,<BA
+365,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_vCSc9egjQy6RPDH,50,female,<BA
+366,rational,right,red,preference,average,,1.0238095238095237,R_vCSc9egjQy6RPDH,50,female,<BA
+367,rational,right,red,preference,std,,0.43773276930595795,R_vCSc9egjQy6RPDH,50,female,<BA
 368,half,left,blue,preference,average,,0.2857142857142857,R_vCSc9egjQy6RPDH,50,female,<BA
 369,half,left,blue,preference,std,,0.0,R_vCSc9egjQy6RPDH,50,female,<BA
 370,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1rcz8bjADSpvIEG,49,male,<BA
@@ -401,9 +401,9 @@
 399,rational,right,red,q_preference,member,choice,1.0,R_1rcz8bjADSpvIEG,49,male,<BA
 400,rational,right,red,q_preference,analyst,choice,1.0,R_1rcz8bjADSpvIEG,49,male,<BA
 401,rational,right,red,q_preference,bartender,choice,1.0,R_1rcz8bjADSpvIEG,49,male,<BA
-402,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_1rcz8bjADSpvIEG,49,male,<BA
-403,rational,right,red,preference,average,,1.0714285714285714,R_1rcz8bjADSpvIEG,49,male,<BA
-404,rational,right,red,preference,std,,0.5050762722761054,R_1rcz8bjADSpvIEG,49,male,<BA
+402,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_1rcz8bjADSpvIEG,49,male,<BA
+403,rational,right,red,preference,average,,1.1904761904761905,R_1rcz8bjADSpvIEG,49,male,<BA
+404,rational,right,red,preference,std,,0.6734350297014738,R_1rcz8bjADSpvIEG,49,male,<BA
 405,half,left,blue,preference,average,,0.2857142857142857,R_1rcz8bjADSpvIEG,49,male,<BA
 406,half,left,blue,preference,std,,0.0,R_1rcz8bjADSpvIEG,49,male,<BA
 407,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1BQOs3xU6cpI7T0,23,female,<BA
@@ -438,9 +438,9 @@
 436,rational,right,red,q_preference,member,choice,1.0,R_1BQOs3xU6cpI7T0,23,female,<BA
 437,rational,right,red,q_preference,analyst,choice,1.0,R_1BQOs3xU6cpI7T0,23,female,<BA
 438,rational,right,red,q_preference,bartender,choice,1.0,R_1BQOs3xU6cpI7T0,23,female,<BA
-439,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_1BQOs3xU6cpI7T0,23,female,<BA
-440,rational,right,red,preference,average,,0.7857142857142857,R_1BQOs3xU6cpI7T0,23,female,<BA
-441,rational,right,red,preference,std,,0.5050762722761053,R_1BQOs3xU6cpI7T0,23,female,<BA
+439,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_1BQOs3xU6cpI7T0,23,female,<BA
+440,rational,right,red,preference,average,,0.8809523809523809,R_1BQOs3xU6cpI7T0,23,female,<BA
+441,rational,right,red,preference,std,,0.6397632782164001,R_1BQOs3xU6cpI7T0,23,female,<BA
 442,half,left,blue,preference,average,,0.5714285714285714,R_1BQOs3xU6cpI7T0,23,female,<BA
 443,half,left,blue,preference,std,,0.0,R_1BQOs3xU6cpI7T0,23,female,<BA
 444,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_1QhIporaJGSa0WL,50,female,BA
@@ -475,9 +475,9 @@
 473,rational,right,red,q_preference,member,choice,1.0,R_1QhIporaJGSa0WL,50,female,BA
 474,rational,right,red,q_preference,analyst,choice,1.0,R_1QhIporaJGSa0WL,50,female,BA
 475,rational,right,red,q_preference,bartender,choice,1.0,R_1QhIporaJGSa0WL,50,female,BA
-476,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_1QhIporaJGSa0WL,50,female,BA
-477,rational,right,red,preference,average,,1.0714285714285714,R_1QhIporaJGSa0WL,50,female,BA
-478,rational,right,red,preference,std,,0.5050762722761054,R_1QhIporaJGSa0WL,50,female,BA
+476,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_1QhIporaJGSa0WL,50,female,BA
+477,rational,right,red,preference,average,,1.1904761904761905,R_1QhIporaJGSa0WL,50,female,BA
+478,rational,right,red,preference,std,,0.6734350297014738,R_1QhIporaJGSa0WL,50,female,BA
 479,half,left,blue,preference,average,,0.2857142857142857,R_1QhIporaJGSa0WL,50,female,BA
 480,half,left,blue,preference,std,,0.0,R_1QhIporaJGSa0WL,50,female,BA
 481,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_3HqpRL6tYEk2uNR,28,male,BA
@@ -512,9 +512,9 @@
 510,rational,right,red,q_preference,member,choice,1.0,R_3HqpRL6tYEk2uNR,28,male,BA
 511,rational,right,red,q_preference,analyst,choice,1.0,R_3HqpRL6tYEk2uNR,28,male,BA
 512,rational,right,red,q_preference,bartender,choice,1.0,R_3HqpRL6tYEk2uNR,28,male,BA
-513,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_3HqpRL6tYEk2uNR,28,male,BA
-514,rational,right,red,preference,average,,1.2142857142857142,R_3HqpRL6tYEk2uNR,28,male,BA
-515,rational,right,red,preference,std,,0.5050762722761054,R_3HqpRL6tYEk2uNR,28,male,BA
+513,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_3HqpRL6tYEk2uNR,28,male,BA
+514,rational,right,red,preference,average,,1.3452380952380951,R_3HqpRL6tYEk2uNR,28,male,BA
+515,rational,right,red,preference,std,,0.6902709054440107,R_3HqpRL6tYEk2uNR,28,male,BA
 516,half,left,blue,preference,average,,0.14285714285714285,R_3HqpRL6tYEk2uNR,28,male,BA
 517,half,left,blue,preference,std,,0.0,R_3HqpRL6tYEk2uNR,28,male,BA
 518,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3ikAhEA2TLVrKlv,28,female,BA
@@ -549,9 +549,9 @@
 547,rational,right,red,q_preference,member,choice,1.0,R_3ikAhEA2TLVrKlv,28,female,BA
 548,rational,right,red,q_preference,analyst,choice,1.0,R_3ikAhEA2TLVrKlv,28,female,BA
 549,rational,right,red,q_preference,bartender,choice,1.0,R_3ikAhEA2TLVrKlv,28,female,BA
-550,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_3ikAhEA2TLVrKlv,28,female,BA
-551,rational,right,red,preference,average,,1.0714285714285714,R_3ikAhEA2TLVrKlv,28,female,BA
-552,rational,right,red,preference,std,,0.5050762722761054,R_3ikAhEA2TLVrKlv,28,female,BA
+550,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_3ikAhEA2TLVrKlv,28,female,BA
+551,rational,right,red,preference,average,,1.1904761904761905,R_3ikAhEA2TLVrKlv,28,female,BA
+552,rational,right,red,preference,std,,0.6734350297014738,R_3ikAhEA2TLVrKlv,28,female,BA
 553,half,left,blue,preference,average,,0.2857142857142857,R_3ikAhEA2TLVrKlv,28,female,BA
 554,half,left,blue,preference,std,,0.0,R_3ikAhEA2TLVrKlv,28,female,BA
 555,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_VVhEv2hbmXi3LJn,40,female,BA
@@ -586,9 +586,9 @@
 584,half,left,blue,q_preference,member,choice,2.0,R_VVhEv2hbmXi3LJn,40,female,BA
 585,half,left,blue,q_preference,analyst,choice,2.0,R_VVhEv2hbmXi3LJn,40,female,BA
 586,rational,right,red,q_preference,bartender,choice,1.0,R_VVhEv2hbmXi3LJn,40,female,BA
-587,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_VVhEv2hbmXi3LJn,40,female,BA
-588,rational,right,red,preference,average,,0.3571428571428571,R_VVhEv2hbmXi3LJn,40,female,BA
-589,rational,right,red,preference,std,,0.10101525445522107,R_VVhEv2hbmXi3LJn,40,female,BA
+587,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_VVhEv2hbmXi3LJn,40,female,BA
+588,rational,right,red,preference,average,,0.39285714285714285,R_VVhEv2hbmXi3LJn,40,female,BA
+589,rational,right,red,preference,std,,0.15152288168283162,R_VVhEv2hbmXi3LJn,40,female,BA
 590,half,left,blue,preference,average,,0.7142857142857143,R_VVhEv2hbmXi3LJn,40,female,BA
 591,half,left,blue,preference,std,,0.0,R_VVhEv2hbmXi3LJn,40,female,BA
 592,,,participant,NARS,S1,Situations and Interactions with Robots,0.4444444444444445,R_4THnWQAD1Hc0wfv,21,male,<BA
@@ -623,9 +623,9 @@
 621,rational,right,red,q_preference,member,choice,1.0,R_4THnWQAD1Hc0wfv,21,male,<BA
 622,rational,right,red,q_preference,analyst,choice,1.0,R_4THnWQAD1Hc0wfv,21,male,<BA
 623,rational,right,red,q_preference,bartender,choice,1.0,R_4THnWQAD1Hc0wfv,21,male,<BA
-624,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_4THnWQAD1Hc0wfv,21,male,<BA
-625,rational,right,red,preference,average,,1.2142857142857142,R_4THnWQAD1Hc0wfv,21,male,<BA
-626,rational,right,red,preference,std,,0.5050762722761054,R_4THnWQAD1Hc0wfv,21,male,<BA
+624,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_4THnWQAD1Hc0wfv,21,male,<BA
+625,rational,right,red,preference,average,,1.3452380952380951,R_4THnWQAD1Hc0wfv,21,male,<BA
+626,rational,right,red,preference,std,,0.6902709054440107,R_4THnWQAD1Hc0wfv,21,male,<BA
 627,half,left,blue,preference,average,,0.14285714285714285,R_4THnWQAD1Hc0wfv,21,male,<BA
 628,half,left,blue,preference,std,,0.0,R_4THnWQAD1Hc0wfv,21,male,<BA
 629,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_3GcxBtYrNi9kgJ8,48,male,BA
@@ -660,9 +660,9 @@
 658,rational,right,red,q_preference,member,choice,1.0,R_3GcxBtYrNi9kgJ8,48,male,BA
 659,rational,right,red,q_preference,analyst,choice,1.0,R_3GcxBtYrNi9kgJ8,48,male,BA
 660,half,left,blue,q_preference,bartender,choice,2.0,R_3GcxBtYrNi9kgJ8,48,male,BA
-661,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_3GcxBtYrNi9kgJ8,48,male,BA
-662,rational,right,red,preference,average,,1.0,R_3GcxBtYrNi9kgJ8,48,male,BA
-663,rational,right,red,preference,std,,0.4040610178208843,R_3GcxBtYrNi9kgJ8,48,male,BA
+661,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_3GcxBtYrNi9kgJ8,48,male,BA
+662,rational,right,red,preference,average,,1.1071428571428572,R_3GcxBtYrNi9kgJ8,48,male,BA
+663,rational,right,red,preference,std,,0.5555838995037159,R_3GcxBtYrNi9kgJ8,48,male,BA
 664,half,left,blue,preference,average,,0.2857142857142857,R_3GcxBtYrNi9kgJ8,48,male,BA
 665,half,left,blue,preference,std,,0.0,R_3GcxBtYrNi9kgJ8,48,male,BA
 666,,,participant,NARS,S1,Situations and Interactions with Robots,0.7777777777777778,R_3fCXVmnNnuLqlTm,36,female,BA
@@ -697,9 +697,9 @@
 695,rational,right,red,q_preference,member,choice,1.0,R_3fCXVmnNnuLqlTm,36,female,BA
 696,rational,right,red,q_preference,analyst,choice,1.0,R_3fCXVmnNnuLqlTm,36,female,BA
 697,rational,right,red,q_preference,bartender,choice,1.0,R_3fCXVmnNnuLqlTm,36,female,BA
-698,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_3fCXVmnNnuLqlTm,36,female,BA
-699,rational,right,red,preference,average,,1.2142857142857142,R_3fCXVmnNnuLqlTm,36,female,BA
-700,rational,right,red,preference,std,,0.5050762722761054,R_3fCXVmnNnuLqlTm,36,female,BA
+698,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_3fCXVmnNnuLqlTm,36,female,BA
+699,rational,right,red,preference,average,,1.3452380952380951,R_3fCXVmnNnuLqlTm,36,female,BA
+700,rational,right,red,preference,std,,0.6902709054440107,R_3fCXVmnNnuLqlTm,36,female,BA
 701,half,left,blue,preference,average,,0.14285714285714285,R_3fCXVmnNnuLqlTm,36,female,BA
 702,half,left,blue,preference,std,,0.0,R_3fCXVmnNnuLqlTm,36,female,BA
 703,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_5AveqRm6pYT5BYZ,32,male,BA
@@ -734,9 +734,9 @@
 732,half,left,blue,q_preference,member,choice,2.0,R_5AveqRm6pYT5BYZ,32,male,BA
 733,half,left,blue,q_preference,analyst,choice,2.0,R_5AveqRm6pYT5BYZ,32,male,BA
 734,rational,right,red,q_preference,bartender,choice,1.0,R_5AveqRm6pYT5BYZ,32,male,BA
-735,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_5AveqRm6pYT5BYZ,32,male,BA
-736,rational,right,red,preference,average,,0.7142857142857142,R_5AveqRm6pYT5BYZ,32,male,BA
-737,rational,right,red,preference,std,,0.20203050891044214,R_5AveqRm6pYT5BYZ,32,male,BA
+735,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_5AveqRm6pYT5BYZ,32,male,BA
+736,rational,right,red,preference,average,,0.7857142857142857,R_5AveqRm6pYT5BYZ,32,male,BA
+737,rational,right,red,preference,std,,0.30304576336566325,R_5AveqRm6pYT5BYZ,32,male,BA
 738,half,left,blue,preference,average,,0.42857142857142855,R_5AveqRm6pYT5BYZ,32,male,BA
 739,half,left,blue,preference,std,,0.0,R_5AveqRm6pYT5BYZ,32,male,BA
 740,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
@@ -771,9 +771,9 @@
 769,rational,right,red,q_preference,member,choice,1.0,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
 770,rational,right,red,q_preference,analyst,choice,1.0,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
 771,rational,right,red,q_preference,bartender,choice,1.0,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
-772,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
-773,rational,right,red,preference,average,,1.1428571428571428,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
-774,rational,right,red,preference,std,,0.4040610178208843,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
+772,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
+773,rational,right,red,preference,average,,1.2619047619047619,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
+774,rational,right,red,preference,std,,0.5724197752462529,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
 775,half,left,blue,preference,average,,0.14285714285714285,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
 776,half,left,blue,preference,std,,0.0,R_DDaYPG5Vn5sJ1i9,31,male,Associate degree
 777,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_1mLxsqC1Cs8UQ2y,33,female,<BA
@@ -808,9 +808,9 @@
 806,rational,right,red,q_preference,member,choice,1.0,R_1mLxsqC1Cs8UQ2y,33,female,<BA
 807,rational,right,red,q_preference,analyst,choice,1.0,R_1mLxsqC1Cs8UQ2y,33,female,<BA
 808,rational,right,red,q_preference,bartender,choice,1.0,R_1mLxsqC1Cs8UQ2y,33,female,<BA
-809,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_1mLxsqC1Cs8UQ2y,33,female,<BA
-810,rational,right,red,preference,average,,1.2142857142857142,R_1mLxsqC1Cs8UQ2y,33,female,<BA
-811,rational,right,red,preference,std,,0.5050762722761054,R_1mLxsqC1Cs8UQ2y,33,female,<BA
+809,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_1mLxsqC1Cs8UQ2y,33,female,<BA
+810,rational,right,red,preference,average,,1.3452380952380951,R_1mLxsqC1Cs8UQ2y,33,female,<BA
+811,rational,right,red,preference,std,,0.6902709054440107,R_1mLxsqC1Cs8UQ2y,33,female,<BA
 812,half,left,blue,preference,average,,0.14285714285714285,R_1mLxsqC1Cs8UQ2y,33,female,<BA
 813,half,left,blue,preference,std,,0.0,R_1mLxsqC1Cs8UQ2y,33,female,<BA
 814,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_RRlHbrztiJMP3vb,46,female,BA
@@ -845,9 +845,9 @@
 843,rational,right,red,q_preference,member,choice,1.0,R_RRlHbrztiJMP3vb,46,female,BA
 844,rational,right,red,q_preference,analyst,choice,1.0,R_RRlHbrztiJMP3vb,46,female,BA
 845,rational,right,red,q_preference,bartender,choice,1.0,R_RRlHbrztiJMP3vb,46,female,BA
-846,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_RRlHbrztiJMP3vb,46,female,BA
-847,rational,right,red,preference,average,,1.2142857142857142,R_RRlHbrztiJMP3vb,46,female,BA
-848,rational,right,red,preference,std,,0.5050762722761054,R_RRlHbrztiJMP3vb,46,female,BA
+846,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_RRlHbrztiJMP3vb,46,female,BA
+847,rational,right,red,preference,average,,1.3452380952380951,R_RRlHbrztiJMP3vb,46,female,BA
+848,rational,right,red,preference,std,,0.6902709054440107,R_RRlHbrztiJMP3vb,46,female,BA
 849,half,left,blue,preference,average,,0.14285714285714285,R_RRlHbrztiJMP3vb,46,female,BA
 850,half,left,blue,preference,std,,0.0,R_RRlHbrztiJMP3vb,46,female,BA
 851,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_0H64w76ZrUPXO8h,21,female,<BA
@@ -882,9 +882,9 @@
 880,half,left,blue,q_preference,member,choice,2.0,R_0H64w76ZrUPXO8h,21,female,<BA
 881,rational,right,red,q_preference,analyst,choice,1.0,R_0H64w76ZrUPXO8h,21,female,<BA
 882,half,left,blue,q_preference,bartender,choice,2.0,R_0H64w76ZrUPXO8h,21,female,<BA
-883,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_0H64w76ZrUPXO8h,21,female,<BA
-884,rational,right,red,preference,average,,1.0,R_0H64w76ZrUPXO8h,21,female,<BA
-885,rational,right,red,preference,std,,0.20203050891044214,R_0H64w76ZrUPXO8h,21,female,<BA
+883,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_0H64w76ZrUPXO8h,21,female,<BA
+884,rational,right,red,preference,average,,1.0952380952380951,R_0H64w76ZrUPXO8h,21,female,<BA
+885,rational,right,red,preference,std,,0.33671751485073687,R_0H64w76ZrUPXO8h,21,female,<BA
 886,half,left,blue,preference,average,,0.14285714285714285,R_0H64w76ZrUPXO8h,21,female,<BA
 887,half,left,blue,preference,std,,0.0,R_0H64w76ZrUPXO8h,21,female,<BA
 888,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_2CBVuELhZxx49Tc,47,female,<BA
@@ -919,9 +919,9 @@
 917,half,left,blue,q_preference,member,choice,2.0,R_2CBVuELhZxx49Tc,47,female,<BA
 918,rational,right,red,q_preference,analyst,choice,1.0,R_2CBVuELhZxx49Tc,47,female,<BA
 919,half,left,blue,q_preference,bartender,choice,2.0,R_2CBVuELhZxx49Tc,47,female,<BA
-920,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_2CBVuELhZxx49Tc,47,female,<BA
-921,rational,right,red,preference,average,,1.0714285714285714,R_2CBVuELhZxx49Tc,47,female,<BA
-922,rational,right,red,preference,std,,0.3030457633656633,R_2CBVuELhZxx49Tc,47,female,<BA
+920,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_2CBVuELhZxx49Tc,47,female,<BA
+921,rational,right,red,preference,average,,1.1785714285714286,R_2CBVuELhZxx49Tc,47,female,<BA
+922,rational,right,red,preference,std,,0.45456864504849487,R_2CBVuELhZxx49Tc,47,female,<BA
 923,half,left,blue,preference,average,,0.14285714285714285,R_2CBVuELhZxx49Tc,47,female,<BA
 924,half,left,blue,preference,std,,0.0,R_2CBVuELhZxx49Tc,47,female,<BA
 925,,,participant,NARS,S1,Situations and Interactions with Robots,0.75,R_29itqPFxcaxJKSZ,51,male,BA
@@ -956,9 +956,9 @@
 954,rational,right,red,q_preference,member,choice,1.0,R_29itqPFxcaxJKSZ,51,male,BA
 955,rational,right,red,q_preference,analyst,choice,1.0,R_29itqPFxcaxJKSZ,51,male,BA
 956,half,left,blue,q_preference,bartender,choice,2.0,R_29itqPFxcaxJKSZ,51,male,BA
-957,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_29itqPFxcaxJKSZ,51,male,BA
-958,rational,right,red,preference,average,,1.0,R_29itqPFxcaxJKSZ,51,male,BA
-959,rational,right,red,preference,std,,0.4040610178208843,R_29itqPFxcaxJKSZ,51,male,BA
+957,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_29itqPFxcaxJKSZ,51,male,BA
+958,rational,right,red,preference,average,,1.1071428571428572,R_29itqPFxcaxJKSZ,51,male,BA
+959,rational,right,red,preference,std,,0.5555838995037159,R_29itqPFxcaxJKSZ,51,male,BA
 960,half,left,blue,preference,average,,0.2857142857142857,R_29itqPFxcaxJKSZ,51,male,BA
 961,half,left,blue,preference,std,,0.0,R_29itqPFxcaxJKSZ,51,male,BA
 962,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_2aRaMY8uSZnxYLJ,25,female,BA
@@ -993,9 +993,9 @@
 991,rational,right,red,q_preference,member,choice,1.0,R_2aRaMY8uSZnxYLJ,25,female,BA
 992,rational,right,red,q_preference,analyst,choice,1.0,R_2aRaMY8uSZnxYLJ,25,female,BA
 993,half,left,blue,q_preference,bartender,choice,2.0,R_2aRaMY8uSZnxYLJ,25,female,BA
-994,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_2aRaMY8uSZnxYLJ,25,female,BA
-995,rational,right,red,preference,average,,1.1428571428571428,R_2aRaMY8uSZnxYLJ,25,female,BA
-996,rational,right,red,preference,std,,0.4040610178208843,R_2aRaMY8uSZnxYLJ,25,female,BA
+994,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_2aRaMY8uSZnxYLJ,25,female,BA
+995,rational,right,red,preference,average,,1.2619047619047619,R_2aRaMY8uSZnxYLJ,25,female,BA
+996,rational,right,red,preference,std,,0.5724197752462529,R_2aRaMY8uSZnxYLJ,25,female,BA
 997,half,left,blue,preference,average,,0.14285714285714285,R_2aRaMY8uSZnxYLJ,25,female,BA
 998,half,left,blue,preference,std,,0.0,R_2aRaMY8uSZnxYLJ,25,female,BA
 999,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_ODaX0gncU1PLDBT,42,female,MA
@@ -1030,9 +1030,9 @@
 1028,rational,right,red,q_preference,member,choice,1.0,R_ODaX0gncU1PLDBT,42,female,MA
 1029,rational,right,red,q_preference,analyst,choice,1.0,R_ODaX0gncU1PLDBT,42,female,MA
 1030,half,left,blue,q_preference,bartender,choice,2.0,R_ODaX0gncU1PLDBT,42,female,MA
-1031,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_ODaX0gncU1PLDBT,42,female,MA
-1032,rational,right,red,preference,average,,1.0,R_ODaX0gncU1PLDBT,42,female,MA
-1033,rational,right,red,preference,std,,0.4040610178208843,R_ODaX0gncU1PLDBT,42,female,MA
+1031,rational,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_ODaX0gncU1PLDBT,42,female,MA
+1032,rational,right,red,preference,average,,1.1071428571428572,R_ODaX0gncU1PLDBT,42,female,MA
+1033,rational,right,red,preference,std,,0.5555838995037159,R_ODaX0gncU1PLDBT,42,female,MA
 1034,half,left,blue,preference,average,,0.2857142857142857,R_ODaX0gncU1PLDBT,42,female,MA
 1035,half,left,blue,preference,std,,0.0,R_ODaX0gncU1PLDBT,42,female,MA
 1036,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_2ZX2zuf6oUo6N8e,41,female,<BA
@@ -1067,9 +1067,9 @@
 1065,rational,left,red,q_preference,member,choice,1.0,R_2ZX2zuf6oUo6N8e,41,female,<BA
 1066,rational,left,red,q_preference,analyst,choice,1.0,R_2ZX2zuf6oUo6N8e,41,female,<BA
 1067,rational,left,red,q_preference,bartender,choice,1.0,R_2ZX2zuf6oUo6N8e,41,female,<BA
-1068,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_2ZX2zuf6oUo6N8e,41,female,<BA
-1069,rational,left,red,preference,average,,1.2142857142857142,R_2ZX2zuf6oUo6N8e,41,female,<BA
-1070,rational,left,red,preference,std,,0.5050762722761054,R_2ZX2zuf6oUo6N8e,41,female,<BA
+1068,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_2ZX2zuf6oUo6N8e,41,female,<BA
+1069,rational,left,red,preference,average,,1.3452380952380951,R_2ZX2zuf6oUo6N8e,41,female,<BA
+1070,rational,left,red,preference,std,,0.6902709054440107,R_2ZX2zuf6oUo6N8e,41,female,<BA
 1071,half,right,blue,preference,average,,0.14285714285714285,R_2ZX2zuf6oUo6N8e,41,female,<BA
 1072,half,right,blue,preference,std,,0.0,R_2ZX2zuf6oUo6N8e,41,female,<BA
 1073,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_1r18SsbUjQeUCyn,26,male,<BA
@@ -1104,9 +1104,9 @@
 1102,rational,left,red,q_preference,member,choice,1.0,R_1r18SsbUjQeUCyn,26,male,<BA
 1103,half,right,blue,q_preference,analyst,choice,2.0,R_1r18SsbUjQeUCyn,26,male,<BA
 1104,rational,left,red,q_preference,bartender,choice,1.0,R_1r18SsbUjQeUCyn,26,male,<BA
-1105,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_1r18SsbUjQeUCyn,26,male,<BA
-1106,rational,left,red,preference,average,,0.6428571428571428,R_1r18SsbUjQeUCyn,26,male,<BA
-1107,rational,left,red,preference,std,,0.3030457633656632,R_1r18SsbUjQeUCyn,26,male,<BA
+1105,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1r18SsbUjQeUCyn,26,male,<BA
+1106,rational,left,red,preference,average,,0.7142857142857143,R_1r18SsbUjQeUCyn,26,male,<BA
+1107,rational,left,red,preference,std,,0.4040610178208843,R_1r18SsbUjQeUCyn,26,male,<BA
 1108,half,right,blue,preference,average,,0.5714285714285714,R_1r18SsbUjQeUCyn,26,male,<BA
 1109,half,right,blue,preference,std,,0.0,R_1r18SsbUjQeUCyn,26,male,<BA
 1110,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_BsjI1PJjk3inFlv,35,male,HS
@@ -1141,9 +1141,9 @@
 1139,rational,left,red,q_preference,member,choice,1.0,R_BsjI1PJjk3inFlv,35,male,HS
 1140,rational,left,red,q_preference,analyst,choice,1.0,R_BsjI1PJjk3inFlv,35,male,HS
 1141,rational,left,red,q_preference,bartender,choice,1.0,R_BsjI1PJjk3inFlv,35,male,HS
-1142,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_BsjI1PJjk3inFlv,35,male,HS
-1143,rational,left,red,preference,average,,1.2142857142857142,R_BsjI1PJjk3inFlv,35,male,HS
-1144,rational,left,red,preference,std,,0.5050762722761054,R_BsjI1PJjk3inFlv,35,male,HS
+1142,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_BsjI1PJjk3inFlv,35,male,HS
+1143,rational,left,red,preference,average,,1.3452380952380951,R_BsjI1PJjk3inFlv,35,male,HS
+1144,rational,left,red,preference,std,,0.6902709054440107,R_BsjI1PJjk3inFlv,35,male,HS
 1145,half,right,blue,preference,average,,0.14285714285714285,R_BsjI1PJjk3inFlv,35,male,HS
 1146,half,right,blue,preference,std,,0.0,R_BsjI1PJjk3inFlv,35,male,HS
 1147,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_s56yVlTR6vVmnVT,36,male,BA
@@ -1178,9 +1178,9 @@
 1176,rational,left,red,q_preference,member,choice,1.0,R_s56yVlTR6vVmnVT,36,male,BA
 1177,rational,left,red,q_preference,analyst,choice,1.0,R_s56yVlTR6vVmnVT,36,male,BA
 1178,half,right,blue,q_preference,bartender,choice,2.0,R_s56yVlTR6vVmnVT,36,male,BA
-1179,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_s56yVlTR6vVmnVT,36,male,BA
-1180,rational,left,red,preference,average,,0.8571428571428571,R_s56yVlTR6vVmnVT,36,male,BA
-1181,rational,left,red,preference,std,,0.40406101782088427,R_s56yVlTR6vVmnVT,36,male,BA
+1179,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_s56yVlTR6vVmnVT,36,male,BA
+1180,rational,left,red,preference,average,,0.9523809523809523,R_s56yVlTR6vVmnVT,36,male,BA
+1181,rational,left,red,preference,std,,0.538748023761179,R_s56yVlTR6vVmnVT,36,male,BA
 1182,half,right,blue,preference,average,,0.42857142857142855,R_s56yVlTR6vVmnVT,36,male,BA
 1183,half,right,blue,preference,std,,0.0,R_s56yVlTR6vVmnVT,36,male,BA
 1184,,,participant,NARS,S1,Situations and Interactions with Robots,0.3888888888888889,R_BrGr7GRYw6ajebT,55,female,HS
@@ -1215,9 +1215,9 @@
 1213,rational,left,red,q_preference,member,choice,1.0,R_BrGr7GRYw6ajebT,55,female,HS
 1214,rational,left,red,q_preference,analyst,choice,1.0,R_BrGr7GRYw6ajebT,55,female,HS
 1215,rational,left,red,q_preference,bartender,choice,1.0,R_BrGr7GRYw6ajebT,55,female,HS
-1216,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.7142857142857142,R_BrGr7GRYw6ajebT,55,female,HS
-1217,rational,left,red,preference,average,,1.3571428571428572,R_BrGr7GRYw6ajebT,55,female,HS
-1218,rational,left,red,preference,std,,0.5050762722761053,R_BrGr7GRYw6ajebT,55,female,HS
+1216,half,right,blue,q_preference,summary,Count (Normalized) participant chose this robot,2.0,R_BrGr7GRYw6ajebT,55,female,HS
+1217,rational,left,red,preference,average,,1.5,R_BrGr7GRYw6ajebT,55,female,HS
+1218,rational,left,red,preference,std,,0.7071067811865476,R_BrGr7GRYw6ajebT,55,female,HS
 1219,half,right,blue,preference,average,,0.0,R_BrGr7GRYw6ajebT,55,female,HS
 1220,half,right,blue,preference,std,,0.0,R_BrGr7GRYw6ajebT,55,female,HS
 1221,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_YSNT9LVO0KnGBa1,26,female,<BA
@@ -1252,9 +1252,9 @@
 1250,rational,left,red,q_preference,member,choice,1.0,R_YSNT9LVO0KnGBa1,26,female,<BA
 1251,rational,left,red,q_preference,analyst,choice,1.0,R_YSNT9LVO0KnGBa1,26,female,<BA
 1252,rational,left,red,q_preference,bartender,choice,1.0,R_YSNT9LVO0KnGBa1,26,female,<BA
-1253,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_YSNT9LVO0KnGBa1,26,female,<BA
-1254,rational,left,red,preference,average,,1.2142857142857142,R_YSNT9LVO0KnGBa1,26,female,<BA
-1255,rational,left,red,preference,std,,0.5050762722761054,R_YSNT9LVO0KnGBa1,26,female,<BA
+1253,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_YSNT9LVO0KnGBa1,26,female,<BA
+1254,rational,left,red,preference,average,,1.3452380952380951,R_YSNT9LVO0KnGBa1,26,female,<BA
+1255,rational,left,red,preference,std,,0.6902709054440107,R_YSNT9LVO0KnGBa1,26,female,<BA
 1256,half,right,blue,preference,average,,0.14285714285714285,R_YSNT9LVO0KnGBa1,26,female,<BA
 1257,half,right,blue,preference,std,,0.0,R_YSNT9LVO0KnGBa1,26,female,<BA
 1258,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_2DRCBZ8alN4g8BA,47,male,BA
@@ -1289,9 +1289,9 @@
 1287,rational,left,red,q_preference,member,choice,1.0,R_2DRCBZ8alN4g8BA,47,male,BA
 1288,rational,left,red,q_preference,analyst,choice,1.0,R_2DRCBZ8alN4g8BA,47,male,BA
 1289,rational,left,red,q_preference,bartender,choice,1.0,R_2DRCBZ8alN4g8BA,47,male,BA
-1290,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_2DRCBZ8alN4g8BA,47,male,BA
-1291,rational,left,red,preference,average,,1.0714285714285714,R_2DRCBZ8alN4g8BA,47,male,BA
-1292,rational,left,red,preference,std,,0.5050762722761054,R_2DRCBZ8alN4g8BA,47,male,BA
+1290,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_2DRCBZ8alN4g8BA,47,male,BA
+1291,rational,left,red,preference,average,,1.1904761904761905,R_2DRCBZ8alN4g8BA,47,male,BA
+1292,rational,left,red,preference,std,,0.6734350297014738,R_2DRCBZ8alN4g8BA,47,male,BA
 1293,half,right,blue,preference,average,,0.2857142857142857,R_2DRCBZ8alN4g8BA,47,male,BA
 1294,half,right,blue,preference,std,,0.0,R_2DRCBZ8alN4g8BA,47,male,BA
 1295,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1NEXevgBRaeqCkq,50,male,BA
@@ -1326,9 +1326,9 @@
 1324,half,right,blue,q_preference,member,choice,2.0,R_1NEXevgBRaeqCkq,50,male,BA
 1325,rational,left,red,q_preference,analyst,choice,1.0,R_1NEXevgBRaeqCkq,50,male,BA
 1326,half,right,blue,q_preference,bartender,choice,2.0,R_1NEXevgBRaeqCkq,50,male,BA
-1327,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_1NEXevgBRaeqCkq,50,male,BA
-1328,rational,left,red,preference,average,,1.0714285714285714,R_1NEXevgBRaeqCkq,50,male,BA
-1329,rational,left,red,preference,std,,0.3030457633656633,R_1NEXevgBRaeqCkq,50,male,BA
+1327,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_1NEXevgBRaeqCkq,50,male,BA
+1328,rational,left,red,preference,average,,1.1785714285714286,R_1NEXevgBRaeqCkq,50,male,BA
+1329,rational,left,red,preference,std,,0.45456864504849487,R_1NEXevgBRaeqCkq,50,male,BA
 1330,half,right,blue,preference,average,,0.14285714285714285,R_1NEXevgBRaeqCkq,50,male,BA
 1331,half,right,blue,preference,std,,0.0,R_1NEXevgBRaeqCkq,50,male,BA
 1332,,,participant,NARS,S1,Situations and Interactions with Robots,0.4444444444444444,R_27NiARwaWeivCEr,58,female,Associate degree
@@ -1363,9 +1363,9 @@
 1361,rational,left,red,q_preference,member,choice,1.0,R_27NiARwaWeivCEr,58,female,Associate degree
 1362,rational,left,red,q_preference,analyst,choice,1.0,R_27NiARwaWeivCEr,58,female,Associate degree
 1363,rational,left,red,q_preference,bartender,choice,1.0,R_27NiARwaWeivCEr,58,female,Associate degree
-1364,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_27NiARwaWeivCEr,58,female,Associate degree
-1365,rational,left,red,preference,average,,1.0714285714285714,R_27NiARwaWeivCEr,58,female,Associate degree
-1366,rational,left,red,preference,std,,0.5050762722761054,R_27NiARwaWeivCEr,58,female,Associate degree
+1364,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_27NiARwaWeivCEr,58,female,Associate degree
+1365,rational,left,red,preference,average,,1.1904761904761905,R_27NiARwaWeivCEr,58,female,Associate degree
+1366,rational,left,red,preference,std,,0.6734350297014738,R_27NiARwaWeivCEr,58,female,Associate degree
 1367,half,right,blue,preference,average,,0.2857142857142857,R_27NiARwaWeivCEr,58,female,Associate degree
 1368,half,right,blue,preference,std,,0.0,R_27NiARwaWeivCEr,58,female,Associate degree
 1369,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_12RbAf7ksUHbWTR,41,male,BA
@@ -1400,9 +1400,9 @@
 1398,rational,left,red,q_preference,member,choice,1.0,R_12RbAf7ksUHbWTR,41,male,BA
 1399,rational,left,red,q_preference,analyst,choice,1.0,R_12RbAf7ksUHbWTR,41,male,BA
 1400,rational,left,red,q_preference,bartender,choice,1.0,R_12RbAf7ksUHbWTR,41,male,BA
-1401,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_12RbAf7ksUHbWTR,41,male,BA
-1402,rational,left,red,preference,average,,0.7857142857142857,R_12RbAf7ksUHbWTR,41,male,BA
-1403,rational,left,red,preference,std,,0.5050762722761053,R_12RbAf7ksUHbWTR,41,male,BA
+1401,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_12RbAf7ksUHbWTR,41,male,BA
+1402,rational,left,red,preference,average,,0.8809523809523809,R_12RbAf7ksUHbWTR,41,male,BA
+1403,rational,left,red,preference,std,,0.6397632782164001,R_12RbAf7ksUHbWTR,41,male,BA
 1404,half,right,blue,preference,average,,0.5714285714285714,R_12RbAf7ksUHbWTR,41,male,BA
 1405,half,right,blue,preference,std,,0.0,R_12RbAf7ksUHbWTR,41,male,BA
 1406,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_1QtjQaFdT9lz5Uu,31,male,<BA
@@ -1437,9 +1437,9 @@
 1435,rational,left,red,q_preference,member,choice,1.0,R_1QtjQaFdT9lz5Uu,31,male,<BA
 1436,rational,left,red,q_preference,analyst,choice,1.0,R_1QtjQaFdT9lz5Uu,31,male,<BA
 1437,rational,left,red,q_preference,bartender,choice,1.0,R_1QtjQaFdT9lz5Uu,31,male,<BA
-1438,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_1QtjQaFdT9lz5Uu,31,male,<BA
-1439,rational,left,red,preference,average,,1.0714285714285714,R_1QtjQaFdT9lz5Uu,31,male,<BA
-1440,rational,left,red,preference,std,,0.5050762722761054,R_1QtjQaFdT9lz5Uu,31,male,<BA
+1438,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_1QtjQaFdT9lz5Uu,31,male,<BA
+1439,rational,left,red,preference,average,,1.1904761904761905,R_1QtjQaFdT9lz5Uu,31,male,<BA
+1440,rational,left,red,preference,std,,0.6734350297014738,R_1QtjQaFdT9lz5Uu,31,male,<BA
 1441,half,right,blue,preference,average,,0.2857142857142857,R_1QtjQaFdT9lz5Uu,31,male,<BA
 1442,half,right,blue,preference,std,,0.0,R_1QtjQaFdT9lz5Uu,31,male,<BA
 1443,,,participant,NARS,S1,Situations and Interactions with Robots,0.4166666666666667,R_1WSQeEEfkyfWk6Z,52,female,<BA
@@ -1474,9 +1474,9 @@
 1472,rational,left,red,q_preference,member,choice,1.0,R_1WSQeEEfkyfWk6Z,52,female,<BA
 1473,rational,left,red,q_preference,analyst,choice,1.0,R_1WSQeEEfkyfWk6Z,52,female,<BA
 1474,rational,left,red,q_preference,bartender,choice,1.0,R_1WSQeEEfkyfWk6Z,52,female,<BA
-1475,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_1WSQeEEfkyfWk6Z,52,female,<BA
-1476,rational,left,red,preference,average,,0.7857142857142857,R_1WSQeEEfkyfWk6Z,52,female,<BA
-1477,rational,left,red,preference,std,,0.5050762722761053,R_1WSQeEEfkyfWk6Z,52,female,<BA
+1475,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_1WSQeEEfkyfWk6Z,52,female,<BA
+1476,rational,left,red,preference,average,,0.8809523809523809,R_1WSQeEEfkyfWk6Z,52,female,<BA
+1477,rational,left,red,preference,std,,0.6397632782164001,R_1WSQeEEfkyfWk6Z,52,female,<BA
 1478,half,right,blue,preference,average,,0.5714285714285714,R_1WSQeEEfkyfWk6Z,52,female,<BA
 1479,half,right,blue,preference,std,,0.0,R_1WSQeEEfkyfWk6Z,52,female,<BA
 1480,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_273Gvp98jYxCp6q,54,female,BA
@@ -1511,9 +1511,9 @@
 1509,half,right,blue,q_preference,member,choice,2.0,R_273Gvp98jYxCp6q,54,female,BA
 1510,rational,left,red,q_preference,analyst,choice,1.0,R_273Gvp98jYxCp6q,54,female,BA
 1511,half,right,blue,q_preference,bartender,choice,2.0,R_273Gvp98jYxCp6q,54,female,BA
-1512,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_273Gvp98jYxCp6q,54,female,BA
-1513,rational,left,red,preference,average,,0.5,R_273Gvp98jYxCp6q,54,female,BA
-1514,rational,left,red,preference,std,,0.10101525445522107,R_273Gvp98jYxCp6q,54,female,BA
+1512,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_273Gvp98jYxCp6q,54,female,BA
+1513,rational,left,red,preference,average,,0.5476190476190476,R_273Gvp98jYxCp6q,54,female,BA
+1514,rational,left,red,preference,std,,0.16835875742536843,R_273Gvp98jYxCp6q,54,female,BA
 1515,half,right,blue,preference,average,,0.5714285714285714,R_273Gvp98jYxCp6q,54,female,BA
 1516,half,right,blue,preference,std,,0.0,R_273Gvp98jYxCp6q,54,female,BA
 1517,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_2TmAExzfalCflqp,63,male,<BA
@@ -1548,9 +1548,9 @@
 1546,rational,left,red,q_preference,member,choice,1.0,R_2TmAExzfalCflqp,63,male,<BA
 1547,rational,left,red,q_preference,analyst,choice,1.0,R_2TmAExzfalCflqp,63,male,<BA
 1548,rational,left,red,q_preference,bartender,choice,1.0,R_2TmAExzfalCflqp,63,male,<BA
-1549,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_2TmAExzfalCflqp,63,male,<BA
-1550,rational,left,red,preference,average,,0.9285714285714286,R_2TmAExzfalCflqp,63,male,<BA
-1551,rational,left,red,preference,std,,0.5050762722761055,R_2TmAExzfalCflqp,63,male,<BA
+1549,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_2TmAExzfalCflqp,63,male,<BA
+1550,rational,left,red,preference,average,,1.0357142857142856,R_2TmAExzfalCflqp,63,male,<BA
+1551,rational,left,red,preference,std,,0.656599153958937,R_2TmAExzfalCflqp,63,male,<BA
 1552,half,right,blue,preference,average,,0.42857142857142855,R_2TmAExzfalCflqp,63,male,<BA
 1553,half,right,blue,preference,std,,0.0,R_2TmAExzfalCflqp,63,male,<BA
 1554,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_2QlW2Cnbtz7nRQq,33,female,HS
@@ -1585,9 +1585,9 @@
 1583,rational,left,red,q_preference,member,choice,1.0,R_2QlW2Cnbtz7nRQq,33,female,HS
 1584,rational,left,red,q_preference,analyst,choice,1.0,R_2QlW2Cnbtz7nRQq,33,female,HS
 1585,half,right,blue,q_preference,bartender,choice,2.0,R_2QlW2Cnbtz7nRQq,33,female,HS
-1586,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_2QlW2Cnbtz7nRQq,33,female,HS
-1587,rational,left,red,preference,average,,0.8571428571428571,R_2QlW2Cnbtz7nRQq,33,female,HS
-1588,rational,left,red,preference,std,,0.40406101782088427,R_2QlW2Cnbtz7nRQq,33,female,HS
+1586,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_2QlW2Cnbtz7nRQq,33,female,HS
+1587,rational,left,red,preference,average,,0.9523809523809523,R_2QlW2Cnbtz7nRQq,33,female,HS
+1588,rational,left,red,preference,std,,0.538748023761179,R_2QlW2Cnbtz7nRQq,33,female,HS
 1589,half,right,blue,preference,average,,0.42857142857142855,R_2QlW2Cnbtz7nRQq,33,female,HS
 1590,half,right,blue,preference,std,,0.0,R_2QlW2Cnbtz7nRQq,33,female,HS
 1591,,,participant,NARS,S1,Situations and Interactions with Robots,0.611111111111111,R_3j1E6JEXq5wRKUy,43,female,BA
@@ -1622,9 +1622,9 @@
 1620,rational,left,red,q_preference,member,choice,1.0,R_3j1E6JEXq5wRKUy,43,female,BA
 1621,rational,left,red,q_preference,analyst,choice,1.0,R_3j1E6JEXq5wRKUy,43,female,BA
 1622,rational,left,red,q_preference,bartender,choice,1.0,R_3j1E6JEXq5wRKUy,43,female,BA
-1623,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_3j1E6JEXq5wRKUy,43,female,BA
-1624,rational,left,red,preference,average,,1.2142857142857142,R_3j1E6JEXq5wRKUy,43,female,BA
-1625,rational,left,red,preference,std,,0.5050762722761054,R_3j1E6JEXq5wRKUy,43,female,BA
+1623,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_3j1E6JEXq5wRKUy,43,female,BA
+1624,rational,left,red,preference,average,,1.3452380952380951,R_3j1E6JEXq5wRKUy,43,female,BA
+1625,rational,left,red,preference,std,,0.6902709054440107,R_3j1E6JEXq5wRKUy,43,female,BA
 1626,half,right,blue,preference,average,,0.14285714285714285,R_3j1E6JEXq5wRKUy,43,female,BA
 1627,half,right,blue,preference,std,,0.0,R_3j1E6JEXq5wRKUy,43,female,BA
 1628,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_2dfEvZTeuafcTjC,35,male,HS
@@ -1659,9 +1659,9 @@
 1657,half,right,blue,q_preference,member,choice,2.0,R_2dfEvZTeuafcTjC,35,male,HS
 1658,rational,left,red,q_preference,analyst,choice,1.0,R_2dfEvZTeuafcTjC,35,male,HS
 1659,half,right,blue,q_preference,bartender,choice,2.0,R_2dfEvZTeuafcTjC,35,male,HS
-1660,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_2dfEvZTeuafcTjC,35,male,HS
-1661,rational,left,red,preference,average,,0.9285714285714286,R_2dfEvZTeuafcTjC,35,male,HS
-1662,rational,left,red,preference,std,,0.3030457633656632,R_2dfEvZTeuafcTjC,35,male,HS
+1660,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_2dfEvZTeuafcTjC,35,male,HS
+1661,rational,left,red,preference,average,,1.0238095238095237,R_2dfEvZTeuafcTjC,35,male,HS
+1662,rational,left,red,preference,std,,0.43773276930595795,R_2dfEvZTeuafcTjC,35,male,HS
 1663,half,right,blue,preference,average,,0.2857142857142857,R_2dfEvZTeuafcTjC,35,male,HS
 1664,half,right,blue,preference,std,,0.0,R_2dfEvZTeuafcTjC,35,male,HS
 1665,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_3KYHqOykZeXwOHr,67,female,Associate degree
@@ -1696,9 +1696,9 @@
 1694,rational,left,red,q_preference,member,choice,1.0,R_3KYHqOykZeXwOHr,67,female,Associate degree
 1695,rational,left,red,q_preference,analyst,choice,1.0,R_3KYHqOykZeXwOHr,67,female,Associate degree
 1696,rational,left,red,q_preference,bartender,choice,1.0,R_3KYHqOykZeXwOHr,67,female,Associate degree
-1697,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_3KYHqOykZeXwOHr,67,female,Associate degree
-1698,rational,left,red,preference,average,,1.0714285714285714,R_3KYHqOykZeXwOHr,67,female,Associate degree
-1699,rational,left,red,preference,std,,0.5050762722761054,R_3KYHqOykZeXwOHr,67,female,Associate degree
+1697,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_3KYHqOykZeXwOHr,67,female,Associate degree
+1698,rational,left,red,preference,average,,1.1904761904761905,R_3KYHqOykZeXwOHr,67,female,Associate degree
+1699,rational,left,red,preference,std,,0.6734350297014738,R_3KYHqOykZeXwOHr,67,female,Associate degree
 1700,half,right,blue,preference,average,,0.2857142857142857,R_3KYHqOykZeXwOHr,67,female,Associate degree
 1701,half,right,blue,preference,std,,0.0,R_3KYHqOykZeXwOHr,67,female,Associate degree
 1702,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_2aqUdSxEguSD66u,50,male,<BA
@@ -1733,9 +1733,9 @@
 1731,rational,left,red,q_preference,member,choice,1.0,R_2aqUdSxEguSD66u,50,male,<BA
 1732,rational,left,red,q_preference,analyst,choice,1.0,R_2aqUdSxEguSD66u,50,male,<BA
 1733,rational,left,red,q_preference,bartender,choice,1.0,R_2aqUdSxEguSD66u,50,male,<BA
-1734,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_2aqUdSxEguSD66u,50,male,<BA
-1735,rational,left,red,preference,average,,0.9285714285714286,R_2aqUdSxEguSD66u,50,male,<BA
-1736,rational,left,red,preference,std,,0.5050762722761055,R_2aqUdSxEguSD66u,50,male,<BA
+1734,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_2aqUdSxEguSD66u,50,male,<BA
+1735,rational,left,red,preference,average,,1.0357142857142856,R_2aqUdSxEguSD66u,50,male,<BA
+1736,rational,left,red,preference,std,,0.656599153958937,R_2aqUdSxEguSD66u,50,male,<BA
 1737,half,right,blue,preference,average,,0.42857142857142855,R_2aqUdSxEguSD66u,50,male,<BA
 1738,half,right,blue,preference,std,,0.0,R_2aqUdSxEguSD66u,50,male,<BA
 1739,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_AvNfhwYOMhPh9bb,54,female,HS
@@ -1770,9 +1770,9 @@
 1768,rational,left,red,q_preference,member,choice,1.0,R_AvNfhwYOMhPh9bb,54,female,HS
 1769,rational,left,red,q_preference,analyst,choice,1.0,R_AvNfhwYOMhPh9bb,54,female,HS
 1770,half,right,blue,q_preference,bartender,choice,2.0,R_AvNfhwYOMhPh9bb,54,female,HS
-1771,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_AvNfhwYOMhPh9bb,54,female,HS
-1772,rational,left,red,preference,average,,1.0,R_AvNfhwYOMhPh9bb,54,female,HS
-1773,rational,left,red,preference,std,,0.4040610178208843,R_AvNfhwYOMhPh9bb,54,female,HS
+1771,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_AvNfhwYOMhPh9bb,54,female,HS
+1772,rational,left,red,preference,average,,1.1071428571428572,R_AvNfhwYOMhPh9bb,54,female,HS
+1773,rational,left,red,preference,std,,0.5555838995037159,R_AvNfhwYOMhPh9bb,54,female,HS
 1774,half,right,blue,preference,average,,0.2857142857142857,R_AvNfhwYOMhPh9bb,54,female,HS
 1775,half,right,blue,preference,std,,0.0,R_AvNfhwYOMhPh9bb,54,female,HS
 1776,,,participant,NARS,S1,Situations and Interactions with Robots,0.3888888888888889,R_2Y3sKAq1n7labqx,38,female,HS
@@ -1807,9 +1807,9 @@
 1805,rational,left,red,q_preference,member,choice,1.0,R_2Y3sKAq1n7labqx,38,female,HS
 1806,half,right,blue,q_preference,analyst,choice,2.0,R_2Y3sKAq1n7labqx,38,female,HS
 1807,rational,left,red,q_preference,bartender,choice,1.0,R_2Y3sKAq1n7labqx,38,female,HS
-1808,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2Y3sKAq1n7labqx,38,female,HS
-1809,rational,left,red,preference,average,,0.5714285714285714,R_2Y3sKAq1n7labqx,38,female,HS
-1810,rational,left,red,preference,std,,0.20203050891044216,R_2Y3sKAq1n7labqx,38,female,HS
+1808,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_2Y3sKAq1n7labqx,38,female,HS
+1809,rational,left,red,preference,average,,0.6309523809523809,R_2Y3sKAq1n7labqx,38,female,HS
+1810,rational,left,red,preference,std,,0.28620988762312644,R_2Y3sKAq1n7labqx,38,female,HS
 1811,half,right,blue,preference,average,,0.5714285714285714,R_2Y3sKAq1n7labqx,38,female,HS
 1812,half,right,blue,preference,std,,0.0,R_2Y3sKAq1n7labqx,38,female,HS
 1813,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_1jk3UCS4hMHHZcp,42,male,BA
@@ -1844,9 +1844,9 @@
 1842,rational,left,red,q_preference,member,choice,1.0,R_1jk3UCS4hMHHZcp,42,male,BA
 1843,half,right,blue,q_preference,analyst,choice,2.0,R_1jk3UCS4hMHHZcp,42,male,BA
 1844,half,right,blue,q_preference,bartender,choice,2.0,R_1jk3UCS4hMHHZcp,42,male,BA
-1845,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1jk3UCS4hMHHZcp,42,male,BA
-1846,rational,left,red,preference,average,,0.8571428571428572,R_1jk3UCS4hMHHZcp,42,male,BA
-1847,rational,left,red,preference,std,,0.20203050891044214,R_1jk3UCS4hMHHZcp,42,male,BA
+1845,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_1jk3UCS4hMHHZcp,42,male,BA
+1846,rational,left,red,preference,average,,0.9404761904761905,R_1jk3UCS4hMHHZcp,42,male,BA
+1847,rational,left,red,preference,std,,0.3198816391082001,R_1jk3UCS4hMHHZcp,42,male,BA
 1848,half,right,blue,preference,average,,0.2857142857142857,R_1jk3UCS4hMHHZcp,42,male,BA
 1849,half,right,blue,preference,std,,0.0,R_1jk3UCS4hMHHZcp,42,male,BA
 1850,,,participant,NARS,S1,Situations and Interactions with Robots,0.8333333333333334,R_sgISXfVot6yZlyp,53,female,Associate degree
@@ -1881,9 +1881,9 @@
 1879,rational,left,red,q_preference,member,choice,1.0,R_sgISXfVot6yZlyp,53,female,Associate degree
 1880,rational,left,red,q_preference,analyst,choice,1.0,R_sgISXfVot6yZlyp,53,female,Associate degree
 1881,rational,left,red,q_preference,bartender,choice,1.0,R_sgISXfVot6yZlyp,53,female,Associate degree
-1882,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_sgISXfVot6yZlyp,53,female,Associate degree
-1883,rational,left,red,preference,average,,1.2142857142857142,R_sgISXfVot6yZlyp,53,female,Associate degree
-1884,rational,left,red,preference,std,,0.5050762722761054,R_sgISXfVot6yZlyp,53,female,Associate degree
+1882,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_sgISXfVot6yZlyp,53,female,Associate degree
+1883,rational,left,red,preference,average,,1.3452380952380951,R_sgISXfVot6yZlyp,53,female,Associate degree
+1884,rational,left,red,preference,std,,0.6902709054440107,R_sgISXfVot6yZlyp,53,female,Associate degree
 1885,half,right,blue,preference,average,,0.14285714285714285,R_sgISXfVot6yZlyp,53,female,Associate degree
 1886,half,right,blue,preference,std,,0.0,R_sgISXfVot6yZlyp,53,female,Associate degree
 1887,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_3NQhwl9KFmBDxX6,A43,female,BA
@@ -1918,9 +1918,9 @@
 1916,rational,left,red,q_preference,member,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,BA
 1917,rational,left,red,q_preference,analyst,choice,1.0,R_3NQhwl9KFmBDxX6,A43,female,BA
 1918,half,right,blue,q_preference,bartender,choice,2.0,R_3NQhwl9KFmBDxX6,A43,female,BA
-1919,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_3NQhwl9KFmBDxX6,A43,female,BA
-1920,rational,left,red,preference,average,,1.1428571428571428,R_3NQhwl9KFmBDxX6,A43,female,BA
-1921,rational,left,red,preference,std,,0.4040610178208843,R_3NQhwl9KFmBDxX6,A43,female,BA
+1919,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_3NQhwl9KFmBDxX6,A43,female,BA
+1920,rational,left,red,preference,average,,1.2619047619047619,R_3NQhwl9KFmBDxX6,A43,female,BA
+1921,rational,left,red,preference,std,,0.5724197752462529,R_3NQhwl9KFmBDxX6,A43,female,BA
 1922,half,right,blue,preference,average,,0.14285714285714285,R_3NQhwl9KFmBDxX6,A43,female,BA
 1923,half,right,blue,preference,std,,0.0,R_3NQhwl9KFmBDxX6,A43,female,BA
 1924,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_7OO0mpvGEPOjwA1,29,male,BA
@@ -1955,9 +1955,9 @@
 1953,half,right,blue,q_preference,member,choice,2.0,R_7OO0mpvGEPOjwA1,29,male,BA
 1954,half,right,blue,q_preference,analyst,choice,2.0,R_7OO0mpvGEPOjwA1,29,male,BA
 1955,half,right,blue,q_preference,bartender,choice,2.0,R_7OO0mpvGEPOjwA1,29,male,BA
-1956,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_7OO0mpvGEPOjwA1,29,male,BA
-1957,rational,left,red,preference,average,,0.42857142857142855,R_7OO0mpvGEPOjwA1,29,male,BA
-1958,rational,left,red,preference,std,,0.0,R_7OO0mpvGEPOjwA1,29,male,BA
+1956,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_7OO0mpvGEPOjwA1,29,male,BA
+1957,rational,left,red,preference,average,,0.4642857142857143,R_7OO0mpvGEPOjwA1,29,male,BA
+1958,rational,left,red,preference,std,,0.050507627227610555,R_7OO0mpvGEPOjwA1,29,male,BA
 1959,half,right,blue,preference,average,,0.5714285714285714,R_7OO0mpvGEPOjwA1,29,male,BA
 1960,half,right,blue,preference,std,,0.0,R_7OO0mpvGEPOjwA1,29,male,BA
 1961,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_1hXPTUJk4liROut,31,male,BA
@@ -1992,9 +1992,9 @@
 1990,rational,left,red,q_preference,member,choice,1.0,R_1hXPTUJk4liROut,31,male,BA
 1991,rational,left,red,q_preference,analyst,choice,1.0,R_1hXPTUJk4liROut,31,male,BA
 1992,rational,left,red,q_preference,bartender,choice,1.0,R_1hXPTUJk4liROut,31,male,BA
-1993,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_1hXPTUJk4liROut,31,male,BA
-1994,rational,left,red,preference,average,,0.9285714285714286,R_1hXPTUJk4liROut,31,male,BA
-1995,rational,left,red,preference,std,,0.5050762722761055,R_1hXPTUJk4liROut,31,male,BA
+1993,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_1hXPTUJk4liROut,31,male,BA
+1994,rational,left,red,preference,average,,1.0357142857142856,R_1hXPTUJk4liROut,31,male,BA
+1995,rational,left,red,preference,std,,0.656599153958937,R_1hXPTUJk4liROut,31,male,BA
 1996,half,right,blue,preference,average,,0.42857142857142855,R_1hXPTUJk4liROut,31,male,BA
 1997,half,right,blue,preference,std,,0.0,R_1hXPTUJk4liROut,31,male,BA
 1998,,,participant,NARS,S1,Situations and Interactions with Robots,0.8333333333333334,R_2EGgUnHpVvbcORX,44,male,BA
@@ -2029,9 +2029,9 @@
 2027,rational,left,red,q_preference,member,choice,1.0,R_2EGgUnHpVvbcORX,44,male,BA
 2028,rational,left,red,q_preference,analyst,choice,1.0,R_2EGgUnHpVvbcORX,44,male,BA
 2029,rational,left,red,q_preference,bartender,choice,1.0,R_2EGgUnHpVvbcORX,44,male,BA
-2030,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5714285714285714,R_2EGgUnHpVvbcORX,44,male,BA
-2031,rational,left,red,preference,average,,1.2142857142857142,R_2EGgUnHpVvbcORX,44,male,BA
-2032,rational,left,red,preference,std,,0.5050762722761054,R_2EGgUnHpVvbcORX,44,male,BA
+2030,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.8333333333333333,R_2EGgUnHpVvbcORX,44,male,BA
+2031,rational,left,red,preference,average,,1.3452380952380951,R_2EGgUnHpVvbcORX,44,male,BA
+2032,rational,left,red,preference,std,,0.6902709054440107,R_2EGgUnHpVvbcORX,44,male,BA
 2033,half,right,blue,preference,average,,0.14285714285714285,R_2EGgUnHpVvbcORX,44,male,BA
 2034,half,right,blue,preference,std,,0.0,R_2EGgUnHpVvbcORX,44,male,BA
 2035,,,participant,NARS,S1,Situations and Interactions with Robots,0.4444444444444444,R_1l0snIjkzvCGsUp,27,female,BA
@@ -2066,9 +2066,9 @@
 2064,rational,left,red,q_preference,member,choice,1.0,R_1l0snIjkzvCGsUp,27,female,BA
 2065,rational,left,red,q_preference,analyst,choice,1.0,R_1l0snIjkzvCGsUp,27,female,BA
 2066,rational,left,red,q_preference,bartender,choice,1.0,R_1l0snIjkzvCGsUp,27,female,BA
-2067,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_1l0snIjkzvCGsUp,27,female,BA
-2068,rational,left,red,preference,average,,1.0714285714285714,R_1l0snIjkzvCGsUp,27,female,BA
-2069,rational,left,red,preference,std,,0.5050762722761054,R_1l0snIjkzvCGsUp,27,female,BA
+2067,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_1l0snIjkzvCGsUp,27,female,BA
+2068,rational,left,red,preference,average,,1.1904761904761905,R_1l0snIjkzvCGsUp,27,female,BA
+2069,rational,left,red,preference,std,,0.6734350297014738,R_1l0snIjkzvCGsUp,27,female,BA
 2070,half,right,blue,preference,average,,0.2857142857142857,R_1l0snIjkzvCGsUp,27,female,BA
 2071,half,right,blue,preference,std,,0.0,R_1l0snIjkzvCGsUp,27,female,BA
 2072,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_ZjEJrMQM20xXIoF,65,male,<BA
@@ -2103,9 +2103,9 @@
 2101,half,right,blue,q_preference,member,choice,2.0,R_ZjEJrMQM20xXIoF,65,male,<BA
 2102,rational,left,red,q_preference,analyst,choice,1.0,R_ZjEJrMQM20xXIoF,65,male,<BA
 2103,rational,left,red,q_preference,bartender,choice,1.0,R_ZjEJrMQM20xXIoF,65,male,<BA
-2104,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_ZjEJrMQM20xXIoF,65,male,<BA
-2105,rational,left,red,preference,average,,0.7857142857142857,R_ZjEJrMQM20xXIoF,65,male,<BA
-2106,rational,left,red,preference,std,,0.30304576336566325,R_ZjEJrMQM20xXIoF,65,male,<BA
+2104,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_ZjEJrMQM20xXIoF,65,male,<BA
+2105,rational,left,red,preference,average,,0.8690476190476191,R_ZjEJrMQM20xXIoF,65,male,<BA
+2106,rational,left,red,preference,std,,0.42089689356342125,R_ZjEJrMQM20xXIoF,65,male,<BA
 2107,half,right,blue,preference,average,,0.42857142857142855,R_ZjEJrMQM20xXIoF,65,male,<BA
 2108,half,right,blue,preference,std,,0.0,R_ZjEJrMQM20xXIoF,65,male,<BA
 2109,,,participant,NARS,S1,Situations and Interactions with Robots,0.38888888888888884,R_3p6cyDIFaTfwG4E,41,female,BA
@@ -2140,9 +2140,9 @@
 2138,half,right,blue,q_preference,member,choice,2.0,R_3p6cyDIFaTfwG4E,41,female,BA
 2139,rational,left,red,q_preference,analyst,choice,1.0,R_3p6cyDIFaTfwG4E,41,female,BA
 2140,half,right,blue,q_preference,bartender,choice,2.0,R_3p6cyDIFaTfwG4E,41,female,BA
-2141,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3p6cyDIFaTfwG4E,41,female,BA
-2142,rational,left,red,preference,average,,0.8571428571428572,R_3p6cyDIFaTfwG4E,41,female,BA
-2143,rational,left,red,preference,std,,0.20203050891044214,R_3p6cyDIFaTfwG4E,41,female,BA
+2141,rational,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_3p6cyDIFaTfwG4E,41,female,BA
+2142,rational,left,red,preference,average,,0.9404761904761905,R_3p6cyDIFaTfwG4E,41,female,BA
+2143,rational,left,red,preference,std,,0.3198816391082001,R_3p6cyDIFaTfwG4E,41,female,BA
 2144,half,right,blue,preference,average,,0.2857142857142857,R_3p6cyDIFaTfwG4E,41,female,BA
 2145,half,right,blue,preference,std,,0.0,R_3p6cyDIFaTfwG4E,41,female,BA
 2146,,,participant,NARS,S1,Situations and Interactions with Robots,0.4583333333333333,R_2PbRHTBUV15y7Z1,40,female,BA
@@ -2177,9 +2177,9 @@
 2175,rational,right,blue,q_preference,member,choice,2.0,R_2PbRHTBUV15y7Z1,40,female,BA
 2176,rational,right,blue,q_preference,analyst,choice,2.0,R_2PbRHTBUV15y7Z1,40,female,BA
 2177,rational,right,blue,q_preference,bartender,choice,2.0,R_2PbRHTBUV15y7Z1,40,female,BA
-2178,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2PbRHTBUV15y7Z1,40,female,BA
-2179,half,left,red,preference,average,,0.2857142857142857,R_2PbRHTBUV15y7Z1,40,female,BA
-2180,half,left,red,preference,std,,0.0,R_2PbRHTBUV15y7Z1,40,female,BA
+2178,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_2PbRHTBUV15y7Z1,40,female,BA
+2179,half,left,red,preference,average,,0.30952380952380953,R_2PbRHTBUV15y7Z1,40,female,BA
+2180,half,left,red,preference,std,,0.03367175148507369,R_2PbRHTBUV15y7Z1,40,female,BA
 2181,rational,right,blue,preference,average,,0.7142857142857143,R_2PbRHTBUV15y7Z1,40,female,BA
 2182,rational,right,blue,preference,std,,0.0,R_2PbRHTBUV15y7Z1,40,female,BA
 2183,,,participant,NARS,S1,Situations and Interactions with Robots,0.5555555555555556,R_1fd4d4lOxOX3u7C,28,male,HS
@@ -2214,9 +2214,9 @@
 2212,rational,right,blue,q_preference,member,choice,2.0,R_1fd4d4lOxOX3u7C,28,male,HS
 2213,rational,right,blue,q_preference,analyst,choice,2.0,R_1fd4d4lOxOX3u7C,28,male,HS
 2214,half,left,red,q_preference,bartender,choice,1.0,R_1fd4d4lOxOX3u7C,28,male,HS
-2215,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_1fd4d4lOxOX3u7C,28,male,HS
-2216,half,left,red,preference,average,,0.3571428571428571,R_1fd4d4lOxOX3u7C,28,male,HS
-2217,half,left,red,preference,std,,0.10101525445522107,R_1fd4d4lOxOX3u7C,28,male,HS
+2215,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_1fd4d4lOxOX3u7C,28,male,HS
+2216,half,left,red,preference,average,,0.39285714285714285,R_1fd4d4lOxOX3u7C,28,male,HS
+2217,half,left,red,preference,std,,0.15152288168283162,R_1fd4d4lOxOX3u7C,28,male,HS
 2218,rational,right,blue,preference,average,,0.7142857142857143,R_1fd4d4lOxOX3u7C,28,male,HS
 2219,rational,right,blue,preference,std,,0.0,R_1fd4d4lOxOX3u7C,28,male,HS
 2220,,,participant,NARS,S1,Situations and Interactions with Robots,0.75,R_3NKXb0UamcoCm72,30,female,BA
@@ -2251,9 +2251,9 @@
 2249,rational,right,blue,q_preference,member,choice,2.0,R_3NKXb0UamcoCm72,30,female,BA
 2250,rational,right,blue,q_preference,analyst,choice,2.0,R_3NKXb0UamcoCm72,30,female,BA
 2251,rational,right,blue,q_preference,bartender,choice,2.0,R_3NKXb0UamcoCm72,30,female,BA
-2252,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3NKXb0UamcoCm72,30,female,BA
-2253,half,left,red,preference,average,,0.14285714285714285,R_3NKXb0UamcoCm72,30,female,BA
-2254,half,left,red,preference,std,,0.0,R_3NKXb0UamcoCm72,30,female,BA
+2252,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_3NKXb0UamcoCm72,30,female,BA
+2253,half,left,red,preference,average,,0.15476190476190477,R_3NKXb0UamcoCm72,30,female,BA
+2254,half,left,red,preference,std,,0.016835875742536845,R_3NKXb0UamcoCm72,30,female,BA
 2255,rational,right,blue,preference,average,,0.8571428571428571,R_3NKXb0UamcoCm72,30,female,BA
 2256,rational,right,blue,preference,std,,0.0,R_3NKXb0UamcoCm72,30,female,BA
 2257,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3Kw7bWzDQs6wBUq,25,male,HS
@@ -2288,9 +2288,9 @@
 2286,rational,right,blue,q_preference,member,choice,2.0,R_3Kw7bWzDQs6wBUq,25,male,HS
 2287,rational,right,blue,q_preference,analyst,choice,2.0,R_3Kw7bWzDQs6wBUq,25,male,HS
 2288,rational,right,blue,q_preference,bartender,choice,2.0,R_3Kw7bWzDQs6wBUq,25,male,HS
-2289,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3Kw7bWzDQs6wBUq,25,male,HS
-2290,half,left,red,preference,average,,0.14285714285714285,R_3Kw7bWzDQs6wBUq,25,male,HS
-2291,half,left,red,preference,std,,0.0,R_3Kw7bWzDQs6wBUq,25,male,HS
+2289,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_3Kw7bWzDQs6wBUq,25,male,HS
+2290,half,left,red,preference,average,,0.15476190476190477,R_3Kw7bWzDQs6wBUq,25,male,HS
+2291,half,left,red,preference,std,,0.016835875742536845,R_3Kw7bWzDQs6wBUq,25,male,HS
 2292,rational,right,blue,preference,average,,0.8571428571428571,R_3Kw7bWzDQs6wBUq,25,male,HS
 2293,rational,right,blue,preference,std,,0.0,R_3Kw7bWzDQs6wBUq,25,male,HS
 2294,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_czKefMsMLNWTkv7,47,male,PhD
@@ -2325,9 +2325,9 @@
 2323,rational,right,blue,q_preference,member,choice,2.0,R_czKefMsMLNWTkv7,47,male,PhD
 2324,rational,right,blue,q_preference,analyst,choice,2.0,R_czKefMsMLNWTkv7,47,male,PhD
 2325,half,left,red,q_preference,bartender,choice,1.0,R_czKefMsMLNWTkv7,47,male,PhD
-2326,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_czKefMsMLNWTkv7,47,male,PhD
-2327,half,left,red,preference,average,,0.07142857142857142,R_czKefMsMLNWTkv7,47,male,PhD
-2328,half,left,red,preference,std,,0.10101525445522107,R_czKefMsMLNWTkv7,47,male,PhD
+2326,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_czKefMsMLNWTkv7,47,male,PhD
+2327,half,left,red,preference,average,,0.08333333333333333,R_czKefMsMLNWTkv7,47,male,PhD
+2328,half,left,red,preference,std,,0.11785113019775792,R_czKefMsMLNWTkv7,47,male,PhD
 2329,rational,right,blue,preference,average,,1.0,R_czKefMsMLNWTkv7,47,male,PhD
 2330,rational,right,blue,preference,std,,0.0,R_czKefMsMLNWTkv7,47,male,PhD
 2331,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_0PnrauMTvq3YuaJ,28,female,MA
@@ -2399,9 +2399,9 @@
 2397,rational,right,blue,q_preference,member,choice,2.0,R_2zMxolsSsInsbQR,34,female,BA
 2398,rational,right,blue,q_preference,analyst,choice,2.0,R_2zMxolsSsInsbQR,34,female,BA
 2399,half,left,red,q_preference,bartender,choice,1.0,R_2zMxolsSsInsbQR,34,female,BA
-2400,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_2zMxolsSsInsbQR,34,female,BA
-2401,half,left,red,preference,average,,0.5,R_2zMxolsSsInsbQR,34,female,BA
-2402,half,left,red,preference,std,,0.10101525445522107,R_2zMxolsSsInsbQR,34,female,BA
+2400,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_2zMxolsSsInsbQR,34,female,BA
+2401,half,left,red,preference,average,,0.5476190476190476,R_2zMxolsSsInsbQR,34,female,BA
+2402,half,left,red,preference,std,,0.16835875742536843,R_2zMxolsSsInsbQR,34,female,BA
 2403,rational,right,blue,preference,average,,0.5714285714285714,R_2zMxolsSsInsbQR,34,female,BA
 2404,rational,right,blue,preference,std,,0.0,R_2zMxolsSsInsbQR,34,female,BA
 2405,,,participant,NARS,S1,Situations and Interactions with Robots,0.4444444444444445,R_3rOMknByCvQMgz8,36,female,<BA
@@ -2473,9 +2473,9 @@
 2471,half,left,red,q_preference,member,choice,1.0,R_UH1UoxCHytvy20p,36,female,Associate degree
 2472,half,left,red,q_preference,analyst,choice,1.0,R_UH1UoxCHytvy20p,36,female,Associate degree
 2473,rational,right,blue,q_preference,bartender,choice,2.0,R_UH1UoxCHytvy20p,36,female,Associate degree
-2474,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_UH1UoxCHytvy20p,36,female,Associate degree
-2475,half,left,red,preference,average,,0.7142857142857143,R_UH1UoxCHytvy20p,36,female,Associate degree
-2476,half,left,red,preference,std,,0.4040610178208843,R_UH1UoxCHytvy20p,36,female,Associate degree
+2474,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_UH1UoxCHytvy20p,36,female,Associate degree
+2475,half,left,red,preference,average,,0.7976190476190477,R_UH1UoxCHytvy20p,36,female,Associate degree
+2476,half,left,red,preference,std,,0.5219121480186423,R_UH1UoxCHytvy20p,36,female,Associate degree
 2477,rational,right,blue,preference,average,,0.5714285714285714,R_UH1UoxCHytvy20p,36,female,Associate degree
 2478,rational,right,blue,preference,std,,0.0,R_UH1UoxCHytvy20p,36,female,Associate degree
 2479,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_6JAWk8ZFVoKa9AR,27,male,BA
@@ -2510,9 +2510,9 @@
 2508,half,left,red,q_preference,member,choice,1.0,R_6JAWk8ZFVoKa9AR,27,male,BA
 2509,rational,right,blue,q_preference,analyst,choice,2.0,R_6JAWk8ZFVoKa9AR,27,male,BA
 2510,half,left,red,q_preference,bartender,choice,1.0,R_6JAWk8ZFVoKa9AR,27,male,BA
-2511,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_6JAWk8ZFVoKa9AR,27,male,BA
-2512,half,left,red,preference,average,,0.42857142857142855,R_6JAWk8ZFVoKa9AR,27,male,BA
-2513,half,left,red,preference,std,,0.20203050891044214,R_6JAWk8ZFVoKa9AR,27,male,BA
+2511,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_6JAWk8ZFVoKa9AR,27,male,BA
+2512,half,left,red,preference,average,,0.47619047619047616,R_6JAWk8ZFVoKa9AR,27,male,BA
+2513,half,left,red,preference,std,,0.2693740118805895,R_6JAWk8ZFVoKa9AR,27,male,BA
 2514,rational,right,blue,preference,average,,0.7142857142857143,R_6JAWk8ZFVoKa9AR,27,male,BA
 2515,rational,right,blue,preference,std,,0.0,R_6JAWk8ZFVoKa9AR,27,male,BA
 2516,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3MzCe5AkEs3KMfc,42,female,<BA
@@ -2547,9 +2547,9 @@
 2545,half,left,red,q_preference,member,choice,1.0,R_3MzCe5AkEs3KMfc,42,female,<BA
 2546,half,left,red,q_preference,analyst,choice,1.0,R_3MzCe5AkEs3KMfc,42,female,<BA
 2547,half,left,red,q_preference,bartender,choice,1.0,R_3MzCe5AkEs3KMfc,42,female,<BA
-2548,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.2857142857142858,R_3MzCe5AkEs3KMfc,42,female,<BA
-2549,half,left,red,preference,average,,0.9285714285714286,R_3MzCe5AkEs3KMfc,42,female,<BA
-2550,half,left,red,preference,std,,0.5050762722761055,R_3MzCe5AkEs3KMfc,42,female,<BA
+2548,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.5,R_3MzCe5AkEs3KMfc,42,female,<BA
+2549,half,left,red,preference,average,,1.0357142857142856,R_3MzCe5AkEs3KMfc,42,female,<BA
+2550,half,left,red,preference,std,,0.656599153958937,R_3MzCe5AkEs3KMfc,42,female,<BA
 2551,rational,right,blue,preference,average,,0.42857142857142855,R_3MzCe5AkEs3KMfc,42,female,<BA
 2552,rational,right,blue,preference,std,,0.0,R_3MzCe5AkEs3KMfc,42,female,<BA
 2553,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_3ikDtLtAFe5x7wj,55,male,<BA
@@ -2584,9 +2584,9 @@
 2582,rational,right,blue,q_preference,member,choice,2.0,R_3ikDtLtAFe5x7wj,55,male,<BA
 2583,half,left,red,q_preference,analyst,choice,1.0,R_3ikDtLtAFe5x7wj,55,male,<BA
 2584,rational,right,blue,q_preference,bartender,choice,2.0,R_3ikDtLtAFe5x7wj,55,male,<BA
-2585,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_3ikDtLtAFe5x7wj,55,male,<BA
-2586,half,left,red,preference,average,,0.7142857142857142,R_3ikDtLtAFe5x7wj,55,male,<BA
-2587,half,left,red,preference,std,,0.20203050891044214,R_3ikDtLtAFe5x7wj,55,male,<BA
+2585,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3ikDtLtAFe5x7wj,55,male,<BA
+2586,half,left,red,preference,average,,0.7857142857142857,R_3ikDtLtAFe5x7wj,55,male,<BA
+2587,half,left,red,preference,std,,0.30304576336566325,R_3ikDtLtAFe5x7wj,55,male,<BA
 2588,rational,right,blue,preference,average,,0.42857142857142855,R_3ikDtLtAFe5x7wj,55,male,<BA
 2589,rational,right,blue,preference,std,,0.0,R_3ikDtLtAFe5x7wj,55,male,<BA
 2590,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_1HeCSJTjUuLQqKr,42,female,BA
@@ -2621,9 +2621,9 @@
 2619,rational,right,blue,q_preference,member,choice,2.0,R_1HeCSJTjUuLQqKr,42,female,BA
 2620,rational,right,blue,q_preference,analyst,choice,2.0,R_1HeCSJTjUuLQqKr,42,female,BA
 2621,half,left,red,q_preference,bartender,choice,1.0,R_1HeCSJTjUuLQqKr,42,female,BA
-2622,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_1HeCSJTjUuLQqKr,42,female,BA
-2623,half,left,red,preference,average,,0.3571428571428571,R_1HeCSJTjUuLQqKr,42,female,BA
-2624,half,left,red,preference,std,,0.10101525445522107,R_1HeCSJTjUuLQqKr,42,female,BA
+2622,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_1HeCSJTjUuLQqKr,42,female,BA
+2623,half,left,red,preference,average,,0.39285714285714285,R_1HeCSJTjUuLQqKr,42,female,BA
+2624,half,left,red,preference,std,,0.15152288168283162,R_1HeCSJTjUuLQqKr,42,female,BA
 2625,rational,right,blue,preference,average,,0.7142857142857143,R_1HeCSJTjUuLQqKr,42,female,BA
 2626,rational,right,blue,preference,std,,0.0,R_1HeCSJTjUuLQqKr,42,female,BA
 2627,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_11bFr4TFkEncfHl,59,male,HS
@@ -2695,9 +2695,9 @@
 2693,rational,right,blue,q_preference,member,choice,2.0,R_1JLUMx76moZL5BM,29,female,BA
 2694,rational,right,blue,q_preference,analyst,choice,2.0,R_1JLUMx76moZL5BM,29,female,BA
 2695,half,left,red,q_preference,bartender,choice,1.0,R_1JLUMx76moZL5BM,29,female,BA
-2696,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1JLUMx76moZL5BM,29,female,BA
-2697,half,left,red,preference,average,,0.21428571428571427,R_1JLUMx76moZL5BM,29,female,BA
-2698,half,left,red,preference,std,,0.10101525445522107,R_1JLUMx76moZL5BM,29,female,BA
+2696,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_1JLUMx76moZL5BM,29,female,BA
+2697,half,left,red,preference,average,,0.23809523809523808,R_1JLUMx76moZL5BM,29,female,BA
+2698,half,left,red,preference,std,,0.13468700594029476,R_1JLUMx76moZL5BM,29,female,BA
 2699,rational,right,blue,preference,average,,0.8571428571428571,R_1JLUMx76moZL5BM,29,female,BA
 2700,rational,right,blue,preference,std,,0.0,R_1JLUMx76moZL5BM,29,female,BA
 2701,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_3nHGDtwRBniEjaC,28,male,BA
@@ -2732,9 +2732,9 @@
 2730,rational,right,blue,q_preference,member,choice,2.0,R_3nHGDtwRBniEjaC,28,male,BA
 2731,rational,right,blue,q_preference,analyst,choice,2.0,R_3nHGDtwRBniEjaC,28,male,BA
 2732,rational,right,blue,q_preference,bartender,choice,2.0,R_3nHGDtwRBniEjaC,28,male,BA
-2733,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3nHGDtwRBniEjaC,28,male,BA
-2734,half,left,red,preference,average,,0.14285714285714285,R_3nHGDtwRBniEjaC,28,male,BA
-2735,half,left,red,preference,std,,0.0,R_3nHGDtwRBniEjaC,28,male,BA
+2733,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_3nHGDtwRBniEjaC,28,male,BA
+2734,half,left,red,preference,average,,0.15476190476190477,R_3nHGDtwRBniEjaC,28,male,BA
+2735,half,left,red,preference,std,,0.016835875742536845,R_3nHGDtwRBniEjaC,28,male,BA
 2736,rational,right,blue,preference,average,,0.8571428571428571,R_3nHGDtwRBniEjaC,28,male,BA
 2737,rational,right,blue,preference,std,,0.0,R_3nHGDtwRBniEjaC,28,male,BA
 2738,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_6i2AF6foMtFEqlP,32,male,BA
@@ -2769,9 +2769,9 @@
 2767,rational,right,blue,q_preference,member,choice,2.0,R_6i2AF6foMtFEqlP,32,male,BA
 2768,rational,right,blue,q_preference,analyst,choice,2.0,R_6i2AF6foMtFEqlP,32,male,BA
 2769,half,left,red,q_preference,bartender,choice,1.0,R_6i2AF6foMtFEqlP,32,male,BA
-2770,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_6i2AF6foMtFEqlP,32,male,BA
-2771,half,left,red,preference,average,,0.3571428571428571,R_6i2AF6foMtFEqlP,32,male,BA
-2772,half,left,red,preference,std,,0.10101525445522107,R_6i2AF6foMtFEqlP,32,male,BA
+2770,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_6i2AF6foMtFEqlP,32,male,BA
+2771,half,left,red,preference,average,,0.39285714285714285,R_6i2AF6foMtFEqlP,32,male,BA
+2772,half,left,red,preference,std,,0.15152288168283162,R_6i2AF6foMtFEqlP,32,male,BA
 2773,rational,right,blue,preference,average,,0.7142857142857143,R_6i2AF6foMtFEqlP,32,male,BA
 2774,rational,right,blue,preference,std,,0.0,R_6i2AF6foMtFEqlP,32,male,BA
 2775,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_2q1zrKH6L3ruNlf,27,female,<BA
@@ -2806,9 +2806,9 @@
 2804,rational,right,blue,q_preference,member,choice,2.0,R_2q1zrKH6L3ruNlf,27,female,<BA
 2805,rational,right,blue,q_preference,analyst,choice,2.0,R_2q1zrKH6L3ruNlf,27,female,<BA
 2806,half,left,red,q_preference,bartender,choice,1.0,R_2q1zrKH6L3ruNlf,27,female,<BA
-2807,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2q1zrKH6L3ruNlf,27,female,<BA
-2808,half,left,red,preference,average,,0.21428571428571427,R_2q1zrKH6L3ruNlf,27,female,<BA
-2809,half,left,red,preference,std,,0.10101525445522107,R_2q1zrKH6L3ruNlf,27,female,<BA
+2807,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_2q1zrKH6L3ruNlf,27,female,<BA
+2808,half,left,red,preference,average,,0.23809523809523808,R_2q1zrKH6L3ruNlf,27,female,<BA
+2809,half,left,red,preference,std,,0.13468700594029476,R_2q1zrKH6L3ruNlf,27,female,<BA
 2810,rational,right,blue,preference,average,,0.8571428571428571,R_2q1zrKH6L3ruNlf,27,female,<BA
 2811,rational,right,blue,preference,std,,0.0,R_2q1zrKH6L3ruNlf,27,female,<BA
 2812,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_1o6JC73YypsQ67a,29,female,<BA
@@ -2880,9 +2880,9 @@
 2878,rational,right,blue,q_preference,member,choice,2.0,R_3eqKEjs7VzXVawY,37,male,<BA
 2879,rational,right,blue,q_preference,analyst,choice,2.0,R_3eqKEjs7VzXVawY,37,male,<BA
 2880,rational,right,blue,q_preference,bartender,choice,2.0,R_3eqKEjs7VzXVawY,37,male,<BA
-2881,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3eqKEjs7VzXVawY,37,male,<BA
-2882,half,left,red,preference,average,,0.14285714285714285,R_3eqKEjs7VzXVawY,37,male,<BA
-2883,half,left,red,preference,std,,0.0,R_3eqKEjs7VzXVawY,37,male,<BA
+2881,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_3eqKEjs7VzXVawY,37,male,<BA
+2882,half,left,red,preference,average,,0.15476190476190477,R_3eqKEjs7VzXVawY,37,male,<BA
+2883,half,left,red,preference,std,,0.016835875742536845,R_3eqKEjs7VzXVawY,37,male,<BA
 2884,rational,right,blue,preference,average,,0.8571428571428571,R_3eqKEjs7VzXVawY,37,male,<BA
 2885,rational,right,blue,preference,std,,0.0,R_3eqKEjs7VzXVawY,37,male,<BA
 2886,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
@@ -2917,9 +2917,9 @@
 2915,rational,right,blue,q_preference,member,choice,2.0,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
 2916,rational,right,blue,q_preference,analyst,choice,2.0,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
 2917,half,left,red,q_preference,bartender,choice,1.0,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
-2918,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
-2919,half,left,red,preference,average,,0.3571428571428571,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
-2920,half,left,red,preference,std,,0.10101525445522107,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
+2918,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
+2919,half,left,red,preference,average,,0.39285714285714285,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
+2920,half,left,red,preference,std,,0.15152288168283162,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
 2921,rational,right,blue,preference,average,,0.7142857142857143,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
 2922,rational,right,blue,preference,std,,0.0,R_RrTZMGSNBCHCiQ1,55,female,Associate degree
 2923,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_C3mLGEwSVxe77ah,32,male,<BA
@@ -2954,9 +2954,9 @@
 2952,rational,right,blue,q_preference,member,choice,2.0,R_C3mLGEwSVxe77ah,32,male,<BA
 2953,half,left,red,q_preference,analyst,choice,1.0,R_C3mLGEwSVxe77ah,32,male,<BA
 2954,half,left,red,q_preference,bartender,choice,1.0,R_C3mLGEwSVxe77ah,32,male,<BA
-2955,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_C3mLGEwSVxe77ah,32,male,<BA
-2956,half,left,red,preference,average,,0.5714285714285714,R_C3mLGEwSVxe77ah,32,male,<BA
-2957,half,left,red,preference,std,,0.40406101782088427,R_C3mLGEwSVxe77ah,32,male,<BA
+2955,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_C3mLGEwSVxe77ah,32,male,<BA
+2956,half,left,red,preference,average,,0.6428571428571428,R_C3mLGEwSVxe77ah,32,male,<BA
+2957,half,left,red,preference,std,,0.5050762722761054,R_C3mLGEwSVxe77ah,32,male,<BA
 2958,rational,right,blue,preference,average,,0.7142857142857143,R_C3mLGEwSVxe77ah,32,male,<BA
 2959,rational,right,blue,preference,std,,0.0,R_C3mLGEwSVxe77ah,32,male,<BA
 2960,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_56XbZB0WKrhrsU9,25,female,Associate degree
@@ -2991,9 +2991,9 @@
 2989,rational,right,blue,q_preference,member,choice,2.0,R_56XbZB0WKrhrsU9,25,female,Associate degree
 2990,rational,right,blue,q_preference,analyst,choice,2.0,R_56XbZB0WKrhrsU9,25,female,Associate degree
 2991,half,left,red,q_preference,bartender,choice,1.0,R_56XbZB0WKrhrsU9,25,female,Associate degree
-2992,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_56XbZB0WKrhrsU9,25,female,Associate degree
-2993,half,left,red,preference,average,,0.5714285714285714,R_56XbZB0WKrhrsU9,25,female,Associate degree
-2994,half,left,red,preference,std,,0.20203050891044216,R_56XbZB0WKrhrsU9,25,female,Associate degree
+2992,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_56XbZB0WKrhrsU9,25,female,Associate degree
+2993,half,left,red,preference,average,,0.6309523809523809,R_56XbZB0WKrhrsU9,25,female,Associate degree
+2994,half,left,red,preference,std,,0.28620988762312644,R_56XbZB0WKrhrsU9,25,female,Associate degree
 2995,rational,right,blue,preference,average,,0.5714285714285714,R_56XbZB0WKrhrsU9,25,female,Associate degree
 2996,rational,right,blue,preference,std,,0.0,R_56XbZB0WKrhrsU9,25,female,Associate degree
 2997,,,participant,NARS,S1,Situations and Interactions with Robots,0.2916666666666667,R_8v8b4QLpseJApvb,35,female,MA
@@ -3028,9 +3028,9 @@
 3026,rational,right,blue,q_preference,member,choice,2.0,R_8v8b4QLpseJApvb,35,female,MA
 3027,rational,right,blue,q_preference,analyst,choice,2.0,R_8v8b4QLpseJApvb,35,female,MA
 3028,half,left,red,q_preference,bartender,choice,1.0,R_8v8b4QLpseJApvb,35,female,MA
-3029,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_8v8b4QLpseJApvb,35,female,MA
-3030,half,left,red,preference,average,,0.21428571428571427,R_8v8b4QLpseJApvb,35,female,MA
-3031,half,left,red,preference,std,,0.10101525445522107,R_8v8b4QLpseJApvb,35,female,MA
+3029,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_8v8b4QLpseJApvb,35,female,MA
+3030,half,left,red,preference,average,,0.23809523809523808,R_8v8b4QLpseJApvb,35,female,MA
+3031,half,left,red,preference,std,,0.13468700594029476,R_8v8b4QLpseJApvb,35,female,MA
 3032,rational,right,blue,preference,average,,0.8571428571428571,R_8v8b4QLpseJApvb,35,female,MA
 3033,rational,right,blue,preference,std,,0.0,R_8v8b4QLpseJApvb,35,female,MA
 3034,,,participant,NARS,S1,Situations and Interactions with Robots,0.20833333333333334,R_2ZP0Tzx5jN27Mqm,29,female,BA
@@ -3065,9 +3065,9 @@
 3063,half,left,red,q_preference,member,choice,1.0,R_2ZP0Tzx5jN27Mqm,29,female,BA
 3064,rational,right,blue,q_preference,analyst,choice,2.0,R_2ZP0Tzx5jN27Mqm,29,female,BA
 3065,half,left,red,q_preference,bartender,choice,1.0,R_2ZP0Tzx5jN27Mqm,29,female,BA
-3066,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2ZP0Tzx5jN27Mqm,29,female,BA
-3067,half,left,red,preference,average,,0.5714285714285714,R_2ZP0Tzx5jN27Mqm,29,female,BA
-3068,half,left,red,preference,std,,0.20203050891044216,R_2ZP0Tzx5jN27Mqm,29,female,BA
+3066,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_2ZP0Tzx5jN27Mqm,29,female,BA
+3067,half,left,red,preference,average,,0.6309523809523809,R_2ZP0Tzx5jN27Mqm,29,female,BA
+3068,half,left,red,preference,std,,0.28620988762312644,R_2ZP0Tzx5jN27Mqm,29,female,BA
 3069,rational,right,blue,preference,average,,0.5714285714285714,R_2ZP0Tzx5jN27Mqm,29,female,BA
 3070,rational,right,blue,preference,std,,0.0,R_2ZP0Tzx5jN27Mqm,29,female,BA
 3071,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_qzkYnOxE8U156dX,22,male,HS
@@ -3102,9 +3102,9 @@
 3100,rational,right,blue,q_preference,member,choice,2.0,R_qzkYnOxE8U156dX,22,male,HS
 3101,rational,right,blue,q_preference,analyst,choice,2.0,R_qzkYnOxE8U156dX,22,male,HS
 3102,rational,right,blue,q_preference,bartender,choice,2.0,R_qzkYnOxE8U156dX,22,male,HS
-3103,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_qzkYnOxE8U156dX,22,male,HS
-3104,half,left,red,preference,average,,0.14285714285714285,R_qzkYnOxE8U156dX,22,male,HS
-3105,half,left,red,preference,std,,0.0,R_qzkYnOxE8U156dX,22,male,HS
+3103,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_qzkYnOxE8U156dX,22,male,HS
+3104,half,left,red,preference,average,,0.15476190476190477,R_qzkYnOxE8U156dX,22,male,HS
+3105,half,left,red,preference,std,,0.016835875742536845,R_qzkYnOxE8U156dX,22,male,HS
 3106,rational,right,blue,preference,average,,0.8571428571428571,R_qzkYnOxE8U156dX,22,male,HS
 3107,rational,right,blue,preference,std,,0.0,R_qzkYnOxE8U156dX,22,male,HS
 3108,,,participant,NARS,S1,Situations and Interactions with Robots,0.5000000000000001,R_3EzogPlirxRkXbb,23,male,BA
@@ -3139,9 +3139,9 @@
 3137,rational,right,blue,q_preference,member,choice,2.0,R_3EzogPlirxRkXbb,23,male,BA
 3138,rational,right,blue,q_preference,analyst,choice,2.0,R_3EzogPlirxRkXbb,23,male,BA
 3139,half,left,red,q_preference,bartender,choice,1.0,R_3EzogPlirxRkXbb,23,male,BA
-3140,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3EzogPlirxRkXbb,23,male,BA
-3141,half,left,red,preference,average,,0.3571428571428571,R_3EzogPlirxRkXbb,23,male,BA
-3142,half,left,red,preference,std,,0.10101525445522107,R_3EzogPlirxRkXbb,23,male,BA
+3140,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_3EzogPlirxRkXbb,23,male,BA
+3141,half,left,red,preference,average,,0.39285714285714285,R_3EzogPlirxRkXbb,23,male,BA
+3142,half,left,red,preference,std,,0.15152288168283162,R_3EzogPlirxRkXbb,23,male,BA
 3143,rational,right,blue,preference,average,,0.7142857142857143,R_3EzogPlirxRkXbb,23,male,BA
 3144,rational,right,blue,preference,std,,0.0,R_3EzogPlirxRkXbb,23,male,BA
 3145,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_2tF4OJF4gK3JZVu,29,male,HS
@@ -3176,9 +3176,9 @@
 3174,rational,right,blue,q_preference,member,choice,2.0,R_2tF4OJF4gK3JZVu,29,male,HS
 3175,rational,right,blue,q_preference,analyst,choice,2.0,R_2tF4OJF4gK3JZVu,29,male,HS
 3176,rational,right,blue,q_preference,bartender,choice,2.0,R_2tF4OJF4gK3JZVu,29,male,HS
-3177,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2tF4OJF4gK3JZVu,29,male,HS
-3178,half,left,red,preference,average,,0.14285714285714285,R_2tF4OJF4gK3JZVu,29,male,HS
-3179,half,left,red,preference,std,,0.0,R_2tF4OJF4gK3JZVu,29,male,HS
+3177,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_2tF4OJF4gK3JZVu,29,male,HS
+3178,half,left,red,preference,average,,0.15476190476190477,R_2tF4OJF4gK3JZVu,29,male,HS
+3179,half,left,red,preference,std,,0.016835875742536845,R_2tF4OJF4gK3JZVu,29,male,HS
 3180,rational,right,blue,preference,average,,0.8571428571428571,R_2tF4OJF4gK3JZVu,29,male,HS
 3181,rational,right,blue,preference,std,,0.0,R_2tF4OJF4gK3JZVu,29,male,HS
 3182,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_3MgKH3lPINAvjYX,47,male,Associate degree
@@ -3213,9 +3213,9 @@
 3211,rational,right,blue,q_preference,member,choice,2.0,R_3MgKH3lPINAvjYX,47,male,Associate degree
 3212,rational,right,blue,q_preference,analyst,choice,2.0,R_3MgKH3lPINAvjYX,47,male,Associate degree
 3213,rational,right,blue,q_preference,bartender,choice,2.0,R_3MgKH3lPINAvjYX,47,male,Associate degree
-3214,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3MgKH3lPINAvjYX,47,male,Associate degree
-3215,half,left,red,preference,average,,0.5714285714285714,R_3MgKH3lPINAvjYX,47,male,Associate degree
-3216,half,left,red,preference,std,,0.0,R_3MgKH3lPINAvjYX,47,male,Associate degree
+3214,half,left,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_3MgKH3lPINAvjYX,47,male,Associate degree
+3215,half,left,red,preference,average,,0.6190476190476191,R_3MgKH3lPINAvjYX,47,male,Associate degree
+3216,half,left,red,preference,std,,0.06734350297014738,R_3MgKH3lPINAvjYX,47,male,Associate degree
 3217,rational,right,blue,preference,average,,0.42857142857142855,R_3MgKH3lPINAvjYX,47,male,Associate degree
 3218,rational,right,blue,preference,std,,0.0,R_3MgKH3lPINAvjYX,47,male,Associate degree
 3219,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_WcfFc9CgMFV1b7r,22,female,HS
@@ -3250,9 +3250,9 @@
 3248,rational,left,blue,q_preference,member,choice,2.0,R_WcfFc9CgMFV1b7r,22,female,HS
 3249,rational,left,blue,q_preference,analyst,choice,2.0,R_WcfFc9CgMFV1b7r,22,female,HS
 3250,rational,left,blue,q_preference,bartender,choice,2.0,R_WcfFc9CgMFV1b7r,22,female,HS
-3251,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_WcfFc9CgMFV1b7r,22,female,HS
-3252,half,right,red,preference,average,,0.14285714285714285,R_WcfFc9CgMFV1b7r,22,female,HS
-3253,half,right,red,preference,std,,0.0,R_WcfFc9CgMFV1b7r,22,female,HS
+3251,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_WcfFc9CgMFV1b7r,22,female,HS
+3252,half,right,red,preference,average,,0.15476190476190477,R_WcfFc9CgMFV1b7r,22,female,HS
+3253,half,right,red,preference,std,,0.016835875742536845,R_WcfFc9CgMFV1b7r,22,female,HS
 3254,rational,left,blue,preference,average,,0.8571428571428571,R_WcfFc9CgMFV1b7r,22,female,HS
 3255,rational,left,blue,preference,std,,0.0,R_WcfFc9CgMFV1b7r,22,female,HS
 3256,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_1f4asvDeoJqxgjT,24,female,BA
@@ -3324,9 +3324,9 @@
 3322,rational,left,blue,q_preference,member,choice,2.0,R_2duNWE0o7Kb7LES,34,female,BA
 3323,rational,left,blue,q_preference,analyst,choice,2.0,R_2duNWE0o7Kb7LES,34,female,BA
 3324,half,right,red,q_preference,bartender,choice,1.0,R_2duNWE0o7Kb7LES,34,female,BA
-3325,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2duNWE0o7Kb7LES,34,female,BA
-3326,half,right,red,preference,average,,0.21428571428571427,R_2duNWE0o7Kb7LES,34,female,BA
-3327,half,right,red,preference,std,,0.10101525445522107,R_2duNWE0o7Kb7LES,34,female,BA
+3325,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_2duNWE0o7Kb7LES,34,female,BA
+3326,half,right,red,preference,average,,0.23809523809523808,R_2duNWE0o7Kb7LES,34,female,BA
+3327,half,right,red,preference,std,,0.13468700594029476,R_2duNWE0o7Kb7LES,34,female,BA
 3328,rational,left,blue,preference,average,,0.8571428571428571,R_2duNWE0o7Kb7LES,34,female,BA
 3329,rational,left,blue,preference,std,,0.0,R_2duNWE0o7Kb7LES,34,female,BA
 3330,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_XGLJSIILpp2KKm5,39,female,HS
@@ -3361,9 +3361,9 @@
 3359,rational,left,blue,q_preference,member,choice,2.0,R_XGLJSIILpp2KKm5,39,female,HS
 3360,rational,left,blue,q_preference,analyst,choice,2.0,R_XGLJSIILpp2KKm5,39,female,HS
 3361,rational,left,blue,q_preference,bartender,choice,2.0,R_XGLJSIILpp2KKm5,39,female,HS
-3362,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_XGLJSIILpp2KKm5,39,female,HS
-3363,half,right,red,preference,average,,0.14285714285714285,R_XGLJSIILpp2KKm5,39,female,HS
-3364,half,right,red,preference,std,,0.0,R_XGLJSIILpp2KKm5,39,female,HS
+3362,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_XGLJSIILpp2KKm5,39,female,HS
+3363,half,right,red,preference,average,,0.15476190476190477,R_XGLJSIILpp2KKm5,39,female,HS
+3364,half,right,red,preference,std,,0.016835875742536845,R_XGLJSIILpp2KKm5,39,female,HS
 3365,rational,left,blue,preference,average,,0.8571428571428571,R_XGLJSIILpp2KKm5,39,female,HS
 3366,rational,left,blue,preference,std,,0.0,R_XGLJSIILpp2KKm5,39,female,HS
 3367,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_1eDGI5tXYmICigl,30,male,BA
@@ -3398,9 +3398,9 @@
 3396,rational,left,blue,q_preference,member,choice,2.0,R_1eDGI5tXYmICigl,30,male,BA
 3397,rational,left,blue,q_preference,analyst,choice,2.0,R_1eDGI5tXYmICigl,30,male,BA
 3398,rational,left,blue,q_preference,bartender,choice,2.0,R_1eDGI5tXYmICigl,30,male,BA
-3399,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1eDGI5tXYmICigl,30,male,BA
-3400,half,right,red,preference,average,,0.14285714285714285,R_1eDGI5tXYmICigl,30,male,BA
-3401,half,right,red,preference,std,,0.0,R_1eDGI5tXYmICigl,30,male,BA
+3399,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_1eDGI5tXYmICigl,30,male,BA
+3400,half,right,red,preference,average,,0.15476190476190477,R_1eDGI5tXYmICigl,30,male,BA
+3401,half,right,red,preference,std,,0.016835875742536845,R_1eDGI5tXYmICigl,30,male,BA
 3402,rational,left,blue,preference,average,,0.8571428571428571,R_1eDGI5tXYmICigl,30,male,BA
 3403,rational,left,blue,preference,std,,0.0,R_1eDGI5tXYmICigl,30,male,BA
 3404,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_3HoWCE4m8ROAtSx,20,male,<BA
@@ -3435,9 +3435,9 @@
 3433,rational,left,blue,q_preference,member,choice,2.0,R_3HoWCE4m8ROAtSx,20,male,<BA
 3434,rational,left,blue,q_preference,analyst,choice,2.0,R_3HoWCE4m8ROAtSx,20,male,<BA
 3435,rational,left,blue,q_preference,bartender,choice,2.0,R_3HoWCE4m8ROAtSx,20,male,<BA
-3436,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3HoWCE4m8ROAtSx,20,male,<BA
-3437,half,right,red,preference,average,,0.42857142857142855,R_3HoWCE4m8ROAtSx,20,male,<BA
-3438,half,right,red,preference,std,,0.0,R_3HoWCE4m8ROAtSx,20,male,<BA
+3436,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_3HoWCE4m8ROAtSx,20,male,<BA
+3437,half,right,red,preference,average,,0.4642857142857143,R_3HoWCE4m8ROAtSx,20,male,<BA
+3438,half,right,red,preference,std,,0.050507627227610555,R_3HoWCE4m8ROAtSx,20,male,<BA
 3439,rational,left,blue,preference,average,,0.5714285714285714,R_3HoWCE4m8ROAtSx,20,male,<BA
 3440,rational,left,blue,preference,std,,0.0,R_3HoWCE4m8ROAtSx,20,male,<BA
 3441,,,participant,NARS,S1,Situations and Interactions with Robots,0.3888888888888889,R_24bKEwOewf0eusy,30,male,BA
@@ -3472,9 +3472,9 @@
 3470,half,right,red,q_preference,member,choice,1.0,R_24bKEwOewf0eusy,30,male,BA
 3471,half,right,red,q_preference,analyst,choice,1.0,R_24bKEwOewf0eusy,30,male,BA
 3472,rational,left,blue,q_preference,bartender,choice,2.0,R_24bKEwOewf0eusy,30,male,BA
-3473,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_24bKEwOewf0eusy,30,male,BA
-3474,half,right,red,preference,average,,0.9285714285714286,R_24bKEwOewf0eusy,30,male,BA
-3475,half,right,red,preference,std,,0.3030457633656632,R_24bKEwOewf0eusy,30,male,BA
+3473,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_24bKEwOewf0eusy,30,male,BA
+3474,half,right,red,preference,average,,1.0238095238095237,R_24bKEwOewf0eusy,30,male,BA
+3475,half,right,red,preference,std,,0.43773276930595795,R_24bKEwOewf0eusy,30,male,BA
 3476,rational,left,blue,preference,average,,0.2857142857142857,R_24bKEwOewf0eusy,30,male,BA
 3477,rational,left,blue,preference,std,,0.0,R_24bKEwOewf0eusy,30,male,BA
 3478,,,participant,NARS,S1,Situations and Interactions with Robots,0.4583333333333333,R_2YEzFP8EhMDZwRt,26,male,BA
@@ -3509,9 +3509,9 @@
 3507,rational,left,blue,q_preference,member,choice,2.0,R_2YEzFP8EhMDZwRt,26,male,BA
 3508,rational,left,blue,q_preference,analyst,choice,2.0,R_2YEzFP8EhMDZwRt,26,male,BA
 3509,rational,left,blue,q_preference,bartender,choice,2.0,R_2YEzFP8EhMDZwRt,26,male,BA
-3510,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_2YEzFP8EhMDZwRt,26,male,BA
-3511,half,right,red,preference,average,,0.42857142857142855,R_2YEzFP8EhMDZwRt,26,male,BA
-3512,half,right,red,preference,std,,0.0,R_2YEzFP8EhMDZwRt,26,male,BA
+3510,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_2YEzFP8EhMDZwRt,26,male,BA
+3511,half,right,red,preference,average,,0.4642857142857143,R_2YEzFP8EhMDZwRt,26,male,BA
+3512,half,right,red,preference,std,,0.050507627227610555,R_2YEzFP8EhMDZwRt,26,male,BA
 3513,rational,left,blue,preference,average,,0.5714285714285714,R_2YEzFP8EhMDZwRt,26,male,BA
 3514,rational,left,blue,preference,std,,0.0,R_2YEzFP8EhMDZwRt,26,male,BA
 3515,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_1CymvkKFlSVlcaP,27,male,BA
@@ -3546,9 +3546,9 @@
 3544,rational,left,blue,q_preference,member,choice,2.0,R_1CymvkKFlSVlcaP,27,male,BA
 3545,rational,left,blue,q_preference,analyst,choice,2.0,R_1CymvkKFlSVlcaP,27,male,BA
 3546,rational,left,blue,q_preference,bartender,choice,2.0,R_1CymvkKFlSVlcaP,27,male,BA
-3547,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1CymvkKFlSVlcaP,27,male,BA
-3548,half,right,red,preference,average,,0.14285714285714285,R_1CymvkKFlSVlcaP,27,male,BA
-3549,half,right,red,preference,std,,0.0,R_1CymvkKFlSVlcaP,27,male,BA
+3547,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_1CymvkKFlSVlcaP,27,male,BA
+3548,half,right,red,preference,average,,0.15476190476190477,R_1CymvkKFlSVlcaP,27,male,BA
+3549,half,right,red,preference,std,,0.016835875742536845,R_1CymvkKFlSVlcaP,27,male,BA
 3550,rational,left,blue,preference,average,,0.8571428571428571,R_1CymvkKFlSVlcaP,27,male,BA
 3551,rational,left,blue,preference,std,,0.0,R_1CymvkKFlSVlcaP,27,male,BA
 3552,,,participant,NARS,S1,Situations and Interactions with Robots,0.5,R_2wysRtK1vtsOTBS,45,female,MA
@@ -3583,9 +3583,9 @@
 3581,rational,left,blue,q_preference,member,choice,2.0,R_2wysRtK1vtsOTBS,45,female,MA
 3582,rational,left,blue,q_preference,analyst,choice,2.0,R_2wysRtK1vtsOTBS,45,female,MA
 3583,rational,left,blue,q_preference,bartender,choice,2.0,R_2wysRtK1vtsOTBS,45,female,MA
-3584,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2wysRtK1vtsOTBS,45,female,MA
-3585,half,right,red,preference,average,,0.14285714285714285,R_2wysRtK1vtsOTBS,45,female,MA
-3586,half,right,red,preference,std,,0.0,R_2wysRtK1vtsOTBS,45,female,MA
+3584,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_2wysRtK1vtsOTBS,45,female,MA
+3585,half,right,red,preference,average,,0.15476190476190477,R_2wysRtK1vtsOTBS,45,female,MA
+3586,half,right,red,preference,std,,0.016835875742536845,R_2wysRtK1vtsOTBS,45,female,MA
 3587,rational,left,blue,preference,average,,0.8571428571428571,R_2wysRtK1vtsOTBS,45,female,MA
 3588,rational,left,blue,preference,std,,0.0,R_2wysRtK1vtsOTBS,45,female,MA
 3589,,,participant,NARS,S1,Situations and Interactions with Robots,0.8333333333333334,R_2q4cx5bw5O1rUYM,33,female,Associate degree
@@ -3620,9 +3620,9 @@
 3618,rational,left,blue,q_preference,member,choice,2.0,R_2q4cx5bw5O1rUYM,33,female,Associate degree
 3619,rational,left,blue,q_preference,analyst,choice,2.0,R_2q4cx5bw5O1rUYM,33,female,Associate degree
 3620,half,right,red,q_preference,bartender,choice,1.0,R_2q4cx5bw5O1rUYM,33,female,Associate degree
-3621,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2q4cx5bw5O1rUYM,33,female,Associate degree
-3622,half,right,red,preference,average,,0.07142857142857142,R_2q4cx5bw5O1rUYM,33,female,Associate degree
-3623,half,right,red,preference,std,,0.10101525445522107,R_2q4cx5bw5O1rUYM,33,female,Associate degree
+3621,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_2q4cx5bw5O1rUYM,33,female,Associate degree
+3622,half,right,red,preference,average,,0.08333333333333333,R_2q4cx5bw5O1rUYM,33,female,Associate degree
+3623,half,right,red,preference,std,,0.11785113019775792,R_2q4cx5bw5O1rUYM,33,female,Associate degree
 3624,rational,left,blue,preference,average,,1.0,R_2q4cx5bw5O1rUYM,33,female,Associate degree
 3625,rational,left,blue,preference,std,,0.0,R_2q4cx5bw5O1rUYM,33,female,Associate degree
 3626,,,participant,NARS,S1,Situations and Interactions with Robots,0.3333333333333333,R_C2j5nxL19u2Iqhr,24,female,BA
@@ -3657,9 +3657,9 @@
 3655,rational,left,blue,q_preference,member,choice,2.0,R_C2j5nxL19u2Iqhr,24,female,BA
 3656,rational,left,blue,q_preference,analyst,choice,2.0,R_C2j5nxL19u2Iqhr,24,female,BA
 3657,rational,left,blue,q_preference,bartender,choice,2.0,R_C2j5nxL19u2Iqhr,24,female,BA
-3658,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_C2j5nxL19u2Iqhr,24,female,BA
-3659,half,right,red,preference,average,,0.2857142857142857,R_C2j5nxL19u2Iqhr,24,female,BA
-3660,half,right,red,preference,std,,0.0,R_C2j5nxL19u2Iqhr,24,female,BA
+3658,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_C2j5nxL19u2Iqhr,24,female,BA
+3659,half,right,red,preference,average,,0.30952380952380953,R_C2j5nxL19u2Iqhr,24,female,BA
+3660,half,right,red,preference,std,,0.03367175148507369,R_C2j5nxL19u2Iqhr,24,female,BA
 3661,rational,left,blue,preference,average,,0.7142857142857143,R_C2j5nxL19u2Iqhr,24,female,BA
 3662,rational,left,blue,preference,std,,0.0,R_C2j5nxL19u2Iqhr,24,female,BA
 3663,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_Z2XXgyg1IendrG1,27,male,BA
@@ -3731,9 +3731,9 @@
 3729,rational,left,blue,q_preference,member,choice,2.0,R_1CjUY0uIHemM6Hr,24,female,BA
 3730,rational,left,blue,q_preference,analyst,choice,2.0,R_1CjUY0uIHemM6Hr,24,female,BA
 3731,rational,left,blue,q_preference,bartender,choice,2.0,R_1CjUY0uIHemM6Hr,24,female,BA
-3732,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1CjUY0uIHemM6Hr,24,female,BA
-3733,half,right,red,preference,average,,0.14285714285714285,R_1CjUY0uIHemM6Hr,24,female,BA
-3734,half,right,red,preference,std,,0.0,R_1CjUY0uIHemM6Hr,24,female,BA
+3732,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_1CjUY0uIHemM6Hr,24,female,BA
+3733,half,right,red,preference,average,,0.15476190476190477,R_1CjUY0uIHemM6Hr,24,female,BA
+3734,half,right,red,preference,std,,0.016835875742536845,R_1CjUY0uIHemM6Hr,24,female,BA
 3735,rational,left,blue,preference,average,,0.8571428571428571,R_1CjUY0uIHemM6Hr,24,female,BA
 3736,rational,left,blue,preference,std,,0.0,R_1CjUY0uIHemM6Hr,24,female,BA
 3737,,,participant,NARS,S1,Situations and Interactions with Robots,0.7083333333333334,R_PXqK4JQtkFusJON,28,female,BA
@@ -3768,9 +3768,9 @@
 3766,half,right,red,q_preference,member,choice,1.0,R_PXqK4JQtkFusJON,28,female,BA
 3767,rational,left,blue,q_preference,analyst,choice,2.0,R_PXqK4JQtkFusJON,28,female,BA
 3768,rational,left,blue,q_preference,bartender,choice,2.0,R_PXqK4JQtkFusJON,28,female,BA
-3769,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_PXqK4JQtkFusJON,28,female,BA
-3770,half,right,red,preference,average,,0.7857142857142857,R_PXqK4JQtkFusJON,28,female,BA
-3771,half,right,red,preference,std,,0.30304576336566325,R_PXqK4JQtkFusJON,28,female,BA
+3769,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1666666666666667,R_PXqK4JQtkFusJON,28,female,BA
+3770,half,right,red,preference,average,,0.8690476190476191,R_PXqK4JQtkFusJON,28,female,BA
+3771,half,right,red,preference,std,,0.42089689356342125,R_PXqK4JQtkFusJON,28,female,BA
 3772,rational,left,blue,preference,average,,0.42857142857142855,R_PXqK4JQtkFusJON,28,female,BA
 3773,rational,left,blue,preference,std,,0.0,R_PXqK4JQtkFusJON,28,female,BA
 3774,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_2V3mBNj8TtJHX2i,28,male,BA
@@ -3805,9 +3805,9 @@
 3803,half,right,red,q_preference,member,choice,1.0,R_2V3mBNj8TtJHX2i,28,male,BA
 3804,half,right,red,q_preference,analyst,choice,1.0,R_2V3mBNj8TtJHX2i,28,male,BA
 3805,rational,left,blue,q_preference,bartender,choice,2.0,R_2V3mBNj8TtJHX2i,28,male,BA
-3806,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.1428571428571428,R_2V3mBNj8TtJHX2i,28,male,BA
-3807,half,right,red,preference,average,,0.8571428571428571,R_2V3mBNj8TtJHX2i,28,male,BA
-3808,half,right,red,preference,std,,0.40406101782088427,R_2V3mBNj8TtJHX2i,28,male,BA
+3806,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.3333333333333333,R_2V3mBNj8TtJHX2i,28,male,BA
+3807,half,right,red,preference,average,,0.9523809523809523,R_2V3mBNj8TtJHX2i,28,male,BA
+3808,half,right,red,preference,std,,0.538748023761179,R_2V3mBNj8TtJHX2i,28,male,BA
 3809,rational,left,blue,preference,average,,0.42857142857142855,R_2V3mBNj8TtJHX2i,28,male,BA
 3810,rational,left,blue,preference,std,,0.0,R_2V3mBNj8TtJHX2i,28,male,BA
 3811,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_2zHIKMK1R8ciGzV,30,male,BA
@@ -3842,9 +3842,9 @@
 3840,rational,left,blue,q_preference,member,choice,2.0,R_2zHIKMK1R8ciGzV,30,male,BA
 3841,half,right,red,q_preference,analyst,choice,1.0,R_2zHIKMK1R8ciGzV,30,male,BA
 3842,half,right,red,q_preference,bartender,choice,1.0,R_2zHIKMK1R8ciGzV,30,male,BA
-3843,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.4285714285714286,R_2zHIKMK1R8ciGzV,30,male,BA
-3844,half,right,red,preference,average,,1.1428571428571428,R_2zHIKMK1R8ciGzV,30,male,BA
-3845,half,right,red,preference,std,,0.4040610178208843,R_2zHIKMK1R8ciGzV,30,male,BA
+3843,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.6666666666666667,R_2zHIKMK1R8ciGzV,30,male,BA
+3844,half,right,red,preference,average,,1.2619047619047619,R_2zHIKMK1R8ciGzV,30,male,BA
+3845,half,right,red,preference,std,,0.5724197752462529,R_2zHIKMK1R8ciGzV,30,male,BA
 3846,rational,left,blue,preference,average,,0.14285714285714285,R_2zHIKMK1R8ciGzV,30,male,BA
 3847,rational,left,blue,preference,std,,0.0,R_2zHIKMK1R8ciGzV,30,male,BA
 3848,,,participant,NARS,S1,Situations and Interactions with Robots,0.5833333333333334,R_2VfnlTXqwaAQxtn,27,female,BA
@@ -3916,9 +3916,9 @@
 3914,rational,left,blue,q_preference,member,choice,2.0,R_1nUYG5BiEzaatdc,24,female,BA
 3915,rational,left,blue,q_preference,analyst,choice,2.0,R_1nUYG5BiEzaatdc,24,female,BA
 3916,half,right,red,q_preference,bartender,choice,1.0,R_1nUYG5BiEzaatdc,24,female,BA
-3917,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_1nUYG5BiEzaatdc,24,female,BA
-3918,half,right,red,preference,average,,0.5,R_1nUYG5BiEzaatdc,24,female,BA
-3919,half,right,red,preference,std,,0.10101525445522107,R_1nUYG5BiEzaatdc,24,female,BA
+3917,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_1nUYG5BiEzaatdc,24,female,BA
+3918,half,right,red,preference,average,,0.5476190476190476,R_1nUYG5BiEzaatdc,24,female,BA
+3919,half,right,red,preference,std,,0.16835875742536843,R_1nUYG5BiEzaatdc,24,female,BA
 3920,rational,left,blue,preference,average,,0.5714285714285714,R_1nUYG5BiEzaatdc,24,female,BA
 3921,rational,left,blue,preference,std,,0.0,R_1nUYG5BiEzaatdc,24,female,BA
 3922,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_2c0zJhiMGhBtPcy,42,male,BA
@@ -3953,9 +3953,9 @@
 3951,rational,left,blue,q_preference,member,choice,2.0,R_2c0zJhiMGhBtPcy,42,male,BA
 3952,rational,left,blue,q_preference,analyst,choice,2.0,R_2c0zJhiMGhBtPcy,42,male,BA
 3953,half,right,red,q_preference,bartender,choice,1.0,R_2c0zJhiMGhBtPcy,42,male,BA
-3954,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2c0zJhiMGhBtPcy,42,male,BA
-3955,half,right,red,preference,average,,0.21428571428571427,R_2c0zJhiMGhBtPcy,42,male,BA
-3956,half,right,red,preference,std,,0.10101525445522107,R_2c0zJhiMGhBtPcy,42,male,BA
+3954,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.3333333333333333,R_2c0zJhiMGhBtPcy,42,male,BA
+3955,half,right,red,preference,average,,0.23809523809523808,R_2c0zJhiMGhBtPcy,42,male,BA
+3956,half,right,red,preference,std,,0.13468700594029476,R_2c0zJhiMGhBtPcy,42,male,BA
 3957,rational,left,blue,preference,average,,0.8571428571428571,R_2c0zJhiMGhBtPcy,42,male,BA
 3958,rational,left,blue,preference,std,,0.0,R_2c0zJhiMGhBtPcy,42,male,BA
 3959,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_2pPufl3O2v40JdT,66,male,Associate degree
@@ -3990,9 +3990,9 @@
 3988,rational,left,blue,q_preference,member,choice,2.0,R_2pPufl3O2v40JdT,66,male,Associate degree
 3989,rational,left,blue,q_preference,analyst,choice,2.0,R_2pPufl3O2v40JdT,66,male,Associate degree
 3990,half,right,red,q_preference,bartender,choice,1.0,R_2pPufl3O2v40JdT,66,male,Associate degree
-3991,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2pPufl3O2v40JdT,66,male,Associate degree
-3992,half,right,red,preference,average,,0.6428571428571428,R_2pPufl3O2v40JdT,66,male,Associate degree
-3993,half,right,red,preference,std,,0.10101525445522111,R_2pPufl3O2v40JdT,66,male,Associate degree
+3991,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_2pPufl3O2v40JdT,66,male,Associate degree
+3992,half,right,red,preference,average,,0.7023809523809523,R_2pPufl3O2v40JdT,66,male,Associate degree
+3993,half,right,red,preference,std,,0.18519463316790535,R_2pPufl3O2v40JdT,66,male,Associate degree
 3994,rational,left,blue,preference,average,,0.42857142857142855,R_2pPufl3O2v40JdT,66,male,Associate degree
 3995,rational,left,blue,preference,std,,0.0,R_2pPufl3O2v40JdT,66,male,Associate degree
 3996,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_21pIkZ7DUXIVE5Q,34,male,HS
@@ -4027,9 +4027,9 @@
 4025,rational,left,blue,q_preference,member,choice,2.0,R_21pIkZ7DUXIVE5Q,34,male,HS
 4026,rational,left,blue,q_preference,analyst,choice,2.0,R_21pIkZ7DUXIVE5Q,34,male,HS
 4027,rational,left,blue,q_preference,bartender,choice,2.0,R_21pIkZ7DUXIVE5Q,34,male,HS
-4028,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_21pIkZ7DUXIVE5Q,34,male,HS
-4029,half,right,red,preference,average,,0.3571428571428571,R_21pIkZ7DUXIVE5Q,34,male,HS
-4030,half,right,red,preference,std,,0.10101525445522107,R_21pIkZ7DUXIVE5Q,34,male,HS
+4028,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_21pIkZ7DUXIVE5Q,34,male,HS
+4029,half,right,red,preference,average,,0.39285714285714285,R_21pIkZ7DUXIVE5Q,34,male,HS
+4030,half,right,red,preference,std,,0.15152288168283162,R_21pIkZ7DUXIVE5Q,34,male,HS
 4031,rational,left,blue,preference,average,,0.7142857142857143,R_21pIkZ7DUXIVE5Q,34,male,HS
 4032,rational,left,blue,preference,std,,0.0,R_21pIkZ7DUXIVE5Q,34,male,HS
 4033,,,participant,NARS,S1,Situations and Interactions with Robots,0.6666666666666666,R_2tyuyotKVxR11zY,47,male,<BA
@@ -4064,9 +4064,9 @@
 4062,rational,left,blue,q_preference,member,choice,2.0,R_2tyuyotKVxR11zY,47,male,<BA
 4063,rational,left,blue,q_preference,analyst,choice,2.0,R_2tyuyotKVxR11zY,47,male,<BA
 4064,half,right,red,q_preference,bartender,choice,1.0,R_2tyuyotKVxR11zY,47,male,<BA
-4065,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_2tyuyotKVxR11zY,47,male,<BA
-4066,half,right,red,preference,average,,0.7857142857142857,R_2tyuyotKVxR11zY,47,male,<BA
-4067,half,right,red,preference,std,,0.10101525445522103,R_2tyuyotKVxR11zY,47,male,<BA
+4065,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,1.0,R_2tyuyotKVxR11zY,47,male,<BA
+4066,half,right,red,preference,average,,0.8571428571428572,R_2tyuyotKVxR11zY,47,male,<BA
+4067,half,right,red,preference,std,,0.20203050891044214,R_2tyuyotKVxR11zY,47,male,<BA
 4068,rational,left,blue,preference,average,,0.2857142857142857,R_2tyuyotKVxR11zY,47,male,<BA
 4069,rational,left,blue,preference,std,,0.0,R_2tyuyotKVxR11zY,47,male,<BA
 4070,,,participant,NARS,S1,Situations and Interactions with Robots,0.27777777777777773,R_2THLlwGsMXcqrKH,34,female,<BA
@@ -4101,9 +4101,9 @@
 4099,rational,left,blue,q_preference,member,choice,2.0,R_2THLlwGsMXcqrKH,34,female,<BA
 4100,half,right,red,q_preference,analyst,choice,1.0,R_2THLlwGsMXcqrKH,34,female,<BA
 4101,rational,left,blue,q_preference,bartender,choice,2.0,R_2THLlwGsMXcqrKH,34,female,<BA
-4102,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_2THLlwGsMXcqrKH,34,female,<BA
-4103,half,right,red,preference,average,,0.42857142857142855,R_2THLlwGsMXcqrKH,34,female,<BA
-4104,half,right,red,preference,std,,0.20203050891044214,R_2THLlwGsMXcqrKH,34,female,<BA
+4102,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.6666666666666666,R_2THLlwGsMXcqrKH,34,female,<BA
+4103,half,right,red,preference,average,,0.47619047619047616,R_2THLlwGsMXcqrKH,34,female,<BA
+4104,half,right,red,preference,std,,0.2693740118805895,R_2THLlwGsMXcqrKH,34,female,<BA
 4105,rational,left,blue,preference,average,,0.7142857142857143,R_2THLlwGsMXcqrKH,34,female,<BA
 4106,rational,left,blue,preference,std,,0.0,R_2THLlwGsMXcqrKH,34,female,<BA
 4107,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_YXMLpifjCZ9ZWPn,62,male,<BA
@@ -4138,9 +4138,9 @@
 4136,rational,left,blue,q_preference,member,choice,2.0,R_YXMLpifjCZ9ZWPn,62,male,<BA
 4137,rational,left,blue,q_preference,analyst,choice,2.0,R_YXMLpifjCZ9ZWPn,62,male,<BA
 4138,rational,left,blue,q_preference,bartender,choice,2.0,R_YXMLpifjCZ9ZWPn,62,male,<BA
-4139,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_YXMLpifjCZ9ZWPn,62,male,<BA
-4140,half,right,red,preference,average,,0.14285714285714285,R_YXMLpifjCZ9ZWPn,62,male,<BA
-4141,half,right,red,preference,std,,0.0,R_YXMLpifjCZ9ZWPn,62,male,<BA
+4139,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_YXMLpifjCZ9ZWPn,62,male,<BA
+4140,half,right,red,preference,average,,0.15476190476190477,R_YXMLpifjCZ9ZWPn,62,male,<BA
+4141,half,right,red,preference,std,,0.016835875742536845,R_YXMLpifjCZ9ZWPn,62,male,<BA
 4142,rational,left,blue,preference,average,,0.8571428571428571,R_YXMLpifjCZ9ZWPn,62,male,<BA
 4143,rational,left,blue,preference,std,,0.0,R_YXMLpifjCZ9ZWPn,62,male,<BA
 4144,,,participant,NARS,S1,Situations and Interactions with Robots,0.16666666666666666,R_24k2xX8ykso2T8A,31,female,<BA
@@ -4175,9 +4175,9 @@
 4173,rational,left,blue,q_preference,member,choice,2.0,R_24k2xX8ykso2T8A,31,female,<BA
 4174,rational,left,blue,q_preference,analyst,choice,2.0,R_24k2xX8ykso2T8A,31,female,<BA
 4175,rational,left,blue,q_preference,bartender,choice,2.0,R_24k2xX8ykso2T8A,31,female,<BA
-4176,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_24k2xX8ykso2T8A,31,female,<BA
-4177,half,right,red,preference,average,,0.14285714285714285,R_24k2xX8ykso2T8A,31,female,<BA
-4178,half,right,red,preference,std,,0.0,R_24k2xX8ykso2T8A,31,female,<BA
+4176,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_24k2xX8ykso2T8A,31,female,<BA
+4177,half,right,red,preference,average,,0.15476190476190477,R_24k2xX8ykso2T8A,31,female,<BA
+4178,half,right,red,preference,std,,0.016835875742536845,R_24k2xX8ykso2T8A,31,female,<BA
 4179,rational,left,blue,preference,average,,0.8571428571428571,R_24k2xX8ykso2T8A,31,female,<BA
 4180,rational,left,blue,preference,std,,0.0,R_24k2xX8ykso2T8A,31,female,<BA
 4181,,,participant,NARS,S1,Situations and Interactions with Robots,0.0,R_1NCuJLRbTUcTDTl,30,male,BA
@@ -4212,9 +4212,9 @@
 4210,rational,left,blue,q_preference,member,choice,2.0,R_1NCuJLRbTUcTDTl,30,male,BA
 4211,rational,left,blue,q_preference,analyst,choice,2.0,R_1NCuJLRbTUcTDTl,30,male,BA
 4212,half,right,red,q_preference,bartender,choice,1.0,R_1NCuJLRbTUcTDTl,30,male,BA
-4213,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_1NCuJLRbTUcTDTl,30,male,BA
-4214,half,right,red,preference,average,,0.3571428571428571,R_1NCuJLRbTUcTDTl,30,male,BA
-4215,half,right,red,preference,std,,0.10101525445522107,R_1NCuJLRbTUcTDTl,30,male,BA
+4213,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.5,R_1NCuJLRbTUcTDTl,30,male,BA
+4214,half,right,red,preference,average,,0.39285714285714285,R_1NCuJLRbTUcTDTl,30,male,BA
+4215,half,right,red,preference,std,,0.15152288168283162,R_1NCuJLRbTUcTDTl,30,male,BA
 4216,rational,left,blue,preference,average,,0.7142857142857143,R_1NCuJLRbTUcTDTl,30,male,BA
 4217,rational,left,blue,preference,std,,0.0,R_1NCuJLRbTUcTDTl,30,male,BA
 4218,,,participant,NARS,S1,Situations and Interactions with Robots,0.25,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
@@ -4249,9 +4249,9 @@
 4247,rational,left,blue,q_preference,member,choice,2.0,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
 4248,rational,left,blue,q_preference,analyst,choice,2.0,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
 4249,rational,left,blue,q_preference,bartender,choice,2.0,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
-4250,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
-4251,half,right,red,preference,average,,0.14285714285714285,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
-4252,half,right,red,preference,std,,0.0,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
+4250,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.16666666666666666,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
+4251,half,right,red,preference,average,,0.15476190476190477,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
+4252,half,right,red,preference,std,,0.016835875742536845,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
 4253,rational,left,blue,preference,average,,0.8571428571428571,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
 4254,rational,left,blue,preference,std,,0.0,R_1Cejvqvgn5Gp0vZ,38,female,Associate degree
 4255,,,participant,NARS,S1,Situations and Interactions with Robots,0.7083333333333334,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
@@ -4286,8 +4286,8 @@
 4284,half,right,red,q_preference,member,choice,1.0,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
 4285,rational,left,blue,q_preference,analyst,choice,2.0,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
 4286,half,right,red,q_preference,bartender,choice,1.0,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
-4287,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
-4288,half,right,red,preference,average,,0.5714285714285714,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
-4289,half,right,red,preference,std,,0.20203050891044216,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
+4287,half,right,red,q_preference,summary,Count (Normalized) participant chose this robot,0.8333333333333334,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
+4288,half,right,red,preference,average,,0.6309523809523809,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
+4289,half,right,red,preference,std,,0.28620988762312644,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
 4290,rational,left,blue,preference,average,,0.5714285714285714,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
 4291,rational,left,blue,preference,std,,0.0,R_2Tpz1HM1BNBbv9G,29,female,Associate degree
