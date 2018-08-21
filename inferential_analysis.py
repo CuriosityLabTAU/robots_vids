@@ -535,20 +535,21 @@ def summary_diff(sf, df_dir):
 
     b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
     b = b[~b['preference'].isna()]
-    b['group'] = 1
+    b['group'] = 'h'
     a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
-    a['group'] = 2
+    a['group'] = 'i'
     a = a[~a['preference'].isna()]
 
     q_pref_df1 = pd.concat([a, b])
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ih','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i1')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i1r')
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','i1')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','i1r')
 
     fig, ax = plt.subplots(1, 1)
     sns.barplot(data=q_pref_df1, x='group', y='preference', hue='rationality', ax=ax)
     # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
+    save_maxfig(fig, 'q_preference_rationality')
 
     st.to_csv(df_dir+'summary_mannwhitney.csv')
     q_pref_df.to_csv(df_dir + '__q_pref_df.csv')
