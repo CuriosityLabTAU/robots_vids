@@ -7,6 +7,7 @@ import pickle
 from matplotlib.colors import LinearSegmentedColormap
 # plt.style.use('ggplot')
 from scipy.stats import mannwhitneyu
+from scipy import stats
 
 # plt.xkcd();
 ft = 12 # annotate fontsize
@@ -492,6 +493,31 @@ def statistical_diff(df_dir):
     print(st)
     print('statistics saved to data/dataframes/stats_diff_mannwhitney.csv')
 
+def binom_test_pref(rat_pref_df_tot):
+    '''
+    calculate binom test for rational
+    :param rat_pref_df_tot: preference per question per deployment dataframe
+    :return: datafrasme containing te results
+    '''
+    deps = rat_pref_df_tot['deployment'].unique()
+    for dep in deps:
+        k = dep.split('_')
+        k = k[0][0] + k[1][0]
+        temp = rat_pref_df_tot[rat_pref_df_tot['deployment'] == dep]
+        temp1 = temp[(temp.question.str.contains('Q')) & (temp.rationality == 'rational')]
+        n = temp['num_users'][0] * temp1.shape[0]
+        x = temp1.preference.sum()
+        bt = stats.binom_test(x = x, n = n, p=.5)
+        temp_d = pd.DataFrame.from_dict({'deployment': [k], 'x': [x], 'n': [n], 'binom_pvalue': [bt]})
+        if 'd' in locals():
+            d = d.append(temp_d)
+        else:
+            d = temp_d.copy()
+    d = d.reset_index(drop=True)
+    return d
+
+
+
 def summary_diff(sf, df_dir):
     '''
     calculating and plotting statistical difference between the summary
@@ -535,9 +561,9 @@ def summary_diff(sf, df_dir):
 
     b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
     b = b[~b['preference'].isna()]
-    b['group'] = 'h'
+    b['group'] = 'irr1'
     a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
-    a['group'] = 'i'
+    a['group'] = 'irr2'
     a = a[~a['preference'].isna()]
 
     q_pref_df1 = pd.concat([a, b])
@@ -546,8 +572,34 @@ def summary_diff(sf, df_dir):
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','i2')
     q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','i1r')
 
+    bin_temp = {'ri':np.nan, 'rh':np.nan}
+    # stats.binom_test(x=q_pref_df['ri'][q_pref_df['ri']>=.5].count(),n=q_pref_df.shape[0],p=.5)
+
     fig, ax = plt.subplots(1, 1)
     sns.barplot(data=q_pref_df1, x='group', y='preference', hue='rationality', ax=ax)
+    for g in q_pref_df1.group.unique():
+        for rat in q_pref_df1.rationality.unique():
+            y = q_pref_df1[(q_pref_df1['group'] == g) & (q_pref_df1['rationality'] == rat)].preference
+            s, p = stats.ttest_1samp(y, 0.5)
+            if p < .5:
+                cxt = ax.get_xticklabels()
+                cxt1 = ax.get_xticks()
+                if cxt[0]._text == g:
+                    c = cxt1[0]
+                else:
+                    c = cxt1[1]
+
+                if rat == 'i2':
+                    ax.annotate('*', xy=(c + 0.21, y.mean() + 0.1), annotation_clip=False, fontsize=14)
+                if rat == 'i1r':
+                    ax.annotate('*', xy=(c - 0.21, y.mean() + 0.1), annotation_clip=False, fontsize=14)
+
+        # todo: continue here
+        s1, p1 = stats.ttest_ind(q_pref_df1[q_pref_df1.rationality == 'i2'].preference, q_pref_df1[q_pref_df1.rationality == 'i1r'].preference)
+        if (p1 <.5) and rat == 'i1r':
+            ax.hlines(ax.get_ylim()[1], cxt1[0], cxt1[1])
+            ax.annotate('*', xy=(np.mean(cxt1)-0.21, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
+
     # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
     save_maxfig(fig, 'q_preference_rationality')
 

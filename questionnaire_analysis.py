@@ -186,8 +186,11 @@ if __name__ == "__main__":
         rat_pref_df_tot      = pd.read_csv(df_dir+'__rat_pref_dataframe.csv', index_col = 0)
 
         rat_pref_df_tot_3rat, binomal_df = rat3_df(rat_pref_df_tot)
+        binom_7questions = binom_test_pref(rat_pref_df_tot)
+
         rat_pref_df_tot_3rat.to_csv(df_dir+'__rat_pref_dataframe_3rat.csv')
         binomal_df.to_csv(df_dir+'__binomal_df.csv')
+        binom_7questions.to_csv(df_dir+'__binom_7questions.csv')
 
 
     if infer:
@@ -197,9 +200,7 @@ if __name__ == "__main__":
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
-
-
-        manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
+        # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
         # only analyzing the choices of all the questions asked after each videeo.
 
