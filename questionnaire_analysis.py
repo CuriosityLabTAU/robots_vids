@@ -157,7 +157,7 @@ def rat3_df(rat_pref_df_tot, df_dir):
     chi_square_dict['rational_half'].index = chi_square_dict['rational_irrational'].index
     cs_r_all_i = chi_square_dict['rational_half'] + chi_square_dict['rational_irrational']
     cs_all, pv_all = stats.chisquare(cs_r_all_i) # chisquare of rational- all irrational (without irrational - half)
-    a = pd.DataFrame(data=[p, s], columns=cs_r_all_i.columns)
+    a = pd.DataFrame(data=[pv_all, cs_all], columns=cs_r_all_i.columns)
     a.index = ['chi_square_p_value', 'chi_square_statistics']
     cs_r_all_i = cs_r_all_i.append(a)
     cs_r_all_i.to_csv(df_dir + 'df4chi_squared_' + 'r_all_irr' + '.csv')
