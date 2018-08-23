@@ -102,11 +102,13 @@ def comine_raw_data2dataframe(rDeployment):
     return crdf.loc[ix,:]
 
 
-def rat3_df(rat_pref_df_tot):
+def rat3_df(rat_pref_df_tot, df_dir):
     '''
     creating dataframe for comparision between 3 rationalities for each question
     :param rat_pref_df_tot: dataframe containing the preference for each rationality.
-    :return:
+    :return:rat3_df - dataframe with all preference across al deployments togther
+            binomal_df - dataframe with all preference for each deployment with binom_test calculation
+            chi_square_dict - dictionary containing the data frames for performing chi_square
     '''
     nu = rat_pref_df_tot.num_users.unique().sum()
     binomal_df = pd.DataFrame(data=[], columns = ['rh', 'ri', 'ih', 'rih'])
@@ -140,7 +142,14 @@ def rat3_df(rat_pref_df_tot):
         else:
             binomal_df = pd.DataFrame(data=[bin_temp], columns=binomal_df.columns)
 
-    return rat3_df, binomal_df
+    chi_square_dict = {}
+    for dep in rat_pref_df_tot.deployment.unique():
+        a = rat_pref_df_tot[rat_pref_df_tot.deployment == dep]
+        chi_square_df = a.pivot(index='rationality', columns='question', values='preference')
+        chi_square_df.to_csv(df_dir+'df4chi_squared_'+dep+'.csv')
+        chi_square_dict[dep] = chi_square_df
+
+    return rat3_df, binomal_df, chi_square_dict
 
 def creating_new_style():
     import matplotlib
@@ -185,7 +194,7 @@ if __name__ == "__main__":
         manova_df_small      = pd.read_csv(df_dir + '__mdf_small.csv', index_col = 0)
         rat_pref_df_tot      = pd.read_csv(df_dir+'__rat_pref_dataframe.csv', index_col = 0)
 
-        rat_pref_df_tot_3rat, binomal_df = rat3_df(rat_pref_df_tot)
+        rat_pref_df_tot_3rat, binomal_df, chi_square_dict = rat3_df(rat_pref_df_tot, df_dir)
         binom_7questions = binom_test_pref(rat_pref_df_tot)
 
         rat_pref_df_tot_3rat.to_csv(df_dir+'__rat_pref_dataframe_3rat.csv')
