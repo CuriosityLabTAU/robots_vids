@@ -141,7 +141,7 @@ def rat3_df(rat_pref_df_tot, df_dir):
             binomal_df = binomal_df.append(pd.DataFrame(data=[bin_temp], columns = binomal_df.columns))
         else:
             binomal_df = pd.DataFrame(data=[bin_temp], columns=binomal_df.columns)
-
+    binomal_df.index = qs
     chi_square_dict = {}
     for dep in rat_pref_df_tot.deployment.unique():
         a = rat_pref_df_tot[rat_pref_df_tot.deployment == dep]
@@ -249,9 +249,10 @@ if __name__ == "__main__":
         # statistical_diff(df_dir)
         q_pref_df = summary_diff(sf, df_dir)
 
+        con_prob = conditional_probability(manova_df_small, 'bartender', 'prefer')
+
         # word_cloud(open_answers_tot, cloud=1)
         # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
-
         plt.show()
 
     # if rDep == 'rDeployment_tt':

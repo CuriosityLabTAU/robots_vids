@@ -578,7 +578,7 @@ def summary_diff(sf, df_dir):
         for rat in q_pref_df1.rationality.unique():
             y = grouped.get_group((g,rat)).preference
             s, p = stats.ttest_1samp(y, 0.5)
-            if p < .5:
+            if p < .05:
                 cxt = ax.get_xticklabels()
                 cxt1 = ax.get_xticks()
                 if cxt[0]._text == g:
@@ -610,7 +610,19 @@ def summary_diff(sf, df_dir):
     print('statistics saved to data/dataframes/summary_mannwhitney.csv')
     print('questions preference saved to data/dataframes/__q_pref_df.csv')
 
+def conditional_probability(df, columnA, columnB):
+    '''
+    calculate conditional probabilites P(A|B)
+    https://stackoverflow.com/questions/37818063/how-to-calculate-conditional-probability-of-values-in-dataframe-pandas-python
+    :param df:
+    :param columnA: conditional column
+    :param columnB: dependent column
+    :return: the conditional probabilities
+    '''
+    rating_probs = df.groupby(columnA).size().div(len(df))
+    conditional_probs = df.groupby([columnB, columnA]).size().div(len(df)).div(rating_probs, axis=0, level=columnA)
 
+    return conditional_probs
 
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
