@@ -146,8 +146,21 @@ def rat3_df(rat_pref_df_tot, df_dir):
     for dep in rat_pref_df_tot.deployment.unique():
         a = rat_pref_df_tot[rat_pref_df_tot.deployment == dep]
         chi_square_df = a.pivot(index='rationality', columns='question', values='preference')
-        chi_square_df.to_csv(df_dir+'df4chi_squared_'+dep+'.csv')
         chi_square_dict[dep] = chi_square_df
+
+        s, p = stats.chisquare(chi_square_df)
+        a = pd.DataFrame(data = [p, s], columns = chi_square_df.columns)
+        a.index = ['chi_square_p_value', 'chi_square_statistics']
+        chi_square_df = chi_square_df.append(a)
+        chi_square_df.to_csv(df_dir+'df4chi_squared_'+dep+'.csv')
+
+    chi_square_dict['rational_half'].index = chi_square_dict['rational_irrational'].index
+    cs_r_all_i = chi_square_dict['rational_half'] + chi_square_dict['rational_irrational']
+    cs_all, pv_all = stats.chisquare(cs_r_all_i) # chisquare of rational- all irrational (without irrational - half)
+    a = pd.DataFrame(data=[p, s], columns=cs_r_all_i.columns)
+    a.index = ['chi_square_p_value', 'chi_square_statistics']
+    cs_r_all_i = cs_r_all_i.append(a)
+    cs_r_all_i.to_csv(df_dir + 'df4chi_squared_' + 'r_all_irr' + '.csv')
 
     return rat3_df, binomal_df, chi_square_dict
 
