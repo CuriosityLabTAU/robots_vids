@@ -535,7 +535,8 @@ def summary_diff(sf, df_dir):
             for categ in categories:
                 psig = False
                 r1, r2 = m[categ].unique()
-                s, p = mannwhitneyu(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
+                # s, p = mannwhitneyu(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
+                s, p = stats.ttest_ind(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
                 st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
                 if (categ == 'rationality') and(p < 0.05):
                     psig = True
@@ -582,7 +583,7 @@ def summary_diff(sf, df_dir):
         for rat in q_pref_df1.rationality.unique():
             y = grouped.get_group((g,rat)).preference
             s, p = stats.ttest_1samp(y, 0.5)
-            st1 = st1.append(pd.DataFrame(data=[[g, rat, s, p]], columns=st1.columns))
+            st1 = st1.append(pd.DataFrame(data=[[g, rat, p, s]], columns=st1.columns))
             if p < .05:
                 cxt = ax.get_xticklabels()
                 cxt1 = ax.get_xticks()
