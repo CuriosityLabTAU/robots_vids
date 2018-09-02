@@ -483,7 +483,7 @@ def statistical_diff(df_dir):
     for key, m in mdfd.items():
         r1, r2 = m.rationality.unique()
         for c in m.columns[m.columns.str.contains('GOD').tolist()]:
-            print('crobach\'s alpha = ', cronbach_alpha(m[c]))
+            print('crobach\'s alpha = ', cronbach_alpha(m[m.columns[m.columns.str.contains('GOD').tolist()]], c))
         # for c in m.columns:
             # s, p = mannwhitneyu(m.query('rationality==str(r1)')[c], m.query('rationality==str(r2)')[c])
             # m.groupby('rationality') # learn how to use this for statistics.
@@ -636,9 +636,9 @@ def conditional_probability(df, columnA, columnB):
 
     return conditional_probs
 
-def cronbach_alpha(items):
+def cronbach_alpha(items, c):
     items = pd.DataFrame(items)
-    items_count = items.shape[0]
+    items_count = items.shape[1]
     variance_sum = float(items.var(axis=0, ddof=1).sum())
     total_var = float(items.sum(axis=1).var(ddof=1))
 

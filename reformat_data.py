@@ -312,7 +312,7 @@ def GODSPEED_data(stats_df, df, robot):
             q = 'GODSPEED2'
         temps = df[df.question == q][df['option'][df.question == q].isin(Godspeed[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
         temps = temps.fillna(0)
-        temps = min_max_norm(temps) # Normalization
+        # temps = min_max_norm(temps) # Normalization
         ms = pd.DataFrame(data=[[robot,q, s, Godspeed[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
