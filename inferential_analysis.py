@@ -482,16 +482,16 @@ def statistical_diff(df_dir):
     st = pd.DataFrame({'deployment':[], 'measurement':[], 'statistics':[], 'p_value':[]})
     for key, m in mdfd.items():
         r1, r2 = m.rationality.unique()
-        # for c in m.columns[m.columns.str.contains('GOD').tolist()]:
-        for c in m.columns:
+        for c in m.columns[m.columns.str.contains('GOD').tolist()]:
+        # for c in m.columns:
             # s, p = mannwhitneyu(m.query('rationality==str(r1)')[c], m.query('rationality==str(r2)')[c])
             # m.groupby('rationality') # learn how to use this for statistics.
             s, p = mannwhitneyu(m[m.rationality==r1][c], m[m.rationality==r2][c])
-            st = st.append(pd.DataFrame(data = [[key, c, s, p]], columns = st.columns))
-    st.to_csv(df_dir+'stats_diff_mannwhitney.csv')
+            # s, p = stats.ttest_ind(m[m.rationality==r1][c], m[m.rationality==r2][c])
+            st = st.append(pd.DataFrame(data = [[key, c, p, s]], columns = st.columns))
+    st.to_csv(df_dir+'__godspeed_mannwhitney.csv')
 
-    print(st)
-    print('statistics saved to data/dataframes/stats_diff_mannwhitney.csv')
+    print('statistics saved to data/dataframes/__godspeed_mannwhitney.csv')
 
 def binom_test_pref(rat_pref_df_tot):
     '''
@@ -597,13 +597,13 @@ def summary_diff(sf, df_dir):
                     ax.annotate('*', xy=(c - 0.21, y.mean() + 0.05), annotation_clip=False, fontsize=14)
 
         s1, p1 = stats.ttest_ind(grouped.get_group((g,'i1r')).preference,grouped.get_group((g,'i2')).preference)
-        st1 = st1.append(pd.DataFrame(data=[[g, g, s1, p1]], columns=st1.columns))
+        st1 = st1.append(pd.DataFrame(data=[[g+'_i1r', g+'_i2', p1, s1]], columns=st1.columns))
 
         if (p1 <.5):
             ax.hlines(ax.get_ylim()[1], c - 0.21, c + 0.21)
             ax.annotate('*', xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
     s1, p1 = stats.ttest_ind(grouped.get_group(('irr2','i1r')).preference,grouped.get_group(('irr1','i1r')).preference)
-    st1 = st1.append(pd.DataFrame(data=[['irr2_i1r', 'irr1_i1r', s1, p1]], columns=st.columns))
+    st1 = st1.append(pd.DataFrame(data=[['irr2_i1r', 'irr1_i1r', p1, s1]], columns=st.columns))
 
     if p1 < .5:
         x1, x2 = cxt1[0] - .21, cxt1[1] -.21
@@ -613,11 +613,11 @@ def summary_diff(sf, df_dir):
     # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
     save_maxfig(fig, 'q_preference_rationality')
 
-    st.to_csv(df_dir+'summary_mannwhitney.csv')
-    st1.to_csv(df_dir+'__ttest_preference.csv')
+    st.to_csv(df_dir+'__summary_preference_mannwhitney.csv')
+    st1.to_csv(df_dir+'__summary_preference_ttest.csv')
 
     q_pref_df.to_csv(df_dir + '__q_pref_df.csv')
-    print('statistics saved to data/dataframes/summary_mannwhitney.csv')
+    print('statistics saved to data/dataframes/summary_preference_mannwhitney.csv')
     print('questions preference saved to data/dataframes/__q_pref_df.csv')
 
 def conditional_probability(df, columnA, columnB):
