@@ -574,10 +574,15 @@ def summary_diff(sf, df_dir):
     grouped = q_pref_df1.groupby(['group', 'rationality'])
     fig, ax = plt.subplots(1, 1)
     sns.barplot(data=q_pref_df1, x='group', y='preference', hue='rationality', ax=ax)
+
+    st1 = pd.DataFrame({'deployment': [], 'category_by': [], 'statistics': [], 'p_value': []})
+    st1 = st1[st1.columns]
+
     for g in q_pref_df1.group.unique():
         for rat in q_pref_df1.rationality.unique():
             y = grouped.get_group((g,rat)).preference
             s, p = stats.ttest_1samp(y, 0.5)
+            st1 = st1.append(pd.DataFrame(data=[[g, rat, s, p]], columns=st1.columns))
             if p < .05:
                 cxt = ax.get_xticklabels()
                 cxt1 = ax.get_xticks()
@@ -591,12 +596,15 @@ def summary_diff(sf, df_dir):
                 if rat == 'i1r':
                     ax.annotate('*', xy=(c - 0.21, y.mean() + 0.05), annotation_clip=False, fontsize=14)
 
-        # todo: continue here
         s1, p1 = stats.ttest_ind(grouped.get_group((g,'i1r')).preference,grouped.get_group((g,'i2')).preference)
+        st1 = st1.append(pd.DataFrame(data=[[g, g, s1, p1]], columns=st1.columns))
+
         if (p1 <.5):
             ax.hlines(ax.get_ylim()[1], c - 0.21, c + 0.21)
             ax.annotate('*', xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
     s1, p1 = stats.ttest_ind(grouped.get_group(('irr2','i1r')).preference,grouped.get_group(('irr1','i1r')).preference)
+    st1 = st1.append(pd.DataFrame(data=[['irr2_i1r', 'irr1_i1r', s1, p1]], columns=st.columns))
+
     if p1 < .5:
         x1, x2 = cxt1[0] - .21, cxt1[1] -.21
         ax.hlines(ax.get_ylim()[1], x1,x2)
@@ -606,6 +614,8 @@ def summary_diff(sf, df_dir):
     save_maxfig(fig, 'q_preference_rationality')
 
     st.to_csv(df_dir+'summary_mannwhitney.csv')
+    st1.to_csv(df_dir+'__ttest_preference.csv')
+
     q_pref_df.to_csv(df_dir + '__q_pref_df.csv')
     print('statistics saved to data/dataframes/summary_mannwhitney.csv')
     print('questions preference saved to data/dataframes/__q_pref_df.csv')
