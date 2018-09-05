@@ -248,7 +248,7 @@ def NARS_data(stats_df, df):
     for s in NARS:
         temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(
             ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
-        temps = min_max_norm(temps) # Normalization
+        # temps = min_max_norm(temps) # Normalization
         ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
         pass

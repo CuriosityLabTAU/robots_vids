@@ -71,6 +71,8 @@ def prepare_data(df_dir ):
         manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
         mdf_small.to_csv(df_dir + '__mdf_small.csv')
 
+        mannwhitneyu_gnbp(df_dir)
+
         pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
 
         r,c = users_pref_tot.shape
@@ -220,6 +222,8 @@ if __name__ == "__main__":
         style.use(['ggplot'])
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
 
+        mannwhitneyu_gnbp(df_dir, plot=True)
+
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
         # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
@@ -246,8 +250,8 @@ if __name__ == "__main__":
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
         # preference_per_question(pref_df_tot)
 
-        statistical_diff(df_dir)
-        q_pref_df = summary_diff(sf, df_dir)
+        # statistical_diff(df_dir)
+        # q_pref_df = summary_diff(sf, df_dir)
 
         # con_prob = conditional_probability(manova_df_small, 'bartender', 'prefer')
 

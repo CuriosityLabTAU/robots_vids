@@ -53,7 +53,7 @@ def preference_plot(stats_df, column, option, fname, yy = 'answers', p='deployme
         n = int(np.ceil(float(cnames.__len__())/m))
         b.answers = b.answers.astype('float64')
     else:
-        # for maniva_df
+        # for manova_df
         cnames = ['education', 'gender', 'side', 'color']
         n = int(np.ceil(float(cnames.__len__()) / m))
         b = stats_df
@@ -233,7 +233,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     upt = users_pref_tot.transpose().reset_index(drop=True)
     # stats_df = sf['rDeployment_tt']
     g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2')
-                 | (stats_df['feature'] == 'BFI') | (stats_df['feature'] == 'NARS')]
+                 | (stats_df['feature'] == 'BFI') | (stats_df['feature'] == 'NARS') | ((stats_df['feature'] == 'preference') & (stats_df['sub_scale'] == 'average'))]
     [['feature', 'sub_scale', 'answers', 'gender', 'education', 'age', 'userID','robot','rationality', 'side']]
     g['rationality'] = g['rationality'].astype('str')
     g['f'] = g['feature'] + '_' + g['sub_scale']
@@ -245,13 +245,15 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
         if 'manova_df' not in locals():
             manova_df = g[g.f == s][['gender','education', 'age', 'userID']]
 
-
-        manova_df.insert(loc = manova_df.columns.__len__(), column=s , value = temp_col)
+        if s != 'preference_average':
+            manova_df.insert(loc = manova_df.columns.__len__(), column=s , value = temp_col)
 
     # data frame for 1st robot
     manova_df = manova_df.reset_index(drop=True)
     manova_df1 = manova_df.sort_values(by='userID')
     manova_df = pd.concat((upt,manova_df1), axis=1)
+    pref = g[(g.f == s) & (g.robot == 'red')].answers.tolist()
+    manova_df.insert(loc=manova_df.columns.__len__(), column=s, value=pref)
 
     manova_df2 = manovadf_drop_support(manova_df, 'GODSPEED1')
     manova_df2 = manovadf_robot_support(manova_df2, 'GODSPEED2_S1', g)
@@ -259,8 +261,10 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     # data frame for 2nd robot
     manova_df = manovadf_drop_support(manova_df, 'GODSPEED2')
     manova_df = manovadf_robot_support(manova_df, 'GODSPEED1_S1', g)
+    pref = g[(g.f == s) & (g.robot == 'blue')].answers.tolist()
+    manova_df2['preference_average'] = pref
 
-    manova_df2 = manova_df2.rename(columns=dict(zip(manova_df2.columns[-5:], manova_df.columns[-5:])))
+    manova_df2 = manova_df2.rename(columns=dict(zip(manova_df2.columns[-6:], manova_df.columns[-6:])))
 
     manova_df = manova_df.append(manova_df2)
 
@@ -275,7 +279,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
         genders = {'female':0, 'male':1}
         edu = {'<HS':1, 'HS':2, '<BA':3, 'BA':4, 'MA':5, 'professional':6, 'PhD':7}
         rdict = {'rationality':rat, 'color':cls, 'side':sides, 'gender':genders, 'education':edu}
-        for c in manova_df.columns[[0, 1, 2, 15, 16]]:
+        for c in ['rationality', 'color', 'side', 'gender', 'education']:
             manova_df.loc[:, c] = manova_df.loc[:, c].replace(rdict[c])
 
     manova_df_small = manova_df.loc[:manova_df.shape[0]/2 - 1].copy()
@@ -582,7 +586,6 @@ def summary_diff(sf, df_dir):
 
     for g in q_pref_df1.group.unique():
         for rat in q_pref_df1.rationality.unique():
-            y = grouped.get_group((g,rat)).preference
             s, p = stats.ttest_1samp(y, 0.5)
             st1 = st1.append(pd.DataFrame(data=[[g, rat, p, s]], columns=st1.columns))
             if p < .05:
@@ -645,6 +648,59 @@ def cronbach_alpha(items, c):
     return (items_count / float(items_count - 1) *
             (1 - variance_sum / total_var))
 
+def mannwhitneyu_gnbp(df_dir, plot = False):
+    '''
+    calculate mannwhitneyu + mean + std for Godspeed and preference (NARS, BFI)
+    :param df_dir: directory containing the dataframes
+    :return: dataframe + fig
+    '''
+    mdf = {}
+    a = pd.Series(os.listdir(df_dir))
+    a = np.array(a[a.str.contains('mdf')].tolist())
+    a = a[~(a == '__mdf_small.csv')]
+
+    for m in a:
+        mdf[m.split('.')[0]] = pd.read_csv(df_dir + m, index_col=0)
+
+    stats1 = pd.DataFrame({'group1':[], 'group2':[], 'measurement':[], 'g1_mean': [], 'g1_std':[], 'g2_mean': [], 'g2_std':[], 'mannwhitneyu':[], 'pvalue':[]})
+
+    for mname, m in mdf.items():
+        fig, ax = plt.subplots(4,4)
+        grouped = m.groupby(['rationality'])
+        g1, g2 = list(grouped.groups.keys())
+        cnames = m.columns[(m.columns.str.contains('GOD')) | (m.columns.str.contains('NARS')) | m.columns.str.contains('BFI') | m.columns.str.contains('average')]
+        for i, c in enumerate(cnames):
+            ttest = False
+            y1 = grouped.get_group(g1)[c]
+            y2 = grouped.get_group(g2)[c]
+            s, p = mannwhitneyu(y1, y2)
+            # assumptions for t-test
+            # https://pythonfordatascience.org/independent-t-test-python/#t_test-assumptions
+            ns1, np1 = stats.shapiro(y1) # test normality of the data
+            ns2, np2 = stats.shapiro(y2) # test noramlity of the data
+            ls, lp = stats.levene(y1, y2) # test that the variance behave the same
+            if (lp > .05) & (np1 > .05) & (np2 > .05):
+                ttest = True
+                s, p = stats.ttest_ind(y1, y2)
+            stats1 = stats1.append(pd.DataFrame(data = [[g1, g2, c, np.mean(y1), np.std(y1), np.mean(y2), np.std(y2), s, p]], columns = stats1.columns))
+
+            if plot:
+                cax = ax[int(i/4), i%4]
+                sns.barplot(data=m, x='rationality', y=c, ax=cax)
+
+            if (p < 0.05):
+                cxt = cax.get_xticks()
+                cax.hlines(cax.get_ylim()[1], cxt[0], cxt[1])
+                if ttest:
+                    cax.annotate('*t', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                else:
+                    cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+
+        #
+        save_maxfig(fig, 'mdf_per_rationality' + mname)
+
+    stats1.to_csv()
+    return stats
 
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
