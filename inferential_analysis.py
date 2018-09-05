@@ -470,7 +470,7 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
 
 def statistical_diff(df_dir):
     '''
-    calculating statistical difference between the different questionnaires parameters
+    cronbach's alpha
     :param df_dir: path to where the desired dataframes are
     :return: stats_diff.csv
     '''
@@ -482,21 +482,11 @@ def statistical_diff(df_dir):
         if ('mdf_' in f) & (len(f) == 10):
             mdfd[f.split('.')[0].split('_')[1]] = pd.read_csv(df_dir + f)
 
-
     st = pd.DataFrame({'deployment':[], 'measurement':[], 'statistics':[], 'p_value':[]})
     for key, m in mdfd.items():
         r1, r2 = m.rationality.unique()
         for c in m.columns[m.columns.str.contains('GOD').tolist()]:
             print('crobach\'s alpha = ', cronbach_alpha(m[m.columns[m.columns.str.contains('GOD').tolist()]], c))
-        # for c in m.columns:
-            # s, p = mannwhitneyu(m.query('rationality==str(r1)')[c], m.query('rationality==str(r2)')[c])
-            # m.groupby('rationality') # learn how to use this for statistics.
-            s, p = mannwhitneyu(m[m.rationality==r1][c], m[m.rationality==r2][c])
-            # s, p = stats.ttest_ind(m[m.rationality==r1][c], m[m.rationality==r2][c])
-            st = st.append(pd.DataFrame(data = [[key, c, p, s]], columns = st.columns))
-    st.to_csv(df_dir+'__godspeed_mannwhitney.csv')
-
-    print('statistics saved to data/dataframes/__godspeed_mannwhitney.csv')
 
 def binom_test_pref(rat_pref_df_tot):
     '''
@@ -509,7 +499,7 @@ def binom_test_pref(rat_pref_df_tot):
         k = dep.split('_')
         k = k[0][0] + k[1][0]
         temp = rat_pref_df_tot[rat_pref_df_tot['deployment'] == dep]
-        temp1 = temp[(temp.question.str.contains('Q')) & (temp.rationality == 'rational')]
+        temp1 = temp[(temp.question.str.contains('Q')) & (temp.rationality == dep.split('_')[0])]
         n = temp['num_users'][0] * temp1.shape[0]
         x = temp1.preference.sum()
         bt = stats.binom_test(x = x, n = n, p=.5)
@@ -536,12 +526,15 @@ def summary_diff(sf, df_dir):
     for deployment, stats_df in sf.items():
         if deployment != 'rDeployment_tt':
             m = stats_df[stats_df.sub_scale == 'summary']
-            m = m[m['feature'] == 'r_preference'] # todo: where the q_preference from?
+            m = m[m['feature'] == 'r_preference']
             for categ in categories:
                 psig = False
                 r1, r2 = m[categ].unique()
-                # s, p = mannwhitneyu(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
-                s, p = stats.ttest_ind(m[m[categ] == r1]['answers'], m[m[categ] == r2]['answers'])
+                y1 = m[m[categ] == r1]['answers']
+                y2 = m[m[categ] == r2]['answers']
+
+                s, p, ttest = ttest_or_mannwhitney(y1, y2)
+
                 st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
                 if (categ == 'rationality') and(p < 0.05):
                     psig = True
@@ -586,6 +579,7 @@ def summary_diff(sf, df_dir):
 
     for g in q_pref_df1.group.unique():
         for rat in q_pref_df1.rationality.unique():
+            y = q_pref_df1[(q_pref_df1['group'] == g) & (q_pref_df1['rationality'] == rat)]['preference']
             s, p = stats.ttest_1samp(y, 0.5)
             st1 = st1.append(pd.DataFrame(data=[[g, rat, p, s]], columns=st1.columns))
             if p < .05:
@@ -601,16 +595,22 @@ def summary_diff(sf, df_dir):
                 if rat == 'i1r':
                     ax.annotate('*', xy=(c - 0.21, y.mean() + 0.05), annotation_clip=False, fontsize=14)
 
-        s1, p1 = stats.ttest_ind(grouped.get_group((g,'i1r')).preference,grouped.get_group((g,'i2')).preference)
+        y1, y2 = grouped.get_group((g,'i1r')).preference, grouped.get_group((g,'i2')).preference
+
+        s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
+
         st1 = st1.append(pd.DataFrame(data=[[g+'_i1r', g+'_i2', p1, s1]], columns=st1.columns))
 
-        if (p1 <.5):
+        if (p1 < .05):
             ax.hlines(ax.get_ylim()[1], c - 0.21, c + 0.21)
             ax.annotate('*', xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
-    s1, p1 = stats.ttest_ind(grouped.get_group(('irr2','i1r')).preference,grouped.get_group(('irr1','i1r')).preference)
+
+    y1, y2 = grouped.get_group(('irr2','i1r')).preference, grouped.get_group(('irr1','i1r')).preference
+    s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
+
     st1 = st1.append(pd.DataFrame(data=[['irr2_i1r', 'irr1_i1r', p1, s1]], columns=st.columns))
 
-    if p1 < .5:
+    if p1 < .05:
         x1, x2 = cxt1[0] - .21, cxt1[1] -.21
         ax.hlines(ax.get_ylim()[1], x1,x2)
         ax.annotate('*', xy=(np.mean([x1,x2]), ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
@@ -619,7 +619,7 @@ def summary_diff(sf, df_dir):
     save_maxfig(fig, 'q_preference_rationality')
 
     st.to_csv(df_dir+'__summary_preference_mannwhitney.csv')
-    st1.to_csv(df_dir+'__summary_preference_ttest.csv')
+    st1.to_csv(df_dir+'__preference_from_point5.csv')
 
     q_pref_df.to_csv(df_dir + '__q_pref_df.csv')
     print('statistics saved to data/dataframes/summary_preference_mannwhitney.csv')
@@ -663,6 +663,8 @@ def mannwhitneyu_gnbp(df_dir, plot = False):
         mdf[m.split('.')[0]] = pd.read_csv(df_dir + m, index_col=0)
 
     stats1 = pd.DataFrame({'group1':[], 'group2':[], 'measurement':[], 'g1_mean': [], 'g1_std':[], 'g2_mean': [], 'g2_std':[], 'mannwhitneyu':[], 'pvalue':[]})
+    stats1 = stats1.reindex(columns =['group1', 'group2', 'measurement', 'g1_mean', 'g1_std', 'g2_mean', 'g2_std', 'mannwhitneyu', 'pvalue'])
+
 
     for mname, m in mdf.items():
         fig, ax = plt.subplots(4,4)
@@ -670,38 +672,52 @@ def mannwhitneyu_gnbp(df_dir, plot = False):
         g1, g2 = list(grouped.groups.keys())
         cnames = m.columns[(m.columns.str.contains('GOD')) | (m.columns.str.contains('NARS')) | m.columns.str.contains('BFI') | m.columns.str.contains('average')]
         for i, c in enumerate(cnames):
-            ttest = False
             y1 = grouped.get_group(g1)[c]
             y2 = grouped.get_group(g2)[c]
-            s, p = mannwhitneyu(y1, y2)
-            # assumptions for t-test
-            # https://pythonfordatascience.org/independent-t-test-python/#t_test-assumptions
-            ns1, np1 = stats.shapiro(y1) # test normality of the data
-            ns2, np2 = stats.shapiro(y2) # test noramlity of the data
-            ls, lp = stats.levene(y1, y2) # test that the variance behave the same
-            if (lp > .05) & (np1 > .05) & (np2 > .05):
-                ttest = True
-                s, p = stats.ttest_ind(y1, y2)
+
+            s, p, ttest = ttest_or_mannwhitney(y1, y2)
+
             stats1 = stats1.append(pd.DataFrame(data = [[g1, g2, c, np.mean(y1), np.std(y1), np.mean(y2), np.std(y2), s, p]], columns = stats1.columns))
 
             if plot:
                 cax = ax[int(i/4), i%4]
                 sns.barplot(data=m, x='rationality', y=c, ax=cax)
 
-            if (p < 0.05):
-                cxt = cax.get_xticks()
-                cax.hlines(cax.get_ylim()[1], cxt[0], cxt[1])
-                if ttest:
-                    cax.annotate('*t', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
-                else:
-                    cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                if (p < 0.05):
+                    cxt = cax.get_xticks()
+                    cax.hlines(cax.get_ylim()[1], cxt[0], cxt[1])
+                    if ttest:
+                        cax.annotate('*t', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                    else:
+                        cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
 
         #
         save_maxfig(fig, 'mdf_per_rationality' + mname)
 
-    stats1.to_csv()
+    stats1.to_csv(df_dir + 'new_2samples_tests.csv')
     return stats
 
+def ttest_or_mannwhitney(y1,y2):
+    '''
+    Check if y1 and y2 stand the assumptions for ttest and if not preform mannwhitney
+    :param y1: 1st sample
+    :param y2: 2nd sample
+    :return: s, pvalue, ttest - True/False
+    '''
+    ttest = False
+
+    # assumptions for t-test
+    # https://pythonfordatascience.org/independent-t-test-python/#t_test-assumptions
+    ns1, np1 = stats.shapiro(y1)  # test normality of the data
+    ns2, np2 = stats.shapiro(y2)  # test noramlity of the data
+    ls, lp = stats.levene(y1, y2)  # test that the variance behave the same
+    if (lp > .05) & (np1 > .05) & (np2 > .05):
+        ttest = True
+        s, p = stats.ttest_ind(y1, y2)
+    else:
+        s, p = mannwhitneyu(y1, y2)
+
+    return s, p, ttest
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''

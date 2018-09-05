@@ -251,7 +251,7 @@ if __name__ == "__main__":
         # preference_per_question(pref_df_tot)
 
         # statistical_diff(df_dir)
-        # q_pref_df = summary_diff(sf, df_dir)
+        q_pref_df = summary_diff(sf, df_dir)
 
         # con_prob = conditional_probability(manova_df_small, 'bartender', 'prefer')
 
