@@ -2,8 +2,8 @@
 # http://matplotlib.org/1.5.3/Matplotlib.pdf
 axes.titlesize      : 24
 axes.labelsize      : 24
-lines.linewidth     : 7
-lines.markersize    : 20
+lines.linewidth     : 2
+# lines.markersize    : 4
 xtick.labelsize     : 24
 ytick.labelsize     : 24
 legend.fontsize     : 24

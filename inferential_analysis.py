@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 import os
 import pickle
 from matplotlib.colors import LinearSegmentedColormap
@@ -82,7 +83,7 @@ def see_the_data(cdf):
     :param cdf: dataframe of the data from robots vids questionnaire.
     '''
     print('Plot histogram of the parameters of the participants...')
-    # todo: change ticks of gender andd age
+    # todo: change ticks of gender angs3_pref_df age
 
     fig, ax = plt.subplots(1,3)
     users_data = cdf[(cdf.feature == 'BFI') & (cdf.sub_scale == 'S1') ]
@@ -342,7 +343,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
         txt = open_answers_tot.loc[open_answers_tot.rationality == rat, 'answer'].str.cat(sep=' ')
         wordcloud = WordCloud(max_font_size=40, max_words=N).generate(txt)  # min_font_size=12,
 
-        ax_wfreq = fig.add_subplot(gs[cloud*inside:4, i]) # freq axes
+        ax_wfreq = fig.ags3_pref_df_subplot(gs[cloud*inside:4, i]) # freq axes
         if cloud != 0:
             # wordcloud
             if inside == 0:
@@ -351,7 +352,7 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
                                        height='60%',  # height : 1 inch
                                        loc=4)
             else:
-                ax_wcloud = fig.add_subplot(gs[0, i])
+                ax_wcloud = fig.ags3_pref_df_subplot(gs[0, i])
                 ax_wcloud.set_title(rat)
             ax_wcloud.imshow(wordcloud, cmap=plt.cm.gray, interpolation="bilinear")
             ax_wcloud.axis("off")
@@ -410,7 +411,7 @@ def stacked_plot(users_pref_tot,  rat_pref_df_tot, binomal_df, show_sig = True):
     fig, ax = plt.subplots(1,1)
     #
     # fig = plt.figure()
-    # ax = fig.add_axes((.1, .4, .8, .5))
+    # ax = fig.ags3_pref_df_axes((.1, .4, .8, .5))
 
     qs = ['investments', 'analyst', 'jury', 'bartender', 'prefer']
     qs = users_pref_tot.index.tolist()
@@ -533,7 +534,7 @@ def summary_diff(sf, df_dir):
                 y1 = m[m[categ] == r1]['answers']
                 y2 = m[m[categ] == r2]['answers']
 
-                s, p, ttest = ttest_or_mannwhitney(y1, y2)
+                s, p, ttest = ttest_or_mannwhitney(y1, y2, paired=True)
 
                 st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
                 if (categ == 'rationality') and(p < 0.05):
@@ -559,19 +560,22 @@ def summary_diff(sf, df_dir):
 
     b = pd.melt(q_pref_df, id_vars='group', value_vars=['hr', 'hi'], var_name='rationality', value_name='preference')
     b = b[~b['preference'].isna()]
-    b['group'] = 'irr1'
+    b['group'] = 'I1'
     a = pd.melt(q_pref_df, id_vars='group', value_vars=['ir', 'ih'], var_name='rationality', value_name='preference')
-    a['group'] = 'irr2'
+    a['group'] = 'I2'
     a = a[~a['preference'].isna()]
 
     q_pref_df1 = pd.concat([a, b])
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ih','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','i1r')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','i2')
-    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','i1r')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ih','I2')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('ir','I1r')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hi','I2')
+    q_pref_df1['rationality'] = q_pref_df1['rationality'].str.replace('hr','I1r')
 
     grouped = q_pref_df1.groupby(['group', 'rationality'])
-    fig, ax = plt.subplots(1, 1)
+
+    fig = plt.figure()
+    ax = fig.add_axes([0.1, 0.1, 0.6, 0.75])
+
     sns.barplot(data=q_pref_df1, x='group', y='preference', hue='rationality', ax=ax)
 
     st1 = pd.DataFrame({'deployment': [], 'category_by': [], 'statistics': [], 'p_value': []})
@@ -589,33 +593,37 @@ def summary_diff(sf, df_dir):
                     c = cxt1[0]
                 else:
                     c = cxt1[1]
+                stars = pvalue_stars(p)
 
-                if rat == 'i2':
-                    ax.annotate('*', xy=(c + 0.19, y.mean() + 0.05), annotation_clip=False, fontsize=14)
-                if rat == 'i1r':
-                    ax.annotate('*', xy=(c - 0.21, y.mean() + 0.05), annotation_clip=False, fontsize=14)
+                if rat == 'I2':
+                    ax.annotate(stars, xy=(c + 0.19, 1.01), annotation_clip=False, fontsize=14)
+                if rat == 'I1r':
+                    ax.annotate(stars, xy=(c - 0.21, 1.01), annotation_clip=False, fontsize=14)
 
-        y1, y2 = grouped.get_group((g,'i1r')).preference, grouped.get_group((g,'i2')).preference
+        y1, y2 = grouped.get_group((g,'I1r')).preference, grouped.get_group((g,'I2')).preference
 
         s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
 
-        st1 = st1.append(pd.DataFrame(data=[[g+'_i1r', g+'_i2', p1, s1]], columns=st1.columns))
+        st1 = st1.append(pd.DataFrame(data=[[g+'_I1r', g+'_I2', p1, s1]], columns=st1.columns))
 
         if (p1 < .05):
+            stars = pvalue_stars(p1)
             ax.hlines(ax.get_ylim()[1], c - 0.21, c + 0.21)
-            ax.annotate('*', xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
+            ax.annotate(stars, xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
 
-    y1, y2 = grouped.get_group(('irr2','i1r')).preference, grouped.get_group(('irr1','i1r')).preference
+    y1, y2 = grouped.get_group(('I2','I1r')).preference, grouped.get_group(('I1','I1r')).preference
     s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
 
-    st1 = st1.append(pd.DataFrame(data=[['irr2_i1r', 'irr1_i1r', p1, s1]], columns=st.columns))
+    st1 = st1.append(pd.DataFrame(data=[['I2_I1r', 'I1_I1r', p1, s1]], columns=st.columns))
 
     if p1 < .05:
+        stars = pvalue_stars(p1)
         x1, x2 = cxt1[0] - .21, cxt1[1] -.21
         ax.hlines(ax.get_ylim()[1], x1,x2)
-        ax.annotate('*', xy=(np.mean([x1,x2]), ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
+        ax.annotate(stars, xy=(np.mean([x1,x2]), ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
 
     # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
+    ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
     save_maxfig(fig, 'q_preference_rationality')
 
     st.to_csv(df_dir+'__summary_preference_mannwhitney.csv')
@@ -642,17 +650,19 @@ def conditional_probability(df, columnA, columnB):
 def cronbach_alpha(items, c):
     items = pd.DataFrame(items)
     items_count = items.shape[1]
-    variance_sum = float(items.var(axis=0, ddof=1).sum())
-    total_var = float(items.sum(axis=1).var(ddof=1))
+    variance_sum = float(items.var(axis=0, gs3_pref_dfof=1).sum())
+    total_var = float(items.sum(axis=1).var(gs3_pref_dfof=1))
 
     return (items_count / float(items_count - 1) *
             (1 - variance_sum / total_var))
 
-def mannwhitneyu_gnbp(df_dir, plot = False):
+def gnbp_diff_corr(df_dir, plot = False):
     '''
     calculate mannwhitneyu + mean + std for Godspeed and preference (NARS, BFI)
     :param df_dir: directory containing the dataframes
-    :return: dataframe + fig
+    :return: dataframe + fig,
+             corrrelation_df - godspeed3 to preference average,
+             corr_bngp - correlation between bfi, nars, godspeed and preference
     '''
     mdf = {}
     a = pd.Series(os.listdir(df_dir))
@@ -665,39 +675,244 @@ def mannwhitneyu_gnbp(df_dir, plot = False):
     stats1 = pd.DataFrame({'group1':[], 'group2':[], 'measurement':[], 'g1_mean': [], 'g1_std':[], 'g2_mean': [], 'g2_std':[], 'mannwhitneyu':[], 'pvalue':[]})
     stats1 = stats1.reindex(columns =['group1', 'group2', 'measurement', 'g1_mean', 'g1_std', 'g2_mean', 'g2_std', 'mannwhitneyu', 'pvalue'])
 
+    correlation_df = pd.DataFrame.from_dict({'group1': [], 'group2': [], 'r': [], 'p': []})
+    mdf['mdf_rih'] = mdf['mdf_rh'].append(mdf['mdf_ri'])
+    mdf['mdf_rih'].rationality = mdf['mdf_rih'].rationality.replace({1: 3, 2: 3})
 
+
+    gs3_pref_df = pd.DataFrame.from_dict({'dep':[], 'GS3':[], 'pref':[]})
+    if plot:
+        fig2, ax2 = plt.subplots(2, 2)
+        fig2.tight_layout()
+        axi = 0
+    pvalues = {}
     for mname, m in mdf.items():
-        fig, ax = plt.subplots(4,4)
+        if plot:
+            fig, ax = plt.subplots(2,3)
+
         grouped = m.groupby(['rationality'])
         g1, g2 = list(grouped.groups.keys())
-        cnames = m.columns[(m.columns.str.contains('GOD')) | (m.columns.str.contains('NARS')) | m.columns.str.contains('BFI') | m.columns.str.contains('average')]
+        cnames = m.columns[(m.columns.str.contains('GOD')) | m.columns.str.contains('average')]
         for i, c in enumerate(cnames):
             y1 = grouped.get_group(g1)[c]
             y2 = grouped.get_group(g2)[c]
 
-            s, p, ttest = ttest_or_mannwhitney(y1, y2)
+            if c != 'preference_average':
+                s, p, ttest = ttest_or_mannwhitney(y1, y2, paired=True)
+            else:
+                bt = stats.binom_test(x=(y1*7).sum(), n=y1.__len__()*7, p=.5)
+                s = bt
+                p = bt
+                p = bt
 
             stats1 = stats1.append(pd.DataFrame(data = [[g1, g2, c, np.mean(y1), np.std(y1), np.mean(y2), np.std(y2), s, p]], columns = stats1.columns))
 
             if plot:
-                cax = ax[int(i/4), i%4]
+                cax = ax[int(i/3), i%3]
                 sns.barplot(data=m, x='rationality', y=c, ax=cax)
 
                 if (p < 0.05):
                     cxt = cax.get_xticks()
                     cax.hlines(cax.get_ylim()[1], cxt[0], cxt[1])
                     if ttest:
-                        cax.annotate('*t', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                        cax.annotate('*t', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.001), annotation_clip=False, fontsize=14)
                     else:
-                        cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.005), annotation_clip=False, fontsize=14)
+                        cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.001), annotation_clip=False, fontsize=14)
+
+            if c == 'GODSPEED1_S3':
+                pvalues[str(g1)+str(g2)] = p
+                m1 = m.copy()
+                m1['rationality'] = m1['rationality'].map({0:'R', 1: 'Irr 1', 2: 'Irr 2', 3: 'Irr1 + Irr2'})
+                ccax = ax2[int(axi/2), axi%2]
+                sns.barplot(data=m1, x='rationality', y=c, ax=ccax)
+                ccxt = ccax.get_xticks()
+
+                if (p < 0.05):
+                    ccax.hlines(ccax.get_ylim()[1], ccxt[0], ccxt[1])
+                    ccax.annotate('*', xy=(np.mean(ccxt), ccax.get_ylim()[1] - 0.01), annotation_clip=False, fontsize=14)
+                ccax.set_ylabel('Likability')
+                ccax.set_xlabel('')
+                axi += 1
+
+                z1 = grouped.get_group(g1)['preference_average']
+                z2 = grouped.get_group(g2)['preference_average']
+                yy = y1.__array__() - y2.__array__()
+                zz = z1.__array__() - z2.__array__()
+                r, p = stats.pearsonr(yy, zz)
+                # r, p = stats.spearmanr(yy, zz)
+                d = pd.DataFrame.from_dict({'group1': [g1], 'group2': [g2], 'r': [r], 'p': [p]})
+                correlation_df = correlation_df.append(d)
+
+                gs3_pref_df = gs3_pref_df.append(pd.DataFrame.from_dict({'dep': str(g1)+str(g2), 'GS3': yy, 'pref': zz}))
+
+
+
+            corr_mat, corr_pvalues = pd_corrcalculate_pvalues(m[['GODSPEED1_S3', 'preference_average']], method='pearson')
 
         #
-        save_maxfig(fig, 'mdf_per_rationality' + mname)
+        if plot:
+            save_maxfig(fig, 'mdf_per_rationality' + mname)
+
+        if g2 != 3:
+            df4corr_temp = m[m['rationality'] == g1][m.columns[m.columns.str.contains('NARS')].tolist() + m.columns[m.columns.str.contains('BFI')].tolist()]
+            df4corr_temp['dep'] = str(g1) + str(g2)
+            df4corr_temp['gs3'] = grouped.get_group(g1)['GODSPEED1_S3'].__array__() - grouped.get_group(g2)['GODSPEED1_S3'].__array__()
+            stats.wilcoxon(grouped.get_group(g1)['GODSPEED1_S3'].__array__(),
+                           grouped.get_group(g2)['GODSPEED1_S3'].__array__())
+            df4corr_temp['pa']= grouped.get_group(g1)['preference_average'].__array__() - grouped.get_group(g2)['preference_average'].__array__()
+            df4corr_temp['p1']= grouped.get_group(g1)['preference_average'].__array__()
+
+            if 'df4corr' in locals():
+                df4corr = df4corr.append(df4corr_temp)
+            else:
+                df4corr = pd.DataFrame(df4corr_temp)
+
+    df4corr.to_csv(df_dir+'__df4corr.csv')
+
+    gs3_pref_df.loc[(gs3_pref_df.dep == '12'), ['pref', 'GS3']] = -1 * gs3_pref_df.loc[
+        (gs3_pref_df.dep == '12'), ['pref', 'GS3']]
+
+    grouped = gs3_pref_df.groupby('dep')
+    pp = grouped.mean()
+    # pp.loc['12'] = -pp.loc['12']
+
+    dd = gs3_pref_df[(gs3_pref_df.dep == '01') | (gs3_pref_df.dep == '02') | (gs3_pref_df.dep == '12')]
+
+    stats.pearsonr(pp['GS3'], pp['pref'])
+    stats.pearsonr(gs3_pref_df['GS3'], gs3_pref_df['pref'])
+
+    if plot:
+        save_maxfig(fig2, '__gs3_diff')
+
+        grouped = gs3_pref_df.groupby('dep')
+        ppm = grouped.mean()
+        pps = grouped.std()
+        ppn = grouped.count()
+        pps /= np.sqrt(ppn - 2)
+        fig, ax = plt.subplots(1, 1)
+        for d in ppm.index:
+            ax.errorbar(ppm.loc[d, 'GS3'], ppm.loc[d, 'pref'], yerr=pps.loc[d, 'GS3'], xerr=pps.loc[d, 'pref'], fmt='o',
+                        label=str(d))
+        ax.legend()
+
+
+        fig11 = plt.figure()
+        ax1 = fig11.add_axes([0.1, 0.1, 0.6, 0.75])
+
+        import statsmodels.api as sm
+        X = df4corr["pa"]
+        y = df4corr["gs3"]
+        # Note the difference in argument order
+        model = sm.OLS(y, X).fit()
+        predictions = model.predict(X)  # make the predictions by the model
+        # # Print out the statistics
+        # print(model.summary())
+
+        # preference average vs likability.
+        df4corr[df4corr.dep == '01'].plot.scatter('pa', 'gs3', s = 16, marker='p', ax=ax1, color = 'cornflowerblue',label='R - Irr 1')
+        df4corr[df4corr.dep == '02'].plot.scatter('pa', 'gs3', s = 16, marker='s', ax=ax1, color = 'lightcoral',label='R - Irr 2')
+        df4corr[df4corr.dep == '12'].plot.scatter('pa', 'gs3', s = 16, marker='^', ax=ax1, color = 'forestgreen',label='Irr 2 - Irr 1')
+        ax1.plot(X,predictions, color='black')
+        ax1.set_ylabel('Likability')
+        ax1.set_xlabel('Preference')
+        ax1.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.) # put legend outside the plot
+        save_maxfig(fig11, '__preference_vs_likability_manual')
+        fig1 = sns.lmplot('pa','gs3',data = df4corr)
+        plt.xlabel('Preference')
+        plt.ylabel('Likability')
+        fig1.savefig('figs_files/__preference_vs_likability')
+
+        # likability as function of deployment (combination of robots pairs)
+        fig3, ax3 = plt.subplots(1,1)
+        err_sem = df4corr.groupby(['dep'])['gs3'].std() / np.sqrt(df4corr.groupby(['dep'])['gs3'].count())
+        bars_means = df4corr.groupby(['dep'])['gs3'].mean()
+        ax3.bar([1, 2, 3], bars_means, yerr=err_sem)
+        ax3.set_xticklabels(['R-I1','R-I2','I1-I2'])
+        ax3.set_xticks([1,2,3])
+        ax3.set_xlabel('Rationalities')
+        ax3.set_ylabel('Likability difference')
+        pvalues = {'01' : stats.wilcoxon(df4corr[df4corr.dep == '01']['gs3'])[1],'02':stats.wilcoxon(df4corr[df4corr.dep == '02']['gs3'])[1],'12':stats.wilcoxon(df4corr[df4corr.dep == '12']['gs3'])[1]}
+        for ddep, pv in pvalues.items():
+            if pv < .05:
+                stars = pvalue_stars(pv)
+                ys = ax3.get_ylim()[1] - 0.02
+                if ddep == '01':
+                    ax3.annotate(stars, xy=(1, ys), annotation_clip=False, fontsize=14)
+                if ddep == '02':
+                    ax3.annotate(stars, xy=(2, ys), annotation_clip=False, fontsize=14)
+                if ddep == '12':
+                    ax3.annotate(stars, xy=(3, ys), annotation_clip=False, fontsize=14)
+
+        save_maxfig(fig3, '__bars_gs3_diff')
+
+        # preference as function of deployment (combination of robots pairs)
+        fig4, ax4 = plt.subplots(1, 1)
+        err_sem = df4corr.groupby(['dep'])['p1'].std() / np.sqrt(df4corr.groupby(['dep'])['p1'].count())
+        bars_means = df4corr.groupby(['dep'])['p1'].mean()
+        ax4.bar([1, 2, 3], bars_means, yerr=err_sem)
+        ax4.set_xticklabels(['R-I1', 'R-I2', 'I1-I2'])
+        ax4.set_xticks([1, 2, 3])
+        ax4.set_xlabel('Rationalities')
+        ax4.set_ylabel('Preference')
+        y1 = df4corr[df4corr.dep == '01']['p1']
+        y2 = df4corr[df4corr.dep == '02']['p1']
+        y3 = df4corr[df4corr.dep == '12']['p1']
+        pvalues = {'01': stats.binom_test(x=(y1*7).sum(), n=y1.__len__()*7),
+                   '02': stats.binom_test(x=(y2*7).sum(), n=y2.__len__()*7),
+                   '12': stats.binom_test(x=(y3*7).sum(), n=y3.__len__()*7)}
+        for ddep, pv in pvalues.items():
+            if pv < .05:
+                stars = pvalue_stars(pv)
+                ys = ax4.get_ylim()[1] - 0.02
+                if ddep == '01':
+                    ax4.annotate(stars, xy=(1, ys), annotation_clip=False, fontsize=14)
+                if ddep == '02':
+                    ax4.annotate(stars, xy=(2, ys), annotation_clip=False, fontsize=14)
+                if ddep == '12':
+                    ax4.annotate(stars, xy=(3, ys), annotation_clip=False, fontsize=14)
+        save_maxfig(fig4, '__bars_preference')
+
+
+    M = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
+    r, p = stats.pearsonr(M.GODSPEED1_S3, M.preference_average)
+    d = pd.DataFrame.from_dict({'group1': ['all'], 'group2': ['Not03'], 'r': [r], 'p': [p]})
+    correlation_df = correlation_df.append(d)
+
+    df4corr_grouped = df4corr.groupby(['dep'])
+
+    ##### Calculate the correlation between NARS or BFI to GODSPEED_S3 or preference #####
+    for d4c_name, d4c in df4corr_grouped:
+        r_nbgs3pa, pv_nbgs3pa = pd_corrcalculate_pvalues(d4c)
+        r_nbgs3pa = r_nbgs3pa[['gs3', 'pa']][pv_nbgs3pa[['gs3', 'pa']] < .05]
+        r_nbgs3pa.to_csv(df_dir +'__corr_NARS_BFI_gs3_average'+d4c_name+'.csv')
+        pv_nbgs3pa.to_csv(df_dir +'__corr_NARS_BFI_gs3_average_pvalues'+d4c_name+'.csv')
+
+    r_nbgs3pa, pv_nbgs3pa = pd_corrcalculate_pvalues(df4corr)
+    r_nbgs3pa = r_nbgs3pa[['gs3', 'pa']][pv_nbgs3pa[['gs3', 'pa']] < .05]
+    r_nbgs3pa.to_csv(df_dir +'__corr_NARS_BFI_gs3_average_all.csv')
+    pv_nbgs3pa.to_csv(df_dir +'__corr_NARS_BFI_gs3_average_pvalues_all.csv')
 
     stats1.to_csv(df_dir + 'new_2samples_tests.csv')
+    correlation_df.to_csv(df_dir + '__corr_gs3_average.csv')
+    np.savetxt(df_dir +"__corr_gs3_average_.csv", corr_mat, delimiter=",")
+    np.savetxt(df_dir +"__corr_gs3_average_pvalues.csv", corr_pvalues, delimiter=",")
+
     return stats
 
-def ttest_or_mannwhitney(y1,y2):
+def pvalue_stars(pvalue):
+    '''
+    return string of stars according to pvalue
+    '''
+
+    if pvalue < 0.001:
+        s = '***'
+    elif pvalue < 0.01:
+        s = '**'
+    elif pvalue < 0.05:
+        s = '*'
+
+    return s
+def ttest_or_mannwhitney(y1,y2, paired = False):
     '''
     Check if y1 and y2 stand the assumptions for ttest and if not preform mannwhitney
     :param y1: 1st sample
@@ -713,11 +928,36 @@ def ttest_or_mannwhitney(y1,y2):
     ls, lp = stats.levene(y1, y2)  # test that the variance behave the same
     if (lp > .05) & (np1 > .05) & (np2 > .05):
         ttest = True
-        s, p = stats.ttest_ind(y1, y2)
+        if paired:
+            s, p = stats.ttest_rel(y1, y2)
+        else:
+            s, p = stats.ttest_ind(y1, y2)
     else:
-        s, p = mannwhitneyu(y1, y2)
+        if paired:
+            s, p = stats.wilcoxon(y1, y2)
+        else:
+            s, p = mannwhitneyu(y1, y2)
 
     return s, p, ttest
+
+def pd_corrcalculate_pvalues(df, method = 'pearson'):
+    '''
+    correlation matrix + pvalues matrix
+    :param df: dataframe
+    :param method: pearson/ spearman
+    :return: correlation matrix, p-values
+    '''
+    df = df.dropna()._get_numeric_data()
+    dfcols = pd.DataFrame(columns=df.columns)
+    pvalues = dfcols.transpose().join(dfcols, how='outer')
+    for r in df.columns:
+        for c in df.columns:
+            if method == 'pearson':
+                pvalues[r][c] = round(stats.pearsonr(df[r], df[c])[1], 4)
+            elif method == 'spearman':
+                pvalues[r][c] = round(stats.spearmanr((df[r], df[c])[1], 4))
+
+    return df.corr(method=method), pvalues
 
 def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     '''
@@ -785,7 +1025,7 @@ if __name__ == "__main__":
         cdf.loc[:, 'education'] = cdf.loc[:, 'education'].replace({1.0: '<HS', 2.0: 'HS', 3.0:'<BA', 4.0:'BA', 5.0:'MA', 6.0:'professional',7.0:'PhD'})
 
         # feel_the_data(stats_df)
-        # todo: add n to the bars in the graphs!!!
+        # todo: ags3_pref_df n to the bars in the graphs!!!
         fig = preference_plot(cdf, 'sub_scale', 'summary')
         save_maxfig(fig, rDep + '_barplot_only_choices')
         fig1 = preference_plot(cdf, 'sub_scale', 'summary', deployment = True)

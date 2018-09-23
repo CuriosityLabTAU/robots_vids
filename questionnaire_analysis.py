@@ -71,7 +71,7 @@ def prepare_data(df_dir ):
         manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
         mdf_small.to_csv(df_dir + '__mdf_small.csv')
 
-        mannwhitneyu_gnbp(df_dir)
+        gnbp_diff_corr(df_dir)
 
         pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
 
@@ -218,11 +218,12 @@ if __name__ == "__main__":
 
 
     if infer:
-        # style.use(['ggplot', 'presentation'])
-        style.use(['ggplot'])
+        style.use(['ggplot', 'presentation'])
+
+        # style.use(['ggplot'])
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
 
-        mannwhitneyu_gnbp(df_dir, plot=True)
+        gnbp_diff_corr(df_dir, plot=True) # most of the plots for the article
 
         print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
