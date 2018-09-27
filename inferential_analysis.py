@@ -596,9 +596,9 @@ def summary_diff(sf, df_dir):
                 stars = pvalue_stars(p)
 
                 if rat == 'I2':
-                    ax.annotate(stars, xy=(c + 0.19, 1.01), annotation_clip=False, fontsize=14)
+                    ax.annotate(stars, xy=(c + 0.19, 1.01), annotation_clip=False, fontsize=18)
                 if rat == 'I1r':
-                    ax.annotate(stars, xy=(c - 0.21, 1.01), annotation_clip=False, fontsize=14)
+                    ax.annotate(stars, xy=(c - 0.21, 1.01), annotation_clip=False, fontsize=18)
 
         y1, y2 = grouped.get_group((g,'I1r')).preference, grouped.get_group((g,'I2')).preference
 
@@ -609,7 +609,7 @@ def summary_diff(sf, df_dir):
         if (p1 < .05):
             stars = pvalue_stars(p1)
             ax.hlines(ax.get_ylim()[1], c - 0.21, c + 0.21)
-            ax.annotate(stars, xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
+            ax.annotate(stars, xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=18)
 
     y1, y2 = grouped.get_group(('I2','I1r')).preference, grouped.get_group(('I1','I1r')).preference
     s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
@@ -620,7 +620,7 @@ def summary_diff(sf, df_dir):
         stars = pvalue_stars(p1)
         x1, x2 = cxt1[0] - .21, cxt1[1] -.21
         ax.hlines(ax.get_ylim()[1], x1,x2)
-        ax.annotate(stars, xy=(np.mean([x1,x2]), ax.get_ylim()[1]), annotation_clip=False, fontsize=14)
+        ax.annotate(stars, xy=(np.mean([x1,x2]), ax.get_ylim()[1]), annotation_clip=False, fontsize=18)
 
     # sns.barplot(data=q_pref_df, order=['hr', 'hi'], ax=ax)
     ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
@@ -822,12 +822,16 @@ def gnbp_diff_corr(df_dir, plot = False):
         plt.ylabel('Likability')
         fig1.savefig('figs_files/__preference_vs_likability')
 
+        fig_combined, ax_combined = plt.subplots(1, 1)
+
         # likability as function of deployment (combination of robots pairs)
+        fig_combined, ax_combined = plt.subplots(1,1)
         fig3, ax3 = plt.subplots(1,1)
-        err_sem = df4corr.groupby(['dep'])['gs3'].std() / np.sqrt(df4corr.groupby(['dep'])['gs3'].count())
-        bars_means = df4corr.groupby(['dep'])['gs3'].mean()
-        ax3.bar([1, 2, 3], bars_means, yerr=err_sem)
-        ax3.set_xticklabels(['R-I1','R-I2','I1-I2'])
+        gs3_err_sem = df4corr.groupby(['dep'])['gs3'].std() / np.sqrt(df4corr.groupby(['dep'])['gs3'].count())
+        gs3_bars_means = df4corr.groupby(['dep'])['gs3'].mean()
+        gs3_bars_means[['01', '02']] = -1 * gs3_bars_means[['01', '02']]
+        ax3.bar([1, 2, 3], gs3_bars_means, yerr=gs3_err_sem)
+        ax3.set_xticklabels(['I1-R','I2-R','I1-I2'])
         ax3.set_xticks([1,2,3])
         ax3.set_xlabel('Rationalities')
         ax3.set_ylabel('Likability difference')
@@ -837,20 +841,27 @@ def gnbp_diff_corr(df_dir, plot = False):
                 stars = pvalue_stars(pv)
                 ys = ax3.get_ylim()[1] - 0.02
                 if ddep == '01':
-                    ax3.annotate(stars, xy=(1, ys), annotation_clip=False, fontsize=14)
+                    ax3.annotate(stars, xy=(1-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(1.2-.05, .38), annotation_clip=False, fontsize=18)
                 if ddep == '02':
-                    ax3.annotate(stars, xy=(2, ys), annotation_clip=False, fontsize=14)
+                    ax3.annotate(stars, xy=(2-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(2.2-.05, .38), annotation_clip=False, fontsize=18)
                 if ddep == '12':
-                    ax3.annotate(stars, xy=(3, ys), annotation_clip=False, fontsize=14)
+                    ax3.annotate(stars, xy=(3-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(3.2-.05, .38), annotation_clip=False, fontsize=18)
 
         save_maxfig(fig3, '__bars_gs3_diff')
 
         # preference as function of deployment (combination of robots pairs)
         fig4, ax4 = plt.subplots(1, 1)
-        err_sem = df4corr.groupby(['dep'])['p1'].std() / np.sqrt(df4corr.groupby(['dep'])['p1'].count())
-        bars_means = df4corr.groupby(['dep'])['p1'].mean()
-        ax4.bar([1, 2, 3], bars_means, yerr=err_sem)
-        ax4.set_xticklabels(['R-I1', 'R-I2', 'I1-I2'])
+        # err_sem = df4corr.groupby(['dep'])['p1'].std() / np.sqrt(df4corr.groupby(['dep'])['p1'].count())
+        # bars_means = df4corr.groupby(['dep'])['p1'].mean()
+        # preference difference
+        pa_err_sem = df4corr.groupby(['dep'])['pa'].std() / np.sqrt(df4corr.groupby(['dep'])['pa'].count())
+        pa_bars_means = df4corr.groupby(['dep'])['pa'].mean()
+        pa_bars_means['12'] = -1*pa_bars_means['12']
+        ax4.bar([1, 2, 3], pa_bars_means, yerr=pa_err_sem)
+        ax4.set_xticklabels(['R-I1', 'R-I2', 'I2-I1'])
         ax4.set_xticks([1, 2, 3])
         ax4.set_xlabel('Rationalities')
         ax4.set_ylabel('Preference')
@@ -865,12 +876,26 @@ def gnbp_diff_corr(df_dir, plot = False):
                 stars = pvalue_stars(pv)
                 ys = ax4.get_ylim()[1] - 0.02
                 if ddep == '01':
-                    ax4.annotate(stars, xy=(1, ys), annotation_clip=False, fontsize=14)
+                    ax4.annotate(stars, xy=(1-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(.8-.05, .38), annotation_clip=False, fontsize=18)
                 if ddep == '02':
-                    ax4.annotate(stars, xy=(2, ys), annotation_clip=False, fontsize=14)
+                    ax4.annotate(stars, xy=(2-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(1.8-.05, .38), annotation_clip=False, fontsize=18)
                 if ddep == '12':
-                    ax4.annotate(stars, xy=(3, ys), annotation_clip=False, fontsize=14)
+                    ax4.annotate(stars, xy=(3-.05, ys), annotation_clip=False, fontsize=18)
+                    ax_combined.annotate(stars, xy=(2.8-.05, .38), annotation_clip=False, fontsize=18)
         save_maxfig(fig4, '__bars_preference')
+
+        ax_combined.bar([.8, 1.8, 2.8], -pa_bars_means, yerr=pa_err_sem, width=.4, label='preference\n average')
+        ax_combined.bar([1.2, 2.2, 3.2], gs3_bars_means, yerr=gs3_err_sem, width=.4, label='likability')
+        ax_combined.set_xticklabels(['I1-R', 'I2-R', 'I2-I1'])
+        ax_combined.set_xticks([1, 2, 3])
+        ax_combined.set_xlabel('Rationalities')
+        ax_combined.set_ylabel('Difference')
+        # ax_combined.legend(bbox_to_anchor=(.95, .95))
+        ax_combined.legend(loc=4)
+
+        save_maxfig(fig_combined, '__gs3pa_bars_preference')
 
 
     M = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
