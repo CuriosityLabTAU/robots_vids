@@ -10,6 +10,8 @@ from matplotlib.colors import LinearSegmentedColormap
 from scipy.stats import mannwhitneyu
 from scipy import stats
 
+sns.set_context('paper')
+
 # plt.xkcd();
 ft = 12 # annotate fontsize
 
@@ -278,7 +280,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
         rat = {'rational':0, 'half':1, 'irrational':2}
         sides = {'left':0, 'right':1}
         genders = {'female':0, 'male':1}
-        edu = {'<HS':1, 'HS':2, '<BA':3, 'BA':4, 'MA':5, 'professional':6, 'PhD':7}
+        edu = {'<HS':1, 'HS':2, '<BA':3, 'BA':4, 'MA':5, 'professional':6, 'Associate degree':7,'PhD':8}
         rdict = {'rationality':rat, 'color':cls, 'side':sides, 'gender':genders, 'education':edu}
         for c in ['rationality', 'color', 'side', 'gender', 'education']:
             manova_df.loc[:, c] = manova_df.loc[:, c].replace(rdict[c])
@@ -317,7 +319,7 @@ def manovadf_drop_support(manova_df, s):
 
     return manova_df1
 
-def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
+def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 20):
     '''
     creating word clouds by rationality.
     :param open_answers_tot: data frame with all the full answers
@@ -332,18 +334,23 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
 
     N = number_of_words # how many words to plot
 
+    open_answers_tot[open_answers_tot.rationality == 'half'] = 'irrational'
+
     rationalities = open_answers_tot.rationality.unique()
 
-    fig = plt.figure()
     gs = gridspec.GridSpec(4, rationalities.__len__())
     gs.update(hspace=0.5)
+
+    lr = len(rationalities)
+    fig, axs = plt.subplots(1,lr, figsize = (4,4*lr))
 
     wordclouds = []
     for i, rat in enumerate(rationalities):
         txt = open_answers_tot.loc[open_answers_tot.rationality == rat, 'answer'].str.cat(sep=' ')
         wordcloud = WordCloud(max_font_size=40, max_words=N).generate(txt)  # min_font_size=12,
 
-        ax_wfreq = fig.ags3_pref_df_subplot(gs[cloud*inside:4, i]) # freq axes
+        # ax_wfreq = fig.ags3_pref_df_subplot(gs[cloud*inside:4, i]) # freq axes
+        ax_wfreq = axs[i]
         if cloud != 0:
             # wordcloud
             if inside == 0:
@@ -360,9 +367,14 @@ def word_cloud(open_answers_tot, cloud = 1, inside = 0, number_of_words = 30):
 
         # frequency plot
         words_names = wordcloud.words_.keys()
+        # if rat == 'rational':
+        #     n = 63
+        # else:
+        #     n = 20
         words_count = wordcloud.words_.values()
         wc, wn = [], []
         for w in zip(words_names, words_count):
+            # wc.append(w[1] * n)
             wc.append(w[1])
             wn.append(w[0])
 
@@ -487,7 +499,7 @@ def statistical_diff(df_dir):
     for key, m in mdfd.items():
         r1, r2 = m.rationality.unique()
         for c in m.columns[m.columns.str.contains('GOD').tolist()]:
-            print('crobach\'s alpha = ', cronbach_alpha(m[m.columns[m.columns.str.contains('GOD').tolist()]], c))
+            print('crobach\'s alpha = ', cronbach_alpha(m[m.columns[m.columns.str.contains('GOD').tolist()]]))
 
 def binom_test_pref(rat_pref_df_tot):
     '''
@@ -534,7 +546,7 @@ def summary_diff(sf, df_dir):
                 y1 = m[m[categ] == r1]['answers']
                 y2 = m[m[categ] == r2]['answers']
 
-                s, p, ttest = ttest_or_mannwhitney(y1, y2, paired=True)
+                s, p, ttest, typ = ttest_or_mannwhitney(y1, y2, paired=True)
 
                 st = st.append(pd.DataFrame(data=[[deployment[-2:], categ, p, s]], columns=st.columns))
                 if (categ == 'rationality') and(p < 0.05):
@@ -602,7 +614,7 @@ def summary_diff(sf, df_dir):
 
         y1, y2 = grouped.get_group((g,'I1r')).preference, grouped.get_group((g,'I2')).preference
 
-        s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
+        s1, p1, ttest, typ = ttest_or_mannwhitney(y1, y2)
 
         st1 = st1.append(pd.DataFrame(data=[[g+'_I1r', g+'_I2', p1, s1]], columns=st1.columns))
 
@@ -612,7 +624,7 @@ def summary_diff(sf, df_dir):
             ax.annotate(stars, xy=(c, ax.get_ylim()[1]), annotation_clip=False, fontsize=18)
 
     y1, y2 = grouped.get_group(('I2','I1r')).preference, grouped.get_group(('I1','I1r')).preference
-    s1, p1, ttest = ttest_or_mannwhitney(y1, y2)
+    s1, p1, ttest, typ = ttest_or_mannwhitney(y1, y2)
 
     st1 = st1.append(pd.DataFrame(data=[['I2_I1r', 'I1_I1r', p1, s1]], columns=st.columns))
 
@@ -647,7 +659,7 @@ def conditional_probability(df, columnA, columnB):
 
     return conditional_probs
 
-def cronbach_alpha(items, c):
+def cronbach_alpha(items):
     items = pd.DataFrame(items)
     items_count = items.shape[1]
     variance_sum = float(items.var(axis=0, gs3_pref_dfof=1).sum())
@@ -698,7 +710,7 @@ def gnbp_diff_corr(df_dir, plot = False):
             y2 = grouped.get_group(g2)[c]
 
             if c != 'preference_average':
-                s, p, ttest = ttest_or_mannwhitney(y1, y2, paired=True)
+                s, p, ttest, typ = ttest_or_mannwhitney(y1, y2, paired=True)
             else:
                 bt = stats.binom_test(x=(y1*7).sum(), n=y1.__len__()*7, p=.5)
                 s = bt
@@ -719,35 +731,36 @@ def gnbp_diff_corr(df_dir, plot = False):
                     else:
                         cax.annotate('*', xy=(np.mean(cxt), cax.get_ylim()[1] + 0.001), annotation_clip=False, fontsize=14)
 
-            if c == 'GODSPEED1_S3':
-                pvalues[str(g1)+str(g2)] = p
-                m1 = m.copy()
-                m1['rationality'] = m1['rationality'].map({0:'R', 1: 'Irr 1', 2: 'Irr 2', 3: 'Irr1 + Irr2'})
-                ccax = ax2[int(axi/2), axi%2]
-                sns.barplot(data=m1, x='rationality', y=c, ax=ccax)
-                ccxt = ccax.get_xticks()
+                if c == 'GODSPEED1_S3':
+                    pvalues[str(g1)+str(g2)] = p
+                    m1 = m.copy()
+                    m1['rationality'] = m1['rationality'].map({0:'R', 1: 'Irr 1', 2: 'Irr 2', 3: 'Irr1 + Irr2'})
+                    ccax = ax2[int(axi/2), axi%2]
+                    sns.barplot(data=m1, x='rationality', y=c, ax=ccax)
+                    ccxt = ccax.get_xticks()
 
-                if (p < 0.05):
-                    ccax.hlines(ccax.get_ylim()[1], ccxt[0], ccxt[1])
-                    ccax.annotate('*', xy=(np.mean(ccxt), ccax.get_ylim()[1] - 0.01), annotation_clip=False, fontsize=14)
-                ccax.set_ylabel('Likability')
-                ccax.set_xlabel('')
-                axi += 1
+                    if (p < 0.05):
+                        ccax.hlines(ccax.get_ylim()[1], ccxt[0], ccxt[1])
+                        ccax.annotate('*', xy=(np.mean(ccxt), ccax.get_ylim()[1] - 0.01), annotation_clip=False, fontsize=14)
+                    ccax.set_ylabel('Likability')
+                    ccax.set_xlabel('')
+                    axi += 1
 
-                z1 = grouped.get_group(g1)['preference_average']
-                z2 = grouped.get_group(g2)['preference_average']
-                yy = y1.__array__() - y2.__array__()
-                zz = z1.__array__() - z2.__array__()
-                r, p = stats.pearsonr(yy, zz)
-                # r, p = stats.spearmanr(yy, zz)
-                d = pd.DataFrame.from_dict({'group1': [g1], 'group2': [g2], 'r': [r], 'p': [p]})
-                correlation_df = correlation_df.append(d)
+            z1 = grouped.get_group(g1)['preference_average']
+            z2 = grouped.get_group(g2)['preference_average']
+            yy = y1.__array__() - y2.__array__()
+            zz = z1.__array__() - z2.__array__()
+            r, p = stats.pearsonr(yy, zz)
+            # r, p = stats.spearmanr(yy, zz)
 
-                gs3_pref_df = gs3_pref_df.append(pd.DataFrame.from_dict({'dep': str(g1)+str(g2), 'GS3': yy, 'pref': zz}))
+            d = pd.DataFrame.from_dict({'group1': [g1], 'group2': [g2], 'r': [r], 'p': [p]})
+            correlation_df = correlation_df.append(d)
+
+            gs3_pref_df = gs3_pref_df.append(pd.DataFrame.from_dict({'dep': str(g1)+str(g2), 'GS3': yy, 'pref': zz}))
 
 
 
-            corr_mat, corr_pvalues = pd_corrcalculate_pvalues(m[['GODSPEED1_S3', 'preference_average']], method='pearson')
+        corr_mat, corr_pvalues = pd_corrcalculate_pvalues(m[['GODSPEED1_S3', 'preference_average']], method='pearson')
 
         #
         if plot:
@@ -769,8 +782,7 @@ def gnbp_diff_corr(df_dir, plot = False):
 
     df4corr.to_csv(df_dir+'__df4corr.csv')
 
-    gs3_pref_df.loc[(gs3_pref_df.dep == '12'), ['pref', 'GS3']] = -1 * gs3_pref_df.loc[
-        (gs3_pref_df.dep == '12'), ['pref', 'GS3']]
+    gs3_pref_df.loc[(gs3_pref_df.dep == '12'), ['pref', 'GS3']] = -1 * gs3_pref_df.loc[(gs3_pref_df.dep == '12'), ['pref', 'GS3']]
 
     grouped = gs3_pref_df.groupby('dep')
     pp = grouped.mean()
@@ -954,16 +966,21 @@ def ttest_or_mannwhitney(y1,y2, paired = False):
     if (lp > .05) & (np1 > .05) & (np2 > .05):
         ttest = True
         if paired:
+            typ = 'paired_ttest'
             s, p = stats.ttest_rel(y1, y2)
         else:
+            typ = 'ttest'
             s, p = stats.ttest_ind(y1, y2)
     else:
         if paired:
+            typ = 'wilcoxon'
             s, p = stats.wilcoxon(y1, y2)
         else:
+            typ = 'mannwhitneyu'
             s, p = mannwhitneyu(y1, y2)
 
-    return s, p, ttest
+    return s, p, ttest, typ
+
 
 def pd_corrcalculate_pvalues(df, method = 'pearson'):
     '''
@@ -984,7 +1001,7 @@ def pd_corrcalculate_pvalues(df, method = 'pearson'):
 
     return df.corr(method=method), pvalues
 
-def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
+def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None, p_fname = 'figs_files/'):
     '''
     Save figure in high resolution
     :param fig: which figure to save
@@ -999,7 +1016,6 @@ def save_maxfig(fig, fig_name, transperent = False, frmt='png', resize=None):
     fig.set_size_inches(12, 12)
     if resize != None:
         fig.set_size_inches(resize[0], resize[1])
-    p_fname = 'figs_files/'
     if not os.path.exists(p_fname):
         os.makedirs(p_fname)
 

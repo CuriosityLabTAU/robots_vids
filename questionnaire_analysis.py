@@ -1,10 +1,15 @@
 from reformat_data import *
 from inferential_analysis import *
+from paper_plots_analysis import *
 import pickle
 from matplotlib import style
+import seaborn as sns
+from sklearn.preprocessing import PowerTransformer
 
 
-def prepare_data(df_dir ):
+sns.set_context('paper')
+
+def prepare_data(df_dir):
     rDeployment_rh = ['rrrlbh', 'rbhlrr', 'rbrlrh', 'rrhlbr']
     rDeployment_ih = ['rbilrh', 'rrhlbi', 'rrilbh', 'rbhlri']
     rDeployment_ri = ['rbilrr', 'rbrlri', 'rrilbr', 'rrrlbi']
@@ -70,6 +75,14 @@ def prepare_data(df_dir ):
         open_answers_tot.to_csv(df_dir+'__open_answers_dataframe'+'.csv')
         manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
         mdf_small.to_csv(df_dir + '__mdf_small.csv')
+
+        # pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
+        # pt = PowerTransformer(method='yeo-johnson', standardize=False)
+        # mdf_normalized = pt.fit_transform(manova_df)
+        # mdf_small_normalized = pt.fit_transform(mdf_small)
+        # mdf_small['GODSPEED_S1_normalized'] = _yeo_johnson_transform(mdf_small['GODSPEED_S1'])
+        # mdf_normalized.to_csv(df_dir + '__normalized_manova_df.csv')
+        # mdf_small_normalized.to_csv(df_dir + '__normalized_small_manova_df.csv')
 
         gnbp_diff_corr(df_dir)
 
@@ -180,8 +193,8 @@ def creating_new_style():
 
 
 if __name__ == "__main__":
-    # reformat, infer = True, False
-    reformat, infer = False, True
+    reformat, infer = True, False
+    # reformat, infer = False, True
     creating_new_style()
     df_dir = 'data/dataframes/'
 
@@ -218,14 +231,15 @@ if __name__ == "__main__":
 
 
     if infer:
-        style.use(['ggplot', 'presentation'])
+        # style.use(['ggplot', 'presentation'])
 
-        # style.use(['ggplot'])
+        style.use(['ggplot'])
+
         # sf['rDeployment_tt'] = sf['rDeployment_ri'] # for only specific deployment
 
-        gnbp_diff_corr(df_dir, plot=True) # most of the plots for the article
-
-        print(np.unique(np.asarray(users_pref_tot),return_counts=True))
+        # gnbp_diff_corr(df_dir, plot=True) # most of the plots for the article
+        #
+        # print(np.unique(np.asarray(users_pref_tot),return_counts=True))
 
         # manova_df, manova_df_small = creating_dataframe4manova(sf['rDeployment_tt'], users_pref_tot)
         # sf.pop('rDeployment_tt')
@@ -252,11 +266,11 @@ if __name__ == "__main__":
         # preference_per_question(pref_df_tot)
 
         # statistical_diff(df_dir)
-        q_pref_df = summary_diff(sf, df_dir)
+        # q_pref_df = summary_diff(sf, df_dir)
 
         # con_prob = conditional_probability(manova_df_small, 'bartender', 'prefer')
 
-        # word_cloud(open_answers_tot, cloud=1)
+        # word_cloud(open_answers_tot, cloud=0)
         # stacked_plot(users_pref_tot, rat_pref_df_tot, binomal_df)
         plt.show()
 

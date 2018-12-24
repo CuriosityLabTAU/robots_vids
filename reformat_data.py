@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-from sklearn import preprocessing
+# from sklearn import preprocessing
 from scipy import stats
 
 
@@ -86,7 +86,7 @@ def raw_data_extraction(path):
         raw_df = raw_df.drop(unanswered_users, axis=1)
         print('unanswered users ', unanswered_users.__len__())
 
-    # cleaning users that didn't complete to fill the questionnaire.
+    # cleaning users that didn't complete the questionnaire.
     a = raw_df[raw_df['full_text'].str.contains('talkative?')]
     b = pd.isnull(a).any()
     empty_users = b[b].index.tolist()
@@ -241,6 +241,9 @@ def NARS_data(stats_df, df):
     '''
     NARS_sub_meaning = {'S1': 'Situations and Interactions with Robots', 'S2':'Social Influence of Robots', 'S3': 'Emotions in Interaction with Robots'}
     NARS_sub = {'S1': [4,7,8,9,10,12], 'S2':[1,2,11,13,14], 'S3': [3,5,6]}
+
+    # temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_revrse)
+
     for n in NARS_sub:
         NARS_sub[n] = map(str,NARS_sub[n])
     NARS = pd.DataFrame.from_dict([NARS_sub_meaning,NARS_sub])
@@ -249,7 +252,9 @@ def NARS_data(stats_df, df):
         temps = df[df.question == 'NARS'][df['option'][df.question == 'NARS'].isin(NARS[s]['average'])].drop(
             ['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float') # choose only the users answers
         # temps = min_max_norm(temps) # Normalization
-        ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
+        if s == 'S3':
+            temps = temps.applymap(bfi_reverse)
+        ms = pd.DataFrame(data=[['','NARS', s, NARS[s]['meaning']] + temps.sum(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
         pass
     return stats_df
@@ -274,14 +279,14 @@ def BFI_data(stats_df, df):
         a = df['option'][df.question == 'BFI'][:-1].astype('int')
         temps = df[df.question == 'BFI'][:-1][a.isin(BFI[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
         rev = np.array(BFI_rev[s], dtype=bool)
-        temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_revrse)
+        temps.loc[temps.index[rev]] = temps.loc[temps.index[rev]].applymap(bfi_reverse)
         # temps = min_max_norm(temps) # Normalization todo: fix this
         temps / temps.max()
         ms = pd.DataFrame(data=[['','BFI', s, BFI[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
 
-def bfi_revrse(v):
+def bfi_reverse(v):
     '''
     reverse value for BFI analysis
     :param v: value to reverse
@@ -292,27 +297,41 @@ def bfi_revrse(v):
 
 def GODSPEED_data(stats_df, df, robot):
     '''
-        Calculating Goddspeed for all users
+        Calculating Godspeed for all users
         https://link.springer.com/content/pdf/10.1007%2Fs12369-008-0001-3.pdf
     :param stats_df: dataframe for inferential statistics.
     :param df: raw dataframe
     :param robot: which robot 'red', 'blue'
     :return:
     '''
-    Godspeed_sub_meaning = {'S1':'Anthropomorphism', 'S2':'Animacy', 'S3':'Likeability', 'S4':'Perceived Intelligence', 'S5':'Perceived Safety'}
-    Godspeed_sub = {'S1':np.arange(0,5), 'S2':np.arange(5,11), 'S3':np.arange(11,16),'S4':np.arange(16,21),'S5':np.arange(21,24)}
-    for n in Godspeed_sub:
-        Godspeed_sub[n] = map(str,Godspeed_sub[n])
-    Godspeed = pd.DataFrame.from_dict([Godspeed_sub_meaning, Godspeed_sub])
-    Godspeed = Godspeed.rename({0:'meaning',1:'average'}, axis='index')
+    Godspeed = {
+        'S1': {'meaning': 'Anthropomorphism',
+               'indices': np.arange(1,6)},
+        'S2': {'meaning':'Animacy',
+               'indices': np.arange(6, 12)},
+        'S3': {'meaning': 'Likeability',
+               'indices': np.arange(12, 17)},
+        'S4': {'meaning': 'Perceived Intelligence',
+               'indices': np.arange(17, 22)},
+        'S5': {'meaning': 'Perceived Safety',
+               'indices': np.arange(22, 25)},
+    }
+
+    for n in Godspeed:
+        Godspeed[n]['indices'] = map(str, Godspeed[n]['indices'])
+
     for s in Godspeed:
-        if robot == 'red':
+        if robot == 'blue': # todo: check which robot is GODSPEED1 - should be the blue
             q = 'GODSPEED1'
         else:
             q = 'GODSPEED2'
-        temps = df[df.question == q][df['option'][df.question == q].isin(Godspeed[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
-        temps = temps.fillna(0)
+        # temps = df[df.question == q][df['option'][df.question == q].isin(Godspeed[s]['average'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
+        temps = df[df.question == q][df['option'][df.question == q].isin(Godspeed[s]['indices'])].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')  # choose only the users answers
+        if temps.isnull().values.any():
+            print('na value!!!')
+            temps = temps.fillna(0)
         # temps = min_max_norm(temps) # Normalization
+        # ms = pd.DataFrame(data=[[robot,q, s, Godspeed[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         ms = pd.DataFrame(data=[[robot,q, s, Godspeed[s]['meaning']] + temps.mean(axis=0).tolist()], columns=stats_df.columns)
         stats_df = stats_df.append(ms)
     return stats_df
@@ -324,7 +343,7 @@ def preference_data(stats_df, df):
     :param df: raw dataframe
     :return: stats_df, raw_df - updated, users2exclude - users that were excluded because they didn't answer all preference questions.
     '''
-    temps = df[df.full_text.str.contains('you agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
+    temps = df[df.full_text.str.contains('agree with?')].drop(['question', 'option', 'full_text', 'dict_text'], axis=1).astype('float')
 
     temps_qs = temps.copy()
     qs = temps_qs.index
@@ -480,8 +499,6 @@ def questions(stats_df, raw_df):
     temps.feature = 'q_preference'
     stats_df = stats_df.append(temps)
 
-    # todo: check if I flipped the question - I think I did
-
     meaning = 'Count (Normalized) participant chose this robot'
 
     # todo: uncomment???
@@ -553,6 +570,29 @@ def min_max_norm(df):
     df_normalized.columns = df.columns
     df_normalized.index = df.index
     return df_normalized
+
+def _yeo_johnson_transform(x, lmbda = (-2, 2)):
+    """Return transformed input x following Yeo-Johnson transform with
+    parameter lambda.
+    """
+
+    out = np.zeros_like(x)
+    pos = x >= 0  # binary mask
+
+    # when x >= 0
+    if abs(lmbda) < np.spacing(1.):
+        out[pos] = np.log1p(x[pos])
+    else:  # lmbda != 0
+        out[pos] = (np.power(x[pos] + 1, lmbda) - 1) / lmbda
+
+    # when x < 0
+    if abs(lmbda - 2) > np.spacing(1.):
+        out[~pos] = -(np.power(-x[~pos] + 1, 2 - lmbda) - 1) / (2 - lmbda)
+    else:  # lmbda == 2
+        out[~pos] = -np.log1p(-x[~pos])
+
+    return out
+
 
 if __name__ == "__main__":
 
