@@ -200,7 +200,7 @@ def create_stats_df(raw_df, fn):
 
 def long_answers(stats_df):
     '''
-    Adding were was the answer that the user cose
+    Adding were was the answer that the user chose
     :param stats_df: statistical datframe,
     :return:
     '''

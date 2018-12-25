@@ -21,7 +21,7 @@ sns.set_context('paper')
 def create_df4paper(df_dir, without12 = True):
 
     mdf = {}
-    # find all dataframes of combinations called mdf_*
+    # find all dataframes of called mdf_*
     a = pd.Series(os.listdir(df_dir))
     a = np.array(a[a.str.contains('mdf')].tolist())
     a = a[~(a == '__mdf_small.csv')]
@@ -69,9 +69,9 @@ def create_df4paper(df_dir, without12 = True):
     g1, g2 = list(df4paper_grouped.groups.keys())
 
     cn = [cnames_groups['Choices'][0]] + cnames_groups['GODSPEED']
-    d1 = df4paper_grouped.get_group(g1).reset_index(drop=True)
-    d2 = df4paper_grouped.get_group(g2).reset_index(drop=True)
-    d1.loc[:, cn] = d1[cn] - d2[cn]
+    d1 = df4paper_grouped.get_group(g1).reset_index(drop=True).sort_values(by = 'Userid')
+    d2 = df4paper_grouped.get_group(g2).reset_index(drop=True).sort_values(by = 'Userid')
+    d1[cn] = d1[cn] - d2[cn]
 
     df4paper_small = d1.copy()
 
@@ -87,16 +87,16 @@ def plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
     cnames = np.array(df4paper.columns)
     categories_columns = np.delete(cnames, [0, 1, 2, 8, 9, 10, 11])
 
-    # pair_plot = sns.pairplot(df4paper, y_vars=cnames_groups['GODSPEED'], x_vars=cnames_groups['Choices'], kind="reg")
-    # pair_plot.savefig(save_dir +'df4paper_pairplot')
-    # reg_names = cnames_groups['GODSPEED'] + cnames_groups['Choices']
+    pair_plot = sns.pairplot(df4paper, y_vars=cnames_groups['GODSPEED'], x_vars=cnames_groups['Choices'], kind="reg")
+    pair_plot.savefig(save_dir +'df4paper_pairplot')
+    reg_names = cnames_groups['GODSPEED'] + cnames_groups['Choices']
 
     df4paper_small.loc[df4paper_small['Age'] == 'A43', 'Age'] = 43
     df4paper_small['Age'] = df4paper_small['Age'].astype('float32')
     df4paper_small.loc[:,['Education', 'Age']] = df4paper_small.loc[:,['Education', 'Age']].astype('float32')
 
-    # pair_plot = sns.pairplot(df4paper_small, y_vars=cnames_groups['GODSPEED'], x_vars=cnames_groups['Choices'], kind="reg")
-    # pair_plot.savefig(save_dir + 'df4paper_small_pairplot')
+    pair_plot = sns.pairplot(df4paper_small, y_vars=cnames_groups['GODSPEED'], x_vars=cnames_groups['Choices'], kind="reg")
+    pair_plot.savefig(save_dir + 'df4paper_small_pairplot')
 
     n = 2
     for x in cnames_groups['Robot']:
@@ -109,14 +109,20 @@ def plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
             cax = ax[int(i/n), i%n]
             agree_bar  = sns.barplot(y = cat, x = x, data = df4paper, ax=cax)
 
-            y1 = df4paper_grouped.get_group(g1)[cat]
-            y2 = df4paper_grouped.get_group(g2)[cat]
+            y1 = df4paper_grouped.get_group(g1).sort_values(by='Userid')[cat]
+            y2 = df4paper_grouped.get_group(g2).sort_values(by='Userid')[cat]
 
-            print(x, cat, g1, g2)
+            # print(x, cat, g1, g2)
 
             paired = False
-            if cat == 'Agreement': paired = True
             test_value, p_value, ttest, test_typ = significance_plot_between2bars(y1, y2, cax, paired)
+            if cat == 'Agreement':
+                paired = True
+                ttest = False
+                test_typ = 'wilcoxon'
+                test_value, p_value = stats.wilcoxon(y1)
+                g2 = g1
+                cat = 'agreement with rational'
 
             temp_stats = pd.DataFrame.from_dict({'behavior1': [g1], 'behavior2': [g2], 'measurement': [cat],
                                                  'mean1': [y1.mean()], 'std1': [y1.std()], 'mean2': [y2.mean()], 'std2': [y2.std()],
@@ -365,7 +371,7 @@ def main():
     manova_df = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
     manova_df_small = pd.read_csv(df_dir + '__mdf_small.csv', index_col=0)
     raw_questionnaires_answers = pd.read_csv(df_dir + 'raw_dataframe_scales_cronbach.csv')
-    cronbach_analysis(raw_questionnaires_answers, save_dir)
+    # cronbach_analysis(raw_questionnaires_answers, save_dir)
 
     df4paper, df4paper_small, cnames_groups = create_df4paper(df_dir, without12=True)
 
@@ -382,14 +388,15 @@ def main():
 
 
     # df4chi = calculae_chisquare(df4paper_small, cnames_groups, save_dir)
-    # plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
+    plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
 
-    a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]
-    b = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('NARS')]]
-    c = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('BFI')]]
-    CronbachAlpha(a.T)
-    CronbachAlpha(b.T)
-    CronbachAlpha(c.T)
+    # a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]
+    # b = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('NARS')]]
+    # c = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('BFI')]]
+    # CronbachAlpha(a.T)
+    # CronbachAlpha(b.T)
+    # CronbachAlpha(c.T)
+
     # # binom_(df4paper_small)
     #
     plt.show()

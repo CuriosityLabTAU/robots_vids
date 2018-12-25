@@ -256,7 +256,13 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     manova_df1 = manova_df.sort_values(by='userID')
     manova_df = pd.concat((upt,manova_df1), axis=1)
     pref = g[(g.f == s) & (g.robot == 'red')].answers.tolist()
-    manova_df.insert(loc=manova_df.columns.__len__(), column=s, value=pref)
+    # manova_df.insert(loc=manova_df.columns.__len__(), column=s, value=pref)
+
+    c = upt.columns[upt.columns.str.contains('Q')]
+    try:
+        manova_df['preference_average'] = upt[c].apply(count_preference, axis = 1)
+    except:
+        manova_df['preference_average'] = upt[c].apply(count_preference(robot='irrational'), axis = 1)
 
     manova_df2 = manovadf_drop_support(manova_df, 'GODSPEED1')
     manova_df2 = manovadf_robot_support(manova_df2, 'GODSPEED2_S1', g)
@@ -265,7 +271,12 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     manova_df = manovadf_drop_support(manova_df, 'GODSPEED2')
     manova_df = manovadf_robot_support(manova_df, 'GODSPEED1_S1', g)
     pref = g[(g.f == s) & (g.robot == 'blue')].answers.tolist()
-    manova_df2['preference_average'] = pref
+    # manova_df2['preference_average'] = pref
+
+    try:
+        manova_df2['preference_average'] = upt[c].apply(count_preference, axis = 1)
+    except:
+        manova_df2['preference_average'] = upt[c].apply(count_preference(robot='irrational'), axis = 1)
 
     manova_df2 = manova_df2.rename(columns=dict(zip(manova_df2.columns[-6:], manova_df.columns[-6:])))
 
@@ -288,6 +299,18 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     manova_df_small = manova_df.loc[:manova_df.shape[0]/2 - 1].copy()
 
     return manova_df, manova_df_small
+
+def count_preference(row, robot = 'rational'):
+    '''
+    count preference for dataframe upt using apply
+    '''
+    temp = pd.value_counts(row)
+    try:
+        temp = temp[robot] - temp[temp.index != robot].values[0]
+    except:
+        temp = 0
+    temp /= 7
+    return temp
 
 def manovadf_robot_support(manova_df, s, g):
     '''
