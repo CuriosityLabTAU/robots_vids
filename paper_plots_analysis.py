@@ -371,25 +371,36 @@ def CronbachAlpha(itemscores):
 
     return nitems / (nitems-1.) * (1 - itemvars.sum() / tscores.var(ddof=1))
 
-def nars_low_high(df4paper, cnames_groups, save_dir, method = 'median'):
+def nars_low_high(df4paper, cnames_groups, save_dir, method = 'median', q = 3):
     '''
     check godspeed ranking by high low nars.
-    :param df4paper:
+    :param df4paper: data frame that I work with
+    :param cnames_groups: dictionary with columns names organized by subject
+    :param save_dir: where to save the data to.
+    :param method: how to divide the data.  median/ mean/ qcut
+    :param q: if method == 'qcut', how many quartiles to divide the data to.
     :return:
     '''
-    df4paper1 = df4paper.copy()
+    df0 = df4paper.copy()
     if method =='median':
-        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].median() > 0, dtype = int)
+        df0[cnames_groups['NARS']] = np.array(df0[cnames_groups['NARS']] - df0[cnames_groups['NARS']].median() > 0, dtype = int)
     if method == 'mean':
-        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].mean() > 0, dtype=int)
+        df0[cnames_groups['NARS']] = np.array(df0[cnames_groups['NARS']] - df0[cnames_groups['NARS']].mean() > 0, dtype=int)
     if method == 'mode':
-        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].mode() > 0, dtype=int)
-
+        df0[cnames_groups['NARS']] = np.array(df0[cnames_groups['NARS']] - df0[cnames_groups['NARS']].mode() > 0, dtype=int)
+    if method == 'qcut':
+        for cnars in cnames_groups['NARS']:
+            a = pd.qcut(x=df0[cnars], q=q)
+            idx_high = a[a == a.unique()[-1]].index
+            idx_low  = a[a != a.unique()[-1]].index
+            df0.loc[idx_high, cnars] = 1
+            df0.loc[idx_low,  cnars] = 0
     n = 2
-    for x in cnames_groups['Robot']:
+    # for x in cnames_groups['Robot']:
+    for x in ['Rationality']:
         for nars in cnames_groups['NARS']:
-            for nars_cat in df4paper1[nars].unique():
-                df = df4paper1[df4paper1[nars] == nars_cat]
+            for nars_cat in df0[nars].unique():
+                df = df0[df0[nars] == nars_cat]
                 df4paper_grouped = df.groupby(x)
                 g1, g2 = list(df4paper_grouped.groups.keys())
 
@@ -397,7 +408,7 @@ def nars_low_high(df4paper, cnames_groups, save_dir, method = 'median'):
                 # for i, cat in enumerate(categories_columns):
                 for i, cat in enumerate(cnames_groups['GODSPEED'] + cnames_groups['Choices']):
                     cax = ax[int(i/n), i%n]
-                    agree_bar  = sns.barplot(y = cat, x = x, data = df4paper1, ax=cax)
+                    agree_bar  = sns.barplot(y = cat, x = x, data = df, ax=cax)
 
                     y1 = df4paper_grouped.get_group(g1).sort_values(by='Userid')[cat]
                     y2 = df4paper_grouped.get_group(g2).sort_values(by='Userid')[cat]
@@ -459,8 +470,8 @@ def main():
 
 
     # df4chi = calculae_chisquare(df4paper_small, cnames_groups, save_dir)
-    plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
-    nars_low_high(df4paper, cnames_groups, save_dir, method = 'mean')
+    # plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
+    nars_low_high(df4paper, cnames_groups, save_dir, method = 'qcut', q = 7)
 
     # a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]
     # b = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('NARS')]]
