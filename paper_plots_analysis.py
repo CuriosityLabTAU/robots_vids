@@ -68,10 +68,13 @@ def create_df4paper(df_dir, without12 = True):
     df4paper_grouped = df4paper.groupby(['Rationality'])
     g1, g2 = list(df4paper_grouped.groups.keys())
 
-    cn = [cnames_groups['Choices'][0]] + cnames_groups['GODSPEED']
-    d1 = df4paper_grouped.get_group(g1).reset_index(drop=True).sort_values(by = 'Userid')
+    cn = cnames_groups['GODSPEED']
+    d0 = df4paper_grouped.get_group(g1).reset_index(drop=True).sort_values(by = 'Userid')
     d2 = df4paper_grouped.get_group(g2).reset_index(drop=True).sort_values(by = 'Userid')
-    d1[cn] = d1[cn] - d2[cn]
+    d1 = d0.copy()
+    d1[cn] = d0[cn] - d2[cn]
+
+    d1[cnames_groups['Choices'][0]] = d0[cnames_groups['Choices'][0]]
 
     df4paper_small = d1.copy()
 
@@ -117,6 +120,9 @@ def plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
             paired = False
             test_value, p_value, ttest, test_typ = significance_plot_between2bars(y1, y2, cax, paired)
             if cat == 'Agreement':
+                # n = y1.shape[0]
+                # x = temp1.preference.sum()
+                # bt = stats.binom_test(x=x, n=n, p=.5)
                 paired = True
                 ttest = False
                 test_typ = 'wilcoxon'
@@ -365,13 +371,78 @@ def CronbachAlpha(itemscores):
 
     return nitems / (nitems-1.) * (1 - itemvars.sum() / tscores.var(ddof=1))
 
+def nars_low_high(df4paper, cnames_groups, save_dir, method = 'median'):
+    '''
+    check godspeed ranking by high low nars.
+    :param df4paper:
+    :return:
+    '''
+    df4paper1 = df4paper.copy()
+    if method =='median':
+        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].median() > 0, dtype = int)
+    if method == 'mean':
+        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].mean() > 0, dtype=int)
+    if method == 'mode':
+        df4paper1[cnames_groups['NARS']] = np.array(df4paper1[cnames_groups['NARS']] - df4paper1[cnames_groups['NARS']].mode() > 0, dtype=int)
+
+    n = 2
+    for x in cnames_groups['Robot']:
+        for nars in cnames_groups['NARS']:
+            for nars_cat in df4paper1[nars].unique():
+                df = df4paper1[df4paper1[nars] == nars_cat]
+                df4paper_grouped = df.groupby(x)
+                g1, g2 = list(df4paper_grouped.groups.keys())
+
+                fig, ax = plt.subplots(5, n)
+                # for i, cat in enumerate(categories_columns):
+                for i, cat in enumerate(cnames_groups['GODSPEED'] + cnames_groups['Choices']):
+                    cax = ax[int(i/n), i%n]
+                    agree_bar  = sns.barplot(y = cat, x = x, data = df4paper1, ax=cax)
+
+                    y1 = df4paper_grouped.get_group(g1).sort_values(by='Userid')[cat]
+                    y2 = df4paper_grouped.get_group(g2).sort_values(by='Userid')[cat]
+
+                    # print(x, cat, g1, g2)
+
+                    paired = False
+                    test_value, p_value, ttest, test_typ = significance_plot_between2bars(y1, y2, cax, paired)
+                    if cat == 'Agreement':
+                        # n = y1.shape[0]
+                        # x = temp1.preference.sum()
+                        # bt = stats.binom_test(x=x, n=n, p=.5)
+                        paired = True
+                        ttest = False
+                        test_typ = 'wilcoxon'
+                        test_value, p_value = stats.wilcoxon(y1)
+                        g2 = g1
+                        cat = 'agreement with rational'
+
+                    temp_stats = pd.DataFrame.from_dict({'behavior1': [g1], 'behavior2': [g2], 'measurement': [cat],
+                                                         'mean1': [y1.mean()], 'std1': [y1.std()], 'mean2': [y2.mean()], 'std2': [y2.std()],
+                                                         'test_type': [test_typ], 'test_value': [test_value],'p_value': [p_value]})
+
+                    if 'df_diff_test' not in locals():
+                        df_diff_test = temp_stats.copy()
+                    else:
+                        df_diff_test = pd.concat([df_diff_test, temp_stats], axis=0)
+
+                df_diff_test = df_diff_test.reset_index(drop=True)
+                save_table(df_diff_test, save_dir, 'df_diff_test_'+x +'_'+ nars +'_' + str(nars_cat))
+                save_maxfig(fig, 'diff_' +x +'_'+ nars +'_' + str(nars_cat), p_fname=save_dir)
+                # fig2plotly(fig, save_dir + 'diff_' + x)
+
+                del(df_diff_test)
+
+
+
+
 def main():
     df_dir = 'data/dataframes/'
     save_dir = 'data/paper/'
-    manova_df = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
-    manova_df_small = pd.read_csv(df_dir + '__mdf_small.csv', index_col=0)
+    # manova_df = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
+    # manova_df_small = pd.read_csv(df_dir + '__mdf_small.csv', index_col=0)
     raw_questionnaires_answers = pd.read_csv(df_dir + 'raw_dataframe_scales_cronbach.csv')
-    # cronbach_analysis(raw_questionnaires_answers, save_dir)
+    cronbach_analysis(raw_questionnaires_answers, save_dir)
 
     df4paper, df4paper_small, cnames_groups = create_df4paper(df_dir, without12=True)
 
@@ -389,6 +460,7 @@ def main():
 
     # df4chi = calculae_chisquare(df4paper_small, cnames_groups, save_dir)
     plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
+    nars_low_high(df4paper, cnames_groups, save_dir, method = 'mean')
 
     # a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]
     # b = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('NARS')]]

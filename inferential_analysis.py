@@ -302,7 +302,8 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
 
 def count_preference(row, robot = 'rational'):
     '''
-    count preference for dataframe upt using apply
+    count preference for dataframe upt using apply.
+    logical robot - illogical robot (from - 1 to -1)
     '''
     temp = pd.value_counts(row)
     try:
