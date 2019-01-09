@@ -470,8 +470,8 @@ def main():
 
 
     # df4chi = calculae_chisquare(df4paper_small, cnames_groups, save_dir)
-    # plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
-    nars_low_high(df4paper, cnames_groups, save_dir, method = 'qcut', q = 7)
+    plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
+    # nars_low_high(df4paper, cnames_groups, save_dir, method = 'qcut', q = 7)
 
     # a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]
     # b = manova_df_small[manova_df_small.columns[manova_df_small.columns.str.contains('NARS')]]
