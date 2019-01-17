@@ -205,7 +205,6 @@ def long_answers(stats_df):
     :return:
     '''
 
-    # todo: long answers
     stats_df['long_answer'] = ''
     stats_df[stats_df.feature == 'q_pref'].answers = stats_df[stats_df.feature == 'q_pref'].rationality
     # stats_df = stats_df.drop(users2exclude, axis=1)
@@ -413,9 +412,11 @@ def prefernce_dataframe_index(raw_df):
 
     blue_rationality = raw_df[(raw_df.question == 'blue_robot') & (raw_df.full_text == 'rationality')]
     red_rationality = raw_df[(raw_df.question == 'red_robot') & (raw_df.full_text == 'rationality')]
+
     # reversing the DON'T question
     temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(1.0,3.0).replace(2.0,1.0)
     temps.loc['Q16.1', :] = temps.loc['Q16.1',:].replace(3.0,2.0)
+
     for c in temps.columns:
         temps[c] = temps[c].replace(1.0, red_rationality[c].tolist()[0])
         temps[c] = temps[c].replace(2.0, blue_rationality[c].tolist()[0])

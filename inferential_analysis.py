@@ -233,7 +233,8 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     :return: data frame for manova
     '''
 
-    upt = users_pref_tot.transpose().reset_index(drop=True)
+    # upt = users_pref_tot.transpose().reset_index(drop=True)
+    upt = users_pref_tot.T.copy().sort_index().reset_index(drop=True)
     # stats_df = sf['rDeployment_tt']
     g = stats_df[(stats_df['feature'] == 'GODSPEED1') | (stats_df['feature'] == 'GODSPEED2')
                  | (stats_df['feature'] == 'BFI') | (stats_df['feature'] == 'NARS') | ((stats_df['feature'] == 'preference') & (stats_df['sub_scale'] == 'average'))]
@@ -255,8 +256,6 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     manova_df = manova_df.reset_index(drop=True)
     manova_df1 = manova_df.sort_values(by='userID')
     manova_df = pd.concat((upt,manova_df1), axis=1)
-    pref = g[(g.f == s) & (g.robot == 'red')].answers.tolist()
-    # manova_df.insert(loc=manova_df.columns.__len__(), column=s, value=pref)
 
     c = upt.columns[upt.columns.str.contains('Q')]
     try:
@@ -270,8 +269,6 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     # data frame for 2nd robot
     manova_df = manovadf_drop_support(manova_df, 'GODSPEED2')
     manova_df = manovadf_robot_support(manova_df, 'GODSPEED1_S1', g)
-    pref = g[(g.f == s) & (g.robot == 'blue')].answers.tolist()
-    # manova_df2['preference_average'] = pref
 
     try:
         manova_df2['preference_average'] = upt[c].apply(count_preference, axis = 1)
@@ -285,7 +282,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
     manova_df = manova_df.reset_index(drop=True)
 
     for c in upt.columns:
-        manova_df[c] = (manova_df[c] == manova_df.rationality).astype('int')
+        manova_df[c] = manova_df[c].replace({'rational':0, 'irrational':2, 'half':1}).astype('int')
     if numeric:
         cls = {'red':0, 'blue':1}
         rat = {'rational':0, 'half':1, 'irrational':2}
@@ -297,6 +294,7 @@ def creating_dataframe4manova(stats_df, users_pref_tot, numeric = True):
             manova_df.loc[:, c] = manova_df.loc[:, c].replace(rdict[c])
 
     manova_df_small = manova_df.loc[:manova_df.shape[0]/2 - 1].copy()
+    manova_df_small = manova_df_small.sort_values('userID')
 
     return manova_df, manova_df_small
 

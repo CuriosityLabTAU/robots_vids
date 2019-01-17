@@ -18,7 +18,32 @@ from reformat_data import bfi_reverse
 
 sns.set_context('paper')
 
-def create_df4paper(df_dir, without12 = True):
+cnames_dict = {
+    'NARS_S1': 'Interactions',
+    'NARS_S2': 'Social_influence',
+    'NARS_S3': 'Emotions',
+    'BFI_S1': 'Extroversion',
+    'BFI_S2': 'Agreeableness',
+    'BFI_S3': 'Conscientiousness',
+    'BFI_S4': 'Neuroticism',
+    'BFI_S5': 'Openness',
+    'GODSPEED1_S1': 'Anthropomorphism',
+    'GODSPEED1_S2': 'Animacy',
+    'GODSPEED1_S3': 'Likability',
+    'GODSPEED1_S4': 'Intelligence',
+    'GODSPEED1_S5': 'Safety',
+    'preference_average': 'agreement'}
+
+cnames_groups = {
+    'Participant': ['Gender', 'Age', 'Education'],
+    'Robot': ['Rationality', 'Color', 'Side'],
+    'NARS': ['Interactions', 'Social_influence', 'Emotions'],
+    'BFI': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
+    'GODSPEED': ['Anthropomorphism', 'Animacy', 'Likability', 'Intelligence', 'Safety'],
+    'Roles': ['Investments', 'Analyst', 'Jury', 'Bartender'],
+    'Choices': ['Agreement', 'Prefer']}
+
+def create_df4paper(df_dir,  cnames_dict, cnames_groups, without12 = True):
 
     mdf = {}
     # find all dataframes of called mdf_*
@@ -36,30 +61,7 @@ def create_df4paper(df_dir, without12 = True):
     else:
         df4paper = mdf['mdf_rh'].append(mdf['mdf_ri']).append(mdf['mdf_ih'])
 
-    cnames_dict = {
-        'NARS_S1': 'Interactions',
-        'NARS_S2': 'Social_influence',
-        'NARS_S3': 'Emotions',
-        'BFI_S1': 'Extroversion',
-        'BFI_S2': 'Agreeableness',
-        'BFI_S3': 'Conscientiousness',
-        'BFI_S4': 'Neuroticism',
-        'BFI_S5': 'Openness',
-        'GODSPEED1_S1': 'Anthropomorphism',
-        'GODSPEED1_S2': 'Animacy',
-        'GODSPEED1_S3': 'Likability',
-        'GODSPEED1_S4': 'Intelligence',
-        'GODSPEED1_S5': 'Safety',
-        'preference_average': 'agreement'}
 
-    cnames_groups = {
-        'Participant':['Gender', 'Age', 'Education'],
-        'Robot':['Rationality', 'Color','Side'],
-        'NARS': ['Interactions', 'Social_influence','Emotions'],
-        'BFI': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
-        'GODSPEED': ['Anthropomorphism','Animacy', 'Likability', 'Intelligence', 'Safety'],
-        'Roles':['Investments', 'Analyst', 'Jury', 'Bartender'],
-        'Choices': ['Agreement','Prefer']}
 
     df4paper = df4paper.rename(index=str, columns = cnames_dict)
     df4paper.columns = df4paper.columns.str.capitalize()
@@ -69,8 +71,8 @@ def create_df4paper(df_dir, without12 = True):
     g1, g2 = list(df4paper_grouped.groups.keys())
 
     cn = cnames_groups['GODSPEED']
-    d0 = df4paper_grouped.get_group(g1).reset_index(drop=True).sort_values(by = 'Userid')
-    d2 = df4paper_grouped.get_group(g2).reset_index(drop=True).sort_values(by = 'Userid')
+    d0 = df4paper_grouped.get_group(g1).reset_index(drop=True).sort_values(by = 'Userid') # rational group
+    d2 = df4paper_grouped.get_group(g2).reset_index(drop=True).sort_values(by = 'Userid') # irrational group
     d1 = d0.copy()
     d1[cn] = d0[cn] - d2[cn]
 
@@ -84,7 +86,7 @@ def create_df4paper(df_dir, without12 = True):
     df4paper.to_csv(df_dir + 'df4paper.csv')
     df4paper_small.to_csv(df_dir + 'df4paper_small.csv')
 
-    return df4paper, df4paper_small, cnames_groups
+    return df4paper, df4paper_small
 
 def plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir):
     cnames = np.array(df4paper.columns)
@@ -224,9 +226,9 @@ def calculate_corr_with_pvalues(df, method = 'pearsonr'):
     r2 = rho.applymap(lambda x: '{}**'.format(x))
     r3 = rho.applymap(lambda x: '{}***'.format(x))
     # apply them where appropriate
-    rho = rho.mask(pval <= 0.1, r1)
-    rho = rho.mask(pval <= 0.05, r2)
-    rho = rho.mask(pval <= 0.01, r3)
+    rho = rho.mask(pval <= 0.05, r1)
+    rho = rho.mask(pval <= 0.01, r2)
+    rho = rho.mask(pval <= 0.001, r3)
 
     return pvalues, rho
 
@@ -448,6 +450,8 @@ def nars_low_high(df4paper, cnames_groups, save_dir, method = 'median', q = 3):
 
 
 def main():
+    reformat_data = True
+    # reformat_data = False
     df_dir = 'data/dataframes/'
     save_dir = 'data/paper/'
     # manova_df = pd.read_csv(df_dir + '__manova_df_dataframe.csv', index_col=0)
@@ -455,7 +459,11 @@ def main():
     raw_questionnaires_answers = pd.read_csv(df_dir + 'raw_dataframe_scales_cronbach.csv')
     cronbach_analysis(raw_questionnaires_answers, save_dir)
 
-    df4paper, df4paper_small, cnames_groups = create_df4paper(df_dir, without12=True)
+    if reformat_data:
+        df4paper, df4paper_small = create_df4paper(df_dir, cnames_dict, cnames_groups, without12=True)
+    else:
+        df4paper       = pd.read_csv(df_dir + 'df4paper.csv', index_col=0)
+        df4paper_small = pd.read_csv(df_dir + 'df4paper_small.csv', index_col=0)
 
     # # transform the data into normal distribution.
     # transform4mancova(manova_df, save_dir, 'manova_df')
@@ -470,7 +478,7 @@ def main():
 
 
     # df4chi = calculae_chisquare(df4paper_small, cnames_groups, save_dir)
-    plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
+    # plot_likability_agreement(df4paper, df4paper_small, cnames_groups, save_dir)
     # nars_low_high(df4paper, cnames_groups, save_dir, method = 'qcut', q = 7)
 
     # a = manova_df[manova_df.columns[manova_df.columns.str.contains('GODSPEED')]]

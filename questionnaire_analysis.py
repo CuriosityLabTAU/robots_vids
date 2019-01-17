@@ -17,84 +17,102 @@ def prepare_data(df_dir):
     rDeployment = {'rDeployment_ri': rDeployment_ri, 'rDeployment_rh': rDeployment_rh, 'rDeployment_ih': rDeployment_ih,'rDeployment_tt': rDeployment_tt}
     # rDeployment = {'rDeployment_ri': rDeployment_ri}
 
-    # infer = False
-    if reformat:
-        files = os.listdir('data/raw/')
-        if not os.path.exists(df_dir):
-            os.mkdir(df_dir)
-        for f in files:
-            path = 'data/raw/' + f
-            raw_df, rDeployment1 = raw_data_extraction(path)
-            rDeployment_tt += [rDeployment1.split('.')[0]]
+    files = os.listdir('data/raw/')
+    if not os.path.exists(df_dir):
+        os.mkdir(df_dir)
+    for f in files:
+        path = 'data/raw/' + f
+        raw_df, rDeployment1 = raw_data_extraction(path)
+        rDeployment_tt += [rDeployment1.split('.')[0]]
 
-        rDeployment['rDeployment_tt'] = rDeployment_tt
+    rDeployment['rDeployment_tt'] = rDeployment_tt
 
-        for i, rDep in enumerate(rDeployment):
-            print('reformatting '+rDep)
-            fn = '_'+rDep[-2:]+'.csv'
-            raw_df = comine_raw_data2dataframe(rDeployment[rDep])
-            raw_df.to_csv(df_dir+'raw_dataframe'+fn)
+    for i, rDep in enumerate(rDeployment):
+        print('reformatting '+rDep)
+        fn = '_'+rDep[-2:]+'.csv'
+        raw_df = comine_raw_data2dataframe(rDeployment[rDep])
+        raw_df.to_csv(df_dir+'raw_dataframe'+fn)
 
-            # cleaning trap question
-            before = raw_df[raw_df.columns[:-5]].columns.__len__()
-            raw_df, users_after_exclusion = trap_exclusion1(raw_df)
-            # raw_df, excluded_users = response_time_exclusion(raw_df, users_after_exclusion)
-            excluded = before - users_after_exclusion.__len__()
-            print('trap question excluded:', excluded, 'out of', before)
-            raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
-            raw_df = raw_df.drop(raw_df.columns[0], axis=1)
+        # cleaning trap question
+        before = raw_df[raw_df.columns[:-5]].columns.__len__()
+        raw_df, users_after_exclusion = trap_exclusion1(raw_df)
+        # raw_df, excluded_users = response_time_exclusion(raw_df, users_after_exclusion)
+        excluded = before - users_after_exclusion.__len__()
+        print('trap question excluded:', excluded, 'out of', before)
+        raw_df = raw_df.set_index(raw_df[raw_df.columns[0]])
+        raw_df = raw_df.drop(raw_df.columns[0], axis=1)
 
-            stats_df = create_stats_df(raw_df, fn)
+        stats_df = create_stats_df(raw_df, fn)
 
-            if rDep != 'rDeployment_tt':
-                pref_df, users_pref, open_answers, rat_pref_df = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
-                mdf, ___ = creating_dataframe4manova(stats_df, users_pref)
-                mdf.to_csv('data/dataframes/mdf_'+rDep[-2:]+'.csv')
+        if rDep != 'rDeployment_tt':
+            pref_df, users_pref, open_answers, rat_pref_df = prefernce_dataframe_index(raw_df) # reverse DON'T question answers inside this question
+            mdf, ___ = creating_dataframe4manova(stats_df, users_pref)
+            mdf.to_csv('data/dataframes/mdf_'+rDep[-2:]+'.csv')
 
-                #  crating preference dataframe
-                if 'pref_df_tot' in locals():
-                    pref_df_tot = pref_df_tot.append(pref_df)
-                    users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
-                    open_answers_tot = pd.concat([open_answers_tot, open_answers],axis=0)
-                    rat_pref_df_tot  = rat_pref_df_tot.append(rat_pref_df)
-                else:
-                    pref_df_tot = pref_df.copy()
-                    users_pref_tot = users_pref.copy()
-                    open_answers_tot = open_answers.copy()
-                    rat_pref_df_tot = rat_pref_df.copy()
+            #  crating preference dataframe
+            if 'pref_df_tot' in locals():
+                pref_df_tot = pref_df_tot.append(pref_df)
+                users_pref_tot = pd.concat([users_pref_tot, users_pref],axis=1)
+                open_answers_tot = pd.concat([open_answers_tot, open_answers],axis=0)
+                rat_pref_df_tot  = rat_pref_df_tot.append(rat_pref_df)
+            else:
+                pref_df_tot = pref_df.copy()
+                users_pref_tot = users_pref.copy()
+                open_answers_tot = open_answers.copy()
+                rat_pref_df_tot = rat_pref_df.copy()
 
-            if rDep == 'rDeployment_tt':
-                manova_df, mdf_small = creating_dataframe4manova(stats_df, users_pref_tot)
+        if rDep == 'rDeployment_tt':
+            manova_df, mdf_small = creating_dataframe4manova(stats_df, users_pref_tot)
 
-        # saving dataframes of answers
-        pref_df_tot.to_csv(df_dir+'__pref_dataframe'+'.csv')
-        rat_pref_df_tot.to_csv(df_dir+'__rat_pref_dataframe'+'.csv')
-        users_pref_tot.to_csv(df_dir+'__users_pref_dataframe'+'.csv')
-        open_answers_tot = pd.DataFrame(dict(answer = open_answers_tot, rationality=users_pref_tot.loc['prefer', :].tolist()))
-        open_answers_tot.index = users_pref_tot.columns
-        open_answers_tot.to_csv(df_dir+'__open_answers_dataframe'+'.csv')
-        manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
-        mdf_small.to_csv(df_dir + '__mdf_small.csv')
+    # saving dataframes of answers
+    pref_df_tot.to_csv(df_dir+'__pref_dataframe'+'.csv')
+    rat_pref_df_tot.to_csv(df_dir+'__rat_pref_dataframe'+'.csv')
+    users_pref_tot.to_csv(df_dir+'__users_pref_dataframe'+'.csv')
+    open_answers_tot = pd.DataFrame(dict(answer = open_answers_tot, rationality=users_pref_tot.loc['prefer', :].tolist()))
+    open_answers_tot.index = users_pref_tot.columns
+    open_answers_tot.to_csv(df_dir+'__open_answers_dataframe'+'.csv')
+    manova_df.to_csv(df_dir + '__manova_df_dataframe.csv')
+    mdf_small.to_csv(df_dir + '__mdf_small.csv')
 
-        # pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
-        # pt = PowerTransformer(method='yeo-johnson', standardize=False)
-        # mdf_normalized = pt.fit_transform(manova_df)
-        # mdf_small_normalized = pt.fit_transform(mdf_small)
-        # mdf_small['GODSPEED_S1_normalized'] = _yeo_johnson_transform(mdf_small['GODSPEED_S1'])
-        # mdf_normalized.to_csv(df_dir + '__normalized_manova_df.csv')
-        # mdf_small_normalized.to_csv(df_dir + '__normalized_small_manova_df.csv')
+    # pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
+    # pt = PowerTransformer(method='yeo-johnson', standardize=False)
+    # mdf_normalized = pt.fit_transform(manova_df)
+    # mdf_small_normalized = pt.fit_transform(mdf_small)
+    # mdf_small['GODSPEED_S1_normalized'] = _yeo_johnson_transform(mdf_small['GODSPEED_S1'])
+    # mdf_normalized.to_csv(df_dir + '__normalized_manova_df.csv')
+    # mdf_small_normalized.to_csv(df_dir + '__normalized_small_manova_df.csv')
 
-        gnbp_diff_corr(df_dir)
+    gnbp_diff_corr(df_dir)
 
-        pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
+    pickle.dump(rDeployment, open(df_dir+'robot_deployments','wb'))
 
-        r,c = users_pref_tot.shape
-        temp = pd.DataFrame(data = np.zeros([c * r, 2]), columns = ['question','preference'])
-        for i,row in enumerate(users_pref_tot.index):
-            temp.loc[i * c : (i+1) * c - 1, 'preference'] = users_pref_tot.loc[row, :].tolist()
-            temp.loc[i * c : (i+1) * c - 1, 'question']   = row
-        temp.to_csv(df_dir + '__pref_df_long.csv')
-        print('Done reformating the data.')
+    r,c = users_pref_tot.shape
+    temp = pd.DataFrame(data = np.zeros([c * r, 2]), columns = ['question','preference'])
+    for i,row in enumerate(users_pref_tot.index):
+        temp.loc[i * c : (i+1) * c - 1, 'preference'] = users_pref_tot.loc[row, :].tolist()
+        temp.loc[i * c : (i+1) * c - 1, 'question']   = row
+    temp.to_csv(df_dir + '__pref_df_long.csv')
+    print('Done reformating the data.')
+
+def fal_rate(users_pref_tot):
+    '''
+    return how many people choose each fallacy.
+    :return: fallacy rate per type
+    '''
+    idx = {'Q5.1': 'conj', 'Q7.1': 'conj', 'Q10.1': 'disj', 'Q12.1': 'conj', 'Q14.1': 'disj', 'Q16.1': 'disj',
+           'Q18.1': 'disj'}
+    df = users_pref_tot.iloc[:7, :227].rename(index = idx)
+    fal_rate = df.T.apply(pd.value_counts)
+
+    a = fal_rate['conj'].sum(axis=1).rename(index = {'half':'single_conj', 'irrational':'double_conj'})
+    b = fal_rate['disj'].sum(axis=1).rename(index = {'half':'single_disj', 'irrational':'double_disj'})
+    a = pd.DataFrame(a).T
+    b = pd.DataFrame(b).T
+
+    fal_rate = pd.concat([a, b], ignore_index=True).fillna(0).sum(axis=0)
+    fal_rate = np.round(fal_rate / fal_rate.sum() * 100, 2)
+    print(fal_rate)
+    return fal_rate
 
 def comine_raw_data2dataframe(rDeployment):
     '''
@@ -264,6 +282,7 @@ if __name__ == "__main__":
 
         # preference_cinsistency(users_pref_tot, sf, ignore = False)
         # preference_per_question(pref_df_tot)
+        fal_rate(users_pref_tot)
 
         # statistical_diff(df_dir)
         # q_pref_df = summary_diff(sf, df_dir)
