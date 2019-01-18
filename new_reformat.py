@@ -1,9 +1,14 @@
+# data libraries
 import pandas as pd
 import numpy as np
 import os
+# statistics libraries
 from scipy import stats
+import statsmodels.formula.api as smf
+# plotting libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
+
 
 # questions organizer
 questions = {'BFI': 'Q2.1',
@@ -210,7 +215,7 @@ def BFI_data(raw_df, bfi_cols, users):
     df = df.reset_index(drop=True)
 
 
-    BFI_sub_meaning = {'S1':'Extraversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
+    BFI_sub_meaning = {'S1':'Extroversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
     BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
     BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
 
@@ -343,14 +348,15 @@ def calculate_corr_with_pvalues(df, method = 'pearsonr', save_dir = None):
     rho = rho.mask(pval <= 0.01, r2)
     rho = rho.mask(pval <= 0.001, r3)
 
-    save_table(rho, save_dir, '00correlations', csv=True, Latex=True)
+    ### correlation tables seperated per questionnaire.
     corr_godspeed = rho.loc[cnames_groups['NARS']+cnames_groups['BFI'] + cnames_groups['Choices'],[x + '2rational' for x in cnames_groups['GODSPEED']]].copy()
     corr_bfi      = rho.loc[cnames_groups['NARS']+ cnames_groups['Choices'], cnames_groups['BFI']].copy()
     corr_nars     = rho.loc[cnames_groups['Choices'], cnames_groups['NARS']].copy()
+
+    save_table(rho, save_dir, '00correlations', csv=True, Latex=True)
     save_table(corr_godspeed, save_dir, '00df_corr_godspeed')
     save_table(corr_bfi, save_dir, '00df_corr_bfi')
     save_table(corr_nars, save_dir, '00df_corr_nars')
-
 
     return pvalues, rho
 
@@ -405,6 +411,43 @@ def diff_test(raw_df, save_dir):
     save_table(df_diff_test, save_dir, '00diff', csv=True, Latex=True)
     return df_diff_test
 
+def multi_linear_regression(raw_df, save_dir):
+    formula0 ='Likability2rational ~ agree2rational'
+
+    # likeability ~ agree + prefer
+    formula =  '%s + prefer' % formula0
+    mlr = smf.ols(formula, data=raw_df).fit()
+    print(mlr.summary(), file=open(save_dir + "00likeability_agree_prefer.txt", "a"))
+
+    # likability ~ agree + NARS
+    formula = '%s' % formula0
+    for s in cnames_groups['NARS']:
+        formula += ' + ' + s
+    mlr = smf.ols(formula, data=raw_df).fit()
+    print(mlr.summary() , file=open(save_dir + "00likeability_agree_nars.txt", "a"))
+
+    # likability ~ agree + NARS + BFI
+    for s in cnames_groups['BFI']:
+        formula += ' + ' + s
+        mlr = smf.ols(formula, data=raw_df).fit()
+    print(mlr.summary(), file=open(save_dir + "00likeability_agree_nars_BFI.txt", "a"))
+
+    # likability ~ agree + NARS + BFI
+    formula += ' + prefer'
+    mlr = smf.ols(formula, data=raw_df).fit()
+    print(mlr.summary(), file=open(save_dir + "00likeability_agree_prefer_nars_BFI.txt", "a"))
+
+    # likability ~ agree + BFI
+    formula = '%s' % formula0
+    for s in cnames_groups['BFI']:
+        formula += ' + ' + s
+        mlr = smf.ols(formula, data=raw_df).fit()
+    print(mlr.summary(), file=open(save_dir + "00likeability_agree_BFI.txt", "a"))
+
+
+
+
+
 def save_table(df, df_dir,file_name, csv = True, Latex = True):
     if csv:
         df.to_csv(df_dir + file_name + '.csv')
@@ -414,8 +457,8 @@ def save_table(df, df_dir,file_name, csv = True, Latex = True):
         with open(df_dir + file_name+ '.tex', 'w') as tf:
             tf.write(df.to_latex())
 def main():
-    # process_data = True
-    process_data = False
+    # process_data, analysis = True, False
+    process_data, analysis = False, True
     df_dir = 'data/dataframes/'
     save_dir = 'data/paper/'
 
@@ -424,8 +467,12 @@ def main():
     else:
         raw_df = pd.read_csv(df_dir + '/new_raw_df.csv', index_col=0)
 
-    pv, rho = calculate_corr_with_pvalues(raw_df, method='pearsonr' , save_dir=save_dir)
-    df_diff = diff_test(raw_df, save_dir)
+    if analysis:
+        pv, rho = calculate_corr_with_pvalues(raw_df, method='pearsonr' , save_dir=save_dir)
+        df_diff = diff_test(raw_df, save_dir)
+        save_table(raw_df.describe(), save_dir, '00descriptive')
+        multi_linear_regression(raw_df, save_dir)
+
     print()
 
 if __name__ == "__main__":
