@@ -111,7 +111,9 @@ def data_processing(path):
     else:
         df_choices[questions['qns']]   = raw_df[agree_questions].replace(robots_comb)
         df_choices[questions['dont']]  = raw_df[dont_question].replace(rev_robots_comb)
+
     df_choices[questions['rules']] = raw_df[rules_question].replace(robots_comb)
+    df_choices['color']            = raw_df[prefer_question]
     df_choices['prefer']           = raw_df[prefer_question].replace(robots_comb)
 
     ### get users id
@@ -321,7 +323,7 @@ def ttest_or_mannwhitney(y1,y2, paired = False):
 
     return y1.mean(), stats.sem(y1), y2.mean(), stats.sem(y2), s, p, ttest, typ
 
-def calculate_corr_with_pvalues(df, method = 'pearsonr', save_dir = None):
+def calculate_corr_with_pvalues(df, method = 'pearsonr', questionnaires = True, save_dir = None):
     df = df.dropna()._get_numeric_data()
     dfcols = pd.DataFrame(columns=df.columns)
     pvalues = dfcols.transpose().join(dfcols, how='outer')
@@ -348,15 +350,16 @@ def calculate_corr_with_pvalues(df, method = 'pearsonr', save_dir = None):
     rho = rho.mask(pval <= 0.01, r2)
     rho = rho.mask(pval <= 0.001, r3)
 
-    ### correlation tables seperated per questionnaire.
-    corr_godspeed = rho.loc[cnames_groups['NARS']+cnames_groups['BFI'] + cnames_groups['Choices'],[x + '2rational' for x in cnames_groups['GODSPEED']]].copy()
-    corr_bfi      = rho.loc[cnames_groups['NARS']+ cnames_groups['Choices'], cnames_groups['BFI']].copy()
-    corr_nars     = rho.loc[cnames_groups['Choices'], cnames_groups['NARS']].copy()
+    if questionnaires:
+        ### correlation tables seperated per questionnaire.
+        corr_godspeed = rho.loc[cnames_groups['NARS']+cnames_groups['BFI'] + cnames_groups['Choices'],[x + '2rational' for x in cnames_groups['GODSPEED']]].copy()
+        corr_bfi      = rho.loc[cnames_groups['NARS']+ cnames_groups['Choices'], cnames_groups['BFI']].copy()
+        corr_nars     = rho.loc[cnames_groups['Choices'], cnames_groups['NARS']].copy()
 
-    save_table(rho, save_dir, '00correlations', csv=True, Latex=True)
-    save_table(corr_godspeed, save_dir, '00df_corr_godspeed')
-    save_table(corr_bfi, save_dir, '00df_corr_bfi')
-    save_table(corr_nars, save_dir, '00df_corr_nars')
+        save_table(rho, save_dir, '00correlations', csv=True, Latex=True)
+        save_table(corr_godspeed, save_dir, '00df_corr_godspeed')
+        save_table(corr_bfi, save_dir, '00df_corr_bfi')
+        save_table(corr_nars, save_dir, '00df_corr_nars')
 
     return pvalues, rho
 
@@ -444,13 +447,50 @@ def multi_linear_regression(raw_df, save_dir):
         mlr = smf.ols(formula, data=raw_df).fit()
     print(mlr.summary(), file=open(save_dir + "00likeability_agree_BFI.txt", "a"))
 
+def new_df4goren(raw_df, save_dir):
+    dft = raw_df[['prefer', 'rColor', 'iColor', 'rational_agree', 'irrational_agree']]
 
+    dft0 = dft[dft.prefer == 0]
+    dft0['rationality'] = '1'
+    dft0['prefer'] = 0
+    dft0['agree'] = dft0.pop('irrational_agree')
+    dft0['color'] = dft0.iColor
+    dft0 = dft0.drop(['rational_agree', 'rColor', 'iColor'], axis = 1)
+    dft0 = dft0.reset_index(drop=True)
 
+    dft1 = dft[dft.prefer == 0]
+    dft1['rationality'] = '0'
+    dft1['prefer'] = 1
+    dft1['agree'] = dft1.pop('rational_agree')
+    dft1['color'] = dft1.rColor
+    dft1 = dft1.drop(['irrational_agree', 'rColor', 'iColor'], axis = 1)
+    dft1 = dft1.reset_index(drop=True)
 
+    dft2 = dft[dft.prefer == 1]
+    dft2['rationality'] = '0'
+    dft2['prefer'] = 0
+    dft2['agree'] = dft2.pop('rational_agree')
+    dft2['color'] = dft2.rColor
+    dft2 = dft2.drop(['irrational_agree', 'rColor', 'iColor'], axis = 1)
+    dft2 = dft2.reset_index(drop=True)
+
+    dft3 = dft[dft.prefer == 1]
+    dft3['rationality'] = '1'
+    dft3['prefer'] = 1
+    dft3['agree'] = dft3.pop('irrational_agree')
+    dft3['color'] = dft3.iColor
+    dft3 = dft3.drop(['rational_agree', 'rColor', 'iColor'], axis = 1)
+    dft3 = dft3.reset_index(drop=True)
+
+    dft = pd.concat((dft0, dft1, dft2, dft3), axis=0)
+
+    save_table(dft, save_dir, '00df4mlr', Latex=False)
+
+    return dft
 
 def save_table(df, df_dir,file_name, csv = True, Latex = True):
     if csv:
-        df.to_csv(df_dir + file_name + '.csv')
+        df.to_csv(df_dir + file_name + '.csv') # drop = True
 
     if Latex:
         df = df.round(3)
@@ -471,7 +511,10 @@ def main():
         pv, rho = calculate_corr_with_pvalues(raw_df, method='pearsonr' , save_dir=save_dir)
         df_diff = diff_test(raw_df, save_dir)
         save_table(raw_df.describe(), save_dir, '00descriptive')
-        multi_linear_regression(raw_df, save_dir)
+
+        # multi_linear_regression(raw_df, save_dir)
+
+        df4goren = new_df4goren(raw_df, save_dir)
 
     print()
 
