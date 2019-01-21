@@ -50,6 +50,13 @@ def trap_question(raw_df, qn, option):
     print('%d participants failed the trap question'%(len(users2remove)))
     return raw_df.index[users_idx], users2remove
 
+def response_times(raw_df):
+    rt_questions = np.array(questions['conj'] + questions['disj']) + 1
+    rt_questions = ['Q' + str(x) + '_Page Submit' for x in rt_questions]
+    responses_times = raw_df[rt_questions].astype('float')
+    return responses_times
+
+
 # questions fallacies
 questions = {'conj': [6, 8, 12],
              'disj': [10, 14, 16, 18]}
@@ -63,6 +70,9 @@ raw_df = raw_df.drop(rows2remove, axis=0)
 
 print(raw_df.shape[0])
 fal_rate = total_fallacy_rate(raw_df, questions)
+rts = response_times(raw_df)
+print(rts.mean(axis = 0))
 
+rts.to_csv('00rts_ranking.csv')
 
 print()

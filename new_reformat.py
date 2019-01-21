@@ -8,6 +8,7 @@ import statsmodels.formula.api as smf
 # plotting libraries
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy import stats
 
 
 # questions organizer
@@ -488,6 +489,27 @@ def new_df4goren(raw_df, save_dir):
 
     return dft
 
+def response_times_diff(save_dir):
+    cols = ['Q' + str(x) for x in range(7)]
+    rts_ranking = pd.read_csv(save_dir + '00rts_ranking.csv', index_col=0).reset_index(drop = True)
+    rts_ranking.columns = cols
+    rts_choosing = pd.read_csv(save_dir + '00rts_choosing.csv', index_col=0).reset_index(drop = True)
+    rts_choosing.columns = cols
+
+    rts_diff = pd.DataFrame({'meanRanking':[], 'semRanking':[], 'meanChoosing':[], 'semChoosing':[], 't':[], 'p_value':[], 'test_type':[]})
+    for i in rts_ranking:
+        y1 = rts_ranking[i]
+        y2 = rts_choosing[i]
+        y1m, y1s, y2m, y2s, s, p, _, typ = ttest_or_mannwhitney(y1, y2)
+        temp = pd.DataFrame({'meanRanking': [y1m], 'semRanking': [y1s], 'meanChoosing': [y2m], 'semChoosing': [y2s], 't': [s], 'p_value': [p],'test_type': [typ]})
+        rts_diff = rts_diff.append(temp)
+    rts_diff['question'] = cols
+    rts_diff = rts_diff.reset_index(drop=True)
+
+    rts_diff.to_csv(save_dir + '00rt.csv')
+    return rts_diff
+
+
 def save_table(df, df_dir,file_name, csv = True, Latex = True):
     if csv:
         df.to_csv(df_dir + file_name + '.csv') # drop = True
@@ -516,6 +538,7 @@ def main():
 
         df4goren = new_df4goren(raw_df, save_dir)
 
+    response_times_diff(save_dir)
     print()
 
 if __name__ == "__main__":

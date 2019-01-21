@@ -75,6 +75,11 @@ def fallacy_rate(raw_df, qns):
                                         'dh': 'single_disj',
                                         'di': 'double_disj'})
     return fal_rate
+def response_times(raw_df):
+    rt_questions = np.array(questions['fallacies']['conj'] + questions['fallacies']['disj']) + 1
+    rt_questions = ['Q' + str(x) + '_Page Submit' for x in rt_questions]
+    responses_times = raw_df[rt_questions].astype('float')
+    return responses_times
 
 def main():
     # load the data.
@@ -95,6 +100,11 @@ def main():
     print(raw_df_all.shape[0])
     fal_rate = fallacy_rate(raw_df_all, qns)
     print(fal_rate)
+    rts = response_times(raw_df)
+    print(rts.mean(axis=0))
+
+    rts.to_csv('00rts_choosing.csv')
+
 
 if __name__ == "__main__":
     main()
