@@ -539,7 +539,6 @@ def main():
         df4goren = new_df4goren(raw_df, save_dir)
 
     response_times_diff(save_dir)
-    print()
 
 if __name__ == "__main__":
     main()
