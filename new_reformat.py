@@ -292,12 +292,12 @@ def reverse_choices(v):
     revrsed_values = [5.,4.,3.,2.,1.]
     return revrsed_values[int(v)-1]
 
-def ttest_or_mannwhitney(y1,y2, paired = False):
+def ttest_or_mannwhitney(y1,y2, paired = False ,return_dic = False):
     '''
     Check if y1 and y2 stand the assumptions for ttest and if not preform mannwhitney
     :param y1: 1st sample
     :param y2: 2nd sample
-    :return: s, pvalue, ttest - True/False
+    :return: mean1, sem1, mean2, sem2m, s, pvalue, ttest - True/False
     '''
     ttest = False
 
@@ -322,7 +322,21 @@ def ttest_or_mannwhitney(y1,y2, paired = False):
             typ = 'mannwhitneyu'
             s, p = stats.mannwhitneyu(y1, y2)
 
-    return y1.mean(), stats.sem(y1), y2.mean(), stats.sem(y2), s, p, ttest, typ
+    if ~return_dic:
+        return y1.mean(), stats.sem(y1), y2.mean(), stats.sem(y2), s, p, ttest, typ
+    else:
+        return {
+            'y1_isnormal': np1,
+            'y2_isnormal': np2,
+            'variance_test': np2,
+            'y1_mean':y1.mean(),
+            'y1_sem':stats.sem(y1),
+            'y2_mean':y2.mean(),
+            'y2_sem':stats.sem(y2),
+            'test_type': typ,
+            'test_score': s,
+            'p_value': p
+        }
 
 def calculate_corr_with_pvalues(df, method = 'pearsonr', questionnaires = True, save_dir = None):
     df = df.dropna()._get_numeric_data()
@@ -539,6 +553,8 @@ def main():
         df4goren = new_df4goren(raw_df, save_dir)
 
     response_times_diff(save_dir)
+
+    print()
 
 if __name__ == "__main__":
     main()
