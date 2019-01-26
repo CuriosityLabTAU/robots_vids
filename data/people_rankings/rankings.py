@@ -27,20 +27,26 @@ def total_fallacy_rate(raw_df, questions):
             raw_df[cq + 'rate'] = fallacy_rate(raw_df, fal, cq)
 
     rate_df = raw_df[raw_df.columns[raw_df.columns.str.contains('rate')]]
-    # rate_df = rate_df.drop([0, 1], axis=0)
+
+    qns_conj = ['Q' + str(x) + '_rate' for x in questions['conj']]
+    qns_disj = ['Q' + str(x) + '_rate' for x in questions['disj']]
+
+    b = pd.DataFrame()
+    for q in qns_conj + qns_disj:
+        temp = rate_df[q].value_counts() / raw_df.shape[0]
+        b = pd.concat((b, temp), axis=1)
+    b.columns = qns_conj + qns_disj
+    conj_rate = b[qns_conj].dropna().mean(axis = 1)
+    disj_rate = b[qns_disj].dropna().mean(axis = 1)
+
+    print(conj_rate)
+    print(disj_rate)
+
     fal_rate = rate_df.stack().value_counts()
     fal_rate = 100 * fal_rate / fal_rate.sum()
 
-    print('''
-    %.2f %% of the people were rational
-    %.2f %% of the people were irrational
-    single conjunction rate is %.2f %%
-    double conjunction rate is %.2f %%
-    single disjunction rate is %.2f %%
-    double disjunction rate is %.2f %%
-    ''' % (fal_rate[0], fal_rate[1] + fal_rate[2] + fal_rate[3] + fal_rate[4], fal_rate[1], fal_rate[2], fal_rate[3],
-           fal_rate[4]))
-    return fal_rate
+    print(fal_rate)
+    return fal_rate, conj_rate, disj_rate
 
 def trap_question(raw_df, qn, option):
     qn = 'Q'+str(qn)
@@ -69,7 +75,7 @@ rows2remove, users2remove = trap_question(raw_df, 21, 3)
 raw_df = raw_df.drop(rows2remove, axis=0)
 
 print(raw_df.shape[0])
-fal_rate = total_fallacy_rate(raw_df, questions)
+fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, questions)
 rts = response_times(raw_df)
 print(rts.mean(axis = 0))
 

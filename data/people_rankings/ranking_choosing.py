@@ -65,8 +65,7 @@ def trap_question(raw_df, qn, option):
     print('%d participants failed the trap question'%(len(users2remove) - 2))
     return raw_df.index[users_idx], users2remove
 
-def fallacy_rate(raw_df, qns):
-    nu = raw_df.shape[1]
+def fallacy_rate(raw_df, qns, qns_conj, qns_disj):
     fal_rate = raw_df[qns].apply(pd.value_counts).sum(axis=1)
     fal_rate = np.round(fal_rate/fal_rate.sum() * 100,2)
     fal_rate = fal_rate.rename(index = {'r': 'rational',
@@ -74,7 +73,18 @@ def fallacy_rate(raw_df, qns):
                                         'ci': 'double_conj',
                                         'dh': 'single_disj',
                                         'di': 'double_disj'})
-    return fal_rate
+
+    b = pd.DataFrame()
+    for q in qns:
+        temp = raw_df[q].value_counts() / raw_df.shape[0]
+        b = pd.concat((b, temp), axis=1)
+    b.columns = qns
+    conj_rate = b[qns_conj].dropna().mean(axis = 1)
+    disj_rate = b[qns_disj].dropna().mean(axis = 1)
+
+    return conj_rate, disj_rate
+
+
 def response_times(raw_df):
     rt_questions = np.array(questions['fallacies']['conj'] + questions['fallacies']['disj']) + 1
     rt_questions = ['Q' + str(x) + '_Page Submit' for x in rt_questions]
@@ -88,19 +98,44 @@ def main():
         rat = {'1': comb[1], '2': comb[-1]}
         df2load = 'Emma_ranking_' + comb + '.csv'
         try:
-            raw_df = load_data(df2load, qns_conj, qns_disj, rat)
-            if 'raw_df_all' in locals():
-                raw_df_all = raw_df_all.append(raw_df)
-                raw_df_all = raw_df_all.reset_index(drop=True)
-            else:
-                raw_df_all = raw_df.copy()
+            df = load_data(df2load, qns_conj, qns_disj, rat)
+
+            a, b = comb[1], comb[-1]
+
+            if (a == 'r' and b == 'i') or (a == 'i' and b == 'r'):
+                if 'raw_df_ri' in locals():
+                    raw_df_ri = raw_df_ri.append(df)
+                    raw_df_ri = raw_df_ri.reset_index(drop=True)
+                else:
+                    raw_df_ri = df.copy()
+            if (a == 'r' and b == 'h') or (a == 'h' and b == 'r'):
+                if 'raw_df_rh' in locals():
+                    raw_df_rh = raw_df_rh.append(df)
+                    raw_df_rh = raw_df_rh.reset_index(drop=True)
+                else:
+                    raw_df_rh = df.copy()
+            # if 'raw_df_all' in locals():
+            #     raw_df_all = raw_df_all.append(raw_df)
+            #     raw_df_all = raw_df_all.reset_index(drop=True)
+            # else:
+            #     raw_df_all = raw_df.copy()
         except:
             pass
 
+    raw_df_all = raw_df_ri.append(raw_df_rh)
+
     print(raw_df_all.shape[0])
-    fal_rate = fallacy_rate(raw_df_all, qns)
-    print(fal_rate)
-    rts = response_times(raw_df)
+    conj_rate, disj_rate = fallacy_rate(raw_df_rh, qns, qns_conj, qns_disj)
+    print('rational - single fallacy:')
+    print(conj_rate)
+    print(disj_rate)
+
+    conj_rate, disj_rate = fallacy_rate(raw_df_ri, qns, qns_conj, qns_disj)
+    print('rational - double fallacy:')
+    print(conj_rate)
+    print(disj_rate)
+
+    rts = response_times(raw_df_all)
     print(rts.mean(axis=0))
 
     rts.to_csv('00rts_choosing.csv')

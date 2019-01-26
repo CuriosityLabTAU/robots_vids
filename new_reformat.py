@@ -58,13 +58,30 @@ def prepare_data(df_dir):
         path = raw_dir + f
         df = data_processing(path)
 
-        if 'raw_df' in locals():
-            raw_df = raw_df.append(df)
-            raw_df = raw_df.reset_index(drop=True)
-        else:
-            raw_df = df.copy()
+        a, b = path.split('.')[0][-1], path.split('.')[0][-4]
 
-    fal_rate = fallacy_rate(raw_df)
+        if (a == 'r' and b == 'i') or (a == 'i' and b == 'r'):
+            if 'raw_df_ri' in locals():
+                raw_df_ri = raw_df_ri.append(df)
+                raw_df_ri = raw_df_ri.reset_index(drop=True)
+            else:
+                raw_df_ri = df.copy()
+        if (a == 'r' and b == 'h') or (a == 'h' and b == 'r'):
+            if 'raw_df_rh' in locals():
+                raw_df_rh = raw_df_rh.append(df)
+                raw_df_rh = raw_df_rh.reset_index(drop=True)
+            else:
+                raw_df_rh = df.copy()
+
+    raw_df = raw_df_ri.append(raw_df_rh)
+    fal_rate, conj_rate, disj_rate = fallacy_rate(raw_df_rh)
+    print('rational - single fallacy:')
+    print(conj_rate)
+    print(disj_rate)
+    fal_rate, conj_rate, disj_rate = fallacy_rate(raw_df_ri)
+    print('rational - double fallacy:')
+    print(conj_rate)
+    print(disj_rate)
     ### replacing all the halfs so that there will be only ir/rational rationalities
     raw_df = raw_df.replace({'half': 'irrational'})
     raw_df = raw_df.replace({'rational': 0, 'irrational': 1})
@@ -397,8 +414,21 @@ def fallacy_rate(raw_df):
 
     fal_rate = pd.concat([a, b], ignore_index=True).fillna(0).sum(axis=0)
     fal_rate = np.round(fal_rate / fal_rate.sum() * 100, 2)
-    print(fal_rate)
-    return fal_rate
+
+    b = pd.DataFrame()
+    for q in ['conj', 'disj']:
+        t = df[q]
+        for q1 in range(df[q].shape[1]):
+            temp = t.iloc[:,q1].value_counts() / df.shape[0]
+            b = pd.concat((b, temp), axis=1)
+    b.columns = questions['fallacies']['conj'] + questions['fallacies']['disj']
+    conj_rate = b[questions['fallacies']['conj']].dropna().mean(axis = 1)\
+        .rename(index = {'half':'single_conj', 'irrational':'double_conj'})
+    disj_rate = b[questions['fallacies']['disj']].dropna().mean(axis = 1)\
+        .rename(index = {'half':'single_disj', 'irrational':'double_disj'})
+
+
+    return fal_rate, conj_rate, disj_rate
 
 def diff_test(raw_df, save_dir):
 
@@ -533,8 +563,8 @@ def save_table(df, df_dir,file_name, csv = True, Latex = True):
         with open(df_dir + file_name+ '.tex', 'w') as tf:
             tf.write(df.to_latex())
 def main():
-    # process_data, analysis = True, False
-    process_data, analysis = False, True
+    process_data, analysis = True, False
+    # process_data, analysis = False, True
     df_dir = 'data/dataframes/'
     save_dir = 'data/paper/'
 
