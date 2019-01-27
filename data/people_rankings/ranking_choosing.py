@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 
+import os,sys,inspect
+from new_reformat import ttest_or_mannwhitney
+
 # questions organizer
 questions = {'BFI': 7,
              'Gender': 3,
@@ -90,6 +93,30 @@ def fallacy_rate(raw_df, qns, qns_conj, qns_disj, save_dir = 'data/paper/', fal_
     return conj_rate, disj_rate
 
 
+def compare_fallacy_rates(fal_type, rate_comparison_df):
+    currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    parentdir = os.path.dirname(currentdir) + '\\paper\\'
+
+    # load the data from the ranking choosing
+    df1 = pd.read_csv('01rankings_choosing_' + fal_type + '.csv', index_col=0)
+    # load the data from the robots choosing
+    df2 = pd.read_csv(parentdir + '01robots_choosing_' + fal_type + '.csv', index_col=0)
+
+    # rename the columns and indices to be the same
+    df2.columns = df1.columns
+    df2.index = df1.index
+
+    # compare them for rational / irrational
+    for ind, row in df1.iterrows():
+        d = ttest_or_mannwhitney(row, df2.loc[ind,:], return_dic=True)
+        d['fal_typ'] = [fal_type]
+        d['sd'] = [ind] # single or double
+        rate_comparison_df = rate_comparison_df.append(pd.DataFrame.from_dict(d))
+    return rate_comparison_df
+
+
+
+
 def response_times(raw_df):
     rt_questions = np.array(questions['fallacies']['conj'] + questions['fallacies']['disj']) + 1
     rt_questions = ['Q' + str(x) + '_Page Submit' for x in rt_questions]
@@ -129,18 +156,30 @@ def main():
 
     raw_df_all = raw_df_ri.append(raw_df_rh)
 
-    print(raw_df_all.shape[0])
     conj_rate, disj_rate = fallacy_rate(raw_df_rh, qns, qns_conj, qns_disj)
     print('rational - single fallacy:')
     print(conj_rate)
     print(disj_rate)
+
+    rate_comparison_df = pd.DataFrame()
+    rate_comparison_df = compare_fallacy_rates('conjsingle', rate_comparison_df)
+    rate_comparison_df = compare_fallacy_rates('disjsingle', rate_comparison_df)
 
     conj_rate, disj_rate = fallacy_rate(raw_df_ri, qns, qns_conj, qns_disj, fal_type='double')
     print('rational - double fallacy:')
     print(conj_rate)
     print(disj_rate)
 
+    rate_comparison_df = compare_fallacy_rates('conjdouble', rate_comparison_df)
+    rate_comparison_df = compare_fallacy_rates('disjdouble', rate_comparison_df)
+
+    rate_comparison_df = rate_comparison_df.reset_index(drop=True)
+    rate_comparison_df.to_csv('01ranking_choosing_comparison')
+    print('-------- rates comparison ---------')
+    print(rate_comparison_df)
+
     rts = response_times(raw_df_all)
+    print('-------- response times ---------')
     print(rts.mean(axis=0))
 
     rts.to_csv('00rts_choosing.csv')

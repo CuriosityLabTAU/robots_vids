@@ -339,21 +339,22 @@ def ttest_or_mannwhitney(y1,y2, paired = False ,return_dic = False):
             typ = 'mannwhitneyu'
             s, p = stats.mannwhitneyu(y1, y2)
 
-    if ~return_dic:
-        return y1.mean(), stats.sem(y1), y2.mean(), stats.sem(y2), s, p, ttest, typ
-    else:
-        return {
-            'y1_isnormal': np1,
-            'y2_isnormal': np2,
-            'variance_test': np2,
-            'y1_mean':y1.mean(),
-            'y1_sem':stats.sem(y1),
-            'y2_mean':y2.mean(),
-            'y2_sem':stats.sem(y2),
-            'test_type': typ,
-            'test_score': s,
-            'p_value': p
+    if return_dic:
+        d = {
+            'y1_isnormal': [np1],
+            'y2_isnormal': [np2],
+            'variance_test': [np2],
+            'y1_mean':[y1.mean()],
+            'y1_sem':[stats.sem(y1)],
+            'y2_mean':[y2.mean()],
+            'y2_sem':[stats.sem(y2)],
+            'test_type': [typ],
+            'test_score': [s],
+            'p_value': [p]
         }
+    else:
+        d = [y1.mean(), stats.sem(y1), y2.mean(), stats.sem(y2), s, p, ttest, typ]
+    return d
 
 def calculate_corr_with_pvalues(df, method = 'pearsonr', questionnaires = True, save_dir = None):
     df = df.dropna()._get_numeric_data()
