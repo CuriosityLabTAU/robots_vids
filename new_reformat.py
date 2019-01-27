@@ -78,7 +78,7 @@ def prepare_data(df_dir):
     print('rational - single fallacy:')
     print(conj_rate)
     print(disj_rate)
-    fal_rate, conj_rate, disj_rate = fallacy_rate(raw_df_ri)
+    fal_rate, conj_rate, disj_rate = fallacy_rate(raw_df_ri, fal_type='double')
     print('rational - double fallacy:')
     print(conj_rate)
     print(disj_rate)
@@ -396,7 +396,7 @@ def calculate_corr_with_pvalues(df, method = 'pearsonr', questionnaires = True, 
     return pvalues, rho
 
 
-def fallacy_rate(raw_df):
+def fallacy_rate(raw_df, save_dir = 'data/paper/', fal_type = 'single'):
     '''
     return how many people choose each fallacy.
     :return: fallacy rate per type
@@ -422,9 +422,13 @@ def fallacy_rate(raw_df):
             temp = t.iloc[:,q1].value_counts() / df.shape[0]
             b = pd.concat((b, temp), axis=1)
     b.columns = questions['fallacies']['conj'] + questions['fallacies']['disj']
-    conj_rate = b[questions['fallacies']['conj']].dropna().mean(axis = 1)\
+    conj_rate = b[questions['fallacies']['conj']].dropna()
+    conj_rate.to_csv(save_dir + '01robots_choosing_conj' + fal_type + '.csv')
+    conj_rate = conj_rate.mean(axis = 1)\
         .rename(index = {'half':'single_conj', 'irrational':'double_conj'})
-    disj_rate = b[questions['fallacies']['disj']].dropna().mean(axis = 1)\
+    disj_rate = b[questions['fallacies']['disj']]
+    disj_rate.to_csv(save_dir + '01robots_choosing_disj' + fal_type + '.csv')
+    disj_rate = disj_rate.dropna().mean(axis = 1)\
         .rename(index = {'half':'single_disj', 'irrational':'double_disj'})
 
 

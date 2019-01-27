@@ -20,7 +20,7 @@ def fallacy_rate(raw_df, fallacy, cq):
 
     return temp_df[cq + 'rate']
 
-def total_fallacy_rate(raw_df, questions):
+def total_fallacy_rate(raw_df, questions, save_dir = 'data/paper/'):
     for fal, qs in questions.items():
         for qn in qs:
             cq = 'Q' + str(qn) + '_'
@@ -36,8 +36,12 @@ def total_fallacy_rate(raw_df, questions):
         temp = rate_df[q].value_counts() / raw_df.shape[0]
         b = pd.concat((b, temp), axis=1)
     b.columns = qns_conj + qns_disj
-    conj_rate = b[qns_conj].dropna().mean(axis = 1)
-    disj_rate = b[qns_disj].dropna().mean(axis = 1)
+    conj_rate = b[qns_conj].dropna()
+    conj_rate.to_csv('01free_rankings_conj.csv')
+    conj_rate = conj_rate.mean(axis = 1)
+    disj_rate = b[qns_disj].dropna()
+    disj_rate.to_csv('01free_rankings_disj.csv')
+    disj_rate = disj_rate.mean(axis = 1)
 
     print(conj_rate)
     print(disj_rate)

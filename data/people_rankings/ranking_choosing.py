@@ -65,7 +65,7 @@ def trap_question(raw_df, qn, option):
     print('%d participants failed the trap question'%(len(users2remove) - 2))
     return raw_df.index[users_idx], users2remove
 
-def fallacy_rate(raw_df, qns, qns_conj, qns_disj):
+def fallacy_rate(raw_df, qns, qns_conj, qns_disj, save_dir = 'data/paper/', fal_type = 'single'):
     fal_rate = raw_df[qns].apply(pd.value_counts).sum(axis=1)
     fal_rate = np.round(fal_rate/fal_rate.sum() * 100,2)
     fal_rate = fal_rate.rename(index = {'r': 'rational',
@@ -79,8 +79,13 @@ def fallacy_rate(raw_df, qns, qns_conj, qns_disj):
         temp = raw_df[q].value_counts() / raw_df.shape[0]
         b = pd.concat((b, temp), axis=1)
     b.columns = qns
-    conj_rate = b[qns_conj].dropna().mean(axis = 1)
-    disj_rate = b[qns_disj].dropna().mean(axis = 1)
+
+    conj_rate = b[qns_conj].dropna()
+    conj_rate.to_csv('01rankings_choosing_conj' + fal_type + '.csv')
+    conj_rate = conj_rate.mean(axis = 1)
+    disj_rate = b[qns_disj].dropna()
+    disj_rate.to_csv('01rankings_choosing_disj' + fal_type + '.csv')
+    disj_rate = disj_rate.mean(axis = 1)
 
     return conj_rate, disj_rate
 
@@ -130,7 +135,7 @@ def main():
     print(conj_rate)
     print(disj_rate)
 
-    conj_rate, disj_rate = fallacy_rate(raw_df_ri, qns, qns_conj, qns_disj)
+    conj_rate, disj_rate = fallacy_rate(raw_df_ri, qns, qns_conj, qns_disj, fal_type='double')
     print('rational - double fallacy:')
     print(conj_rate)
     print(disj_rate)
