@@ -27,6 +27,7 @@ def total_fallacy_rate(raw_df, questions, save_dir = 'data/paper/'):
             raw_df[cq + 'rate'] = fallacy_rate(raw_df, fal, cq)
 
     rate_df = raw_df[raw_df.columns[raw_df.columns.str.contains('rate')]]
+    rate_df.to_csv('raw_df_ranking.csv')
 
     qns_conj = ['Q' + str(x) + '_rate' for x in questions['conj']]
     qns_disj = ['Q' + str(x) + '_rate' for x in questions['disj']]

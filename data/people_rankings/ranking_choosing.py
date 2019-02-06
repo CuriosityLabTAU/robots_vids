@@ -155,6 +155,7 @@ def main():
             pass
 
     raw_df_all = raw_df_ri.append(raw_df_rh)
+    raw_df_all.to_csv('raw_df_choose_ranking.csv')
 
     conj_rate, disj_rate = fallacy_rate(raw_df_rh, qns, qns_conj, qns_disj)
     print('rational - single fallacy:')
