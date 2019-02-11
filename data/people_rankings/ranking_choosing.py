@@ -115,8 +115,6 @@ def compare_fallacy_rates(fal_type, rate_comparison_df):
     return rate_comparison_df
 
 
-
-
 def response_times(raw_df):
     rt_questions = np.array(questions['fallacies']['conj'] + questions['fallacies']['disj']) + 1
     rt_questions = ['Q' + str(x) + '_Page Submit' for x in rt_questions]
@@ -128,10 +126,16 @@ def main():
     for comb in ['lirr', 'lhrr', 'lrri', 'lrrh']:
         # 1 : left, 2: right
         rat = {'1': comb[1], '2': comb[-1]}
+        sides = {'1': comb[0], '2': comb[-2]}
         df2load = 'Emma_ranking_' + comb + '.csv'
         try:
             df = load_data(df2load, qns_conj, qns_disj, rat)
-
+            r_side = sides[list(rat.keys())[list(rat.values()).index('r')]]
+            df['rational_position'] = r_side
+            if r_side == 'r':
+                df['irrational_position'] = 'l'
+            else:
+                df['irrational_position'] = 'r'
             a, b = comb[1], comb[-1]
 
             if (a == 'r' and b == 'i') or (a == 'i' and b == 'r'):
@@ -140,6 +144,7 @@ def main():
                     raw_df_ri = raw_df_ri.reset_index(drop=True)
                 else:
                     raw_df_ri = df.copy()
+
             if (a == 'r' and b == 'h') or (a == 'h' and b == 'r'):
                 if 'raw_df_rh' in locals():
                     raw_df_rh = raw_df_rh.append(df)
@@ -156,6 +161,29 @@ def main():
 
     raw_df_all = raw_df_ri.append(raw_df_rh)
     raw_df_all.to_csv('raw_df_choose_ranking.csv')
+
+    # DataFrame for Goren
+    rdfr = raw_df_all.copy()
+    rdfr.pop('irrational_position')
+    rdfr = rdfr.rename({'rational_position': 'side'}, axis='columns')
+    rdfr['rationality'] = 'rational'
+    rdfr[rdfr[qns] != 'r'] = 0
+    rdfr[rdfr[qns] == 'r'] = 1
+    rdfr[qns]
+    rdfr = rdfr[qns + ['side', 'rationality']]
+
+    rdfi = raw_df_all.copy()
+    rdfi.pop('rational_position')
+    rdfi = rdfi.rename({'irrational_position': 'side'}, axis='columns')
+    rdfi['rationality'] = 'irrational'
+    rdfi[rdfi[qns] != 'r'] = 1
+    rdfi[rdfi[qns] == 'r'] = 0
+    rdfi[qns]
+    rdfi = rdfi[qns + ['side', 'rationality']]
+
+    df4goren = rdfr.append(rdfi)
+    df4goren['side'] = df4goren['side'].replace({'l':'left', 'r':'right'})
+    df4goren.to_csv('df4goren.csv')
 
     conj_rate, disj_rate = fallacy_rate(raw_df_rh, qns, qns_conj, qns_disj)
     print('rational - single fallacy:')
