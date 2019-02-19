@@ -71,8 +71,8 @@ data[columns_of_intrest] = scaler.transform(data)
 cq = cnames_groups['BFI']
 # cq = cnames_groups['NARS']
 
-# X = data[cq].copy()
-X = data
+X = data[cq].copy()
+# X = data.copy()
 
 # do_pca = False
 do_pca = True
@@ -97,22 +97,21 @@ else:
     plot_clusters(X, labels, cax)
     # plot_clusters(X, labels1, cax)
 
-plt.show()
 
-# ### Run the Kmeans algorithm and get the index of data points clusters
-# sse = []
-# list_k = list(range(1, 20))
+### Run the Kmeans algorithm and get the index of data points clusters
+sse = []
+list_k = list(range(1, 50))
 #
-# for k in list_k:
-#     km = KMeans(n_clusters=k)
-#     km.fit(X)
-#     sse.append(km.inertia_)
+for k in list_k:
+    km = KMeans(n_clusters=k)
+    km.fit(X)
+    sse.append(km.inertia_)
 #
-# # Plot sse against k
-# plt.figure(figsize=(6, 6))
-# plt.plot(list_k, sse, '-o')
-# plt.xlabel(r'Number of clusters *k*')
-# plt.ylabel('Sum of squared distance');
+# Plot sse against k
+plt.figure(figsize=(6, 6))
+plt.plot(list_k, sse, '-o')
+plt.xlabel(r'Number of clusters *k*')
+plt.ylabel('Sum of squared distance');
 
 
 # ### k fold cross validation of results
@@ -165,3 +164,4 @@ plt.show()
         #     auc_score = roc_auc_score(test_data['actual_{}'.format(classer)], k_probabilities[mdl_idx][classer])
         #     auc[classer] = auc_score
         # k_auc[mdl_idx] = auc
+plt.show()
