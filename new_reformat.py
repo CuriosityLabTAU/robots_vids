@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 
-# questions organizer
+# questions organizer.
 questions = {'BFI': 'Q2.1',
              'NARS': 'Q3.1',
              'Godspeed_Red': 'Q20.2#1',
@@ -26,6 +26,7 @@ questions = {'BFI': 'Q2.1',
                           'disj': ['Q10.1','Q14.1','Q16.1', 'Q18.1']},
              'rules': ['investments', 'jury', 'analyst', 'bartender']}
 
+### names of columns used in the script for differnt dataframes.
 cnames_groups = {
     'Participant': ['Gender', 'Age', 'Education'],
     'Robot': ['Rationality', 'Color', 'Side'],
@@ -35,25 +36,31 @@ cnames_groups = {
     'Roles': ['Investments', 'Analyst', 'Jury', 'Bartender'],
     'Choices': ['agree2rational', 'prefer']}
 
+### dictionary for choices in dataframes.
 d = {'colors': {'b': 'Blue', 'r': 'Red'}, 'side': {'l': 'left', 'r': 'right'},
      'rationality': {'r': 'rational', 'h': 'half', 'i': 'irrational'}}
 
+### BFI text-->numerical
 bfi_options = {'Disagree strongly' : 1, 'Disagree a little' : 2, 'Neither agree nor disagree':3,
            'Agree a little':4, 'Agree strongly':5}
 
+### NARS text-->numerical
 nars_options = {'Strongly disagree' : 1, 'Disagree' : 2, 'Undecided':3,
            'Agree':4, 'Strongly agree':5}
 
+### Godspeed text-->numerical
 godspeed_options = {'Answer 1' : 1, 'Answer 2' : 2, 'Answer 3':3,
            'Answer 4':4, 'Answer 5':5}
 
-
+### prepearing the data for analysis
 def prepare_data(df_dir):
+    ### load the raw data from qualtrics
     # raw_dir = 'data/raw/'
     raw_dir = 'data/raw_text/'
     files = os.listdir(raw_dir)
     if not os.path.exists(df_dir):
         os.mkdir(df_dir)
+    ### run over all the files from the experiment (different setups)
     for f in files:
         path = raw_dir + f
         df = data_processing(path)
@@ -73,7 +80,10 @@ def prepare_data(df_dir):
             else:
                 raw_df_rh = df.copy()
 
+    ### combining the optiontion of rational-irrational only (and not irrational1 - irrational2)
     raw_df = raw_df_ri.append(raw_df_rh)
+
+    ### calculate the fallacy rates
     fal_rate, conj_rate, disj_rate = fallacy_rate(raw_df_rh)
     print('rational - single fallacy:')
     print(conj_rate)
@@ -90,14 +100,15 @@ def prepare_data(df_dir):
     return raw_df
 
 def data_processing(path):
-
+    ### preprocessing the data
     print('processing: ' + path)
     comb = path.split('_')[-1].split('.')[0]
 
-    ### color and rationality dictionary.
+    ### color dictionary.
     robots_comb = {d['colors'][comb[1]]: d['rationality'][comb[2]],
                    d['colors'][comb[4]]: d['rationality'][comb[5]]}
 
+    ### rationality dictionary.
     rat_comb = {d['rationality'][comb[2]] : {'color' : d['colors'][comb[1]],
                                              'side'  : d['side'][comb[0]]},
                 d['rationality'][comb[5]]: {'color': d['colors'][comb[4]],
@@ -402,10 +413,15 @@ def fallacy_rate(raw_df, save_dir = 'data/paper/', fal_type = 'single'):
     return how many people choose each fallacy.
     :return: fallacy rate per type
     '''
+    ### type of fallacy in each question
     idx = {'Q5.1': 'conj', 'Q7.1': 'conj', 'Q10.1': 'disj', 'Q12.1': 'conj', 'Q14.1': 'disj', 'Q16.1': 'disj',
            'Q18.1': 'disj'}
+
+    ### choose only the columns of the questions from the total dataframe.
     df = raw_df[questions['qns'] + [questions['dont']]]\
         .rename(columns = idx)
+
+    ### calculate the fallacy rates of the all data - not accurate calculation.
     fal_rate = df.apply(pd.value_counts)
 
     a = fal_rate['conj'].sum(axis=1).rename(index = {'half':'single_conj', 'irrational':'double_conj'})
@@ -423,6 +439,8 @@ def fallacy_rate(raw_df, save_dir = 'data/paper/', fal_type = 'single'):
             temp = t.iloc[:,q1].value_counts() / df.shape[0]
             b = pd.concat((b, temp), axis=1)
     b.columns = questions['fallacies']['conj'] + questions['fallacies']['disj']
+
+    ### calculate the fallacy rate per fallacy type - conj/disj
     conj_rate = b[questions['fallacies']['conj']].dropna()
     conj_rate.to_csv(save_dir + '01robots_choosing_conj' + fal_type + '.csv')
     conj_rate = conj_rate.mean(axis = 1)\
@@ -436,7 +454,7 @@ def fallacy_rate(raw_df, save_dir = 'data/paper/', fal_type = 'single'):
     return fal_rate, conj_rate, disj_rate
 
 def diff_test(raw_df, save_dir):
-
+    ### calculate difference test between rationalities for different measurments of Godspeed
     for cat in cnames_groups['GODSPEED'] + [cnames_groups['Choices'][0]]:
 
         if cat == 'agree2rational':
@@ -465,6 +483,7 @@ def diff_test(raw_df, save_dir):
     return df_diff_test
 
 def multi_linear_regression(raw_df, save_dir):
+    ### calculate linear regression for different combination of features (see formulas below)
     formula0 ='Likability2rational ~ agree2rational'
 
     # likeability ~ agree + prefer
@@ -498,7 +517,15 @@ def multi_linear_regression(raw_df, save_dir):
     print(mlr.summary(), file=open(save_dir + "00likeability_agree_BFI.txt", "a"))
 
 def new_df4goren(raw_df, save_dir):
+    ### this is just to create the dataframe Goren asked for.
+    ### take the columns Goren asked for
     dft = raw_df[['prefer', 'rColor', 'iColor', 'rational_agree', 'irrational_agree']]
+
+    ### creat 4 temporary dataframes dft0, dft1, dft2, dft3 for the two irrationalities and preference.
+    ### dft0: don't prefer irrational
+    ### dft1: prefer rational
+    ### dft2: don't prefer rational
+    ### dft3: prefer irrationalv
 
     dft0 = dft[dft.prefer == 0]
     dft0['rationality'] = '1'
@@ -532,34 +559,47 @@ def new_df4goren(raw_df, save_dir):
     dft3 = dft3.drop(['rational_agree', 'rColor', 'iColor'], axis = 1)
     dft3 = dft3.reset_index(drop=True)
 
+    ### combine all the dataframes together to one dataframe,
     dft = pd.concat((dft0, dft1, dft2, dft3), axis=0)
 
+    ### save the daaframe
     save_table(dft, save_dir, '00df4mlr', Latex=False)
 
     return dft
 
 def response_times_diff(save_dir):
+    ### calculate response time differences between the questionnaires without robors ranking vs choosing.
+    ### which columns to look in the data.
     cols = ['Q' + str(x) for x in range(7)]
+
+    ### load ranking data
     rts_ranking = pd.read_csv(save_dir + '00rts_ranking.csv', index_col=0).reset_index(drop = True)
     rts_ranking.columns = cols
+    ### load choosing data
     rts_choosing = pd.read_csv(save_dir + '00rts_choosing.csv', index_col=0).reset_index(drop = True)
     rts_choosing.columns = cols
 
+    ### intialize empty dataframe for the comparison of response times.
     rts_diff = pd.DataFrame({'meanRanking':[], 'semRanking':[], 'meanChoosing':[], 'semChoosing':[], 't':[], 'p_value':[], 'test_type':[]})
+
+    ### comparing between response times per question
     for i in rts_ranking:
         y1 = rts_ranking[i]
         y2 = rts_choosing[i]
         y1m, y1s, y2m, y2s, s, p, _, typ = ttest_or_mannwhitney(y1, y2)
         temp = pd.DataFrame({'meanRanking': [y1m], 'semRanking': [y1s], 'meanChoosing': [y2m], 'semChoosing': [y2s], 't': [s], 'p_value': [p],'test_type': [typ]})
         rts_diff = rts_diff.append(temp)
+
+    ### reformat and save the dataframe with the results
     rts_diff['question'] = cols
     rts_diff = rts_diff.reset_index(drop=True)
-
     rts_diff.to_csv(save_dir + '00rt.csv')
+
     return rts_diff
 
 
 def save_table(df, df_dir,file_name, csv = True, Latex = True):
+    ### save dataframe + in latex format
     if csv:
         df.to_csv(df_dir + file_name + '.csv') # drop = True
 
@@ -568,6 +608,7 @@ def save_table(df, df_dir,file_name, csv = True, Latex = True):
         with open(df_dir + file_name+ '.tex', 'w') as tf:
             tf.write(df.to_latex())
 def main():
+    ### do we need to preprocess the data or load the processed one.
     process_data, analysis = True, False
     # process_data, analysis = False, True
     df_dir = 'data/dataframes/'
@@ -579,14 +620,22 @@ def main():
         raw_df = pd.read_csv(df_dir + '/new_raw_df.csv', index_col=0)
 
     if analysis:
+        ### calculate the correlation between all the columns of the a dataframe
         pv, rho = calculate_corr_with_pvalues(raw_df, method='pearsonr' , save_dir=save_dir)
+
+        ### calculate difference test between rationalities for different measurments of Godspeed
         df_diff = diff_test(raw_df, save_dir)
+
+        ### save the raw data descriptive
         save_table(raw_df.describe(), save_dir, '00descriptive')
 
+        ### multi linear regression
         # multi_linear_regression(raw_df, save_dir)
 
+        ### makes a dataframe in a shape that goren asked
         df4goren = new_df4goren(raw_df, save_dir)
 
+    ### calculate response time differences between the questionnaires without robors ranking vs choosing
     response_times_diff(save_dir)
 
     print()
