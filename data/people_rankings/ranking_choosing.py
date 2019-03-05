@@ -6,9 +6,9 @@ from new_reformat import ttest_or_mannwhitney
 
 # questions organizer
 questions = {'BFI': 7,
-             'Gender': 3,
-             'Age' : 4,
-             'Education' : 5,
+             'Gender': 'Q3',
+             'Age' : 'Q4',
+             'Education' : 'Q5',
              'trap': 13,
              'dont': 20,
              'fallacies':{'conj': [9, 11, 16],
@@ -35,6 +35,7 @@ def load_data(df2load, qns_conj, qns_disj, rat):
     :return: loaded dataframe.
     '''
     raw_df = pd.read_csv(df2load)
+    print(raw_df.shape[0])
     rows2remove, users2remove = trap_question(raw_df, 13, 3)
     raw_df = raw_df.drop(rows2remove, axis=0)
 
@@ -160,6 +161,8 @@ def main():
             pass
 
     raw_df_all = raw_df_ri.append(raw_df_rh)
+    for idx in ['Gender', 'Age', 'Education']:
+        raw_df_all = raw_df_all.rename({questions[idx]: idx}, axis=1)
     raw_df_all.to_csv('raw_df_choose_ranking.csv')
 
     # DataFrame for Goren
@@ -169,8 +172,7 @@ def main():
     rdfr['rationality'] = 'rational'
     rdfr[rdfr[qns] != 'r'] = 0
     rdfr[rdfr[qns] == 'r'] = 1
-    rdfr[qns]
-    rdfr = rdfr[qns + ['side', 'rationality']]
+    rdfr = rdfr[qns + ['side', 'rationality', 'Gender', 'Age', 'Education']]
 
     rdfi = raw_df_all.copy()
     rdfi.pop('rational_position')
@@ -178,8 +180,7 @@ def main():
     rdfi['rationality'] = 'irrational'
     rdfi[rdfi[qns] != 'r'] = 1
     rdfi[rdfi[qns] == 'r'] = 0
-    rdfi[qns]
-    rdfi = rdfi[qns + ['side', 'rationality']]
+    rdfi = rdfi[qns + ['side', 'rationality', 'Gender', 'Age', 'Education']]
 
     df4goren = rdfr.append(rdfi)
     df4goren['side'] = df4goren['side'].replace({'l':'left', 'r':'right'})

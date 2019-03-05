@@ -24,6 +24,7 @@ def total_fallacy_rate(raw_df, questions, save_dir = 'data/paper/'):
     for fal, qs in questions.items():
         for qn in qs:
             cq = 'Q' + str(qn) + '_'
+            print(cq)
             raw_df[cq + 'rate'] = fallacy_rate(raw_df, fal, cq)
 
     rate_df = raw_df[raw_df.columns[raw_df.columns.str.contains('rate')]]
@@ -68,22 +69,36 @@ def response_times(raw_df):
     return responses_times
 
 
-# questions fallacies
+# old quesionnaire guide
 questions = {'conj': [6, 8, 12],
-             'disj': [10, 14, 16, 18]}
+             'disj': [10, 14, 16, 18],
+             'trap': 21,
+             'fpath': 'Emma_ranking_options.csv'}
 
+### new questionnaire
+questions = {'conj': [9, 11, 18, 22],
+             'disj': [14, 16, 20],
+             'trap': 13,
+             'fpath': 'Emma_ranking_options_v1.csv',
+             'BFI': 7,
+             'Gender': 'Q3',
+             'Age' : 'Q4',
+             'Education' : 'Q5',}
 # load the data.
-raw_df = pd.read_csv('Emma_ranking_options.csv')
+raw_df = pd.read_csv(questions['fpath'])
 
 #check trap question
-rows2remove, users2remove = trap_question(raw_df, 21, 3)
+rows2remove, users2remove = trap_question(raw_df, questions['trap'], 3)
 raw_df = raw_df.drop(rows2remove, axis=0)
 
+for idx in ['Gender', 'Age', 'Education']:
+    raw_df = raw_df.rename({questions[idx]:idx}, axis = 1)
+
 print(raw_df.shape[0])
-fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, questions)
+fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, dict(filter(lambda i:i[0] in ['conj', 'disj'], questions.items())))
+
 rts = response_times(raw_df)
 print(rts.mean(axis = 0))
-
 rts.to_csv('00rts_ranking.csv')
 
 print()
