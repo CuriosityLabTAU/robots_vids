@@ -1,6 +1,33 @@
 import numpy as np
 import pandas as pd
 
+def BFI_data(df, bfi_cols):
+
+    BFI_sub_meaning = {'S1':'Extroversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
+    BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
+    BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
+
+    for s in BFI_sub.keys():
+
+        ### columns to revverse the choices 1 <--> 5
+        rev_cols = bfi_cols[np.array(BFI_sub[s]) - 1][np.array(BFI_rev[s], dtype='bool')]
+        df[rev_cols] = df[rev_cols].applymap(reverse_choices)
+
+        ### calculating the average for this sub scale
+        df[BFI_sub_meaning[s]] = df[bfi_cols[np.array(BFI_sub[s]) - 1]].mean(axis = 1)
+
+
+    return df[list(BFI_sub_meaning.values())]
+
+def reverse_choices(v):
+    '''
+    reverse value for BFI analysis
+    :param v: value to reverse
+    :return: reversed value
+    '''
+    revrsed_values = [5.,4.,3.,2.,1.]
+    return revrsed_values[int(v)-1]
+
 def fallacy_rate(raw_df, fallacy, cq):
     '''
     :param raw_df: dataframe with raw data
@@ -81,6 +108,7 @@ questions = {'conj': [9, 11, 18, 22],
              'trap': 13,
              'fpath': 'Emma_ranking_options_v1.csv',
              'BFI': 7,
+             'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
              'Gender': 'Q3',
              'Age' : 'Q4',
              'Education' : 'Q5',}
@@ -91,10 +119,18 @@ raw_df = pd.read_csv(questions['fpath'])
 rows2remove, users2remove = trap_question(raw_df, questions['trap'], 3)
 raw_df = raw_df.drop(rows2remove, axis=0)
 
+### demographics
 for idx in ['Gender', 'Age', 'Education']:
     raw_df = raw_df.rename({questions[idx]:idx}, axis = 1)
 
 print(raw_df.shape[0])
+
+### BFI answers
+bfi_cols = raw_df.columns[raw_df.columns.str.contains(str(questions['BFI']) + '_')]
+df_bfi = BFI_data(raw_df, bfi_cols)
+
+raw_df = pd.concat((raw_df, df_bfi), axis=1)
+
 fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, dict(filter(lambda i:i[0] in ['conj', 'disj'], questions.items())))
 #
 rts = response_times(raw_df)

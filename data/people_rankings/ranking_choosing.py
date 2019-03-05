@@ -6,6 +6,7 @@ from new_reformat import ttest_or_mannwhitney
 
 # questions organizer
 questions = {'BFI': 7,
+             'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
              'Gender': 'Q3',
              'Age' : 'Q4',
              'Education' : 'Q5',
@@ -23,6 +24,34 @@ qns_disj = list(np.array(qns_disj, dtype='str'))
 qns_disj = ['Q' + qn for qn in qns_disj] # list of choosing questions
 
 qns = qns_conj + qns_disj
+
+def BFI_data(df, bfi_cols):
+
+    BFI_sub_meaning = {'S1':'Extroversion', 'S2':'Agreeableness', 'S3':'Conscientiousness', 'S4':'Neuroticism', 'S5':'Openness'}
+    BFI_rev = {'S1':[0,1,0,0,1,0,1,0], 'S2':[1,0,1,0,0,1,0,1,0], 'S3':[0,1,0,1,1,0,0,0,1],'S4':[0,1,0,0,1,0,1,0],'S5':[0,0,0,0,0,0,1,0,1,0]}
+    BFI_sub = {'S1':[1,6,11,16,21,26,31,36], 'S2':[2,7,12,17,22,27,32,37,42], 'S3':[3,8,13,18,23,28,33,38,43],'S4':[4,9,14,19,24,29,34,39],'S5':[5,10,15,20,25,30,35,40,41,44]}
+
+    for s in BFI_sub.keys():
+
+        ### columns to revverse the choices 1 <--> 5
+        rev_cols = bfi_cols[np.array(BFI_sub[s]) - 1][np.array(BFI_rev[s], dtype='bool')]
+        df[rev_cols] = df[rev_cols].applymap(reverse_choices)
+
+        ### calculating the average for this sub scale
+        df[BFI_sub_meaning[s]] = df[bfi_cols[np.array(BFI_sub[s]) - 1]].mean(axis = 1)
+
+
+    return df[list(BFI_sub_meaning.values())]
+
+def reverse_choices(v):
+    '''
+    reverse value for BFI analysis
+    :param v: value to reverse
+    :return: reversed value
+    '''
+    revrsed_values = [5.,4.,3.,2.,1.]
+    return revrsed_values[int(v)-1]
+
 
 def load_data(df2load, qns_conj, qns_disj, rat):
     '''
@@ -165,22 +194,28 @@ def main():
         raw_df_all = raw_df_all.rename({questions[idx]: idx}, axis=1)
     raw_df_all.to_csv('raw_df_choose_ranking.csv')
 
+    ### BFI answers
+    bfi_cols = raw_df_all.columns[raw_df_all.columns.str.contains(str(questions['BFI']) + '_')]
+    df_bfi = BFI_data(raw_df_all, bfi_cols)
+
+    raw_df_all = pd.concat((raw_df_all, df_bfi), axis=1)
+
     # DataFrame for Goren
     rdfr = raw_df_all.copy()
     rdfr.pop('irrational_position')
     rdfr = rdfr.rename({'rational_position': 'side'}, axis='columns')
     rdfr['rationality'] = 'rational'
-    rdfr[rdfr[qns] != 'r'] = 0
-    rdfr[rdfr[qns] == 'r'] = 1
-    rdfr = rdfr[qns + ['side', 'rationality', 'Gender', 'Age', 'Education']]
+    rdfr[qns][rdfr[qns] != 'r'] = 0
+    rdfr[qns][rdfr[qns] == 'r'] = 1
+    rdfr = rdfr[qns + ['side', 'rationality', 'Gender', 'Age', 'Education'] + questions['BFI_sub']]
 
     rdfi = raw_df_all.copy()
     rdfi.pop('rational_position')
     rdfi = rdfi.rename({'irrational_position': 'side'}, axis='columns')
     rdfi['rationality'] = 'irrational'
-    rdfi[rdfi[qns] != 'r'] = 1
-    rdfi[rdfi[qns] == 'r'] = 0
-    rdfi = rdfi[qns + ['side', 'rationality', 'Gender', 'Age', 'Education']]
+    rdfi[qns][rdfi[qns] != 'r'] = 1
+    rdfi[qns][rdfi[qns] == 'r'] = 0
+    rdfi = rdfi[qns + ['side', 'rationality', 'Gender', 'Age', 'Education'] + questions['BFI_sub']]
 
     df4goren = rdfr.append(rdfi)
     df4goren['side'] = df4goren['side'].replace({'l':'left', 'r':'right'})
