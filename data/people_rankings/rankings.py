@@ -96,7 +96,7 @@ for idx in ['Gender', 'Age', 'Education']:
 
 print(raw_df.shape[0])
 fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, dict(filter(lambda i:i[0] in ['conj', 'disj'], questions.items())))
-
+#
 rts = response_times(raw_df)
 print(rts.mean(axis = 0))
 rts.to_csv('00rts_ranking.csv')
