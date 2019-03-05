@@ -57,9 +57,12 @@ def prepare_data(df_dir):
     ### load the raw data from qualtrics
     # raw_dir = 'data/raw/'
     raw_dir = 'data/raw_text/'
+
+    ### checking which files in the directory --> list
     files = os.listdir(raw_dir)
     if not os.path.exists(df_dir):
         os.mkdir(df_dir)
+
     ### run over all the files from the experiment (different setups)
     for f in files:
         path = raw_dir + f
@@ -611,6 +614,7 @@ def main():
     ### do we need to preprocess the data or load the processed one.
     process_data, analysis = True, False
     # process_data, analysis = False, True
+
     df_dir = 'data/dataframes/'
     save_dir = 'data/paper/'
 
