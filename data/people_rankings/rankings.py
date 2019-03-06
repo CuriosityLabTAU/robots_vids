@@ -131,6 +131,7 @@ df_bfi = BFI_data(raw_df, bfi_cols)
 
 raw_df = pd.concat((raw_df, df_bfi), axis=1)
 
+### calculate fallacy rates
 fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, dict(filter(lambda i:i[0] in ['conj', 'disj'], questions.items())))
 #
 rts = response_times(raw_df)

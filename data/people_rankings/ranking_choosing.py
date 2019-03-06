@@ -205,16 +205,14 @@ def main():
     rdfr.pop('irrational_position')
     rdfr = rdfr.rename({'rational_position': 'side'}, axis='columns')
     rdfr['rationality'] = 'rational'
-    rdfr[qns][rdfr[qns] != 'r'] = 0
-    rdfr[qns][rdfr[qns] == 'r'] = 1
+    rdfr.loc[:, qns] = rdfr.loc[:, qns].replace({'ch': 0, 'dh': 0, 'ci': 0, 'di': 0, 'r': 1})
     rdfr = rdfr[qns + ['side', 'rationality', 'Gender', 'Age', 'Education'] + questions['BFI_sub']]
 
     rdfi = raw_df_all.copy()
     rdfi.pop('rational_position')
     rdfi = rdfi.rename({'irrational_position': 'side'}, axis='columns')
     rdfi['rationality'] = 'irrational'
-    rdfi[qns][rdfi[qns] != 'r'] = 1
-    rdfi[qns][rdfi[qns] == 'r'] = 0
+    rdfi.loc[:, qns] = rdfi.loc[:, qns].replace({'ch': 1, 'dh': 1, 'ci': 1, 'di': 1, 'r': 0})
     rdfi = rdfi[qns + ['side', 'rationality', 'Gender', 'Age', 'Education'] + questions['BFI_sub']]
 
     df4goren = rdfr.append(rdfi)
