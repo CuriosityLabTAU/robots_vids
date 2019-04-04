@@ -102,16 +102,16 @@ questions = {'conj': [6, 8, 12],
              'trap': 21,
              'fpath': 'Emma_ranking_options.csv'}
 
-### new questionnaire
-questions = {'conj': [9, 11, 18, 22],
-             'disj': [14, 16, 20],
-             'trap': 13,
-             'fpath': 'Emma_ranking_options_v1.csv',
-             'BFI': 7,
-             'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
-             'Gender': 'Q3',
-             'Age' : 'Q4',
-             'Education' : 'Q5',}
+# ### new questionnaire
+# questions = {'conj': [9, 11, 18, 22],
+#              'disj': [14, 16, 20],
+#              'trap': 13,
+#              'fpath': 'Emma_ranking_options_v1.csv',
+#              'BFI': 7,
+#              'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
+#              'Gender': 'Q3',
+#              'Age' : 'Q4',
+#              'Education' : 'Q5',}
 # load the data.
 raw_df = pd.read_csv(questions['fpath'])
 
