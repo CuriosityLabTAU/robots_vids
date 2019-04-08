@@ -1,0 +1,897 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,Q2,Q3,Q4,Q5,Q7_1,Q7_2,Q7_3,Q7_4,Q7_5,Q7_6,Q7_7,Q7_8,Q7_9,Q7_10,Q7_11,Q7_12,Q7_13,Q7_14,Q7_15,Q7_16,Q7_17,Q7_18,Q7_19,Q7_20,Q7_21,Q7_22,Q7_23,Q7_24,Q7_25,Q7_26,Q7_27,Q7_28,Q7_29,Q7_30,Q7_31,Q7_32,Q7_33,Q7_34,Q7_35,Q7_36,Q7_37,Q7_38,Q7_39,Q7_40,Q7_41,Q7_42,Q7_43,Q7_44,Q8_First Click,Q8_Last Click,Q8_Page Submit,Q8_Click Count,Q9,Q10_First Click,Q10_Last Click,Q10_Page Submit,Q10_Click Count,Q11,Q12_First Click,Q12_Last Click,Q12_Page Submit,Q12_Click Count,Q13,Q14,Q15_First Click,Q15_Last Click,Q15_Page Submit,Q15_Click Count,Q16,Q17_First Click,Q17_Last Click,Q17_Page Submit,Q17_Click Count,Q18,Q19_First Click,Q19_Last Click,Q19_Page Submit,Q19_Click Count,Q20,Q21_First Click,Q21_Last Click,Q21_Page Submit,Q21_Click Count,Q22,Q23_First Click,Q23_Last Click,Q23_Page Submit,Q23_Click Count,survey_code
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,"I am age 18 or older, I have read and understood the information above, I want to participate in this research and continue with the survey:",To which gender identity do you most identify?,What is your age?,"What is the highest degree or level of school you have completed? (If 
+you’re currently enrolled in school, please indicate the highest degree 
+you have received.)",I see myself as someone who is: - Is talkative,I see myself as someone who is: - Tends to find fault with others,I see myself as someone who is: - Does a thorough job,"I see myself as someone who is: - Is depressed, blue","I see myself as someone who is: - Is original, comes up with new ideas",I see myself as someone who is: - Is reserved,I see myself as someone who is: - Is helpful and unselfish with others,I see myself as someone who is: - Can be somewhat careless,"I see myself as someone who is: - Is relaxed, handles stress well",I see myself as someone who is: - Is curious about many different things,I see myself as someone who is: - Is full of energy,I see myself as someone who is: - Starts quarrels with others,I see myself as someone who is: - Is a reliable worker,I see myself as someone who is: - Can be tense,"I see myself as someone who is: - Is ingenious, a deep thinker",I see myself as someone who is: - Generates a lot of enthusiasm,I see myself as someone who is: - Has a forgiving nature,I see myself as someone who is: - Tends to be disorganized,I see myself as someone who is: - Worries a lot,I see myself as someone who is: - Has ana active imagination,I see myself as someone who is: - Tends to be quiet,I see myself as someone who is: - Is generally trusting,I see myself as someone who is: - Tends to be lazy,"I see myself as someone who is: - Is emotionally stable, not easily upset",I see myself as someone who is: - Is inventive,I see myself as someone who is: - Has an assertive personality,I see myself as someone who is: - Can be cold and aloof,I see myself as someone who is: - Preseveres until the task is finished,I see myself as someone who is: - Can be moody,"I see myself as someone who is: - Values artistic, aesthetic experiences","I see myself as someone who is: - Is sometimes shy, inhibited",I see myself as someone who is: - Is considerate and kind to almost everyone,I see myself as someone who is: - Does things efficiently,I see myself as someone who is: - Remains calm in tense situations,I see myself as someone who is: - Prefers work that is routine,"I see myself as someone who is: - Is outgoing, sociable",I see myself as someone who is: - Is sometimes rude to others,I see myself as someone who is: - Makes plans and follows through with them,I see myself as someone who is: - Gets nervous easily,"I see myself as someone who is: - Likes to reflect, play with ideas",I see myself as someone who is: - Has few artistic interests,I see myself as someone who is: - Likes to cooperate with others,I see myself as someone who is: - Is easily disracted,"I see myself as someone who is: - Is sophisticated in art, music, or literature",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"Emma lives in an apartment with her two cats in the center of the city and is an outgoing person. She takes yoga classes at the gym three times a week, enjoys reading science-fiction books and volunteers at least once a week in an animal shelter.
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"Liz lives in a Victorian home in Oakland. She is an analytical thinker and works
+at a start-up company. She tries to attend a few classes at the gym every week. She is very
+ambitious at her job and also enjoys cooking very much and is quite good at it. 
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,What does Liz enjoy doing?,"Emma and Liz want to do an extracurricular activity together.For each statement, please move the horizontal slider to represent how likely it is they will choose this activity and why.
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"The Start-up where Liz and Emma's work was recently bought by another company. The new CEO is dismissing many employees. Who do you think the new CEO will not dismiss?
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"Liz and Emma came up with an idea for a new business.
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"Recently, Emma came to the conclusion that she doesn’t have enough time in a day.
+Below are 2 descending ranking options from most to least probable.
+Which one DON'T you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,"Emma and Liz have been best friends for years. How do you think they met?
+
+Below are 2 descending ranking options from most to least probable.
+Which one do you agree with?",Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,survey_code
+"{""ImportId"":""startDate"",""timeZone"":""America/Denver""}","{""ImportId"":""endDate"",""timeZone"":""America/Denver""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""America/Denver""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID23""}","{""ImportId"":""QID24""}","{""ImportId"":""QID25_TEXT""}","{""ImportId"":""QID26""}","{""ImportId"":""QID11_1""}","{""ImportId"":""QID11_2""}","{""ImportId"":""QID11_3""}","{""ImportId"":""QID11_4""}","{""ImportId"":""QID11_5""}","{""ImportId"":""QID11_6""}","{""ImportId"":""QID11_7""}","{""ImportId"":""QID11_8""}","{""ImportId"":""QID11_9""}","{""ImportId"":""QID11_10""}","{""ImportId"":""QID11_11""}","{""ImportId"":""QID11_12""}","{""ImportId"":""QID11_13""}","{""ImportId"":""QID11_14""}","{""ImportId"":""QID11_15""}","{""ImportId"":""QID11_16""}","{""ImportId"":""QID11_17""}","{""ImportId"":""QID11_18""}","{""ImportId"":""QID11_19""}","{""ImportId"":""QID11_20""}","{""ImportId"":""QID11_21""}","{""ImportId"":""QID11_22""}","{""ImportId"":""QID11_23""}","{""ImportId"":""QID11_24""}","{""ImportId"":""QID11_25""}","{""ImportId"":""QID11_26""}","{""ImportId"":""QID11_27""}","{""ImportId"":""QID11_28""}","{""ImportId"":""QID11_29""}","{""ImportId"":""QID11_30""}","{""ImportId"":""QID11_31""}","{""ImportId"":""QID11_32""}","{""ImportId"":""QID11_33""}","{""ImportId"":""QID11_34""}","{""ImportId"":""QID11_35""}","{""ImportId"":""QID11_36""}","{""ImportId"":""QID11_37""}","{""ImportId"":""QID11_38""}","{""ImportId"":""QID11_39""}","{""ImportId"":""QID11_40""}","{""ImportId"":""QID11_41""}","{""ImportId"":""QID11_42""}","{""ImportId"":""QID11_43""}","{""ImportId"":""QID11_44""}","{""ImportId"":""QID12_FIRST_CLICK""}","{""ImportId"":""QID12_LAST_CLICK""}","{""ImportId"":""QID12_PAGE_SUBMIT""}","{""ImportId"":""QID12_CLICK_COUNT""}","{""ImportId"":""QID1""}","{""ImportId"":""QID13_FIRST_CLICK""}","{""ImportId"":""QID13_LAST_CLICK""}","{""ImportId"":""QID13_PAGE_SUBMIT""}","{""ImportId"":""QID13_CLICK_COUNT""}","{""ImportId"":""QID19""}","{""ImportId"":""QID20_FIRST_CLICK""}","{""ImportId"":""QID20_LAST_CLICK""}","{""ImportId"":""QID20_PAGE_SUBMIT""}","{""ImportId"":""QID20_CLICK_COUNT""}","{""ImportId"":""QID21""}","{""ImportId"":""QID3""}","{""ImportId"":""QID14_FIRST_CLICK""}","{""ImportId"":""QID14_LAST_CLICK""}","{""ImportId"":""QID14_PAGE_SUBMIT""}","{""ImportId"":""QID14_CLICK_COUNT""}","{""ImportId"":""QID4""}","{""ImportId"":""QID15_FIRST_CLICK""}","{""ImportId"":""QID15_LAST_CLICK""}","{""ImportId"":""QID15_PAGE_SUBMIT""}","{""ImportId"":""QID15_CLICK_COUNT""}","{""ImportId"":""QID5""}","{""ImportId"":""QID16_FIRST_CLICK""}","{""ImportId"":""QID16_LAST_CLICK""}","{""ImportId"":""QID16_PAGE_SUBMIT""}","{""ImportId"":""QID16_CLICK_COUNT""}","{""ImportId"":""QID6""}","{""ImportId"":""QID17_FIRST_CLICK""}","{""ImportId"":""QID17_LAST_CLICK""}","{""ImportId"":""QID17_PAGE_SUBMIT""}","{""ImportId"":""QID17_CLICK_COUNT""}","{""ImportId"":""QID7""}","{""ImportId"":""QID18_FIRST_CLICK""}","{""ImportId"":""QID18_LAST_CLICK""}","{""ImportId"":""QID18_PAGE_SUBMIT""}","{""ImportId"":""QID18_CLICK_COUNT""}","{""ImportId"":""survey_code""}"
+2019-01-13 00:34:33,2019-01-13 00:34:33,Survey Test,,100,0,True,2019-01-13 00:34:33,R_bO98vIp4vDDtMzz,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,"Consectetuer ab eu pede erat ut arcu viverra? Dui morbi, arcu consectetuer dui tortor.","Bechelor's degree (e.g. BA, BS)",Agree a little,Disagree a little,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Disagree strongly,Disagree strongly,Agree strongly,Neither agree nor disagree,Disagree strongly,Agree a little,Agree strongly,Disagree strongly,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Agree a little,Agree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Agree a little,Agree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree strongly,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Disagree a little,Agree a little,9.160000000000000142108547152020037174224853515625,9.300000000000000710542735760100185871124267578125,9.5099999999999997868371792719699442386627197265625,25,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",4.910000000000000142108547152020037174224853515625,5.82000000000000028421709430404007434844970703125,5.53000000000000024868995751603506505489349365234375,13,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",0.9699999999999999733546474089962430298328399658203125,4.910000000000000142108547152020037174224853515625,5.42999999999999971578290569595992565155029296875,33,cooking,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",3.779999999999999804600747665972448885440826416015625,7.269999999999999573674358543939888477325439453125,5.96999999999999975131004248396493494510650634765625,17,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",4.7400000000000002131628207280300557613372802734375,6.20999999999999996447286321199499070644378662109375,7.089999999999999857891452847979962825775146484375,48,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",2.54000000000000003552713678800500929355621337890625,8.1899999999999995026200849679298698902130126953125,5.660000000000000142108547152020037174224853515625,43,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",1.5100000000000000088817841970012523233890533447265625,6.79999999999999982236431605997495353221893310546875,9.0299999999999993605115378159098327159881591796875,12,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",4.04999999999999982236431605997495353221893310546875,9.71000000000000085265128291212022304534912109375,8.78999999999999914734871708787977695465087890625,4,84280818
+2019-01-13 00:34:33,2019-01-13 00:34:33,Survey Test,,100,0,True,2019-01-13 00:34:33,R_8eQiDhnzYVc8bIh,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Consequat egestas! Pretium orci proin. Facilisis molestie? Curabitur erat blandit at porttitor per.,"Professional degree (e.g. MD, DDS, DVM)",Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree strongly,Agree a little,Agree strongly,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Agree strongly,Agree a little,Agree a little,Agree a little,Agree a little,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Agree strongly,Disagree a little,Agree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Agree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Agree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Agree strongly,Disagree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Agree strongly,Agree a little,Neither agree nor disagree,8.2400000000000002131628207280300557613372802734375,9.0800000000000000710542735760100185871124267578125,8.28999999999999914734871708787977695465087890625,17,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",1.189999999999999946709294817992486059665679931640625,1.87999999999999989341858963598497211933135986328125,1.3600000000000000976996261670137755572795867919921875,40,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",0.5500000000000000444089209850062616169452667236328125,9.5299999999999993605115378159098327159881591796875,3.319999999999999840127884453977458178997039794921875,41,cooking,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",5.54999999999999982236431605997495353221893310546875,6.0099999999999997868371792719699442386627197265625,6.63999999999999968025576890795491635799407958984375,6,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",3.9900000000000002131628207280300557613372802734375,6.79000000000000003552713678800500929355621337890625,6.12000000000000010658141036401502788066864013671875,36,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",7.12999999999999989341858963598497211933135986328125,8.7599999999999997868371792719699442386627197265625,8.269999999999999573674358543939888477325439453125,13,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",3.520000000000000017763568394002504646778106689453125,9.3100000000000004973799150320701301097869873046875,3.70000000000000017763568394002504646778106689453125,42,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",0.9899999999999999911182158029987476766109466552734375,9.3100000000000004973799150320701301097869873046875,1.479999999999999982236431605997495353221893310546875,28,53157493
+2019-01-13 00:34:33,2019-01-13 00:34:34,Survey Test,,100,1,True,2019-01-13 00:34:34,R_d5oSl4J7XoXkFfL,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,Sit rhoncus! Donec metus neque dolorem vestibulum? Placerat erat proin platea.,High school degree or equivalent (e.g. GED),Agree a little,Agree a little,Agree a little,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Agree a little,Disagree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Agree a little,Disagree a little,Agree a little,Disagree a little,Agree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Disagree strongly,Agree a little,Neither agree nor disagree,Agree a little,Agree a little,Agree a little,Agree a little,Agree strongly,Disagree strongly,Agree strongly,Agree strongly,Disagree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Agree a little,Agree a little,Agree a little,Disagree a little,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,8.550000000000000710542735760100185871124267578125,9.6899999999999995026200849679298698902130126953125,8.92999999999999971578290569595992565155029296875,0,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",0.67000000000000003996802888650563545525074005126953125,8.25,2.7400000000000002131628207280300557613372802734375,8,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",9.46000000000000085265128291212022304534912109375,9.82000000000000028421709430404007434844970703125,9.6500000000000003552713678800500929355621337890625,39,plat the piano,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",7.55999999999999960920149533194489777088165283203125,7.70999999999999996447286321199499070644378662109375,7.5800000000000000710542735760100185871124267578125,8,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",5.0099999999999997868371792719699442386627197265625,5.45000000000000017763568394002504646778106689453125,7.29000000000000003552713678800500929355621337890625,28,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",7.7400000000000002131628207280300557613372802734375,9.5600000000000004973799150320701301097869873046875,8.71000000000000085265128291212022304534912109375,2,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",5.44000000000000039079850466805510222911834716796875,8.769999999999999573674358543939888477325439453125,6.9900000000000002131628207280300557613372802734375,36,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",2.859999999999999875655021241982467472553253173828125,4.80999999999999960920149533194489777088165283203125,6.20999999999999996447286321199499070644378662109375,32,74645672
+2019-01-13 00:34:34,2019-01-13 00:34:34,Survey Test,,100,0,True,2019-01-13 00:34:34,R_cGF05jbdlX3xMPz,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,Tempor ultricies posuere? Ultrices natoque integer nec vel metus aenean. Primis! Ipsum. Commodo tempor nonummy.,"Bechelor's degree (e.g. BA, BS)",Agree strongly,Agree strongly,Disagree strongly,Agree a little,Neither agree nor disagree,Disagree strongly,Agree strongly,Agree a little,Agree a little,Agree a little,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Agree a little,Agree strongly,Agree a little,Agree a little,Agree strongly,Agree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Agree strongly,Disagree strongly,Disagree strongly,Agree a little,Disagree a little,Neither agree nor disagree,Agree strongly,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree strongly,Agree a little,Disagree strongly,3.399999999999999911182158029987476766109466552734375,3.819999999999999840127884453977458178997039794921875,8.7200000000000006394884621840901672840118408203125,35,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",7.339999999999999857891452847979962825775146484375,8.660000000000000142108547152020037174224853515625,9.4399999999999995026200849679298698902130126953125,6,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",0.460000000000000019984014443252817727625370025634765625,3.6699999999999999289457264239899814128875732421875,1.2800000000000000266453525910037569701671600341796875,4,crafting,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",7.9900000000000002131628207280300557613372802734375,8.089999999999999857891452847979962825775146484375,9.4000000000000003552713678800500929355621337890625,7,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",6.54999999999999982236431605997495353221893310546875,6.9900000000000002131628207280300557613372802734375,8.839999999999999857891452847979962825775146484375,29,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",6.8499999999999996447286321199499070644378662109375,7.70000000000000017763568394002504646778106689453125,9.6899999999999995026200849679298698902130126953125,48,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",1.4699999999999999733546474089962430298328399658203125,2.850000000000000088817841970012523233890533447265625,2.79000000000000003552713678800500929355621337890625,14,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",2.029999999999999804600747665972448885440826416015625,6.1500000000000003552713678800500929355621337890625,4.7599999999999997868371792719699442386627197265625,50,24342823
+2019-01-13 00:34:35,2019-01-13 00:34:35,Survey Test,,100,0,True,2019-01-13 00:34:35,R_eDKfDft9XZs70eV,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Nonummy sapien eleifend? Posuere cras luctus urna faucibus. Fermentum! Dapibus proin rutrum suscipit.,"Some college, no degree",Disagree a little,Disagree a little,Disagree a little,Neither agree nor disagree,Disagree strongly,Agree strongly,Disagree a little,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Disagree a little,Agree a little,Disagree strongly,Agree a little,Agree a little,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Agree strongly,Agree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree strongly,Agree strongly,Disagree strongly,Agree a little,Agree strongly,Agree strongly,Agree strongly,Agree a little,Disagree a little,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,8.1300000000000007815970093361102044582366943359375,8.8599999999999994315658113919198513031005859375,9.3900000000000005684341886080801486968994140625,18,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",8.199999999999999289457264239899814128875732421875,8.96000000000000085265128291212022304534912109375,8.8499999999999996447286321199499070644378662109375,32,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",2.899999999999999911182158029987476766109466552734375,5.339999999999999857891452847979962825775146484375,6.87999999999999989341858963598497211933135986328125,27,plat the piano,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",4.80999999999999960920149533194489777088165283203125,5.88999999999999968025576890795491635799407958984375,9.089999999999999857891452847979962825775146484375,32,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",4.25,8.6199999999999992184029906638897955417633056640625,4.32000000000000028421709430404007434844970703125,41,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",5.20000000000000017763568394002504646778106689453125,9.17999999999999971578290569595992565155029296875,9.199999999999999289457264239899814128875732421875,47,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",8.0800000000000000710542735760100185871124267578125,9.3300000000000000710542735760100185871124267578125,9.1199999999999992184029906638897955417633056640625,49,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",9.4000000000000003552713678800500929355621337890625,9.949999999999999289457264239899814128875732421875,9.4399999999999995026200849679298698902130126953125,17,92093404
+2019-01-13 00:34:35,2019-01-13 00:34:35,Survey Test,,100,0,True,2019-01-13 00:34:36,R_cPh3a1HQxEgtNI1,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,"Tincidunt est! Augue sagittis vulputate. Non nibh temporibus, ut quis platea velit scelerisque turpis.","Bechelor's degree (e.g. BA, BS)",Disagree a little,Neither agree nor disagree,Agree a little,Agree strongly,Disagree a little,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree strongly,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree strongly,Disagree strongly,Agree strongly,Agree strongly,Agree strongly,Agree a little,Disagree strongly,Agree a little,Disagree strongly,Agree strongly,Disagree a little,Agree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Agree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Disagree a little,Agree a little,Disagree a little,Neither agree nor disagree,0.59999999999999997779553950749686919152736663818359375,4.21999999999999975131004248396493494510650634765625,8.9700000000000006394884621840901672840118408203125,25,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",7.11000000000000031974423109204508364200592041015625,7.6699999999999999289457264239899814128875732421875,9.3100000000000004973799150320701301097869873046875,23,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",2.109999999999999875655021241982467472553253173828125,5.339999999999999857891452847979962825775146484375,7.019999999999999573674358543939888477325439453125,44,climbimg,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",9.21000000000000085265128291212022304534912109375,9.25,9.57000000000000028421709430404007434844970703125,33,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",5.6500000000000003552713678800500929355621337890625,7.8499999999999996447286321199499070644378662109375,7.75,31,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",6.69000000000000039079850466805510222911834716796875,8.589999999999999857891452847979962825775146484375,9.050000000000000710542735760100185871124267578125,9,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",0.54000000000000003552713678800500929355621337890625,0.7600000000000000088817841970012523233890533447265625,5.980000000000000426325641456060111522674560546875,21,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",6.13999999999999968025576890795491635799407958984375,8.1400000000000005684341886080801486968994140625,6.80999999999999960920149533194489777088165283203125,47,10908992
+2019-01-13 00:34:36,2019-01-13 00:34:36,Survey Test,,100,0,True,2019-01-13 00:34:36,R_eIGjT1TdOHuizCl,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Porta volutpat eros est! Aenean. Nulla ultricies quis bibendum mauris eros culpa dictumst.,"Some college, no degree",Neither agree nor disagree,Disagree a little,Disagree a little,Agree a little,Disagree a little,Agree strongly,Disagree strongly,Disagree strongly,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree strongly,Agree a little,Disagree strongly,Agree a little,Agree a little,Agree strongly,Agree a little,Disagree strongly,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Agree a little,Disagree a little,Disagree strongly,Disagree a little,Disagree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Agree a little,7.80999999999999960920149533194489777088165283203125,9.3900000000000005684341886080801486968994140625,8.8800000000000007815970093361102044582366943359375,37,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",8.339999999999999857891452847979962825775146484375,9.949999999999999289457264239899814128875732421875,9.4199999999999999289457264239899814128875732421875,38,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",7.089999999999999857891452847979962825775146484375,8.4000000000000003552713678800500929355621337890625,8.589999999999999857891452847979962825775146484375,42,climbimg,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",7.37000000000000010658141036401502788066864013671875,8.7599999999999997868371792719699442386627197265625,8.1099999999999994315658113919198513031005859375,6,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",2.70999999999999996447286321199499070644378662109375,9.4700000000000006394884621840901672840118408203125,5.0800000000000000710542735760100185871124267578125,20,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",9.0999999999999996447286321199499070644378662109375,9.9199999999999999289457264239899814128875732421875,9.6699999999999999289457264239899814128875732421875,11,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",1.12000000000000010658141036401502788066864013671875,6.17999999999999971578290569595992565155029296875,8.410000000000000142108547152020037174224853515625,21,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",2.62999999999999989341858963598497211933135986328125,8.4399999999999995026200849679298698902130126953125,6.94000000000000039079850466805510222911834716796875,8,19423246
+2019-01-13 00:34:37,2019-01-13 00:34:37,Survey Test,,100,0,True,2019-01-13 00:34:37,R_bDFY5I1viOG1xJ3,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,"Natoque temporibus nullam augue duis venenatis, convallis nec, posuere. Justo sodales.","Doctorate (e.g. PhD, EdD)",Agree strongly,Agree a little,Neither agree nor disagree,Agree strongly,Disagree strongly,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Agree strongly,Agree a little,Disagree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Disagree strongly,Disagree a little,Agree strongly,Disagree a little,Disagree a little,Agree strongly,Disagree strongly,Agree strongly,Agree a little,Agree a little,Neither agree nor disagree,Agree a little,Agree a little,Agree strongly,Agree a little,Disagree a little,Agree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Agree strongly,Disagree strongly,Disagree strongly,Agree strongly,Neither agree nor disagree,3.479999999999999982236431605997495353221893310546875,5.980000000000000426325641456060111522674560546875,9.67999999999999971578290569595992565155029296875,48,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",8.57000000000000028421709430404007434844970703125,9.660000000000000142108547152020037174224853515625,9.0800000000000000710542735760100185871124267578125,1,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",1.3899999999999999023003738329862244427204132080078125,6.519999999999999573674358543939888477325439453125,5.410000000000000142108547152020037174224853515625,3,cooking,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",6,6.9000000000000003552713678800500929355621337890625,9.8699999999999992184029906638897955417633056640625,46,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",0.08000000000000000166533453693773481063544750213623046875,4.70000000000000017763568394002504646778106689453125,8.699999999999999289457264239899814128875732421875,20,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",9.3599999999999994315658113919198513031005859375,9.5600000000000004973799150320701301097869873046875,9.6300000000000007815970093361102044582366943359375,9,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",7.69000000000000039079850466805510222911834716796875,9.2200000000000006394884621840901672840118408203125,8.6400000000000005684341886080801486968994140625,30,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",2.12000000000000010658141036401502788066864013671875,4.519999999999999573674358543939888477325439453125,4.88999999999999968025576890795491635799407958984375,20,58436687
+2019-01-13 00:34:37,2019-01-13 00:34:38,Survey Test,,100,1,True,2019-01-13 00:34:38,R_8CFu624ajKhdYln,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Pede montes sed convallis. Leo eu consectetuer aliquet molestie! Platea mauris ac elementum.,High school degree or equivalent (e.g. GED),Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Agree strongly,Disagree strongly,Disagree a little,Agree strongly,Disagree a little,Disagree strongly,Agree a little,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree a little,Disagree strongly,Disagree strongly,Disagree a little,Agree a little,Disagree strongly,Agree a little,Disagree a little,Disagree a little,Agree a little,Neither agree nor disagree,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Agree a little,Neither agree nor disagree,Agree a little,Agree strongly,Agree a little,Disagree strongly,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree a little,Disagree strongly,Agree strongly,9.1899999999999995026200849679298698902130126953125,9.949999999999999289457264239899814128875732421875,9.9700000000000006394884621840901672840118408203125,40,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",9.25,9.269999999999999573674358543939888477325439453125,9.28999999999999914734871708787977695465087890625,30,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",5.12000000000000010658141036401502788066864013671875,5.4900000000000002131628207280300557613372802734375,8.0800000000000000710542735760100185871124267578125,38,running,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",5.57000000000000028421709430404007434844970703125,5.5999999999999996447286321199499070644378662109375,8.82000000000000028421709430404007434844970703125,23,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",9.449999999999999289457264239899814128875732421875,9.78999999999999914734871708787977695465087890625,9.7400000000000002131628207280300557613372802734375,2,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",1.1399999999999999023003738329862244427204132080078125,4.04999999999999982236431605997495353221893310546875,6.8499999999999996447286321199499070644378662109375,12,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",7.769999999999999573674358543939888477325439453125,8.5299999999999993605115378159098327159881591796875,8.0999999999999996447286321199499070644378662109375,19,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",9.589999999999999857891452847979962825775146484375,9.6400000000000005684341886080801486968994140625,9.6199999999999992184029906638897955417633056640625,5,70289124
+2019-01-13 00:34:38,2019-01-13 00:34:38,Survey Test,,100,0,True,2019-01-13 00:34:39,R_ePTdXzyg4WHVuf3,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Malesuada massa et magna et risus nulla dapibus nulla leo? Imperdiet ultricies.,"Some college, no degree",Disagree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Disagree strongly,Disagree strongly,Agree strongly,Agree a little,Disagree a little,Disagree a little,Neither agree nor disagree,Agree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Agree strongly,Agree a little,Agree a little,Neither agree nor disagree,Disagree strongly,Agree a little,Neither agree nor disagree,Agree a little,Agree strongly,Disagree strongly,Disagree a little,Disagree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree a little,Disagree a little,Agree strongly,Disagree strongly,Agree strongly,1.229999999999999982236431605997495353221893310546875,4.54000000000000003552713678800500929355621337890625,1.7399999999999999911182158029987476766109466552734375,43,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",4.7400000000000002131628207280300557613372802734375,9.3900000000000005684341886080801486968994140625,6.44000000000000039079850466805510222911834716796875,46,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",7,7.12000000000000010658141036401502788066864013671875,7.88999999999999968025576890795491635799407958984375,29,skiing,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",0.6999999999999999555910790149937383830547332763671875,7.5999999999999996447286321199499070644378662109375,4.61000000000000031974423109204508364200592041015625,14,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",5.0999999999999996447286321199499070644378662109375,5.9900000000000002131628207280300557613372802734375,8.3300000000000000710542735760100185871124267578125,21,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",2.3300000000000000710542735760100185871124267578125,4.67999999999999971578290569595992565155029296875,6.45000000000000017763568394002504646778106689453125,42,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",6.5999999999999996447286321199499070644378662109375,9.0299999999999993605115378159098327159881591796875,9.3499999999999996447286321199499070644378662109375,1,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",8.0299999999999993605115378159098327159881591796875,9.3499999999999996447286321199499070644378662109375,9.019999999999999573674358543939888477325439453125,10,10165845
+2019-01-13 00:34:39,2019-01-13 00:34:39,Survey Test,,100,0,True,2019-01-13 00:34:39,R_3gwjIajTgTZkKlD,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Arcu viverra nullam in enim elementum aliquam. Dictumst suscipit pharetra.,"Some college, no degree",Disagree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Agree strongly,Agree a little,Disagree strongly,Disagree a little,Disagree a little,Disagree strongly,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Agree strongly,Disagree strongly,Disagree strongly,Disagree a little,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Agree strongly,Agree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Disagree a little,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree a little,Agree strongly,Agree a little,Neither agree nor disagree,2.12000000000000010658141036401502788066864013671875,7.0800000000000000710542735760100185871124267578125,3.970000000000000195399252334027551114559173583984375,41,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",6.12000000000000010658141036401502788066864013671875,8.0099999999999997868371792719699442386627197265625,9.9900000000000002131628207280300557613372802734375,28,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",9.1300000000000007815970093361102044582366943359375,9.3300000000000000710542735760100185871124267578125,9.8499999999999996447286321199499070644378662109375,14,climbimg,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",8.0800000000000000710542735760100185871124267578125,9.8800000000000007815970093361102044582366943359375,8.1899999999999995026200849679298698902130126953125,25,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",6.53000000000000024868995751603506505489349365234375,7.12999999999999989341858963598497211933135986328125,7.0800000000000000710542735760100185871124267578125,3,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",2.95000000000000017763568394002504646778106689453125,6.54000000000000003552713678800500929355621337890625,6.0999999999999996447286321199499070644378662109375,50,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",5.95999999999999996447286321199499070644378662109375,7.53000000000000024868995751603506505489349365234375,8.589999999999999857891452847979962825775146484375,25,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",8.339999999999999857891452847979962825775146484375,9.21000000000000085265128291212022304534912109375,9.3800000000000007815970093361102044582366943359375,10,34950945
+2019-01-13 00:34:39,2019-01-13 00:34:39,Survey Test,,100,0,True,2019-01-13 00:34:40,R_bC404lG90HtnHVj,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,"Ab aenean turpis bibendum facilisis! Non, magna natoque eleifend sem convallis.","Doctorate (e.g. PhD, EdD)",Disagree strongly,Agree a little,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree strongly,Disagree strongly,Disagree strongly,Agree a little,Agree a little,Disagree a little,Neither agree nor disagree,Disagree strongly,Agree strongly,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Disagree strongly,Agree strongly,Agree strongly,Disagree strongly,Agree a little,Disagree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Agree a little,Agree strongly,Agree strongly,Agree strongly,Agree strongly,Disagree strongly,8.0099999999999997868371792719699442386627197265625,9.3100000000000004973799150320701301097869873046875,8.03999999999999914734871708787977695465087890625,37,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",4.42999999999999971578290569595992565155029296875,8.6300000000000007815970093361102044582366943359375,4.9900000000000002131628207280300557613372802734375,39,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",1.0900000000000000799360577730112709105014801025390625,2.04999999999999982236431605997495353221893310546875,3.720000000000000195399252334027551114559173583984375,37,running,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",7.28000000000000024868995751603506505489349365234375,7.92999999999999971578290569595992565155029296875,8.8100000000000004973799150320701301097869873046875,16,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",3.970000000000000195399252334027551114559173583984375,4.9900000000000002131628207280300557613372802734375,6.0099999999999997868371792719699442386627197265625,38,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",0.520000000000000017763568394002504646778106689453125,1.229999999999999982236431605997495353221893310546875,8.0099999999999997868371792719699442386627197265625,17,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",7.30999999999999960920149533194489777088165283203125,8.1500000000000003552713678800500929355621337890625,9.53999999999999914734871708787977695465087890625,32,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",0.68000000000000004884981308350688777863979339599609375,7.88999999999999968025576890795491635799407958984375,5.2599999999999997868371792719699442386627197265625,39,68206015
+2019-01-13 00:34:40,2019-01-13 00:34:40,Survey Test,,100,0,True,2019-01-13 00:34:40,R_5dS6HhjetJdU0Bv,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Pharetra in? Elit? Tempor eu vulputate facilisi. Per platea accusamus et orci.,"Associate degree (e.g. AA, AS)",Neither agree nor disagree,Disagree strongly,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Agree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree a little,Agree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Agree a little,Agree a little,Agree strongly,Agree a little,Neither agree nor disagree,Agree strongly,Agree a little,Agree a little,Neither agree nor disagree,Agree a little,Disagree a little,Agree strongly,Disagree a little,Disagree strongly,Disagree a little,Disagree strongly,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Agree strongly,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Disagree a little,Agree a little,Neither agree nor disagree,3.100000000000000088817841970012523233890533447265625,6.2599999999999997868371792719699442386627197265625,4.53000000000000024868995751603506505489349365234375,38,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",2.020000000000000017763568394002504646778106689453125,2.2599999999999997868371792719699442386627197265625,3.79999999999999982236431605997495353221893310546875,37,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",7.96999999999999975131004248396493494510650634765625,9.800000000000000710542735760100185871124267578125,9.7200000000000006394884621840901672840118408203125,35,plat the piano,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",8.6300000000000007815970093361102044582366943359375,8.7200000000000006394884621840901672840118408203125,9.82000000000000028421709430404007434844970703125,6,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",4.9900000000000002131628207280300557613372802734375,7.61000000000000031974423109204508364200592041015625,9.3100000000000004973799150320701301097869873046875,24,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",4.660000000000000142108547152020037174224853515625,8.199999999999999289457264239899814128875732421875,6.9199999999999999289457264239899814128875732421875,38,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",2.0099999999999997868371792719699442386627197265625,2.95000000000000017763568394002504646778106689453125,4.04000000000000003552713678800500929355621337890625,25,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",8.8300000000000000710542735760100185871124267578125,9.339999999999999857891452847979962825775146484375,9.160000000000000142108547152020037174224853515625,4,93465166
+2019-01-13 00:34:40,2019-01-13 00:34:40,Survey Test,,100,0,True,2019-01-13 00:34:41,R_8zWLzOokWizu5db,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,"Vivamus egestas, imperdiet neque? Venenatis est iaculis aliquet accumsan faucibus.",High school degree or equivalent (e.g. GED),Disagree strongly,Disagree a little,Neither agree nor disagree,Agree a little,Disagree strongly,Neither agree nor disagree,Agree strongly,Disagree strongly,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Agree a little,Agree a little,Disagree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Agree strongly,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree strongly,Disagree a little,Disagree a little,Disagree a little,Agree a little,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Agree a little,Agree a little,Agree a little,3.5800000000000000710542735760100185871124267578125,6.7400000000000002131628207280300557613372802734375,7.6699999999999999289457264239899814128875732421875,12,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",5.3300000000000000710542735760100185871124267578125,8.800000000000000710542735760100185871124267578125,9.6500000000000003552713678800500929355621337890625,1,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",8.550000000000000710542735760100185871124267578125,9.949999999999999289457264239899814128875732421875,9.82000000000000028421709430404007434844970703125,50,cooking,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",9.46000000000000085265128291212022304534912109375,9.7799999999999993605115378159098327159881591796875,9.53999999999999914734871708787977695465087890625,44,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",1.899999999999999911182158029987476766109466552734375,9.8100000000000004973799150320701301097869873046875,4.87000000000000010658141036401502788066864013671875,30,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",2.890000000000000124344978758017532527446746826171875,8.8900000000000005684341886080801486968994140625,5.04000000000000003552713678800500929355621337890625,47,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",9.550000000000000710542735760100185871124267578125,9.7400000000000002131628207280300557613372802734375,9.78999999999999914734871708787977695465087890625,34,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",5.660000000000000142108547152020037174224853515625,8.75,6.089999999999999857891452847979962825775146484375,8,90128784
+2019-01-13 00:34:41,2019-01-13 00:34:41,Survey Test,,100,0,True,2019-01-13 00:34:41,R_82ZRn7D6zB0jp7D,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,"Ac tempor, molestie culpa. Pede sed! Dignissim nec dapibus tincidunt magnis pretium augue.","Master's degree (e.g. MA, MS, MEd)",Disagree a little,Agree a little,Neither agree nor disagree,Agree a little,Disagree a little,Agree strongly,Disagree a little,Agree a little,Disagree a little,Agree a little,Agree a little,Agree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree strongly,Disagree a little,Agree a little,Agree strongly,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Disagree strongly,Agree a little,Neither agree nor disagree,Disagree a little,Agree a little,Neither agree nor disagree,Agree a little,Disagree strongly,Disagree a little,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Agree strongly,Agree strongly,Agree a little,Disagree a little,1.1799999999999999378275106209912337362766265869140625,1.62000000000000010658141036401502788066864013671875,5.4199999999999999289457264239899814128875732421875,43,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",1.4499999999999999555910790149937383830547332763671875,5.92999999999999971578290569595992565155029296875,3.9900000000000002131628207280300557613372802734375,22,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",4.910000000000000142108547152020037174224853515625,7.9900000000000002131628207280300557613372802734375,5.8300000000000000710542735760100185871124267578125,2,skiing,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",9.6699999999999999289457264239899814128875732421875,9.8100000000000004973799150320701301097869873046875,9.949999999999999289457264239899814128875732421875,21,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",0.560000000000000053290705182007513940334320068359375,0.58999999999999996891375531049561686813831329345703125,7.80999999999999960920149533194489777088165283203125,9,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",7.730000000000000426325641456060111522674560546875,8.71000000000000085265128291212022304534912109375,8.660000000000000142108547152020037174224853515625,21,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",9.8800000000000007815970093361102044582366943359375,9.9399999999999995026200849679298698902130126953125,9.949999999999999289457264239899814128875732421875,11,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",6.92999999999999971578290569595992565155029296875,9.0299999999999993605115378159098327159881591796875,9.9399999999999995026200849679298698902130126953125,10,51165683
+2019-01-13 00:34:41,2019-01-13 00:34:41,Survey Test,,100,0,True,2019-01-13 00:34:41,R_1BJ5fvZMejPlmw5,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,Nulla etiam? Facilisis. Metus diam tellus bibendum? Cras cursus nonummy placerat aliquam faucibus! Vel commodo.,"Professional degree (e.g. MD, DDS, DVM)",Disagree strongly,Disagree a little,Agree a little,Neither agree nor disagree,Agree a little,Disagree strongly,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Agree a little,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree strongly,Neither agree nor disagree,Disagree strongly,Agree a little,Disagree a little,Disagree strongly,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree strongly,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree a little,Disagree strongly,6.12000000000000010658141036401502788066864013671875,7.519999999999999573674358543939888477325439453125,7.20999999999999996447286321199499070644378662109375,22,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",2.20999999999999996447286321199499070644378662109375,4.3300000000000000710542735760100185871124267578125,8.3800000000000007815970093361102044582366943359375,13,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",4.63999999999999968025576890795491635799407958984375,6.410000000000000142108547152020037174224853515625,8.92999999999999971578290569595992565155029296875,44,cooking,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",3.470000000000000195399252334027551114559173583984375,6.7599999999999997868371792719699442386627197265625,8.839999999999999857891452847979962825775146484375,3,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",8.2799999999999993605115378159098327159881591796875,9.1500000000000003552713678800500929355621337890625,9.4399999999999995026200849679298698902130126953125,6,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",9.03999999999999914734871708787977695465087890625,9.6199999999999992184029906638897955417633056640625,9.0800000000000000710542735760100185871124267578125,19,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",0.4699999999999999733546474089962430298328399658203125,2.819999999999999840127884453977458178997039794921875,0.65000000000000002220446049250313080847263336181640625,49,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",5.45000000000000017763568394002504646778106689453125,9.0299999999999993605115378159098327159881591796875,9.230000000000000426325641456060111522674560546875,38,92891015
+2019-01-13 00:34:42,2019-01-13 00:34:42,Survey Test,,100,0,True,2019-01-13 00:34:42,R_249er0TgAr9NR5j,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Pede phasellus est lacus non ridiculus cras consequat convallis augue maecenas fermentum sit. Risus vestibulum.,"Professional degree (e.g. MD, DDS, DVM)",Disagree a little,Disagree a little,Agree a little,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Agree a little,Agree a little,Agree strongly,Disagree strongly,Agree a little,Disagree a little,Agree strongly,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree strongly,Agree strongly,Disagree a little,Disagree strongly,Agree strongly,Disagree strongly,Agree strongly,Agree strongly,Disagree strongly,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Neither agree nor disagree,Agree strongly,Disagree strongly,Disagree a little,Disagree a little,Neither agree nor disagree,Agree strongly,Disagree a little,Disagree a little,Agree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Agree a little,3.149999999999999911182158029987476766109466552734375,5.28000000000000024868995751603506505489349365234375,6.63999999999999968025576890795491635799407958984375,39,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",4.9199999999999999289457264239899814128875732421875,5.20999999999999996447286321199499070644378662109375,7.9900000000000002131628207280300557613372802734375,38,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",1.1399999999999999023003738329862244427204132080078125,9.6199999999999992184029906638897955417633056640625,8.050000000000000710542735760100185871124267578125,23,climbimg,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",0.61999999999999999555910790149937383830547332763671875,1.9499999999999999555910790149937383830547332763671875,0.86999999999999999555910790149937383830547332763671875,27,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",9.980000000000000426325641456060111522674560546875,9.9900000000000002131628207280300557613372802734375,9.9900000000000002131628207280300557613372802734375,32,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",0.2300000000000000099920072216264088638126850128173828125,4.980000000000000426325641456060111522674560546875,3,42,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",7.61000000000000031974423109204508364200592041015625,8.8699999999999992184029906638897955417633056640625,7.96999999999999975131004248396493494510650634765625,11,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",8.46000000000000085265128291212022304534912109375,9.07000000000000028421709430404007434844970703125,9.6199999999999992184029906638897955417633056640625,36,56923297
+2019-01-13 00:34:42,2019-01-13 00:34:42,Survey Test,,100,0,True,2019-01-13 00:34:42,R_8I0ggRzaEfxB5zL,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,"Temporibus. Urna, urna magna egestas elit. Justo atque. Auctor porttitor. Eros.","Doctorate (e.g. PhD, EdD)",Disagree a little,Disagree a little,Disagree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Disagree strongly,Agree strongly,Agree a little,Disagree a little,Neither agree nor disagree,Neither agree nor disagree,Agree a little,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Disagree a little,Disagree a little,Disagree strongly,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Disagree a little,Agree strongly,Agree strongly,Disagree a little,Disagree a little,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Disagree a little,Agree strongly,9.480000000000000426325641456060111522674560546875,9.7799999999999993605115378159098327159881591796875,9.519999999999999573674358543939888477325439453125,18,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",3.069999999999999840127884453977458178997039794921875,8.6500000000000003552713678800500929355621337890625,4.480000000000000426325641456060111522674560546875,30,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",8.6199999999999992184029906638897955417633056640625,9.6300000000000007815970093361102044582366943359375,8.7400000000000002131628207280300557613372802734375,24,running,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",5.79000000000000003552713678800500929355621337890625,8.0299999999999993605115378159098327159881591796875,8.0600000000000004973799150320701301097869873046875,25,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",1.5800000000000000710542735760100185871124267578125,2.859999999999999875655021241982467472553253173828125,2.70000000000000017763568394002504646778106689453125,17,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",2.70000000000000017763568394002504646778106689453125,7.4199999999999999289457264239899814128875732421875,3.04000000000000003552713678800500929355621337890625,0,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",5.44000000000000039079850466805510222911834716796875,5.7599999999999997868371792719699442386627197265625,5.92999999999999971578290569595992565155029296875,15,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",4.480000000000000426325641456060111522674560546875,7.37000000000000010658141036401502788066864013671875,9.339999999999999857891452847979962825775146484375,41,69247519
+2019-01-13 00:34:42,2019-01-13 00:34:42,Survey Test,,100,0,True,2019-01-13 00:34:43,R_1HAbtK2jTbNQ59P,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,Eu tempor imperdiet iaculis sodales nonummy pharetra elementum enim duis mauris! Mi accumsan nec mattis.,"Doctorate (e.g. PhD, EdD)",Disagree a little,Agree strongly,Agree a little,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Agree a little,Agree strongly,Agree strongly,Disagree strongly,Agree strongly,Disagree strongly,Agree a little,Disagree strongly,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Agree a little,Disagree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree a little,Disagree a little,Disagree strongly,Disagree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree a little,Neither agree nor disagree,Agree a little,Disagree strongly,Agree strongly,Disagree strongly,Agree strongly,Agree a little,Agree strongly,Neither agree nor disagree,6.12999999999999989341858963598497211933135986328125,7.38999999999999968025576890795491635799407958984375,9.4900000000000002131628207280300557613372802734375,18,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",4.7599999999999997868371792719699442386627197265625,9.7400000000000002131628207280300557613372802734375,8.8699999999999992184029906638897955417633056640625,10,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",2.660000000000000142108547152020037174224853515625,7.62999999999999989341858963598497211933135986328125,4.03000000000000024868995751603506505489349365234375,40,cooking,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",5,9.4199999999999999289457264239899814128875732421875,8.019999999999999573674358543939888477325439453125,23,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",0.770000000000000017763568394002504646778106689453125,3.229999999999999982236431605997495353221893310546875,2.890000000000000124344978758017532527446746826171875,42,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",6.05999999999999960920149533194489777088165283203125,8.7799999999999993605115378159098327159881591796875,9.71000000000000085265128291212022304534912109375,40,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",7.9000000000000003552713678800500929355621337890625,8.42999999999999971578290569595992565155029296875,9.17999999999999971578290569595992565155029296875,5,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",4.660000000000000142108547152020037174224853515625,8.6699999999999999289457264239899814128875732421875,7.67999999999999971578290569595992565155029296875,5,38305839
+2019-01-13 00:34:43,2019-01-13 00:34:43,Survey Test,,100,0,True,2019-01-13 00:34:43,R_1Iavb6gx1fgXjil,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Nonummy luctus lorem suspendisse massa vestibulum convallis maecenas non velit lectus ante dictumst duis.,"Bechelor's degree (e.g. BA, BS)",Agree a little,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree a little,Agree strongly,Agree strongly,Agree a little,Agree a little,Agree strongly,Agree a little,Disagree strongly,Agree strongly,Disagree a little,Disagree a little,Agree strongly,Agree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Disagree a little,Agree strongly,Disagree a little,Disagree strongly,Agree strongly,Disagree strongly,Agree strongly,Agree strongly,Agree a little,Agree strongly,Agree a little,Agree strongly,Disagree strongly,5.78000000000000024868995751603506505489349365234375,6.53000000000000024868995751603506505489349365234375,7.7599999999999997868371792719699442386627197265625,17,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",5.4900000000000002131628207280300557613372802734375,9.019999999999999573674358543939888477325439453125,5.6500000000000003552713678800500929355621337890625,25,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",0.979999999999999982236431605997495353221893310546875,3.04999999999999982236431605997495353221893310546875,2.70999999999999996447286321199499070644378662109375,47,cooking,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",6.79000000000000003552713678800500929355621337890625,7.0800000000000000710542735760100185871124267578125,8.300000000000000710542735760100185871124267578125,10,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",7.8300000000000000710542735760100185871124267578125,8.0099999999999997868371792719699442386627197265625,8.8900000000000005684341886080801486968994140625,30,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",2.7599999999999997868371792719699442386627197265625,8.1099999999999994315658113919198513031005859375,5.30999999999999960920149533194489777088165283203125,22,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",9.0999999999999996447286321199499070644378662109375,9.2599999999999997868371792719699442386627197265625,9.8599999999999994315658113919198513031005859375,17,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",1.8400000000000000799360577730112709105014801025390625,7.519999999999999573674358543939888477325439453125,4.45999999999999996447286321199499070644378662109375,22,87059231
+2019-01-13 00:34:43,2019-01-13 00:34:43,Survey Test,,100,0,True,2019-01-13 00:34:43,R_8ui6E8d0wJIxJwV,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Female,Posuere lorem purus vestibulum lorem convallis facilisi dictumst donec! Vulputate sodales.,"Doctorate (e.g. PhD, EdD)",Disagree strongly,Neither agree nor disagree,Agree a little,Disagree strongly,Neither agree nor disagree,Agree a little,Agree a little,Agree a little,Neither agree nor disagree,Agree a little,Agree a little,Neither agree nor disagree,Agree a little,Agree a little,Agree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree strongly,Agree strongly,Agree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Disagree a little,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Disagree a little,Disagree strongly,Agree a little,Agree a little,Agree strongly,Disagree a little,Disagree strongly,Disagree strongly,Disagree strongly,Agree strongly,Disagree a little,Disagree a little,Agree a little,Disagree strongly,Agree strongly,5.05999999999999960920149533194489777088165283203125,7.17999999999999971578290569595992565155029296875,5.269999999999999573674358543939888477325439453125,15,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",3.839999999999999857891452847979962825775146484375,4.82000000000000028421709430404007434844970703125,6.86000000000000031974423109204508364200592041015625,13,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",6.45000000000000017763568394002504646778106689453125,6.7599999999999997868371792719699442386627197265625,7.95000000000000017763568394002504646778106689453125,26,running,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",1.9099999999999999200639422269887290894985198974609375,3.04000000000000003552713678800500929355621337890625,4.28000000000000024868995751603506505489349365234375,27,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",5.1500000000000003552713678800500929355621337890625,5.230000000000000426325641456060111522674560546875,9.1300000000000007815970093361102044582366943359375,44,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",5.69000000000000039079850466805510222911834716796875,7.269999999999999573674358543939888477325439453125,8.980000000000000426325641456060111522674560546875,23,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",8.7200000000000006394884621840901672840118408203125,9.199999999999999289457264239899814128875732421875,9.8699999999999992184029906638897955417633056640625,48,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",3.9900000000000002131628207280300557613372802734375,9.4000000000000003552713678800500929355621337890625,9.71000000000000085265128291212022304534912109375,39,52613152
+2019-01-13 00:34:43,2019-01-13 00:34:43,Survey Test,,100,0,True,2019-01-13 00:34:44,R_6QXUtTIpbDQvuaV,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,"Augue! Montes enim sit, nonummy dolor porta. Risus atque a.","Professional degree (e.g. MD, DDS, DVM)",Agree strongly,Neither agree nor disagree,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree a little,Agree strongly,Disagree a little,Agree a little,Agree a little,Disagree strongly,Disagree strongly,Disagree a little,Neither agree nor disagree,Disagree strongly,Agree strongly,Neither agree nor disagree,Agree strongly,Disagree a little,Disagree a little,Agree strongly,Agree a little,Agree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Agree strongly,Agree a little,Disagree strongly,Neither agree nor disagree,Agree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Agree a little,Disagree strongly,Agree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Neither agree nor disagree,7.5,9.03999999999999914734871708787977695465087890625,7.730000000000000426325641456060111522674560546875,7,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",7.96999999999999975131004248396493494510650634765625,9.3599999999999994315658113919198513031005859375,8.46000000000000085265128291212022304534912109375,22,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",1.5700000000000000621724893790087662637233734130859375,9.339999999999999857891452847979962825775146484375,8.2400000000000002131628207280300557613372802734375,27,plat the piano,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",1.79000000000000003552713678800500929355621337890625,3.0099999999999997868371792719699442386627197265625,4.05999999999999960920149533194489777088165283203125,20,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",3.770000000000000017763568394002504646778106689453125,8.1099999999999994315658113919198513031005859375,7.94000000000000039079850466805510222911834716796875,48,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",5.36000000000000031974423109204508364200592041015625,7.54000000000000003552713678800500929355621337890625,8.57000000000000028421709430404007434844970703125,14,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",7.6500000000000003552713678800500929355621337890625,8.96000000000000085265128291212022304534912109375,8.5999999999999996447286321199499070644378662109375,43,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",0.729999999999999982236431605997495353221893310546875,5.769999999999999573674358543939888477325439453125,3.470000000000000195399252334027551114559173583984375,42,78456249
+2019-01-13 00:34:44,2019-01-13 00:34:44,Survey Test,,100,0,True,2019-01-13 00:34:44,R_dbUWAfeYCObmtBr,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Viverra? Posuere magnis lacus etiam rutrum. Sem neque interdum! Vehicula sed quam molestie pharetra duis.,Less than a high school diploma,Neither agree nor disagree,Agree strongly,Agree a little,Disagree a little,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree a little,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree a little,Agree strongly,Agree strongly,Agree strongly,Agree a little,Neither agree nor disagree,Agree strongly,Disagree strongly,Agree strongly,Disagree a little,Neither agree nor disagree,Disagree strongly,Agree strongly,Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Disagree strongly,Agree strongly,Disagree a little,Disagree a little,Agree a little,Agree strongly,Agree strongly,Neither agree nor disagree,Disagree strongly,Agree a little,Disagree a little,Disagree a little,Agree strongly,Disagree strongly,7.6699999999999999289457264239899814128875732421875,9.7599999999999997868371792719699442386627197265625,8.6199999999999992184029906638897955417633056640625,24,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",4.20999999999999996447286321199499070644378662109375,4.78000000000000024868995751603506505489349365234375,9.46000000000000085265128291212022304534912109375,25,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",6.70999999999999996447286321199499070644378662109375,7.79000000000000003552713678800500929355621337890625,9.3800000000000007815970093361102044582366943359375,41,plat the piano,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",3.79000000000000003552713678800500929355621337890625,8.800000000000000710542735760100185871124267578125,8.769999999999999573674358543939888477325439453125,49,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",7.089999999999999857891452847979962825775146484375,9.9399999999999995026200849679298698902130126953125,7.54000000000000003552713678800500929355621337890625,42,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",6.480000000000000426325641456060111522674560546875,6.70999999999999996447286321199499070644378662109375,6.54000000000000003552713678800500929355621337890625,15,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",9.2799999999999993605115378159098327159881591796875,9.3599999999999994315658113919198513031005859375,9.550000000000000710542735760100185871124267578125,48,"
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+
+",5.86000000000000031974423109204508364200592041015625,9.2599999999999997868371792719699442386627197265625,8.1300000000000007815970093361102044582366943359375,32,14813824
+2019-01-13 00:34:44,2019-01-13 00:34:44,Survey Test,,100,0,True,2019-01-13 00:34:44,R_bBcVeGYXHsFEnul,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Male,Pellentesque! Odio nec ante! Maecenas sit felis non phasellus. Venenatis? Neque rutrum arcu.,"Master's degree (e.g. MA, MS, MEd)",Neither agree nor disagree,Agree a little,Neither agree nor disagree,Neither agree nor disagree,Agree a little,Disagree a little,Agree a little,Disagree a little,Disagree a little,Agree strongly,Disagree a little,Disagree strongly,Agree a little,Agree strongly,Disagree a little,Neither agree nor disagree,Agree a little,Disagree strongly,Agree strongly,Neither agree nor disagree,Neither agree nor disagree,Disagree a little,Disagree strongly,Disagree strongly,Agree a little,Disagree strongly,Agree a little,Agree a little,Disagree a little,Agree strongly,Agree a little,Disagree a little,Agree a little,Agree a little,Disagree a little,Agree a little,Agree strongly,Disagree a little,Neither agree nor disagree,Agree strongly,Neither agree nor disagree,Disagree a little,Agree a little,Disagree strongly,4.5800000000000000710542735760100185871124267578125,4.839999999999999857891452847979962825775146484375,7.95999999999999996447286321199499070644378662109375,31,"
+	Emma is a manager and likes to exercise.
+	​Emma is a manager.
+	​Emma likes to exercise.
+
+",7.339999999999999857891452847979962825775146484375,7.45000000000000017763568394002504646778106689453125,8.1300000000000007815970093361102044582366943359375,50,"
+	Liz is a programmer.
+	Liz likes to paint.
+	Liz is a programmer and likes to paint.
+
+",5.11000000000000031974423109204508364200592041015625,5.6500000000000003552713678800500929355621337890625,7.339999999999999857891452847979962825775146484375,18,cooking,"
+	Take a spinning class or a realistic painting class.
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+
+",1,7.42999999999999971578290569595992565155029296875,8.589999999999999857891452847979962825775146484375,18,"
+ Liz, because she is a programmer.
+ Emma, because she is a manager.
+ Emma, because she is a manager and Liz because she is a programmer.
+  
+",5.92999999999999971578290569595992565155029296875,8.1300000000000007815970093361102044582366943359375,8.25,13,"
+	A mobile App because of Liz’s programming skills.
+	A fitness business because Emma likes to exercise
+	A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+
+",9.5,9.5999999999999996447286321199499070644378662109375,9.6899999999999995026200849679298698902130126953125,15,"
+	For her work, as a manager.
+	To exercise.
+	For her work, as a manager or to exercise.
+
+",5.44000000000000039079850466805510222911834716796875,9.7599999999999997868371792719699442386627197265625,6.96999999999999975131004248396493494510650634765625,43,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",8.8699999999999992184029906638897955417633056640625,9.3800000000000007815970093361102044582366943359375,9.9000000000000003552713678800500929355621337890625,1,74027516
+2019-01-13 00:34:44,2019-01-13 00:34:44,Survey Test,,100,0,True,2019-01-13 00:34:44,R_6xSrJomm2uQLU1v,,,,,32.0666961669921875,34.766693115234375,test,,Agree,Other,"Tellus nonummy tellus, lectus in mi tempora imperdiet felis porttitor tortor proin pellentesque.","Some college, no degree",Disagree strongly,Neither agree nor disagree,Disagree strongly,Disagree a little,Disagree strongly,Agree a little,Agree strongly,Disagree a little,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Agree a little,Agree strongly,Agree a little,Agree strongly,Disagree strongly,Agree strongly,Disagree a little,Agree strongly,Disagree a little,Agree strongly,Agree a little,Disagree strongly,Disagree a little,Disagree a little,Disagree strongly,Neither agree nor disagree,Disagree a little,Disagree a little,Disagree strongly,Disagree strongly,Agree strongly,Disagree a little,Agree strongly,Neither agree nor disagree,Agree a little,Neither agree nor disagree,Disagree a little,Agree a little,Disagree strongly,Disagree strongly,Agree a little,Disagree a little,0.2200000000000000011102230246251565404236316680908203125,2.25,2.720000000000000195399252334027551114559173583984375,11,"
+ ​Emma is a manager.
+ ​Emma likes to exercise.
+ Emma is a manager and likes to exercise.
+",4.910000000000000142108547152020037174224853515625,9.8900000000000005684341886080801486968994140625,5.410000000000000142108547152020037174224853515625,24,"
+	Liz is a programmer and likes to paint.
+	Liz is a programmer.
+	Liz likes to paint.
+
+",4.13999999999999968025576890795491635799407958984375,7.62999999999999989341858963598497211933135986328125,8.25,28,climbimg,"
+	Take a spinning class, because Emma likes to exercise.
+	Take a realistic painting class, because Liz likes to paint.
+	Take a spinning class or a realistic painting class.
+
+",2.770000000000000017763568394002504646778106689453125,7.37000000000000010658141036401502788066864013671875,6.13999999999999968025576890795491635799407958984375,21,"
+	Emma, because she is a manager and Liz because she is a programmer.
+	Liz, because she is a programmer.
+	Emma, because she is a manager.
+
+",6.3300000000000000710542735760100185871124267578125,8.550000000000000710542735760100185871124267578125,7.92999999999999971578290569595992565155029296875,35,"
+ A mobile App because of Liz’s programming skills or a fitness business because Emma likes to exercise.
+ A mobile App because of Liz’s programming skills.
+ A fitness business because Emma likes to exercise
+",2.979999999999999982236431605997495353221893310546875,7.519999999999999573674358543939888477325439453125,3.560000000000000053290705182007513940334320068359375,38,"
+	For her work, as a manager or to exercise.
+	For her work, as a manager.
+	To exercise.
+
+",3.319999999999999840127884453977458178997039794921875,9.4000000000000003552713678800500929355621337890625,7.3300000000000000710542735760100185871124267578125,14,"
+	Emma bought a painting from Liz at an art fair.
+	They met when Emma hired Liz for her team.
+	They met when Emma hired Liz for her team or when Emma bought a painting from Liz at an art fair.
+
+",2.4199999999999999289457264239899814128875732421875,6.160000000000000142108547152020037174224853515625,2.62999999999999989341858963598497211933135986328125,23,94330052

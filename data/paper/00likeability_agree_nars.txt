@@ -1,0 +1,56 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.095
+Model:                             OLS   Adj. R-squared:                  0.079
+Method:                  Least Squares   F-statistic:                     5.852
+Date:                 Thu, 17 Jan 2019   Prob (F-statistic):           0.000170
+Time:                         10:07:11   Log-Likelihood:                -240.08
+No. Observations:                  227   AIC:                             490.2
+Df Residuals:                      222   BIC:                             507.3
+Df Model:                            4                                         
+Covariance Type:             nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept           -0.5213      0.388     -1.345      0.180      -1.285       0.243
+agree2rational       0.4733      0.102      4.650      0.000       0.273       0.674
+Interactions         0.0151      0.013      1.155      0.250      -0.011       0.041
+Social_Influence     0.0136      0.017      0.811      0.418      -0.019       0.047
+Emotions             0.0132      0.021      0.629      0.530      -0.028       0.055
+==============================================================================
+Omnibus:                       98.864   Durbin-Watson:                   1.997
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              592.526
+Skew:                           1.594   Prob(JB):                    2.16e-129
+Kurtosis:                      10.245   Cond. No.                         191.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.095
+Model:                             OLS   Adj. R-squared:                  0.079
+Method:                  Least Squares   F-statistic:                     5.852
+Date:                 Sun, 20 Jan 2019   Prob (F-statistic):           0.000170
+Time:                         14:19:35   Log-Likelihood:                -240.08
+No. Observations:                  227   AIC:                             490.2
+Df Residuals:                      222   BIC:                             507.3
+Df Model:                            4                                         
+Covariance Type:             nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept           -0.5213      0.388     -1.345      0.180      -1.285       0.243
+agree2rational       0.4733      0.102      4.650      0.000       0.273       0.674
+Interactions         0.0151      0.013      1.155      0.250      -0.011       0.041
+Social_Influence     0.0136      0.017      0.811      0.418      -0.019       0.047
+Emotions             0.0132      0.021      0.629      0.530      -0.028       0.055
+==============================================================================
+Omnibus:                       98.864   Durbin-Watson:                   1.997
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              592.526
+Skew:                           1.594   Prob(JB):                    2.16e-129
+Kurtosis:                      10.245   Cond. No.                         191.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

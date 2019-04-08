@@ -1,0 +1,1765 @@
+,rationality,side,robot,feature,sub_scale,meaning,answers,userID,age,gender,education
+0,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_2Ce9onUvQQjCiGS,26,male,BA
+1,,,participant,NARS,S2,Social Influence of Robots,19.0,R_2Ce9onUvQQjCiGS,26,male,BA
+2,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_2Ce9onUvQQjCiGS,26,male,BA
+3,,,participant,BFI,S1,Extraversion,3.25,R_2Ce9onUvQQjCiGS,26,male,BA
+4,,,participant,BFI,S2,Agreeableness,3.0,R_2Ce9onUvQQjCiGS,26,male,BA
+5,,,participant,BFI,S3,Conscientiousness,3.3333333333333335,R_2Ce9onUvQQjCiGS,26,male,BA
+6,,,participant,BFI,S4,Neuroticism,2.75,R_2Ce9onUvQQjCiGS,26,male,BA
+7,,,participant,BFI,S5,Openness,3.4,R_2Ce9onUvQQjCiGS,26,male,BA
+8,half,left,red,GODSPEED2,S1,Anthropomorphism,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+9,half,left,red,GODSPEED2,S2,Animacy,2.8333333333333335,R_2Ce9onUvQQjCiGS,26,male,BA
+10,half,left,red,GODSPEED2,S3,Likeability,2.6,R_2Ce9onUvQQjCiGS,26,male,BA
+11,half,left,red,GODSPEED2,S4,Perceived Intelligence,1.6,R_2Ce9onUvQQjCiGS,26,male,BA
+12,half,left,red,GODSPEED2,S5,Perceived Safety,2.3333333333333335,R_2Ce9onUvQQjCiGS,26,male,BA
+13,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,4.6,R_2Ce9onUvQQjCiGS,26,male,BA
+14,irrational,right,blue,GODSPEED1,S2,Animacy,4.333333333333333,R_2Ce9onUvQQjCiGS,26,male,BA
+15,irrational,right,blue,GODSPEED1,S3,Likeability,4.2,R_2Ce9onUvQQjCiGS,26,male,BA
+16,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,4.2,R_2Ce9onUvQQjCiGS,26,male,BA
+17,irrational,right,blue,GODSPEED1,S5,Perceived Safety,4.0,R_2Ce9onUvQQjCiGS,26,male,BA
+18,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_2Ce9onUvQQjCiGS,26,male,BA
+19,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_2Ce9onUvQQjCiGS,26,male,BA
+20,half,left,red,q_preference,Q5.1,,1.0,R_2Ce9onUvQQjCiGS,26,male,BA
+21,irrational,right,blue,q_preference,Q7.1,,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+22,half,left,red,q_preference,Q10.1,,1.0,R_2Ce9onUvQQjCiGS,26,male,BA
+23,irrational,right,blue,q_preference,Q12.1,,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+24,irrational,right,blue,q_preference,Q14.1,,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+25,irrational,right,blue,q_preference,Q16.1,,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+26,half,left,red,q_preference,Q18.1,,1.0,R_2Ce9onUvQQjCiGS,26,male,BA
+27,irrational,right,blue,q_preference,prefer,choice,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+28,half,left,red,q_preference,portfolio,choice,1.0,R_2Ce9onUvQQjCiGS,26,male,BA
+29,irrational,right,blue,q_preference,member,choice,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+30,irrational,right,blue,q_preference,analyst,choice,2.0,R_2Ce9onUvQQjCiGS,26,male,BA
+31,half,left,red,q_preference,bartender,choice,1.0,R_2Ce9onUvQQjCiGS,26,male,BA
+32,half,left,red,preference,average,,0.42857142857142855,R_2Ce9onUvQQjCiGS,26,male,BA
+33,half,left,red,preference,std,,0.0,R_2Ce9onUvQQjCiGS,26,male,BA
+34,irrational,right,blue,preference,average,,0.5714285714285714,R_2Ce9onUvQQjCiGS,26,male,BA
+35,irrational,right,blue,preference,std,,0.0,R_2Ce9onUvQQjCiGS,26,male,BA
+36,,,participant,NARS,S1,Situations and Interactions with Robots,25.0,R_21cuWbYxhmQ9lCq,30,male,BA
+37,,,participant,NARS,S2,Social Influence of Robots,17.0,R_21cuWbYxhmQ9lCq,30,male,BA
+38,,,participant,NARS,S3,Emotions in Interaction with Robots,5.0,R_21cuWbYxhmQ9lCq,30,male,BA
+39,,,participant,BFI,S1,Extraversion,3.125,R_21cuWbYxhmQ9lCq,30,male,BA
+40,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_21cuWbYxhmQ9lCq,30,male,BA
+41,,,participant,BFI,S3,Conscientiousness,2.7777777777777777,R_21cuWbYxhmQ9lCq,30,male,BA
+42,,,participant,BFI,S4,Neuroticism,2.75,R_21cuWbYxhmQ9lCq,30,male,BA
+43,,,participant,BFI,S5,Openness,3.1,R_21cuWbYxhmQ9lCq,30,male,BA
+44,half,left,red,GODSPEED2,S1,Anthropomorphism,2.8,R_21cuWbYxhmQ9lCq,30,male,BA
+45,half,left,red,GODSPEED2,S2,Animacy,2.8333333333333335,R_21cuWbYxhmQ9lCq,30,male,BA
+46,half,left,red,GODSPEED2,S3,Likeability,2.6,R_21cuWbYxhmQ9lCq,30,male,BA
+47,half,left,red,GODSPEED2,S4,Perceived Intelligence,2.8,R_21cuWbYxhmQ9lCq,30,male,BA
+48,half,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_21cuWbYxhmQ9lCq,30,male,BA
+49,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,3.4,R_21cuWbYxhmQ9lCq,30,male,BA
+50,irrational,right,blue,GODSPEED1,S2,Animacy,3.5,R_21cuWbYxhmQ9lCq,30,male,BA
+51,irrational,right,blue,GODSPEED1,S3,Likeability,3.6,R_21cuWbYxhmQ9lCq,30,male,BA
+52,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,2.6,R_21cuWbYxhmQ9lCq,30,male,BA
+53,irrational,right,blue,GODSPEED1,S5,Perceived Safety,4.0,R_21cuWbYxhmQ9lCq,30,male,BA
+54,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_21cuWbYxhmQ9lCq,30,male,BA
+55,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_21cuWbYxhmQ9lCq,30,male,BA
+56,irrational,right,blue,q_preference,Q5.1,,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+57,half,left,red,q_preference,Q7.1,,1.0,R_21cuWbYxhmQ9lCq,30,male,BA
+58,half,left,red,q_preference,Q10.1,,1.0,R_21cuWbYxhmQ9lCq,30,male,BA
+59,irrational,right,blue,q_preference,Q12.1,,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+60,half,left,red,q_preference,Q14.1,,1.0,R_21cuWbYxhmQ9lCq,30,male,BA
+61,irrational,right,blue,q_preference,Q16.1,,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+62,irrational,right,blue,q_preference,Q18.1,,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+63,irrational,right,blue,q_preference,prefer,choice,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+64,irrational,right,blue,q_preference,portfolio,choice,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+65,irrational,right,blue,q_preference,member,choice,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+66,irrational,right,blue,q_preference,analyst,choice,2.0,R_21cuWbYxhmQ9lCq,30,male,BA
+67,half,left,red,q_preference,bartender,choice,1.0,R_21cuWbYxhmQ9lCq,30,male,BA
+68,half,left,red,preference,average,,0.42857142857142855,R_21cuWbYxhmQ9lCq,30,male,BA
+69,half,left,red,preference,std,,0.0,R_21cuWbYxhmQ9lCq,30,male,BA
+70,irrational,right,blue,preference,average,,0.5714285714285714,R_21cuWbYxhmQ9lCq,30,male,BA
+71,irrational,right,blue,preference,std,,0.0,R_21cuWbYxhmQ9lCq,30,male,BA
+72,,,participant,NARS,S1,Situations and Interactions with Robots,11.0,R_27x7GeRCFbfA0Ps,41,male,BA
+73,,,participant,NARS,S2,Social Influence of Robots,16.0,R_27x7GeRCFbfA0Ps,41,male,BA
+74,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_27x7GeRCFbfA0Ps,41,male,BA
+75,,,participant,BFI,S1,Extraversion,1.125,R_27x7GeRCFbfA0Ps,41,male,BA
+76,,,participant,BFI,S2,Agreeableness,4.0,R_27x7GeRCFbfA0Ps,41,male,BA
+77,,,participant,BFI,S3,Conscientiousness,3.888888888888889,R_27x7GeRCFbfA0Ps,41,male,BA
+78,,,participant,BFI,S4,Neuroticism,1.125,R_27x7GeRCFbfA0Ps,41,male,BA
+79,,,participant,BFI,S5,Openness,4.1,R_27x7GeRCFbfA0Ps,41,male,BA
+80,half,left,red,GODSPEED2,S1,Anthropomorphism,2.4,R_27x7GeRCFbfA0Ps,41,male,BA
+81,half,left,red,GODSPEED2,S2,Animacy,3.5,R_27x7GeRCFbfA0Ps,41,male,BA
+82,half,left,red,GODSPEED2,S3,Likeability,3.6,R_27x7GeRCFbfA0Ps,41,male,BA
+83,half,left,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_27x7GeRCFbfA0Ps,41,male,BA
+84,half,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_27x7GeRCFbfA0Ps,41,male,BA
+85,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,2.4,R_27x7GeRCFbfA0Ps,41,male,BA
+86,irrational,right,blue,GODSPEED1,S2,Animacy,3.5,R_27x7GeRCFbfA0Ps,41,male,BA
+87,irrational,right,blue,GODSPEED1,S3,Likeability,3.8,R_27x7GeRCFbfA0Ps,41,male,BA
+88,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.4,R_27x7GeRCFbfA0Ps,41,male,BA
+89,irrational,right,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_27x7GeRCFbfA0Ps,41,male,BA
+90,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_27x7GeRCFbfA0Ps,41,male,BA
+91,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_27x7GeRCFbfA0Ps,41,male,BA
+92,irrational,right,blue,q_preference,Q5.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+93,irrational,right,blue,q_preference,Q7.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+94,half,left,red,q_preference,Q10.1,,1.0,R_27x7GeRCFbfA0Ps,41,male,BA
+95,irrational,right,blue,q_preference,Q12.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+96,irrational,right,blue,q_preference,Q14.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+97,irrational,right,blue,q_preference,Q16.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+98,irrational,right,blue,q_preference,Q18.1,,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+99,irrational,right,blue,q_preference,prefer,choice,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+100,irrational,right,blue,q_preference,portfolio,choice,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+101,irrational,right,blue,q_preference,member,choice,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+102,irrational,right,blue,q_preference,analyst,choice,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+103,irrational,right,blue,q_preference,bartender,choice,2.0,R_27x7GeRCFbfA0Ps,41,male,BA
+104,half,left,red,preference,average,,0.14285714285714285,R_27x7GeRCFbfA0Ps,41,male,BA
+105,half,left,red,preference,std,,0.0,R_27x7GeRCFbfA0Ps,41,male,BA
+106,irrational,right,blue,preference,average,,0.8571428571428571,R_27x7GeRCFbfA0Ps,41,male,BA
+107,irrational,right,blue,preference,std,,0.0,R_27x7GeRCFbfA0Ps,41,male,BA
+108,,,participant,NARS,S1,Situations and Interactions with Robots,14.0,R_3Rf85R89Bo46ARh,33,male,BA
+109,,,participant,NARS,S2,Social Influence of Robots,11.0,R_3Rf85R89Bo46ARh,33,male,BA
+110,,,participant,NARS,S3,Emotions in Interaction with Robots,5.0,R_3Rf85R89Bo46ARh,33,male,BA
+111,,,participant,BFI,S1,Extraversion,3.625,R_3Rf85R89Bo46ARh,33,male,BA
+112,,,participant,BFI,S2,Agreeableness,3.3333333333333335,R_3Rf85R89Bo46ARh,33,male,BA
+113,,,participant,BFI,S3,Conscientiousness,3.111111111111111,R_3Rf85R89Bo46ARh,33,male,BA
+114,,,participant,BFI,S4,Neuroticism,2.875,R_3Rf85R89Bo46ARh,33,male,BA
+115,,,participant,BFI,S5,Openness,2.9,R_3Rf85R89Bo46ARh,33,male,BA
+116,half,left,red,GODSPEED2,S1,Anthropomorphism,2.6,R_3Rf85R89Bo46ARh,33,male,BA
+117,half,left,red,GODSPEED2,S2,Animacy,1.6666666666666667,R_3Rf85R89Bo46ARh,33,male,BA
+118,half,left,red,GODSPEED2,S3,Likeability,2.6,R_3Rf85R89Bo46ARh,33,male,BA
+119,half,left,red,GODSPEED2,S4,Perceived Intelligence,2.6,R_3Rf85R89Bo46ARh,33,male,BA
+120,half,left,red,GODSPEED2,S5,Perceived Safety,4.0,R_3Rf85R89Bo46ARh,33,male,BA
+121,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,3.8,R_3Rf85R89Bo46ARh,33,male,BA
+122,irrational,right,blue,GODSPEED1,S2,Animacy,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+123,irrational,right,blue,GODSPEED1,S3,Likeability,2.8,R_3Rf85R89Bo46ARh,33,male,BA
+124,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,2.8,R_3Rf85R89Bo46ARh,33,male,BA
+125,irrational,right,blue,GODSPEED1,S5,Perceived Safety,2.3333333333333335,R_3Rf85R89Bo46ARh,33,male,BA
+126,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_3Rf85R89Bo46ARh,33,male,BA
+127,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_3Rf85R89Bo46ARh,33,male,BA
+128,irrational,right,blue,q_preference,Q5.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+129,irrational,right,blue,q_preference,Q7.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+130,irrational,right,blue,q_preference,Q10.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+131,irrational,right,blue,q_preference,Q12.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+132,irrational,right,blue,q_preference,Q14.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+133,irrational,right,blue,q_preference,Q16.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+134,irrational,right,blue,q_preference,Q18.1,,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+135,irrational,right,blue,q_preference,prefer,choice,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+136,irrational,right,blue,q_preference,portfolio,choice,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+137,irrational,right,blue,q_preference,member,choice,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+138,irrational,right,blue,q_preference,analyst,choice,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+139,irrational,right,blue,q_preference,bartender,choice,2.0,R_3Rf85R89Bo46ARh,33,male,BA
+140,half,left,red,preference,average,,0.0,R_3Rf85R89Bo46ARh,33,male,BA
+141,half,left,red,preference,std,,0.0,R_3Rf85R89Bo46ARh,33,male,BA
+142,irrational,right,blue,preference,average,,1.0,R_3Rf85R89Bo46ARh,33,male,BA
+143,irrational,right,blue,preference,std,,0.0,R_3Rf85R89Bo46ARh,33,male,BA
+144,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+145,,,participant,NARS,S2,Social Influence of Robots,15.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+146,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+147,,,participant,BFI,S1,Extraversion,3.375,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+148,,,participant,BFI,S2,Agreeableness,2.888888888888889,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+149,,,participant,BFI,S3,Conscientiousness,3.6666666666666665,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+150,,,participant,BFI,S4,Neuroticism,3.125,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+151,,,participant,BFI,S5,Openness,3.6,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+152,half,left,red,GODSPEED2,S1,Anthropomorphism,3.6,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+153,half,left,red,GODSPEED2,S2,Animacy,3.3333333333333335,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+154,half,left,red,GODSPEED2,S3,Likeability,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+155,half,left,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+156,half,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+157,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,2.8,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+158,irrational,right,blue,GODSPEED1,S2,Animacy,3.1666666666666665,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+159,irrational,right,blue,GODSPEED1,S3,Likeability,2.8,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+160,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.4,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+161,irrational,right,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+162,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+163,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+164,half,left,red,q_preference,Q5.1,,1.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+165,half,left,red,q_preference,Q7.1,,1.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+166,irrational,right,blue,q_preference,Q10.1,,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+167,irrational,right,blue,q_preference,Q12.1,,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+168,irrational,right,blue,q_preference,Q14.1,,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+169,irrational,right,blue,q_preference,Q16.1,,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+170,irrational,right,blue,q_preference,Q18.1,,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+171,irrational,right,blue,q_preference,prefer,choice,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+172,irrational,right,blue,q_preference,portfolio,choice,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+173,irrational,right,blue,q_preference,member,choice,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+174,irrational,right,blue,q_preference,analyst,choice,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+175,irrational,right,blue,q_preference,bartender,choice,2.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+176,half,left,red,preference,average,,0.2857142857142857,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+177,half,left,red,preference,std,,0.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+178,irrational,right,blue,preference,average,,0.7142857142857143,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+179,irrational,right,blue,preference,std,,0.0,R_3QGhT2z79AhcQ7w,26,female,Associate degree
+180,,,participant,NARS,S1,Situations and Interactions with Robots,8.0,R_2rHIELmmNt9i7TN,47,female,HS
+181,,,participant,NARS,S2,Social Influence of Robots,9.0,R_2rHIELmmNt9i7TN,47,female,HS
+182,,,participant,NARS,S3,Emotions in Interaction with Robots,5.0,R_2rHIELmmNt9i7TN,47,female,HS
+183,,,participant,BFI,S1,Extraversion,3.5,R_2rHIELmmNt9i7TN,47,female,HS
+184,,,participant,BFI,S2,Agreeableness,4.555555555555555,R_2rHIELmmNt9i7TN,47,female,HS
+185,,,participant,BFI,S3,Conscientiousness,4.333333333333333,R_2rHIELmmNt9i7TN,47,female,HS
+186,,,participant,BFI,S4,Neuroticism,2.0,R_2rHIELmmNt9i7TN,47,female,HS
+187,,,participant,BFI,S5,Openness,3.7,R_2rHIELmmNt9i7TN,47,female,HS
+188,half,left,red,GODSPEED2,S1,Anthropomorphism,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+189,half,left,red,GODSPEED2,S2,Animacy,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+190,half,left,red,GODSPEED2,S3,Likeability,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+191,half,left,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+192,half,left,red,GODSPEED2,S5,Perceived Safety,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+193,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+194,irrational,right,blue,GODSPEED1,S2,Animacy,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+195,irrational,right,blue,GODSPEED1,S3,Likeability,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+196,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+197,irrational,right,blue,GODSPEED1,S5,Perceived Safety,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+198,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2rHIELmmNt9i7TN,47,female,HS
+199,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2rHIELmmNt9i7TN,47,female,HS
+200,half,left,red,q_preference,Q5.1,,1.0,R_2rHIELmmNt9i7TN,47,female,HS
+201,irrational,right,blue,q_preference,Q7.1,,2.0,R_2rHIELmmNt9i7TN,47,female,HS
+202,irrational,right,blue,q_preference,Q10.1,,2.0,R_2rHIELmmNt9i7TN,47,female,HS
+203,,,,q_preference,Q12.1,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+204,,,,q_preference,Q14.1,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+205,,,,q_preference,Q16.1,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+206,,,,q_preference,Q18.1,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+207,,,,q_preference,prefer,choice,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+208,,,,q_preference,portfolio,choice,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+209,,,,q_preference,member,choice,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+210,,,,q_preference,analyst,choice,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+211,,,,q_preference,bartender,choice,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+212,half,left,red,preference,average,,0.14285714285714285,R_2rHIELmmNt9i7TN,47,female,HS
+213,half,left,red,preference,std,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+214,irrational,right,blue,preference,average,,0.2857142857142857,R_2rHIELmmNt9i7TN,47,female,HS
+215,irrational,right,blue,preference,std,,0.0,R_2rHIELmmNt9i7TN,47,female,HS
+216,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+217,,,participant,NARS,S2,Social Influence of Robots,10.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+218,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+219,,,participant,BFI,S1,Extraversion,2.625,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+220,,,participant,BFI,S2,Agreeableness,4.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+221,,,participant,BFI,S3,Conscientiousness,4.444444444444445,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+222,,,participant,BFI,S4,Neuroticism,1.5,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+223,,,participant,BFI,S5,Openness,4.6,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+224,half,left,red,GODSPEED2,S1,Anthropomorphism,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+225,half,left,red,GODSPEED2,S2,Animacy,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+226,half,left,red,GODSPEED2,S3,Likeability,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+227,half,left,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+228,half,left,red,GODSPEED2,S5,Perceived Safety,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+229,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+230,irrational,right,blue,GODSPEED1,S2,Animacy,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+231,irrational,right,blue,GODSPEED1,S3,Likeability,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+232,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+233,irrational,right,blue,GODSPEED1,S5,Perceived Safety,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+234,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+235,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+236,half,left,red,q_preference,Q5.1,,1.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+237,half,left,red,q_preference,Q7.1,,1.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+238,irrational,right,blue,q_preference,Q10.1,,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+239,half,left,red,q_preference,Q12.1,,1.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+240,half,left,red,q_preference,Q14.1,,1.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+241,irrational,right,blue,q_preference,Q16.1,,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+242,irrational,right,blue,q_preference,Q18.1,,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+243,irrational,right,blue,q_preference,prefer,choice,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+244,irrational,right,blue,q_preference,portfolio,choice,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+245,irrational,right,blue,q_preference,member,choice,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+246,irrational,right,blue,q_preference,analyst,choice,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+247,irrational,right,blue,q_preference,bartender,choice,2.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+248,half,left,red,preference,average,,0.5714285714285714,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+249,half,left,red,preference,std,,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+250,irrational,right,blue,preference,average,,0.42857142857142855,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+251,irrational,right,blue,preference,std,,0.0,R_3Oe5xUruQDNJQnt,45,male,Associate degree
+252,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_Ap00PlqjpND5zot,52,male,MA
+253,,,participant,NARS,S2,Social Influence of Robots,12.0,R_Ap00PlqjpND5zot,52,male,MA
+254,,,participant,NARS,S3,Emotions in Interaction with Robots,11.0,R_Ap00PlqjpND5zot,52,male,MA
+255,,,participant,BFI,S1,Extraversion,1.75,R_Ap00PlqjpND5zot,52,male,MA
+256,,,participant,BFI,S2,Agreeableness,4.555555555555555,R_Ap00PlqjpND5zot,52,male,MA
+257,,,participant,BFI,S3,Conscientiousness,4.777777777777778,R_Ap00PlqjpND5zot,52,male,MA
+258,,,participant,BFI,S4,Neuroticism,2.25,R_Ap00PlqjpND5zot,52,male,MA
+259,,,participant,BFI,S5,Openness,2.9,R_Ap00PlqjpND5zot,52,male,MA
+260,half,right,red,GODSPEED2,S1,Anthropomorphism,1.6,R_Ap00PlqjpND5zot,52,male,MA
+261,half,right,red,GODSPEED2,S2,Animacy,3.0,R_Ap00PlqjpND5zot,52,male,MA
+262,half,right,red,GODSPEED2,S3,Likeability,3.6,R_Ap00PlqjpND5zot,52,male,MA
+263,half,right,red,GODSPEED2,S4,Perceived Intelligence,3.0,R_Ap00PlqjpND5zot,52,male,MA
+264,half,right,red,GODSPEED2,S5,Perceived Safety,1.6666666666666667,R_Ap00PlqjpND5zot,52,male,MA
+265,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,2.0,R_Ap00PlqjpND5zot,52,male,MA
+266,irrational,left,blue,GODSPEED1,S2,Animacy,3.3333333333333335,R_Ap00PlqjpND5zot,52,male,MA
+267,irrational,left,blue,GODSPEED1,S3,Likeability,3.6,R_Ap00PlqjpND5zot,52,male,MA
+268,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.2,R_Ap00PlqjpND5zot,52,male,MA
+269,irrational,left,blue,GODSPEED1,S5,Perceived Safety,2.0,R_Ap00PlqjpND5zot,52,male,MA
+270,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_Ap00PlqjpND5zot,52,male,MA
+271,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_Ap00PlqjpND5zot,52,male,MA
+272,irrational,left,blue,q_preference,Q5.1,,2.0,R_Ap00PlqjpND5zot,52,male,MA
+273,irrational,left,blue,q_preference,Q7.1,,2.0,R_Ap00PlqjpND5zot,52,male,MA
+274,half,right,red,q_preference,Q10.1,,1.0,R_Ap00PlqjpND5zot,52,male,MA
+275,irrational,left,blue,q_preference,Q12.1,,2.0,R_Ap00PlqjpND5zot,52,male,MA
+276,half,right,red,q_preference,Q14.1,,1.0,R_Ap00PlqjpND5zot,52,male,MA
+277,irrational,left,blue,q_preference,Q16.1,,2.0,R_Ap00PlqjpND5zot,52,male,MA
+278,irrational,left,blue,q_preference,Q18.1,,2.0,R_Ap00PlqjpND5zot,52,male,MA
+279,irrational,left,blue,q_preference,prefer,choice,2.0,R_Ap00PlqjpND5zot,52,male,MA
+280,irrational,left,blue,q_preference,portfolio,choice,2.0,R_Ap00PlqjpND5zot,52,male,MA
+281,irrational,left,blue,q_preference,member,choice,2.0,R_Ap00PlqjpND5zot,52,male,MA
+282,irrational,left,blue,q_preference,analyst,choice,2.0,R_Ap00PlqjpND5zot,52,male,MA
+283,half,right,red,q_preference,bartender,choice,1.0,R_Ap00PlqjpND5zot,52,male,MA
+284,half,right,red,preference,average,,0.2857142857142857,R_Ap00PlqjpND5zot,52,male,MA
+285,half,right,red,preference,std,,0.0,R_Ap00PlqjpND5zot,52,male,MA
+286,irrational,left,blue,preference,average,,0.7142857142857143,R_Ap00PlqjpND5zot,52,male,MA
+287,irrational,left,blue,preference,std,,0.0,R_Ap00PlqjpND5zot,52,male,MA
+288,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+289,,,participant,NARS,S2,Social Influence of Robots,12.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+290,,,participant,NARS,S3,Emotions in Interaction with Robots,10.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+291,,,participant,BFI,S1,Extraversion,2.25,R_1jvUWvCVrHxOPaP,25,male,<BA
+292,,,participant,BFI,S2,Agreeableness,4.444444444444445,R_1jvUWvCVrHxOPaP,25,male,<BA
+293,,,participant,BFI,S3,Conscientiousness,4.444444444444445,R_1jvUWvCVrHxOPaP,25,male,<BA
+294,,,participant,BFI,S4,Neuroticism,1.75,R_1jvUWvCVrHxOPaP,25,male,<BA
+295,,,participant,BFI,S5,Openness,2.9,R_1jvUWvCVrHxOPaP,25,male,<BA
+296,half,right,red,GODSPEED2,S1,Anthropomorphism,3.4,R_1jvUWvCVrHxOPaP,25,male,<BA
+297,half,right,red,GODSPEED2,S2,Animacy,2.8333333333333335,R_1jvUWvCVrHxOPaP,25,male,<BA
+298,half,right,red,GODSPEED2,S3,Likeability,3.8,R_1jvUWvCVrHxOPaP,25,male,<BA
+299,half,right,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_1jvUWvCVrHxOPaP,25,male,<BA
+300,half,right,red,GODSPEED2,S5,Perceived Safety,2.6666666666666665,R_1jvUWvCVrHxOPaP,25,male,<BA
+301,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,2.4,R_1jvUWvCVrHxOPaP,25,male,<BA
+302,irrational,left,blue,GODSPEED1,S2,Animacy,2.3333333333333335,R_1jvUWvCVrHxOPaP,25,male,<BA
+303,irrational,left,blue,GODSPEED1,S3,Likeability,3.2,R_1jvUWvCVrHxOPaP,25,male,<BA
+304,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+305,irrational,left,blue,GODSPEED1,S5,Perceived Safety,3.6666666666666665,R_1jvUWvCVrHxOPaP,25,male,<BA
+306,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_1jvUWvCVrHxOPaP,25,male,<BA
+307,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_1jvUWvCVrHxOPaP,25,male,<BA
+308,irrational,left,blue,q_preference,Q5.1,,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+309,half,right,red,q_preference,Q7.1,,1.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+310,half,right,red,q_preference,Q10.1,,1.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+311,half,right,red,q_preference,Q12.1,,1.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+312,irrational,left,blue,q_preference,Q14.1,,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+313,irrational,left,blue,q_preference,Q16.1,,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+314,irrational,left,blue,q_preference,Q18.1,,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+315,irrational,left,blue,q_preference,prefer,choice,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+316,irrational,left,blue,q_preference,portfolio,choice,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+317,irrational,left,blue,q_preference,member,choice,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+318,irrational,left,blue,q_preference,analyst,choice,2.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+319,half,right,red,q_preference,bartender,choice,1.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+320,half,right,red,preference,average,,0.42857142857142855,R_1jvUWvCVrHxOPaP,25,male,<BA
+321,half,right,red,preference,std,,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+322,irrational,left,blue,preference,average,,0.5714285714285714,R_1jvUWvCVrHxOPaP,25,male,<BA
+323,irrational,left,blue,preference,std,,0.0,R_1jvUWvCVrHxOPaP,25,male,<BA
+324,,,participant,NARS,S1,Situations and Interactions with Robots,6.0,R_26evzLJuqRk5deP,29,male,HS
+325,,,participant,NARS,S2,Social Influence of Robots,17.0,R_26evzLJuqRk5deP,29,male,HS
+326,,,participant,NARS,S3,Emotions in Interaction with Robots,9.0,R_26evzLJuqRk5deP,29,male,HS
+327,,,participant,BFI,S1,Extraversion,4.125,R_26evzLJuqRk5deP,29,male,HS
+328,,,participant,BFI,S2,Agreeableness,4.777777777777778,R_26evzLJuqRk5deP,29,male,HS
+329,,,participant,BFI,S3,Conscientiousness,5.0,R_26evzLJuqRk5deP,29,male,HS
+330,,,participant,BFI,S4,Neuroticism,1.5,R_26evzLJuqRk5deP,29,male,HS
+331,,,participant,BFI,S5,Openness,4.6,R_26evzLJuqRk5deP,29,male,HS
+332,half,right,red,GODSPEED2,S1,Anthropomorphism,3.0,R_26evzLJuqRk5deP,29,male,HS
+333,half,right,red,GODSPEED2,S2,Animacy,3.0,R_26evzLJuqRk5deP,29,male,HS
+334,half,right,red,GODSPEED2,S3,Likeability,3.0,R_26evzLJuqRk5deP,29,male,HS
+335,half,right,red,GODSPEED2,S4,Perceived Intelligence,3.0,R_26evzLJuqRk5deP,29,male,HS
+336,half,right,red,GODSPEED2,S5,Perceived Safety,3.0,R_26evzLJuqRk5deP,29,male,HS
+337,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,2.6,R_26evzLJuqRk5deP,29,male,HS
+338,irrational,left,blue,GODSPEED1,S2,Animacy,3.0,R_26evzLJuqRk5deP,29,male,HS
+339,irrational,left,blue,GODSPEED1,S3,Likeability,3.0,R_26evzLJuqRk5deP,29,male,HS
+340,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.0,R_26evzLJuqRk5deP,29,male,HS
+341,irrational,left,blue,GODSPEED1,S5,Perceived Safety,3.0,R_26evzLJuqRk5deP,29,male,HS
+342,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_26evzLJuqRk5deP,29,male,HS
+343,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_26evzLJuqRk5deP,29,male,HS
+344,irrational,left,blue,q_preference,Q5.1,,2.0,R_26evzLJuqRk5deP,29,male,HS
+345,half,right,red,q_preference,Q7.1,,1.0,R_26evzLJuqRk5deP,29,male,HS
+346,irrational,left,blue,q_preference,Q10.1,,2.0,R_26evzLJuqRk5deP,29,male,HS
+347,irrational,left,blue,q_preference,Q12.1,,2.0,R_26evzLJuqRk5deP,29,male,HS
+348,half,right,red,q_preference,Q14.1,,1.0,R_26evzLJuqRk5deP,29,male,HS
+349,irrational,left,blue,q_preference,Q16.1,,2.0,R_26evzLJuqRk5deP,29,male,HS
+350,irrational,left,blue,q_preference,Q18.1,,2.0,R_26evzLJuqRk5deP,29,male,HS
+351,irrational,left,blue,q_preference,prefer,choice,2.0,R_26evzLJuqRk5deP,29,male,HS
+352,irrational,left,blue,q_preference,portfolio,choice,2.0,R_26evzLJuqRk5deP,29,male,HS
+353,irrational,left,blue,q_preference,member,choice,2.0,R_26evzLJuqRk5deP,29,male,HS
+354,irrational,left,blue,q_preference,analyst,choice,2.0,R_26evzLJuqRk5deP,29,male,HS
+355,irrational,left,blue,q_preference,bartender,choice,2.0,R_26evzLJuqRk5deP,29,male,HS
+356,half,right,red,preference,average,,0.2857142857142857,R_26evzLJuqRk5deP,29,male,HS
+357,half,right,red,preference,std,,0.0,R_26evzLJuqRk5deP,29,male,HS
+358,irrational,left,blue,preference,average,,0.7142857142857143,R_26evzLJuqRk5deP,29,male,HS
+359,irrational,left,blue,preference,std,,0.0,R_26evzLJuqRk5deP,29,male,HS
+360,,,participant,NARS,S1,Situations and Interactions with Robots,24.0,R_3NOsQmrn8CVVjHX,29,male,MA
+361,,,participant,NARS,S2,Social Influence of Robots,19.0,R_3NOsQmrn8CVVjHX,29,male,MA
+362,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_3NOsQmrn8CVVjHX,29,male,MA
+363,,,participant,BFI,S1,Extraversion,3.0,R_3NOsQmrn8CVVjHX,29,male,MA
+364,,,participant,BFI,S2,Agreeableness,3.2222222222222223,R_3NOsQmrn8CVVjHX,29,male,MA
+365,,,participant,BFI,S3,Conscientiousness,3.3333333333333335,R_3NOsQmrn8CVVjHX,29,male,MA
+366,,,participant,BFI,S4,Neuroticism,3.125,R_3NOsQmrn8CVVjHX,29,male,MA
+367,,,participant,BFI,S5,Openness,3.8,R_3NOsQmrn8CVVjHX,29,male,MA
+368,irrational,right,red,GODSPEED2,S1,Anthropomorphism,4.2,R_3NOsQmrn8CVVjHX,29,male,MA
+369,irrational,right,red,GODSPEED2,S2,Animacy,4.166666666666667,R_3NOsQmrn8CVVjHX,29,male,MA
+370,irrational,right,red,GODSPEED2,S3,Likeability,4.6,R_3NOsQmrn8CVVjHX,29,male,MA
+371,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,4.2,R_3NOsQmrn8CVVjHX,29,male,MA
+372,irrational,right,red,GODSPEED2,S5,Perceived Safety,4.333333333333333,R_3NOsQmrn8CVVjHX,29,male,MA
+373,half,left,blue,GODSPEED1,S1,Anthropomorphism,4.4,R_3NOsQmrn8CVVjHX,29,male,MA
+374,half,left,blue,GODSPEED1,S2,Animacy,4.666666666666667,R_3NOsQmrn8CVVjHX,29,male,MA
+375,half,left,blue,GODSPEED1,S3,Likeability,4.6,R_3NOsQmrn8CVVjHX,29,male,MA
+376,half,left,blue,GODSPEED1,S4,Perceived Intelligence,4.4,R_3NOsQmrn8CVVjHX,29,male,MA
+377,half,left,blue,GODSPEED1,S5,Perceived Safety,4.666666666666667,R_3NOsQmrn8CVVjHX,29,male,MA
+378,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3NOsQmrn8CVVjHX,29,male,MA
+379,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3NOsQmrn8CVVjHX,29,male,MA
+380,half,left,blue,q_preference,Q5.1,,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+381,half,left,blue,q_preference,Q7.1,,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+382,half,left,blue,q_preference,Q10.1,,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+383,half,left,blue,q_preference,Q12.1,,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+384,half,left,blue,q_preference,Q14.1,,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+385,irrational,right,red,q_preference,Q16.1,,1.0,R_3NOsQmrn8CVVjHX,29,male,MA
+386,irrational,right,red,q_preference,Q18.1,,1.0,R_3NOsQmrn8CVVjHX,29,male,MA
+387,half,left,blue,q_preference,prefer,choice,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+388,half,left,blue,q_preference,portfolio,choice,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+389,irrational,right,red,q_preference,member,choice,1.0,R_3NOsQmrn8CVVjHX,29,male,MA
+390,half,left,blue,q_preference,analyst,choice,2.0,R_3NOsQmrn8CVVjHX,29,male,MA
+391,irrational,right,red,q_preference,bartender,choice,1.0,R_3NOsQmrn8CVVjHX,29,male,MA
+392,irrational,right,red,preference,average,,0.2857142857142857,R_3NOsQmrn8CVVjHX,29,male,MA
+393,irrational,right,red,preference,std,,0.0,R_3NOsQmrn8CVVjHX,29,male,MA
+394,half,left,blue,preference,average,,0.7142857142857143,R_3NOsQmrn8CVVjHX,29,male,MA
+395,half,left,blue,preference,std,,0.0,R_3NOsQmrn8CVVjHX,29,male,MA
+396,,,participant,NARS,S1,Situations and Interactions with Robots,22.0,R_2Y99vmvmZD9Igrn,29,female,BA
+397,,,participant,NARS,S2,Social Influence of Robots,16.0,R_2Y99vmvmZD9Igrn,29,female,BA
+398,,,participant,NARS,S3,Emotions in Interaction with Robots,12.0,R_2Y99vmvmZD9Igrn,29,female,BA
+399,,,participant,BFI,S1,Extraversion,3.125,R_2Y99vmvmZD9Igrn,29,female,BA
+400,,,participant,BFI,S2,Agreeableness,4.333333333333333,R_2Y99vmvmZD9Igrn,29,female,BA
+401,,,participant,BFI,S3,Conscientiousness,4.777777777777778,R_2Y99vmvmZD9Igrn,29,female,BA
+402,,,participant,BFI,S4,Neuroticism,1.375,R_2Y99vmvmZD9Igrn,29,female,BA
+403,,,participant,BFI,S5,Openness,4.6,R_2Y99vmvmZD9Igrn,29,female,BA
+404,irrational,right,red,GODSPEED2,S1,Anthropomorphism,1.8,R_2Y99vmvmZD9Igrn,29,female,BA
+405,irrational,right,red,GODSPEED2,S2,Animacy,1.6666666666666667,R_2Y99vmvmZD9Igrn,29,female,BA
+406,irrational,right,red,GODSPEED2,S3,Likeability,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+407,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,1.6,R_2Y99vmvmZD9Igrn,29,female,BA
+408,irrational,right,red,GODSPEED2,S5,Perceived Safety,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+409,half,left,blue,GODSPEED1,S1,Anthropomorphism,3.2,R_2Y99vmvmZD9Igrn,29,female,BA
+410,half,left,blue,GODSPEED1,S2,Animacy,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+411,half,left,blue,GODSPEED1,S3,Likeability,3.0,R_2Y99vmvmZD9Igrn,29,female,BA
+412,half,left,blue,GODSPEED1,S4,Perceived Intelligence,1.8,R_2Y99vmvmZD9Igrn,29,female,BA
+413,half,left,blue,GODSPEED1,S5,Perceived Safety,3.0,R_2Y99vmvmZD9Igrn,29,female,BA
+414,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2Y99vmvmZD9Igrn,29,female,BA
+415,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2Y99vmvmZD9Igrn,29,female,BA
+416,irrational,right,red,q_preference,Q5.1,,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+417,irrational,right,red,q_preference,Q7.1,,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+418,irrational,right,red,q_preference,Q10.1,,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+419,half,left,blue,q_preference,Q12.1,,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+420,irrational,right,red,q_preference,Q14.1,,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+421,irrational,right,red,q_preference,Q16.1,,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+422,half,left,blue,q_preference,Q18.1,,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+423,irrational,right,red,q_preference,prefer,choice,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+424,irrational,right,red,q_preference,portfolio,choice,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+425,half,left,blue,q_preference,member,choice,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+426,irrational,right,red,q_preference,analyst,choice,1.0,R_2Y99vmvmZD9Igrn,29,female,BA
+427,half,left,blue,q_preference,bartender,choice,2.0,R_2Y99vmvmZD9Igrn,29,female,BA
+428,irrational,right,red,preference,average,,0.7142857142857143,R_2Y99vmvmZD9Igrn,29,female,BA
+429,irrational,right,red,preference,std,,0.0,R_2Y99vmvmZD9Igrn,29,female,BA
+430,half,left,blue,preference,average,,0.2857142857142857,R_2Y99vmvmZD9Igrn,29,female,BA
+431,half,left,blue,preference,std,,0.0,R_2Y99vmvmZD9Igrn,29,female,BA
+432,,,participant,NARS,S1,Situations and Interactions with Robots,20.0,R_2urGHxwWAlyGdHu,30,male,BA
+433,,,participant,NARS,S2,Social Influence of Robots,17.0,R_2urGHxwWAlyGdHu,30,male,BA
+434,,,participant,NARS,S3,Emotions in Interaction with Robots,13.0,R_2urGHxwWAlyGdHu,30,male,BA
+435,,,participant,BFI,S1,Extraversion,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+436,,,participant,BFI,S2,Agreeableness,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+437,,,participant,BFI,S3,Conscientiousness,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+438,,,participant,BFI,S4,Neuroticism,2.0,R_2urGHxwWAlyGdHu,30,male,BA
+439,,,participant,BFI,S5,Openness,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+440,irrational,right,red,GODSPEED2,S1,Anthropomorphism,3.0,R_2urGHxwWAlyGdHu,30,male,BA
+441,irrational,right,red,GODSPEED2,S2,Animacy,3.0,R_2urGHxwWAlyGdHu,30,male,BA
+442,irrational,right,red,GODSPEED2,S3,Likeability,2.4,R_2urGHxwWAlyGdHu,30,male,BA
+443,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,2.0,R_2urGHxwWAlyGdHu,30,male,BA
+444,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.0,R_2urGHxwWAlyGdHu,30,male,BA
+445,half,left,blue,GODSPEED1,S1,Anthropomorphism,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+446,half,left,blue,GODSPEED1,S2,Animacy,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+447,half,left,blue,GODSPEED1,S3,Likeability,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+448,half,left,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_2urGHxwWAlyGdHu,30,male,BA
+449,half,left,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_2urGHxwWAlyGdHu,30,male,BA
+450,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_2urGHxwWAlyGdHu,30,male,BA
+451,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2urGHxwWAlyGdHu,30,male,BA
+452,irrational,right,red,q_preference,Q5.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+453,irrational,right,red,q_preference,Q7.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+454,irrational,right,red,q_preference,Q10.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+455,irrational,right,red,q_preference,Q12.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+456,half,left,blue,q_preference,Q14.1,,2.0,R_2urGHxwWAlyGdHu,30,male,BA
+457,irrational,right,red,q_preference,Q16.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+458,irrational,right,red,q_preference,Q18.1,,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+459,irrational,right,red,q_preference,prefer,choice,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+460,irrational,right,red,q_preference,portfolio,choice,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+461,irrational,right,red,q_preference,member,choice,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+462,irrational,right,red,q_preference,analyst,choice,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+463,irrational,right,red,q_preference,bartender,choice,1.0,R_2urGHxwWAlyGdHu,30,male,BA
+464,irrational,right,red,preference,average,,0.8571428571428571,R_2urGHxwWAlyGdHu,30,male,BA
+465,irrational,right,red,preference,std,,0.0,R_2urGHxwWAlyGdHu,30,male,BA
+466,half,left,blue,preference,average,,0.14285714285714285,R_2urGHxwWAlyGdHu,30,male,BA
+467,half,left,blue,preference,std,,0.0,R_2urGHxwWAlyGdHu,30,male,BA
+468,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_1l011tD1Bg8DQy2,33,female,BA
+469,,,participant,NARS,S2,Social Influence of Robots,15.0,R_1l011tD1Bg8DQy2,33,female,BA
+470,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_1l011tD1Bg8DQy2,33,female,BA
+471,,,participant,BFI,S1,Extraversion,3.125,R_1l011tD1Bg8DQy2,33,female,BA
+472,,,participant,BFI,S2,Agreeableness,4.222222222222222,R_1l011tD1Bg8DQy2,33,female,BA
+473,,,participant,BFI,S3,Conscientiousness,4.0,R_1l011tD1Bg8DQy2,33,female,BA
+474,,,participant,BFI,S4,Neuroticism,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+475,,,participant,BFI,S5,Openness,3.1,R_1l011tD1Bg8DQy2,33,female,BA
+476,irrational,right,red,GODSPEED2,S1,Anthropomorphism,2.4,R_1l011tD1Bg8DQy2,33,female,BA
+477,irrational,right,red,GODSPEED2,S2,Animacy,2.8333333333333335,R_1l011tD1Bg8DQy2,33,female,BA
+478,irrational,right,red,GODSPEED2,S3,Likeability,3.6,R_1l011tD1Bg8DQy2,33,female,BA
+479,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,3.0,R_1l011tD1Bg8DQy2,33,female,BA
+480,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.6666666666666665,R_1l011tD1Bg8DQy2,33,female,BA
+481,half,left,blue,GODSPEED1,S1,Anthropomorphism,3.2,R_1l011tD1Bg8DQy2,33,female,BA
+482,half,left,blue,GODSPEED1,S2,Animacy,2.8333333333333335,R_1l011tD1Bg8DQy2,33,female,BA
+483,half,left,blue,GODSPEED1,S3,Likeability,3.8,R_1l011tD1Bg8DQy2,33,female,BA
+484,half,left,blue,GODSPEED1,S4,Perceived Intelligence,3.4,R_1l011tD1Bg8DQy2,33,female,BA
+485,half,left,blue,GODSPEED1,S5,Perceived Safety,3.6666666666666665,R_1l011tD1Bg8DQy2,33,female,BA
+486,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1l011tD1Bg8DQy2,33,female,BA
+487,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_1l011tD1Bg8DQy2,33,female,BA
+488,half,left,blue,q_preference,Q5.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+489,half,left,blue,q_preference,Q7.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+490,half,left,blue,q_preference,Q10.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+491,half,left,blue,q_preference,Q12.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+492,half,left,blue,q_preference,Q14.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+493,half,left,blue,q_preference,Q16.1,,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+494,irrational,right,red,q_preference,Q18.1,,1.0,R_1l011tD1Bg8DQy2,33,female,BA
+495,half,left,blue,q_preference,prefer,choice,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+496,half,left,blue,q_preference,portfolio,choice,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+497,half,left,blue,q_preference,member,choice,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+498,half,left,blue,q_preference,analyst,choice,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+499,half,left,blue,q_preference,bartender,choice,2.0,R_1l011tD1Bg8DQy2,33,female,BA
+500,irrational,right,red,preference,average,,0.14285714285714285,R_1l011tD1Bg8DQy2,33,female,BA
+501,irrational,right,red,preference,std,,0.0,R_1l011tD1Bg8DQy2,33,female,BA
+502,half,left,blue,preference,average,,0.8571428571428571,R_1l011tD1Bg8DQy2,33,female,BA
+503,half,left,blue,preference,std,,0.0,R_1l011tD1Bg8DQy2,33,female,BA
+504,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_2OJD0HQHgnW7TIm,32,male,BA
+505,,,participant,NARS,S2,Social Influence of Robots,15.0,R_2OJD0HQHgnW7TIm,32,male,BA
+506,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_2OJD0HQHgnW7TIm,32,male,BA
+507,,,participant,BFI,S1,Extraversion,2.25,R_2OJD0HQHgnW7TIm,32,male,BA
+508,,,participant,BFI,S2,Agreeableness,3.5555555555555554,R_2OJD0HQHgnW7TIm,32,male,BA
+509,,,participant,BFI,S3,Conscientiousness,2.3333333333333335,R_2OJD0HQHgnW7TIm,32,male,BA
+510,,,participant,BFI,S4,Neuroticism,4.875,R_2OJD0HQHgnW7TIm,32,male,BA
+511,,,participant,BFI,S5,Openness,2.7,R_2OJD0HQHgnW7TIm,32,male,BA
+512,irrational,right,red,GODSPEED2,S1,Anthropomorphism,4.0,R_2OJD0HQHgnW7TIm,32,male,BA
+513,irrational,right,red,GODSPEED2,S2,Animacy,3.1666666666666665,R_2OJD0HQHgnW7TIm,32,male,BA
+514,irrational,right,red,GODSPEED2,S3,Likeability,5.0,R_2OJD0HQHgnW7TIm,32,male,BA
+515,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,4.4,R_2OJD0HQHgnW7TIm,32,male,BA
+516,irrational,right,red,GODSPEED2,S5,Perceived Safety,4.333333333333333,R_2OJD0HQHgnW7TIm,32,male,BA
+517,half,left,blue,GODSPEED1,S1,Anthropomorphism,3.0,R_2OJD0HQHgnW7TIm,32,male,BA
+518,half,left,blue,GODSPEED1,S2,Animacy,3.1666666666666665,R_2OJD0HQHgnW7TIm,32,male,BA
+519,half,left,blue,GODSPEED1,S3,Likeability,5.0,R_2OJD0HQHgnW7TIm,32,male,BA
+520,half,left,blue,GODSPEED1,S4,Perceived Intelligence,3.2,R_2OJD0HQHgnW7TIm,32,male,BA
+521,half,left,blue,GODSPEED1,S5,Perceived Safety,4.333333333333333,R_2OJD0HQHgnW7TIm,32,male,BA
+522,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2OJD0HQHgnW7TIm,32,male,BA
+523,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2OJD0HQHgnW7TIm,32,male,BA
+524,irrational,right,red,q_preference,Q5.1,,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+525,half,left,blue,q_preference,Q7.1,,2.0,R_2OJD0HQHgnW7TIm,32,male,BA
+526,half,left,blue,q_preference,Q10.1,,2.0,R_2OJD0HQHgnW7TIm,32,male,BA
+527,irrational,right,red,q_preference,Q12.1,,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+528,irrational,right,red,q_preference,Q14.1,,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+529,irrational,right,red,q_preference,Q16.1,,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+530,irrational,right,red,q_preference,Q18.1,,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+531,irrational,right,red,q_preference,prefer,choice,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+532,irrational,right,red,q_preference,portfolio,choice,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+533,irrational,right,red,q_preference,member,choice,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+534,irrational,right,red,q_preference,analyst,choice,1.0,R_2OJD0HQHgnW7TIm,32,male,BA
+535,half,left,blue,q_preference,bartender,choice,2.0,R_2OJD0HQHgnW7TIm,32,male,BA
+536,irrational,right,red,preference,average,,0.7142857142857143,R_2OJD0HQHgnW7TIm,32,male,BA
+537,irrational,right,red,preference,std,,0.0,R_2OJD0HQHgnW7TIm,32,male,BA
+538,half,left,blue,preference,average,,0.2857142857142857,R_2OJD0HQHgnW7TIm,32,male,BA
+539,half,left,blue,preference,std,,0.0,R_2OJD0HQHgnW7TIm,32,male,BA
+540,,,participant,NARS,S1,Situations and Interactions with Robots,6.0,R_3sgkqeXS5mSH5qt,31,female,BA
+541,,,participant,NARS,S2,Social Influence of Robots,8.0,R_3sgkqeXS5mSH5qt,31,female,BA
+542,,,participant,NARS,S3,Emotions in Interaction with Robots,5.0,R_3sgkqeXS5mSH5qt,31,female,BA
+543,,,participant,BFI,S1,Extraversion,3.25,R_3sgkqeXS5mSH5qt,31,female,BA
+544,,,participant,BFI,S2,Agreeableness,4.555555555555555,R_3sgkqeXS5mSH5qt,31,female,BA
+545,,,participant,BFI,S3,Conscientiousness,4.0,R_3sgkqeXS5mSH5qt,31,female,BA
+546,,,participant,BFI,S4,Neuroticism,1.75,R_3sgkqeXS5mSH5qt,31,female,BA
+547,,,participant,BFI,S5,Openness,3.1,R_3sgkqeXS5mSH5qt,31,female,BA
+548,irrational,left,red,GODSPEED2,S1,Anthropomorphism,2.2,R_3sgkqeXS5mSH5qt,31,female,BA
+549,irrational,left,red,GODSPEED2,S2,Animacy,3.3333333333333335,R_3sgkqeXS5mSH5qt,31,female,BA
+550,irrational,left,red,GODSPEED2,S3,Likeability,4.0,R_3sgkqeXS5mSH5qt,31,female,BA
+551,irrational,left,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_3sgkqeXS5mSH5qt,31,female,BA
+552,irrational,left,red,GODSPEED2,S5,Perceived Safety,5.0,R_3sgkqeXS5mSH5qt,31,female,BA
+553,half,right,blue,GODSPEED1,S1,Anthropomorphism,3.6,R_3sgkqeXS5mSH5qt,31,female,BA
+554,half,right,blue,GODSPEED1,S2,Animacy,4.0,R_3sgkqeXS5mSH5qt,31,female,BA
+555,half,right,blue,GODSPEED1,S3,Likeability,5.0,R_3sgkqeXS5mSH5qt,31,female,BA
+556,half,right,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_3sgkqeXS5mSH5qt,31,female,BA
+557,half,right,blue,GODSPEED1,S5,Perceived Safety,5.0,R_3sgkqeXS5mSH5qt,31,female,BA
+558,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3sgkqeXS5mSH5qt,31,female,BA
+559,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3sgkqeXS5mSH5qt,31,female,BA
+560,half,right,blue,q_preference,Q5.1,,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+561,half,right,blue,q_preference,Q7.1,,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+562,irrational,left,red,q_preference,Q10.1,,1.0,R_3sgkqeXS5mSH5qt,31,female,BA
+563,half,right,blue,q_preference,Q12.1,,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+564,half,right,blue,q_preference,Q14.1,,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+565,irrational,left,red,q_preference,Q16.1,,1.0,R_3sgkqeXS5mSH5qt,31,female,BA
+566,irrational,left,red,q_preference,Q18.1,,1.0,R_3sgkqeXS5mSH5qt,31,female,BA
+567,half,right,blue,q_preference,prefer,choice,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+568,half,right,blue,q_preference,portfolio,choice,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+569,half,right,blue,q_preference,member,choice,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+570,half,right,blue,q_preference,analyst,choice,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+571,half,right,blue,q_preference,bartender,choice,2.0,R_3sgkqeXS5mSH5qt,31,female,BA
+572,irrational,left,red,preference,average,,0.42857142857142855,R_3sgkqeXS5mSH5qt,31,female,BA
+573,irrational,left,red,preference,std,,0.0,R_3sgkqeXS5mSH5qt,31,female,BA
+574,half,right,blue,preference,average,,0.5714285714285714,R_3sgkqeXS5mSH5qt,31,female,BA
+575,half,right,blue,preference,std,,0.0,R_3sgkqeXS5mSH5qt,31,female,BA
+576,,,participant,NARS,S1,Situations and Interactions with Robots,8.0,R_3nHt10lYNAiQigG,34,male,BA
+577,,,participant,NARS,S2,Social Influence of Robots,9.0,R_3nHt10lYNAiQigG,34,male,BA
+578,,,participant,NARS,S3,Emotions in Interaction with Robots,12.0,R_3nHt10lYNAiQigG,34,male,BA
+579,,,participant,BFI,S1,Extraversion,2.625,R_3nHt10lYNAiQigG,34,male,BA
+580,,,participant,BFI,S2,Agreeableness,3.4444444444444446,R_3nHt10lYNAiQigG,34,male,BA
+581,,,participant,BFI,S3,Conscientiousness,3.5555555555555554,R_3nHt10lYNAiQigG,34,male,BA
+582,,,participant,BFI,S4,Neuroticism,2.5,R_3nHt10lYNAiQigG,34,male,BA
+583,,,participant,BFI,S5,Openness,4.0,R_3nHt10lYNAiQigG,34,male,BA
+584,irrational,left,red,GODSPEED2,S1,Anthropomorphism,2.4,R_3nHt10lYNAiQigG,34,male,BA
+585,irrational,left,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_3nHt10lYNAiQigG,34,male,BA
+586,irrational,left,red,GODSPEED2,S3,Likeability,2.6,R_3nHt10lYNAiQigG,34,male,BA
+587,irrational,left,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_3nHt10lYNAiQigG,34,male,BA
+588,irrational,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_3nHt10lYNAiQigG,34,male,BA
+589,half,right,blue,GODSPEED1,S1,Anthropomorphism,4.0,R_3nHt10lYNAiQigG,34,male,BA
+590,half,right,blue,GODSPEED1,S2,Animacy,3.8333333333333335,R_3nHt10lYNAiQigG,34,male,BA
+591,half,right,blue,GODSPEED1,S3,Likeability,3.4,R_3nHt10lYNAiQigG,34,male,BA
+592,half,right,blue,GODSPEED1,S4,Perceived Intelligence,3.2,R_3nHt10lYNAiQigG,34,male,BA
+593,half,right,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_3nHt10lYNAiQigG,34,male,BA
+594,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_3nHt10lYNAiQigG,34,male,BA
+595,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_3nHt10lYNAiQigG,34,male,BA
+596,irrational,left,red,q_preference,Q5.1,,1.0,R_3nHt10lYNAiQigG,34,male,BA
+597,half,right,blue,q_preference,Q7.1,,2.0,R_3nHt10lYNAiQigG,34,male,BA
+598,half,right,blue,q_preference,Q10.1,,2.0,R_3nHt10lYNAiQigG,34,male,BA
+599,half,right,blue,q_preference,Q12.1,,2.0,R_3nHt10lYNAiQigG,34,male,BA
+600,irrational,left,red,q_preference,Q14.1,,1.0,R_3nHt10lYNAiQigG,34,male,BA
+601,irrational,left,red,q_preference,Q16.1,,1.0,R_3nHt10lYNAiQigG,34,male,BA
+602,half,right,blue,q_preference,Q18.1,,2.0,R_3nHt10lYNAiQigG,34,male,BA
+603,irrational,left,red,q_preference,prefer,choice,1.0,R_3nHt10lYNAiQigG,34,male,BA
+604,irrational,left,red,q_preference,portfolio,choice,1.0,R_3nHt10lYNAiQigG,34,male,BA
+605,irrational,left,red,q_preference,member,choice,1.0,R_3nHt10lYNAiQigG,34,male,BA
+606,irrational,left,red,q_preference,analyst,choice,1.0,R_3nHt10lYNAiQigG,34,male,BA
+607,irrational,left,red,q_preference,bartender,choice,1.0,R_3nHt10lYNAiQigG,34,male,BA
+608,irrational,left,red,preference,average,,0.42857142857142855,R_3nHt10lYNAiQigG,34,male,BA
+609,irrational,left,red,preference,std,,0.0,R_3nHt10lYNAiQigG,34,male,BA
+610,half,right,blue,preference,average,,0.5714285714285714,R_3nHt10lYNAiQigG,34,male,BA
+611,half,right,blue,preference,std,,0.0,R_3nHt10lYNAiQigG,34,male,BA
+612,,,participant,NARS,S1,Situations and Interactions with Robots,10.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+613,,,participant,NARS,S2,Social Influence of Robots,13.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+614,,,participant,NARS,S3,Emotions in Interaction with Robots,9.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+615,,,participant,BFI,S1,Extraversion,1.625,R_3RgVGyKsN0qt4Hf,36,male,HS
+616,,,participant,BFI,S2,Agreeableness,3.888888888888889,R_3RgVGyKsN0qt4Hf,36,male,HS
+617,,,participant,BFI,S3,Conscientiousness,4.333333333333333,R_3RgVGyKsN0qt4Hf,36,male,HS
+618,,,participant,BFI,S4,Neuroticism,2.625,R_3RgVGyKsN0qt4Hf,36,male,HS
+619,,,participant,BFI,S5,Openness,3.9,R_3RgVGyKsN0qt4Hf,36,male,HS
+620,irrational,left,red,GODSPEED2,S1,Anthropomorphism,2.6,R_3RgVGyKsN0qt4Hf,36,male,HS
+621,irrational,left,red,GODSPEED2,S2,Animacy,3.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+622,irrational,left,red,GODSPEED2,S3,Likeability,4.2,R_3RgVGyKsN0qt4Hf,36,male,HS
+623,irrational,left,red,GODSPEED2,S4,Perceived Intelligence,3.8,R_3RgVGyKsN0qt4Hf,36,male,HS
+624,irrational,left,red,GODSPEED2,S5,Perceived Safety,4.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+625,half,right,blue,GODSPEED1,S1,Anthropomorphism,2.2,R_3RgVGyKsN0qt4Hf,36,male,HS
+626,half,right,blue,GODSPEED1,S2,Animacy,3.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+627,half,right,blue,GODSPEED1,S3,Likeability,3.8,R_3RgVGyKsN0qt4Hf,36,male,HS
+628,half,right,blue,GODSPEED1,S4,Perceived Intelligence,3.8,R_3RgVGyKsN0qt4Hf,36,male,HS
+629,half,right,blue,GODSPEED1,S5,Perceived Safety,4.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+630,irrational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3RgVGyKsN0qt4Hf,36,male,HS
+631,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3RgVGyKsN0qt4Hf,36,male,HS
+632,irrational,left,red,q_preference,Q5.1,,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+633,irrational,left,red,q_preference,Q7.1,,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+634,half,right,blue,q_preference,Q10.1,,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+635,irrational,left,red,q_preference,Q12.1,,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+636,irrational,left,red,q_preference,Q14.1,,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+637,irrational,left,red,q_preference,Q16.1,,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+638,half,right,blue,q_preference,Q18.1,,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+639,irrational,left,red,q_preference,prefer,choice,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+640,half,right,blue,q_preference,portfolio,choice,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+641,half,right,blue,q_preference,member,choice,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+642,half,right,blue,q_preference,analyst,choice,2.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+643,irrational,left,red,q_preference,bartender,choice,1.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+644,irrational,left,red,preference,average,,0.7142857142857143,R_3RgVGyKsN0qt4Hf,36,male,HS
+645,irrational,left,red,preference,std,,0.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+646,half,right,blue,preference,average,,0.2857142857142857,R_3RgVGyKsN0qt4Hf,36,male,HS
+647,half,right,blue,preference,std,,0.0,R_3RgVGyKsN0qt4Hf,36,male,HS
+648,,,participant,NARS,S1,Situations and Interactions with Robots,14.0,R_883i94DV4dQuEiR,22,female,BA
+649,,,participant,NARS,S2,Social Influence of Robots,16.0,R_883i94DV4dQuEiR,22,female,BA
+650,,,participant,NARS,S3,Emotions in Interaction with Robots,14.0,R_883i94DV4dQuEiR,22,female,BA
+651,,,participant,BFI,S1,Extraversion,1.625,R_883i94DV4dQuEiR,22,female,BA
+652,,,participant,BFI,S2,Agreeableness,3.888888888888889,R_883i94DV4dQuEiR,22,female,BA
+653,,,participant,BFI,S3,Conscientiousness,3.3333333333333335,R_883i94DV4dQuEiR,22,female,BA
+654,,,participant,BFI,S4,Neuroticism,4.5,R_883i94DV4dQuEiR,22,female,BA
+655,,,participant,BFI,S5,Openness,4.0,R_883i94DV4dQuEiR,22,female,BA
+656,rational,right,red,GODSPEED2,S1,Anthropomorphism,2.6,R_883i94DV4dQuEiR,22,female,BA
+657,rational,right,red,GODSPEED2,S2,Animacy,2.0,R_883i94DV4dQuEiR,22,female,BA
+658,rational,right,red,GODSPEED2,S3,Likeability,2.6,R_883i94DV4dQuEiR,22,female,BA
+659,rational,right,red,GODSPEED2,S4,Perceived Intelligence,3.4,R_883i94DV4dQuEiR,22,female,BA
+660,rational,right,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_883i94DV4dQuEiR,22,female,BA
+661,half,left,blue,GODSPEED1,S1,Anthropomorphism,1.2,R_883i94DV4dQuEiR,22,female,BA
+662,half,left,blue,GODSPEED1,S2,Animacy,1.6666666666666667,R_883i94DV4dQuEiR,22,female,BA
+663,half,left,blue,GODSPEED1,S3,Likeability,3.4,R_883i94DV4dQuEiR,22,female,BA
+664,half,left,blue,GODSPEED1,S4,Perceived Intelligence,2.6,R_883i94DV4dQuEiR,22,female,BA
+665,half,left,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_883i94DV4dQuEiR,22,female,BA
+666,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_883i94DV4dQuEiR,22,female,BA
+667,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_883i94DV4dQuEiR,22,female,BA
+668,rational,right,red,q_preference,Q5.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+669,rational,right,red,q_preference,Q7.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+670,rational,right,red,q_preference,Q10.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+671,rational,right,red,q_preference,Q12.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+672,rational,right,red,q_preference,Q14.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+673,rational,right,red,q_preference,Q16.1,,1.0,R_883i94DV4dQuEiR,22,female,BA
+674,half,left,blue,q_preference,Q18.1,,2.0,R_883i94DV4dQuEiR,22,female,BA
+675,rational,right,red,q_preference,prefer,choice,1.0,R_883i94DV4dQuEiR,22,female,BA
+676,rational,right,red,q_preference,portfolio,choice,1.0,R_883i94DV4dQuEiR,22,female,BA
+677,rational,right,red,q_preference,member,choice,1.0,R_883i94DV4dQuEiR,22,female,BA
+678,rational,right,red,q_preference,analyst,choice,1.0,R_883i94DV4dQuEiR,22,female,BA
+679,rational,right,red,q_preference,bartender,choice,1.0,R_883i94DV4dQuEiR,22,female,BA
+680,rational,right,red,preference,average,,0.8571428571428571,R_883i94DV4dQuEiR,22,female,BA
+681,rational,right,red,preference,std,,0.0,R_883i94DV4dQuEiR,22,female,BA
+682,half,left,blue,preference,average,,0.14285714285714285,R_883i94DV4dQuEiR,22,female,BA
+683,half,left,blue,preference,std,,0.0,R_883i94DV4dQuEiR,22,female,BA
+684,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_1pAIbETAQh0OTju,36,male,BA
+685,,,participant,NARS,S2,Social Influence of Robots,13.0,R_1pAIbETAQh0OTju,36,male,BA
+686,,,participant,NARS,S3,Emotions in Interaction with Robots,11.0,R_1pAIbETAQh0OTju,36,male,BA
+687,,,participant,BFI,S1,Extraversion,4.0,R_1pAIbETAQh0OTju,36,male,BA
+688,,,participant,BFI,S2,Agreeableness,4.888888888888889,R_1pAIbETAQh0OTju,36,male,BA
+689,,,participant,BFI,S3,Conscientiousness,5.0,R_1pAIbETAQh0OTju,36,male,BA
+690,,,participant,BFI,S4,Neuroticism,1.125,R_1pAIbETAQh0OTju,36,male,BA
+691,,,participant,BFI,S5,Openness,4.9,R_1pAIbETAQh0OTju,36,male,BA
+692,rational,right,red,GODSPEED2,S1,Anthropomorphism,2.0,R_1pAIbETAQh0OTju,36,male,BA
+693,rational,right,red,GODSPEED2,S2,Animacy,1.5,R_1pAIbETAQh0OTju,36,male,BA
+694,rational,right,red,GODSPEED2,S3,Likeability,2.0,R_1pAIbETAQh0OTju,36,male,BA
+695,rational,right,red,GODSPEED2,S4,Perceived Intelligence,2.4,R_1pAIbETAQh0OTju,36,male,BA
+696,rational,right,red,GODSPEED2,S5,Perceived Safety,1.6666666666666667,R_1pAIbETAQh0OTju,36,male,BA
+697,half,left,blue,GODSPEED1,S1,Anthropomorphism,4.4,R_1pAIbETAQh0OTju,36,male,BA
+698,half,left,blue,GODSPEED1,S2,Animacy,3.3333333333333335,R_1pAIbETAQh0OTju,36,male,BA
+699,half,left,blue,GODSPEED1,S3,Likeability,2.2,R_1pAIbETAQh0OTju,36,male,BA
+700,half,left,blue,GODSPEED1,S4,Perceived Intelligence,3.2,R_1pAIbETAQh0OTju,36,male,BA
+701,half,left,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_1pAIbETAQh0OTju,36,male,BA
+702,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1pAIbETAQh0OTju,36,male,BA
+703,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_1pAIbETAQh0OTju,36,male,BA
+704,half,left,blue,q_preference,Q5.1,,2.0,R_1pAIbETAQh0OTju,36,male,BA
+705,half,left,blue,q_preference,Q7.1,,2.0,R_1pAIbETAQh0OTju,36,male,BA
+706,rational,right,red,q_preference,Q10.1,,1.0,R_1pAIbETAQh0OTju,36,male,BA
+707,half,left,blue,q_preference,Q12.1,,2.0,R_1pAIbETAQh0OTju,36,male,BA
+708,half,left,blue,q_preference,Q14.1,,2.0,R_1pAIbETAQh0OTju,36,male,BA
+709,rational,right,red,q_preference,Q16.1,,1.0,R_1pAIbETAQh0OTju,36,male,BA
+710,half,left,blue,q_preference,Q18.1,,2.0,R_1pAIbETAQh0OTju,36,male,BA
+711,half,left,blue,q_preference,prefer,choice,2.0,R_1pAIbETAQh0OTju,36,male,BA
+712,half,left,blue,q_preference,portfolio,choice,2.0,R_1pAIbETAQh0OTju,36,male,BA
+713,rational,right,red,q_preference,member,choice,1.0,R_1pAIbETAQh0OTju,36,male,BA
+714,rational,right,red,q_preference,analyst,choice,1.0,R_1pAIbETAQh0OTju,36,male,BA
+715,half,left,blue,q_preference,bartender,choice,2.0,R_1pAIbETAQh0OTju,36,male,BA
+716,rational,right,red,preference,average,,0.2857142857142857,R_1pAIbETAQh0OTju,36,male,BA
+717,rational,right,red,preference,std,,0.0,R_1pAIbETAQh0OTju,36,male,BA
+718,half,left,blue,preference,average,,0.7142857142857143,R_1pAIbETAQh0OTju,36,male,BA
+719,half,left,blue,preference,std,,0.0,R_1pAIbETAQh0OTju,36,male,BA
+720,,,participant,NARS,S1,Situations and Interactions with Robots,11.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+721,,,participant,NARS,S2,Social Influence of Robots,13.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+722,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+723,,,participant,BFI,S1,Extraversion,3.75,R_20USM6QIIwJ3t96,32,male,Associate degree
+724,,,participant,BFI,S2,Agreeableness,4.111111111111111,R_20USM6QIIwJ3t96,32,male,Associate degree
+725,,,participant,BFI,S3,Conscientiousness,4.111111111111111,R_20USM6QIIwJ3t96,32,male,Associate degree
+726,,,participant,BFI,S4,Neuroticism,1.875,R_20USM6QIIwJ3t96,32,male,Associate degree
+727,,,participant,BFI,S5,Openness,2.9,R_20USM6QIIwJ3t96,32,male,Associate degree
+728,rational,right,red,GODSPEED2,S1,Anthropomorphism,2.4,R_20USM6QIIwJ3t96,32,male,Associate degree
+729,rational,right,red,GODSPEED2,S2,Animacy,1.8333333333333333,R_20USM6QIIwJ3t96,32,male,Associate degree
+730,rational,right,red,GODSPEED2,S3,Likeability,2.8,R_20USM6QIIwJ3t96,32,male,Associate degree
+731,rational,right,red,GODSPEED2,S4,Perceived Intelligence,2.6,R_20USM6QIIwJ3t96,32,male,Associate degree
+732,rational,right,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_20USM6QIIwJ3t96,32,male,Associate degree
+733,half,left,blue,GODSPEED1,S1,Anthropomorphism,2.2,R_20USM6QIIwJ3t96,32,male,Associate degree
+734,half,left,blue,GODSPEED1,S2,Animacy,1.8333333333333333,R_20USM6QIIwJ3t96,32,male,Associate degree
+735,half,left,blue,GODSPEED1,S3,Likeability,2.6,R_20USM6QIIwJ3t96,32,male,Associate degree
+736,half,left,blue,GODSPEED1,S4,Perceived Intelligence,2.6,R_20USM6QIIwJ3t96,32,male,Associate degree
+737,half,left,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_20USM6QIIwJ3t96,32,male,Associate degree
+738,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_20USM6QIIwJ3t96,32,male,Associate degree
+739,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_20USM6QIIwJ3t96,32,male,Associate degree
+740,rational,right,red,q_preference,Q5.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+741,rational,right,red,q_preference,Q7.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+742,rational,right,red,q_preference,Q10.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+743,rational,right,red,q_preference,Q12.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+744,rational,right,red,q_preference,Q14.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+745,rational,right,red,q_preference,Q16.1,,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+746,half,left,blue,q_preference,Q18.1,,2.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+747,rational,right,red,q_preference,prefer,choice,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+748,rational,right,red,q_preference,portfolio,choice,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+749,rational,right,red,q_preference,member,choice,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+750,rational,right,red,q_preference,analyst,choice,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+751,rational,right,red,q_preference,bartender,choice,1.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+752,rational,right,red,preference,average,,0.8571428571428571,R_20USM6QIIwJ3t96,32,male,Associate degree
+753,rational,right,red,preference,std,,0.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+754,half,left,blue,preference,average,,0.14285714285714285,R_20USM6QIIwJ3t96,32,male,Associate degree
+755,half,left,blue,preference,std,,0.0,R_20USM6QIIwJ3t96,32,male,Associate degree
+756,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+757,,,participant,NARS,S2,Social Influence of Robots,13.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+758,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+759,,,participant,BFI,S1,Extraversion,2.125,R_3qfISvr9FrgFkqw,30,female,Associate degree
+760,,,participant,BFI,S2,Agreeableness,4.777777777777778,R_3qfISvr9FrgFkqw,30,female,Associate degree
+761,,,participant,BFI,S3,Conscientiousness,4.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+762,,,participant,BFI,S4,Neuroticism,2.875,R_3qfISvr9FrgFkqw,30,female,Associate degree
+763,,,participant,BFI,S5,Openness,2.7,R_3qfISvr9FrgFkqw,30,female,Associate degree
+764,rational,right,red,GODSPEED2,S1,Anthropomorphism,3.8,R_3qfISvr9FrgFkqw,30,female,Associate degree
+765,rational,right,red,GODSPEED2,S2,Animacy,3.5,R_3qfISvr9FrgFkqw,30,female,Associate degree
+766,rational,right,red,GODSPEED2,S3,Likeability,4.8,R_3qfISvr9FrgFkqw,30,female,Associate degree
+767,rational,right,red,GODSPEED2,S4,Perceived Intelligence,4.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+768,rational,right,red,GODSPEED2,S5,Perceived Safety,4.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+769,half,left,blue,GODSPEED1,S1,Anthropomorphism,2.6,R_3qfISvr9FrgFkqw,30,female,Associate degree
+770,half,left,blue,GODSPEED1,S2,Animacy,3.3333333333333335,R_3qfISvr9FrgFkqw,30,female,Associate degree
+771,half,left,blue,GODSPEED1,S3,Likeability,4.8,R_3qfISvr9FrgFkqw,30,female,Associate degree
+772,half,left,blue,GODSPEED1,S4,Perceived Intelligence,3.6,R_3qfISvr9FrgFkqw,30,female,Associate degree
+773,half,left,blue,GODSPEED1,S5,Perceived Safety,4.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+774,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_3qfISvr9FrgFkqw,30,female,Associate degree
+775,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3qfISvr9FrgFkqw,30,female,Associate degree
+776,rational,right,red,q_preference,Q5.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+777,rational,right,red,q_preference,Q7.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+778,rational,right,red,q_preference,Q10.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+779,rational,right,red,q_preference,Q12.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+780,rational,right,red,q_preference,Q14.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+781,rational,right,red,q_preference,Q16.1,,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+782,half,left,blue,q_preference,Q18.1,,2.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+783,rational,right,red,q_preference,prefer,choice,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+784,rational,right,red,q_preference,portfolio,choice,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+785,rational,right,red,q_preference,member,choice,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+786,rational,right,red,q_preference,analyst,choice,1.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+787,half,left,blue,q_preference,bartender,choice,2.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+788,rational,right,red,preference,average,,0.8571428571428571,R_3qfISvr9FrgFkqw,30,female,Associate degree
+789,rational,right,red,preference,std,,0.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+790,half,left,blue,preference,average,,0.14285714285714285,R_3qfISvr9FrgFkqw,30,female,Associate degree
+791,half,left,blue,preference,std,,0.0,R_3qfISvr9FrgFkqw,30,female,Associate degree
+792,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_xEEXA3z59uwgp69,36,male,BA
+793,,,participant,NARS,S2,Social Influence of Robots,11.0,R_xEEXA3z59uwgp69,36,male,BA
+794,,,participant,NARS,S3,Emotions in Interaction with Robots,10.0,R_xEEXA3z59uwgp69,36,male,BA
+795,,,participant,BFI,S1,Extraversion,5.0,R_xEEXA3z59uwgp69,36,male,BA
+796,,,participant,BFI,S2,Agreeableness,4.888888888888889,R_xEEXA3z59uwgp69,36,male,BA
+797,,,participant,BFI,S3,Conscientiousness,5.0,R_xEEXA3z59uwgp69,36,male,BA
+798,,,participant,BFI,S4,Neuroticism,1.0,R_xEEXA3z59uwgp69,36,male,BA
+799,,,participant,BFI,S5,Openness,4.7,R_xEEXA3z59uwgp69,36,male,BA
+800,rational,right,red,GODSPEED2,S1,Anthropomorphism,0.0,R_xEEXA3z59uwgp69,36,male,BA
+801,rational,right,red,GODSPEED2,S2,Animacy,0.0,R_xEEXA3z59uwgp69,36,male,BA
+802,rational,right,red,GODSPEED2,S3,Likeability,0.0,R_xEEXA3z59uwgp69,36,male,BA
+803,rational,right,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_xEEXA3z59uwgp69,36,male,BA
+804,rational,right,red,GODSPEED2,S5,Perceived Safety,0.0,R_xEEXA3z59uwgp69,36,male,BA
+805,half,left,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_xEEXA3z59uwgp69,36,male,BA
+806,half,left,blue,GODSPEED1,S2,Animacy,0.0,R_xEEXA3z59uwgp69,36,male,BA
+807,half,left,blue,GODSPEED1,S3,Likeability,0.0,R_xEEXA3z59uwgp69,36,male,BA
+808,half,left,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_xEEXA3z59uwgp69,36,male,BA
+809,half,left,blue,GODSPEED1,S5,Perceived Safety,0.0,R_xEEXA3z59uwgp69,36,male,BA
+810,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_xEEXA3z59uwgp69,36,male,BA
+811,half,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_xEEXA3z59uwgp69,36,male,BA
+812,half,left,blue,q_preference,Q5.1,,2.0,R_xEEXA3z59uwgp69,36,male,BA
+813,rational,right,red,q_preference,Q7.1,,1.0,R_xEEXA3z59uwgp69,36,male,BA
+814,rational,right,red,q_preference,Q10.1,,1.0,R_xEEXA3z59uwgp69,36,male,BA
+815,,,,q_preference,Q12.1,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+816,,,,q_preference,Q14.1,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+817,,,,q_preference,Q16.1,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+818,,,,q_preference,Q18.1,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+819,,,,q_preference,prefer,choice,0.0,R_xEEXA3z59uwgp69,36,male,BA
+820,,,,q_preference,portfolio,choice,0.0,R_xEEXA3z59uwgp69,36,male,BA
+821,,,,q_preference,member,choice,0.0,R_xEEXA3z59uwgp69,36,male,BA
+822,,,,q_preference,analyst,choice,0.0,R_xEEXA3z59uwgp69,36,male,BA
+823,,,,q_preference,bartender,choice,0.0,R_xEEXA3z59uwgp69,36,male,BA
+824,rational,right,red,preference,average,,0.2857142857142857,R_xEEXA3z59uwgp69,36,male,BA
+825,rational,right,red,preference,std,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+826,half,left,blue,preference,average,,0.14285714285714285,R_xEEXA3z59uwgp69,36,male,BA
+827,half,left,blue,preference,std,,0.0,R_xEEXA3z59uwgp69,36,male,BA
+828,,,participant,NARS,S1,Situations and Interactions with Robots,6.0,R_12Rc88NieRTaw5S,30,female,<BA
+829,,,participant,NARS,S2,Social Influence of Robots,17.0,R_12Rc88NieRTaw5S,30,female,<BA
+830,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_12Rc88NieRTaw5S,30,female,<BA
+831,,,participant,BFI,S1,Extraversion,3.0,R_12Rc88NieRTaw5S,30,female,<BA
+832,,,participant,BFI,S2,Agreeableness,2.7777777777777777,R_12Rc88NieRTaw5S,30,female,<BA
+833,,,participant,BFI,S3,Conscientiousness,3.111111111111111,R_12Rc88NieRTaw5S,30,female,<BA
+834,,,participant,BFI,S4,Neuroticism,4.125,R_12Rc88NieRTaw5S,30,female,<BA
+835,,,participant,BFI,S5,Openness,4.8,R_12Rc88NieRTaw5S,30,female,<BA
+836,rational,left,red,GODSPEED2,S1,Anthropomorphism,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+837,rational,left,red,GODSPEED2,S2,Animacy,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+838,rational,left,red,GODSPEED2,S3,Likeability,1.8,R_12Rc88NieRTaw5S,30,female,<BA
+839,rational,left,red,GODSPEED2,S4,Perceived Intelligence,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+840,rational,left,red,GODSPEED2,S5,Perceived Safety,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+841,half,right,blue,GODSPEED1,S1,Anthropomorphism,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+842,half,right,blue,GODSPEED1,S2,Animacy,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+843,half,right,blue,GODSPEED1,S3,Likeability,1.8,R_12Rc88NieRTaw5S,30,female,<BA
+844,half,right,blue,GODSPEED1,S4,Perceived Intelligence,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+845,half,right,blue,GODSPEED1,S5,Perceived Safety,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+846,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_12Rc88NieRTaw5S,30,female,<BA
+847,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_12Rc88NieRTaw5S,30,female,<BA
+848,rational,left,red,q_preference,Q5.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+849,half,right,blue,q_preference,Q7.1,,2.0,R_12Rc88NieRTaw5S,30,female,<BA
+850,rational,left,red,q_preference,Q10.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+851,rational,left,red,q_preference,Q12.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+852,rational,left,red,q_preference,Q14.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+853,rational,left,red,q_preference,Q16.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+854,rational,left,red,q_preference,Q18.1,,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+855,rational,left,red,q_preference,prefer,choice,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+856,rational,left,red,q_preference,portfolio,choice,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+857,rational,left,red,q_preference,member,choice,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+858,rational,left,red,q_preference,analyst,choice,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+859,rational,left,red,q_preference,bartender,choice,1.0,R_12Rc88NieRTaw5S,30,female,<BA
+860,rational,left,red,preference,average,,0.8571428571428571,R_12Rc88NieRTaw5S,30,female,<BA
+861,rational,left,red,preference,std,,0.0,R_12Rc88NieRTaw5S,30,female,<BA
+862,half,right,blue,preference,average,,0.14285714285714285,R_12Rc88NieRTaw5S,30,female,<BA
+863,half,right,blue,preference,std,,0.0,R_12Rc88NieRTaw5S,30,female,<BA
+864,,,participant,NARS,S1,Situations and Interactions with Robots,8.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+865,,,participant,NARS,S2,Social Influence of Robots,10.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+866,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+867,,,participant,BFI,S1,Extraversion,1.875,R_1ISCgMjTBzjsb7s,19,male,<BA
+868,,,participant,BFI,S2,Agreeableness,3.7777777777777777,R_1ISCgMjTBzjsb7s,19,male,<BA
+869,,,participant,BFI,S3,Conscientiousness,3.2222222222222223,R_1ISCgMjTBzjsb7s,19,male,<BA
+870,,,participant,BFI,S4,Neuroticism,1.75,R_1ISCgMjTBzjsb7s,19,male,<BA
+871,,,participant,BFI,S5,Openness,3.9,R_1ISCgMjTBzjsb7s,19,male,<BA
+872,rational,left,red,GODSPEED2,S1,Anthropomorphism,3.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+873,rational,left,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_1ISCgMjTBzjsb7s,19,male,<BA
+874,rational,left,red,GODSPEED2,S3,Likeability,3.2,R_1ISCgMjTBzjsb7s,19,male,<BA
+875,rational,left,red,GODSPEED2,S4,Perceived Intelligence,2.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+876,rational,left,red,GODSPEED2,S5,Perceived Safety,4.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+877,half,right,blue,GODSPEED1,S1,Anthropomorphism,2.2,R_1ISCgMjTBzjsb7s,19,male,<BA
+878,half,right,blue,GODSPEED1,S2,Animacy,2.5,R_1ISCgMjTBzjsb7s,19,male,<BA
+879,half,right,blue,GODSPEED1,S3,Likeability,3.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+880,half,right,blue,GODSPEED1,S4,Perceived Intelligence,2.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+881,half,right,blue,GODSPEED1,S5,Perceived Safety,4.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+882,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+883,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+884,rational,left,red,q_preference,Q5.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+885,rational,left,red,q_preference,Q7.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+886,rational,left,red,q_preference,Q10.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+887,rational,left,red,q_preference,Q12.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+888,rational,left,red,q_preference,Q14.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+889,rational,left,red,q_preference,Q16.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+890,rational,left,red,q_preference,Q18.1,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+891,rational,left,red,q_preference,prefer,choice,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+892,rational,left,red,q_preference,portfolio,choice,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+893,rational,left,red,q_preference,member,choice,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+894,rational,left,red,q_preference,analyst,choice,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+895,rational,left,red,q_preference,bartender,choice,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+896,rational,left,red,preference,average,,1.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+897,rational,left,red,preference,std,,0.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+898,half,right,blue,preference,average,,0.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+899,half,right,blue,preference,std,,0.0,R_1ISCgMjTBzjsb7s,19,male,<BA
+900,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+901,,,participant,NARS,S2,Social Influence of Robots,15.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+902,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+903,,,participant,BFI,S1,Extraversion,3.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+904,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_1NqZY0X15MszjSk,26,male,Associate degree
+905,,,participant,BFI,S3,Conscientiousness,3.111111111111111,R_1NqZY0X15MszjSk,26,male,Associate degree
+906,,,participant,BFI,S4,Neuroticism,3.125,R_1NqZY0X15MszjSk,26,male,Associate degree
+907,,,participant,BFI,S5,Openness,3.1,R_1NqZY0X15MszjSk,26,male,Associate degree
+908,rational,left,red,GODSPEED2,S1,Anthropomorphism,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+909,rational,left,red,GODSPEED2,S2,Animacy,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+910,rational,left,red,GODSPEED2,S3,Likeability,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+911,rational,left,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+912,rational,left,red,GODSPEED2,S5,Perceived Safety,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+913,half,right,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+914,half,right,blue,GODSPEED1,S2,Animacy,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+915,half,right,blue,GODSPEED1,S3,Likeability,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+916,half,right,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+917,half,right,blue,GODSPEED1,S5,Perceived Safety,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+918,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_1NqZY0X15MszjSk,26,male,Associate degree
+919,half,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1NqZY0X15MszjSk,26,male,Associate degree
+920,rational,left,red,q_preference,Q5.1,,1.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+921,rational,left,red,q_preference,Q7.1,,1.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+922,rational,left,red,q_preference,Q10.1,,1.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+923,rational,left,red,q_preference,Q12.1,,1.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+924,rational,left,red,q_preference,Q14.1,,1.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+925,half,right,blue,q_preference,Q16.1,,2.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+926,,,,q_preference,Q18.1,,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+927,,,,q_preference,prefer,choice,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+928,,,,q_preference,portfolio,choice,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+929,,,,q_preference,member,choice,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+930,,,,q_preference,analyst,choice,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+931,,,,q_preference,bartender,choice,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+932,rational,left,red,preference,average,,0.7142857142857143,R_1NqZY0X15MszjSk,26,male,Associate degree
+933,rational,left,red,preference,std,,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+934,half,right,blue,preference,average,,0.14285714285714285,R_1NqZY0X15MszjSk,26,male,Associate degree
+935,half,right,blue,preference,std,,0.0,R_1NqZY0X15MszjSk,26,male,Associate degree
+936,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_27lporB8KdYdZ4I,36,female,BA
+937,,,participant,NARS,S2,Social Influence of Robots,17.0,R_27lporB8KdYdZ4I,36,female,BA
+938,,,participant,NARS,S3,Emotions in Interaction with Robots,11.0,R_27lporB8KdYdZ4I,36,female,BA
+939,,,participant,BFI,S1,Extraversion,3.5,R_27lporB8KdYdZ4I,36,female,BA
+940,,,participant,BFI,S2,Agreeableness,2.7777777777777777,R_27lporB8KdYdZ4I,36,female,BA
+941,,,participant,BFI,S3,Conscientiousness,4.111111111111111,R_27lporB8KdYdZ4I,36,female,BA
+942,,,participant,BFI,S4,Neuroticism,3.0,R_27lporB8KdYdZ4I,36,female,BA
+943,,,participant,BFI,S5,Openness,4.3,R_27lporB8KdYdZ4I,36,female,BA
+944,half,left,red,GODSPEED2,S1,Anthropomorphism,2.0,R_27lporB8KdYdZ4I,36,female,BA
+945,half,left,red,GODSPEED2,S2,Animacy,2.8333333333333335,R_27lporB8KdYdZ4I,36,female,BA
+946,half,left,red,GODSPEED2,S3,Likeability,3.2,R_27lporB8KdYdZ4I,36,female,BA
+947,half,left,red,GODSPEED2,S4,Perceived Intelligence,2.6,R_27lporB8KdYdZ4I,36,female,BA
+948,half,left,red,GODSPEED2,S5,Perceived Safety,2.0,R_27lporB8KdYdZ4I,36,female,BA
+949,rational,right,blue,GODSPEED1,S1,Anthropomorphism,2.2,R_27lporB8KdYdZ4I,36,female,BA
+950,rational,right,blue,GODSPEED1,S2,Animacy,2.3333333333333335,R_27lporB8KdYdZ4I,36,female,BA
+951,rational,right,blue,GODSPEED1,S3,Likeability,3.4,R_27lporB8KdYdZ4I,36,female,BA
+952,rational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.8,R_27lporB8KdYdZ4I,36,female,BA
+953,rational,right,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_27lporB8KdYdZ4I,36,female,BA
+954,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_27lporB8KdYdZ4I,36,female,BA
+955,rational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_27lporB8KdYdZ4I,36,female,BA
+956,rational,right,blue,q_preference,Q5.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+957,rational,right,blue,q_preference,Q7.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+958,rational,right,blue,q_preference,Q10.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+959,rational,right,blue,q_preference,Q12.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+960,rational,right,blue,q_preference,Q14.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+961,rational,right,blue,q_preference,Q16.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+962,rational,right,blue,q_preference,Q18.1,,2.0,R_27lporB8KdYdZ4I,36,female,BA
+963,rational,right,blue,q_preference,prefer,choice,2.0,R_27lporB8KdYdZ4I,36,female,BA
+964,rational,right,blue,q_preference,portfolio,choice,2.0,R_27lporB8KdYdZ4I,36,female,BA
+965,rational,right,blue,q_preference,member,choice,2.0,R_27lporB8KdYdZ4I,36,female,BA
+966,rational,right,blue,q_preference,analyst,choice,2.0,R_27lporB8KdYdZ4I,36,female,BA
+967,half,left,red,q_preference,bartender,choice,1.0,R_27lporB8KdYdZ4I,36,female,BA
+968,half,left,red,preference,average,,0.0,R_27lporB8KdYdZ4I,36,female,BA
+969,half,left,red,preference,std,,0.0,R_27lporB8KdYdZ4I,36,female,BA
+970,rational,right,blue,preference,average,,1.0,R_27lporB8KdYdZ4I,36,female,BA
+971,rational,right,blue,preference,std,,0.0,R_27lporB8KdYdZ4I,36,female,BA
+972,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_2ZDIJ20soWQHNO1,31,male,BA
+973,,,participant,NARS,S2,Social Influence of Robots,11.0,R_2ZDIJ20soWQHNO1,31,male,BA
+974,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_2ZDIJ20soWQHNO1,31,male,BA
+975,,,participant,BFI,S1,Extraversion,3.25,R_2ZDIJ20soWQHNO1,31,male,BA
+976,,,participant,BFI,S2,Agreeableness,3.888888888888889,R_2ZDIJ20soWQHNO1,31,male,BA
+977,,,participant,BFI,S3,Conscientiousness,4.444444444444445,R_2ZDIJ20soWQHNO1,31,male,BA
+978,,,participant,BFI,S4,Neuroticism,2.25,R_2ZDIJ20soWQHNO1,31,male,BA
+979,,,participant,BFI,S5,Openness,3.5,R_2ZDIJ20soWQHNO1,31,male,BA
+980,half,left,red,GODSPEED2,S1,Anthropomorphism,2.4,R_2ZDIJ20soWQHNO1,31,male,BA
+981,half,left,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_2ZDIJ20soWQHNO1,31,male,BA
+982,half,left,red,GODSPEED2,S3,Likeability,2.8,R_2ZDIJ20soWQHNO1,31,male,BA
+983,half,left,red,GODSPEED2,S4,Perceived Intelligence,2.8,R_2ZDIJ20soWQHNO1,31,male,BA
+984,half,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_2ZDIJ20soWQHNO1,31,male,BA
+985,rational,right,blue,GODSPEED1,S1,Anthropomorphism,3.6,R_2ZDIJ20soWQHNO1,31,male,BA
+986,rational,right,blue,GODSPEED1,S2,Animacy,3.0,R_2ZDIJ20soWQHNO1,31,male,BA
+987,rational,right,blue,GODSPEED1,S3,Likeability,3.2,R_2ZDIJ20soWQHNO1,31,male,BA
+988,rational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.0,R_2ZDIJ20soWQHNO1,31,male,BA
+989,rational,right,blue,GODSPEED1,S5,Perceived Safety,3.0,R_2ZDIJ20soWQHNO1,31,male,BA
+990,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_2ZDIJ20soWQHNO1,31,male,BA
+991,rational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_2ZDIJ20soWQHNO1,31,male,BA
+992,rational,right,blue,q_preference,Q5.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+993,rational,right,blue,q_preference,Q7.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+994,rational,right,blue,q_preference,Q10.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+995,rational,right,blue,q_preference,Q12.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+996,rational,right,blue,q_preference,Q14.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+997,rational,right,blue,q_preference,Q16.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+998,rational,right,blue,q_preference,Q18.1,,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+999,rational,right,blue,q_preference,prefer,choice,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1000,rational,right,blue,q_preference,portfolio,choice,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1001,rational,right,blue,q_preference,member,choice,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1002,rational,right,blue,q_preference,analyst,choice,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1003,rational,right,blue,q_preference,bartender,choice,2.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1004,half,left,red,preference,average,,0.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1005,half,left,red,preference,std,,0.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1006,rational,right,blue,preference,average,,1.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1007,rational,right,blue,preference,std,,0.0,R_2ZDIJ20soWQHNO1,31,male,BA
+1008,,,participant,NARS,S1,Situations and Interactions with Robots,21.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1009,,,participant,NARS,S2,Social Influence of Robots,19.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1010,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1011,,,participant,BFI,S1,Extraversion,2.625,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1012,,,participant,BFI,S2,Agreeableness,2.888888888888889,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1013,,,participant,BFI,S3,Conscientiousness,2.3333333333333335,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1014,,,participant,BFI,S4,Neuroticism,3.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1015,,,participant,BFI,S5,Openness,2.9,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1016,half,left,red,GODSPEED2,S1,Anthropomorphism,4.2,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1017,half,left,red,GODSPEED2,S2,Animacy,2.5,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1018,half,left,red,GODSPEED2,S3,Likeability,3.4,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1019,half,left,red,GODSPEED2,S4,Perceived Intelligence,3.8,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1020,half,left,red,GODSPEED2,S5,Perceived Safety,2.3333333333333335,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1021,rational,right,blue,GODSPEED1,S1,Anthropomorphism,4.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1022,rational,right,blue,GODSPEED1,S2,Animacy,3.8333333333333335,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1023,rational,right,blue,GODSPEED1,S3,Likeability,4.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1024,rational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1025,rational,right,blue,GODSPEED1,S5,Perceived Safety,4.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1026,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1027,rational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1028,half,left,red,q_preference,Q5.1,,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1029,rational,right,blue,q_preference,Q7.1,,2.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1030,half,left,red,q_preference,Q10.1,,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1031,rational,right,blue,q_preference,Q12.1,,2.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1032,half,left,red,q_preference,Q14.1,,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1033,half,left,red,q_preference,Q16.1,,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1034,half,left,red,q_preference,Q18.1,,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1035,rational,right,blue,q_preference,prefer,choice,2.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1036,rational,right,blue,q_preference,portfolio,choice,2.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1037,rational,right,blue,q_preference,member,choice,2.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1038,half,left,red,q_preference,analyst,choice,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1039,half,left,red,q_preference,bartender,choice,1.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1040,half,left,red,preference,average,,0.7142857142857143,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1041,half,left,red,preference,std,,0.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1042,rational,right,blue,preference,average,,0.2857142857142857,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1043,rational,right,blue,preference,std,,0.0,R_3JdY7uo4rM0ZExZ,26,male,Associate degree
+1044,,,participant,NARS,S1,Situations and Interactions with Robots,7.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1045,,,participant,NARS,S2,Social Influence of Robots,9.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1046,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1047,,,participant,BFI,S1,Extraversion,1.375,R_5cHR7KRgL6TG6BP,33,male,<BA
+1048,,,participant,BFI,S2,Agreeableness,2.5555555555555554,R_5cHR7KRgL6TG6BP,33,male,<BA
+1049,,,participant,BFI,S3,Conscientiousness,4.666666666666667,R_5cHR7KRgL6TG6BP,33,male,<BA
+1050,,,participant,BFI,S4,Neuroticism,2.875,R_5cHR7KRgL6TG6BP,33,male,<BA
+1051,,,participant,BFI,S5,Openness,4.8,R_5cHR7KRgL6TG6BP,33,male,<BA
+1052,half,left,red,GODSPEED2,S1,Anthropomorphism,1.2,R_5cHR7KRgL6TG6BP,33,male,<BA
+1053,half,left,red,GODSPEED2,S2,Animacy,1.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1054,half,left,red,GODSPEED2,S3,Likeability,3.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1055,half,left,red,GODSPEED2,S4,Perceived Intelligence,1.8,R_5cHR7KRgL6TG6BP,33,male,<BA
+1056,half,left,red,GODSPEED2,S5,Perceived Safety,3.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1057,rational,right,blue,GODSPEED1,S1,Anthropomorphism,1.8,R_5cHR7KRgL6TG6BP,33,male,<BA
+1058,rational,right,blue,GODSPEED1,S2,Animacy,1.1666666666666667,R_5cHR7KRgL6TG6BP,33,male,<BA
+1059,rational,right,blue,GODSPEED1,S3,Likeability,3.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1060,rational,right,blue,GODSPEED1,S4,Perceived Intelligence,2.4,R_5cHR7KRgL6TG6BP,33,male,<BA
+1061,rational,right,blue,GODSPEED1,S5,Perceived Safety,3.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1062,half,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1063,rational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1064,rational,right,blue,q_preference,Q5.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1065,rational,right,blue,q_preference,Q7.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1066,rational,right,blue,q_preference,Q10.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1067,rational,right,blue,q_preference,Q12.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1068,rational,right,blue,q_preference,Q14.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1069,rational,right,blue,q_preference,Q16.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1070,rational,right,blue,q_preference,Q18.1,,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1071,rational,right,blue,q_preference,prefer,choice,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1072,rational,right,blue,q_preference,portfolio,choice,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1073,rational,right,blue,q_preference,member,choice,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1074,rational,right,blue,q_preference,analyst,choice,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1075,rational,right,blue,q_preference,bartender,choice,2.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1076,half,left,red,preference,average,,0.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1077,half,left,red,preference,std,,0.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1078,rational,right,blue,preference,average,,1.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1079,rational,right,blue,preference,std,,0.0,R_5cHR7KRgL6TG6BP,33,male,<BA
+1080,,,participant,NARS,S1,Situations and Interactions with Robots,24.0,R_22FSTkafmtA1lko,44,male,MA
+1081,,,participant,NARS,S2,Social Influence of Robots,21.0,R_22FSTkafmtA1lko,44,male,MA
+1082,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_22FSTkafmtA1lko,44,male,MA
+1083,,,participant,BFI,S1,Extraversion,3.25,R_22FSTkafmtA1lko,44,male,MA
+1084,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_22FSTkafmtA1lko,44,male,MA
+1085,,,participant,BFI,S3,Conscientiousness,3.4444444444444446,R_22FSTkafmtA1lko,44,male,MA
+1086,,,participant,BFI,S4,Neuroticism,3.25,R_22FSTkafmtA1lko,44,male,MA
+1087,,,participant,BFI,S5,Openness,3.5,R_22FSTkafmtA1lko,44,male,MA
+1088,half,right,red,GODSPEED2,S1,Anthropomorphism,5.0,R_22FSTkafmtA1lko,44,male,MA
+1089,half,right,red,GODSPEED2,S2,Animacy,3.1666666666666665,R_22FSTkafmtA1lko,44,male,MA
+1090,half,right,red,GODSPEED2,S3,Likeability,2.8,R_22FSTkafmtA1lko,44,male,MA
+1091,half,right,red,GODSPEED2,S4,Perceived Intelligence,2.4,R_22FSTkafmtA1lko,44,male,MA
+1092,half,right,red,GODSPEED2,S5,Perceived Safety,3.0,R_22FSTkafmtA1lko,44,male,MA
+1093,rational,left,blue,GODSPEED1,S1,Anthropomorphism,3.6,R_22FSTkafmtA1lko,44,male,MA
+1094,rational,left,blue,GODSPEED1,S2,Animacy,3.6666666666666665,R_22FSTkafmtA1lko,44,male,MA
+1095,rational,left,blue,GODSPEED1,S3,Likeability,3.6,R_22FSTkafmtA1lko,44,male,MA
+1096,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.6,R_22FSTkafmtA1lko,44,male,MA
+1097,rational,left,blue,GODSPEED1,S5,Perceived Safety,4.0,R_22FSTkafmtA1lko,44,male,MA
+1098,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_22FSTkafmtA1lko,44,male,MA
+1099,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_22FSTkafmtA1lko,44,male,MA
+1100,rational,left,blue,q_preference,Q5.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1101,rational,left,blue,q_preference,Q7.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1102,rational,left,blue,q_preference,Q10.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1103,rational,left,blue,q_preference,Q12.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1104,rational,left,blue,q_preference,Q14.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1105,rational,left,blue,q_preference,Q16.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1106,rational,left,blue,q_preference,Q18.1,,2.0,R_22FSTkafmtA1lko,44,male,MA
+1107,rational,left,blue,q_preference,prefer,choice,2.0,R_22FSTkafmtA1lko,44,male,MA
+1108,rational,left,blue,q_preference,portfolio,choice,2.0,R_22FSTkafmtA1lko,44,male,MA
+1109,rational,left,blue,q_preference,member,choice,2.0,R_22FSTkafmtA1lko,44,male,MA
+1110,rational,left,blue,q_preference,analyst,choice,2.0,R_22FSTkafmtA1lko,44,male,MA
+1111,rational,left,blue,q_preference,bartender,choice,2.0,R_22FSTkafmtA1lko,44,male,MA
+1112,half,right,red,preference,average,,0.0,R_22FSTkafmtA1lko,44,male,MA
+1113,half,right,red,preference,std,,0.0,R_22FSTkafmtA1lko,44,male,MA
+1114,rational,left,blue,preference,average,,1.0,R_22FSTkafmtA1lko,44,male,MA
+1115,rational,left,blue,preference,std,,0.0,R_22FSTkafmtA1lko,44,male,MA
+1116,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_PYBWyCicsAE42Pv,26,male,BA
+1117,,,participant,NARS,S2,Social Influence of Robots,9.0,R_PYBWyCicsAE42Pv,26,male,BA
+1118,,,participant,NARS,S3,Emotions in Interaction with Robots,10.0,R_PYBWyCicsAE42Pv,26,male,BA
+1119,,,participant,BFI,S1,Extraversion,3.125,R_PYBWyCicsAE42Pv,26,male,BA
+1120,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_PYBWyCicsAE42Pv,26,male,BA
+1121,,,participant,BFI,S3,Conscientiousness,3.5555555555555554,R_PYBWyCicsAE42Pv,26,male,BA
+1122,,,participant,BFI,S4,Neuroticism,2.625,R_PYBWyCicsAE42Pv,26,male,BA
+1123,,,participant,BFI,S5,Openness,3.2,R_PYBWyCicsAE42Pv,26,male,BA
+1124,half,right,red,GODSPEED2,S1,Anthropomorphism,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1125,half,right,red,GODSPEED2,S2,Animacy,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1126,half,right,red,GODSPEED2,S3,Likeability,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1127,half,right,red,GODSPEED2,S4,Perceived Intelligence,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1128,half,right,red,GODSPEED2,S5,Perceived Safety,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1129,rational,left,blue,GODSPEED1,S1,Anthropomorphism,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1130,rational,left,blue,GODSPEED1,S2,Animacy,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1131,rational,left,blue,GODSPEED1,S3,Likeability,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1132,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1133,rational,left,blue,GODSPEED1,S5,Perceived Safety,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1134,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_PYBWyCicsAE42Pv,26,male,BA
+1135,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_PYBWyCicsAE42Pv,26,male,BA
+1136,rational,left,blue,q_preference,Q5.1,,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1137,half,right,red,q_preference,Q7.1,,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1138,rational,left,blue,q_preference,Q10.1,,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1139,half,right,red,q_preference,Q12.1,,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1140,half,right,red,q_preference,Q14.1,,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1141,rational,left,blue,q_preference,Q16.1,,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1142,rational,left,blue,q_preference,Q18.1,,2.0,R_PYBWyCicsAE42Pv,26,male,BA
+1143,half,right,red,q_preference,prefer,choice,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1144,half,right,red,q_preference,portfolio,choice,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1145,half,right,red,q_preference,member,choice,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1146,half,right,red,q_preference,analyst,choice,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1147,half,right,red,q_preference,bartender,choice,1.0,R_PYBWyCicsAE42Pv,26,male,BA
+1148,half,right,red,preference,average,,0.42857142857142855,R_PYBWyCicsAE42Pv,26,male,BA
+1149,half,right,red,preference,std,,0.0,R_PYBWyCicsAE42Pv,26,male,BA
+1150,rational,left,blue,preference,average,,0.5714285714285714,R_PYBWyCicsAE42Pv,26,male,BA
+1151,rational,left,blue,preference,std,,0.0,R_PYBWyCicsAE42Pv,26,male,BA
+1152,,,participant,NARS,S1,Situations and Interactions with Robots,14.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1153,,,participant,NARS,S2,Social Influence of Robots,15.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1154,,,participant,NARS,S3,Emotions in Interaction with Robots,10.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1155,,,participant,BFI,S1,Extraversion,1.75,R_2TnsysyJA578QCH,37,female,Associate degree
+1156,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_2TnsysyJA578QCH,37,female,Associate degree
+1157,,,participant,BFI,S3,Conscientiousness,4.444444444444445,R_2TnsysyJA578QCH,37,female,Associate degree
+1158,,,participant,BFI,S4,Neuroticism,3.375,R_2TnsysyJA578QCH,37,female,Associate degree
+1159,,,participant,BFI,S5,Openness,4.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1160,half,right,red,GODSPEED2,S1,Anthropomorphism,2.2,R_2TnsysyJA578QCH,37,female,Associate degree
+1161,half,right,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_2TnsysyJA578QCH,37,female,Associate degree
+1162,half,right,red,GODSPEED2,S3,Likeability,3.8,R_2TnsysyJA578QCH,37,female,Associate degree
+1163,half,right,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_2TnsysyJA578QCH,37,female,Associate degree
+1164,half,right,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_2TnsysyJA578QCH,37,female,Associate degree
+1165,rational,left,blue,GODSPEED1,S1,Anthropomorphism,2.8,R_2TnsysyJA578QCH,37,female,Associate degree
+1166,rational,left,blue,GODSPEED1,S2,Animacy,2.6666666666666665,R_2TnsysyJA578QCH,37,female,Associate degree
+1167,rational,left,blue,GODSPEED1,S3,Likeability,4.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1168,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.4,R_2TnsysyJA578QCH,37,female,Associate degree
+1169,rational,left,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_2TnsysyJA578QCH,37,female,Associate degree
+1170,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2TnsysyJA578QCH,37,female,Associate degree
+1171,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2TnsysyJA578QCH,37,female,Associate degree
+1172,rational,left,blue,q_preference,Q5.1,,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1173,rational,left,blue,q_preference,Q7.1,,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1174,half,right,red,q_preference,Q10.1,,1.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1175,rational,left,blue,q_preference,Q12.1,,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1176,rational,left,blue,q_preference,Q14.1,,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1177,rational,left,blue,q_preference,Q16.1,,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1178,half,right,red,q_preference,Q18.1,,1.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1179,rational,left,blue,q_preference,prefer,choice,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1180,rational,left,blue,q_preference,portfolio,choice,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1181,rational,left,blue,q_preference,member,choice,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1182,rational,left,blue,q_preference,analyst,choice,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1183,rational,left,blue,q_preference,bartender,choice,2.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1184,half,right,red,preference,average,,0.2857142857142857,R_2TnsysyJA578QCH,37,female,Associate degree
+1185,half,right,red,preference,std,,0.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1186,rational,left,blue,preference,average,,0.7142857142857143,R_2TnsysyJA578QCH,37,female,Associate degree
+1187,rational,left,blue,preference,std,,0.0,R_2TnsysyJA578QCH,37,female,Associate degree
+1188,,,participant,NARS,S1,Situations and Interactions with Robots,21.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1189,,,participant,NARS,S2,Social Influence of Robots,17.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1190,,,participant,NARS,S3,Emotions in Interaction with Robots,13.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1191,,,participant,BFI,S1,Extraversion,2.875,R_1q1B2bQSgLGhyJ4,23,male,BA
+1192,,,participant,BFI,S2,Agreeableness,4.444444444444445,R_1q1B2bQSgLGhyJ4,23,male,BA
+1193,,,participant,BFI,S3,Conscientiousness,4.777777777777778,R_1q1B2bQSgLGhyJ4,23,male,BA
+1194,,,participant,BFI,S4,Neuroticism,1.375,R_1q1B2bQSgLGhyJ4,23,male,BA
+1195,,,participant,BFI,S5,Openness,3.6,R_1q1B2bQSgLGhyJ4,23,male,BA
+1196,half,right,red,GODSPEED2,S1,Anthropomorphism,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1197,half,right,red,GODSPEED2,S2,Animacy,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1198,half,right,red,GODSPEED2,S3,Likeability,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1199,half,right,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1200,half,right,red,GODSPEED2,S5,Perceived Safety,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1201,rational,left,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1202,rational,left,blue,GODSPEED1,S2,Animacy,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1203,rational,left,blue,GODSPEED1,S3,Likeability,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1204,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1205,rational,left,blue,GODSPEED1,S5,Perceived Safety,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1206,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1q1B2bQSgLGhyJ4,23,male,BA
+1207,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_1q1B2bQSgLGhyJ4,23,male,BA
+1208,half,right,red,q_preference,Q5.1,,1.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1209,rational,left,blue,q_preference,Q7.1,,2.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1210,half,right,red,q_preference,Q10.1,,1.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1211,,,,q_preference,Q12.1,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1212,,,,q_preference,Q14.1,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1213,,,,q_preference,Q16.1,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1214,,,,q_preference,Q18.1,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1215,,,,q_preference,prefer,choice,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1216,,,,q_preference,portfolio,choice,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1217,,,,q_preference,member,choice,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1218,,,,q_preference,analyst,choice,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1219,,,,q_preference,bartender,choice,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1220,half,right,red,preference,average,,0.2857142857142857,R_1q1B2bQSgLGhyJ4,23,male,BA
+1221,half,right,red,preference,std,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1222,rational,left,blue,preference,average,,0.14285714285714285,R_1q1B2bQSgLGhyJ4,23,male,BA
+1223,rational,left,blue,preference,std,,0.0,R_1q1B2bQSgLGhyJ4,23,male,BA
+1224,,,participant,NARS,S1,Situations and Interactions with Robots,11.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1225,,,participant,NARS,S2,Social Influence of Robots,14.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1226,,,participant,NARS,S3,Emotions in Interaction with Robots,11.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1227,,,participant,BFI,S1,Extraversion,4.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1228,,,participant,BFI,S2,Agreeableness,3.7777777777777777,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1229,,,participant,BFI,S3,Conscientiousness,4.222222222222222,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1230,,,participant,BFI,S4,Neuroticism,1.875,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1231,,,participant,BFI,S5,Openness,4.7,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1232,half,right,red,GODSPEED2,S1,Anthropomorphism,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1233,half,right,red,GODSPEED2,S2,Animacy,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1234,half,right,red,GODSPEED2,S3,Likeability,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1235,half,right,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1236,half,right,red,GODSPEED2,S5,Perceived Safety,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1237,rational,left,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1238,rational,left,blue,GODSPEED1,S2,Animacy,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1239,rational,left,blue,GODSPEED1,S3,Likeability,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1240,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1241,rational,left,blue,GODSPEED1,S5,Perceived Safety,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1242,half,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1243,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1244,half,right,red,q_preference,Q5.1,,1.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1245,rational,left,blue,q_preference,Q7.1,,2.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1246,,,,q_preference,Q10.1,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1247,,,,q_preference,Q12.1,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1248,,,,q_preference,Q14.1,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1249,,,,q_preference,Q16.1,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1250,,,,q_preference,Q18.1,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1251,,,,q_preference,prefer,choice,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1252,,,,q_preference,portfolio,choice,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1253,,,,q_preference,member,choice,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1254,,,,q_preference,analyst,choice,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1255,,,,q_preference,bartender,choice,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1256,half,right,red,preference,average,,0.14285714285714285,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1257,half,right,red,preference,std,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1258,rational,left,blue,preference,average,,0.14285714285714285,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1259,rational,left,blue,preference,std,,0.0,R_3R9CWoL5vjVx1Vm,39,male,<BA
+1260,,,participant,NARS,S1,Situations and Interactions with Robots,10.0,R_248jSr60q0E4zMP,34,male,<BA
+1261,,,participant,NARS,S2,Social Influence of Robots,19.0,R_248jSr60q0E4zMP,34,male,<BA
+1262,,,participant,NARS,S3,Emotions in Interaction with Robots,9.0,R_248jSr60q0E4zMP,34,male,<BA
+1263,,,participant,BFI,S1,Extraversion,1.375,R_248jSr60q0E4zMP,34,male,<BA
+1264,,,participant,BFI,S2,Agreeableness,1.5555555555555556,R_248jSr60q0E4zMP,34,male,<BA
+1265,,,participant,BFI,S3,Conscientiousness,5.0,R_248jSr60q0E4zMP,34,male,<BA
+1266,,,participant,BFI,S4,Neuroticism,2.25,R_248jSr60q0E4zMP,34,male,<BA
+1267,,,participant,BFI,S5,Openness,1.9,R_248jSr60q0E4zMP,34,male,<BA
+1268,rational,left,red,GODSPEED2,S1,Anthropomorphism,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1269,rational,left,red,GODSPEED2,S2,Animacy,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1270,rational,left,red,GODSPEED2,S3,Likeability,2.4,R_248jSr60q0E4zMP,34,male,<BA
+1271,rational,left,red,GODSPEED2,S4,Perceived Intelligence,2.2,R_248jSr60q0E4zMP,34,male,<BA
+1272,rational,left,red,GODSPEED2,S5,Perceived Safety,2.3333333333333335,R_248jSr60q0E4zMP,34,male,<BA
+1273,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,1.2,R_248jSr60q0E4zMP,34,male,<BA
+1274,irrational,right,blue,GODSPEED1,S2,Animacy,1.1666666666666667,R_248jSr60q0E4zMP,34,male,<BA
+1275,irrational,right,blue,GODSPEED1,S3,Likeability,2.2,R_248jSr60q0E4zMP,34,male,<BA
+1276,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,1.8,R_248jSr60q0E4zMP,34,male,<BA
+1277,irrational,right,blue,GODSPEED1,S5,Perceived Safety,2.3333333333333335,R_248jSr60q0E4zMP,34,male,<BA
+1278,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1279,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_248jSr60q0E4zMP,34,male,<BA
+1280,rational,left,red,q_preference,Q5.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1281,rational,left,red,q_preference,Q7.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1282,rational,left,red,q_preference,Q10.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1283,rational,left,red,q_preference,Q12.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1284,rational,left,red,q_preference,Q14.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1285,rational,left,red,q_preference,Q16.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1286,rational,left,red,q_preference,Q18.1,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1287,rational,left,red,q_preference,prefer,choice,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1288,rational,left,red,q_preference,portfolio,choice,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1289,rational,left,red,q_preference,member,choice,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1290,rational,left,red,q_preference,analyst,choice,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1291,rational,left,red,q_preference,bartender,choice,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1292,rational,left,red,preference,average,,1.0,R_248jSr60q0E4zMP,34,male,<BA
+1293,rational,left,red,preference,std,,0.0,R_248jSr60q0E4zMP,34,male,<BA
+1294,irrational,right,blue,preference,average,,0.0,R_248jSr60q0E4zMP,34,male,<BA
+1295,irrational,right,blue,preference,std,,0.0,R_248jSr60q0E4zMP,34,male,<BA
+1296,,,participant,NARS,S1,Situations and Interactions with Robots,10.0,R_2q4YVOKOy4M9l69,31,male,MA
+1297,,,participant,NARS,S2,Social Influence of Robots,12.0,R_2q4YVOKOy4M9l69,31,male,MA
+1298,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_2q4YVOKOy4M9l69,31,male,MA
+1299,,,participant,BFI,S1,Extraversion,2.875,R_2q4YVOKOy4M9l69,31,male,MA
+1300,,,participant,BFI,S2,Agreeableness,4.333333333333333,R_2q4YVOKOy4M9l69,31,male,MA
+1301,,,participant,BFI,S3,Conscientiousness,4.444444444444445,R_2q4YVOKOy4M9l69,31,male,MA
+1302,,,participant,BFI,S4,Neuroticism,1.5,R_2q4YVOKOy4M9l69,31,male,MA
+1303,,,participant,BFI,S5,Openness,3.0,R_2q4YVOKOy4M9l69,31,male,MA
+1304,rational,left,red,GODSPEED2,S1,Anthropomorphism,2.8,R_2q4YVOKOy4M9l69,31,male,MA
+1305,rational,left,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_2q4YVOKOy4M9l69,31,male,MA
+1306,rational,left,red,GODSPEED2,S3,Likeability,3.0,R_2q4YVOKOy4M9l69,31,male,MA
+1307,rational,left,red,GODSPEED2,S4,Perceived Intelligence,3.4,R_2q4YVOKOy4M9l69,31,male,MA
+1308,rational,left,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_2q4YVOKOy4M9l69,31,male,MA
+1309,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,2.8,R_2q4YVOKOy4M9l69,31,male,MA
+1310,irrational,right,blue,GODSPEED1,S2,Animacy,2.6666666666666665,R_2q4YVOKOy4M9l69,31,male,MA
+1311,irrational,right,blue,GODSPEED1,S3,Likeability,3.0,R_2q4YVOKOy4M9l69,31,male,MA
+1312,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,3.4,R_2q4YVOKOy4M9l69,31,male,MA
+1313,irrational,right,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_2q4YVOKOy4M9l69,31,male,MA
+1314,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1315,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_2q4YVOKOy4M9l69,31,male,MA
+1316,rational,left,red,q_preference,Q5.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1317,rational,left,red,q_preference,Q7.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1318,rational,left,red,q_preference,Q10.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1319,rational,left,red,q_preference,Q12.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1320,rational,left,red,q_preference,Q14.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1321,rational,left,red,q_preference,Q16.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1322,rational,left,red,q_preference,Q18.1,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1323,rational,left,red,q_preference,prefer,choice,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1324,rational,left,red,q_preference,portfolio,choice,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1325,rational,left,red,q_preference,member,choice,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1326,rational,left,red,q_preference,analyst,choice,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1327,irrational,right,blue,q_preference,bartender,choice,2.0,R_2q4YVOKOy4M9l69,31,male,MA
+1328,rational,left,red,preference,average,,1.0,R_2q4YVOKOy4M9l69,31,male,MA
+1329,rational,left,red,preference,std,,0.0,R_2q4YVOKOy4M9l69,31,male,MA
+1330,irrational,right,blue,preference,average,,0.0,R_2q4YVOKOy4M9l69,31,male,MA
+1331,irrational,right,blue,preference,std,,0.0,R_2q4YVOKOy4M9l69,31,male,MA
+1332,,,participant,NARS,S1,Situations and Interactions with Robots,17.0,R_29tqGQIajUZLeeE,30,male,HS
+1333,,,participant,NARS,S2,Social Influence of Robots,13.0,R_29tqGQIajUZLeeE,30,male,HS
+1334,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_29tqGQIajUZLeeE,30,male,HS
+1335,,,participant,BFI,S1,Extraversion,2.375,R_29tqGQIajUZLeeE,30,male,HS
+1336,,,participant,BFI,S2,Agreeableness,3.4444444444444446,R_29tqGQIajUZLeeE,30,male,HS
+1337,,,participant,BFI,S3,Conscientiousness,2.888888888888889,R_29tqGQIajUZLeeE,30,male,HS
+1338,,,participant,BFI,S4,Neuroticism,2.75,R_29tqGQIajUZLeeE,30,male,HS
+1339,,,participant,BFI,S5,Openness,3.0,R_29tqGQIajUZLeeE,30,male,HS
+1340,rational,left,red,GODSPEED2,S1,Anthropomorphism,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1341,rational,left,red,GODSPEED2,S2,Animacy,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1342,rational,left,red,GODSPEED2,S3,Likeability,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1343,rational,left,red,GODSPEED2,S4,Perceived Intelligence,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1344,rational,left,red,GODSPEED2,S5,Perceived Safety,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1345,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,3.2,R_29tqGQIajUZLeeE,30,male,HS
+1346,irrational,right,blue,GODSPEED1,S2,Animacy,3.0,R_29tqGQIajUZLeeE,30,male,HS
+1347,irrational,right,blue,GODSPEED1,S3,Likeability,3.0,R_29tqGQIajUZLeeE,30,male,HS
+1348,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_29tqGQIajUZLeeE,30,male,HS
+1349,irrational,right,blue,GODSPEED1,S5,Perceived Safety,3.0,R_29tqGQIajUZLeeE,30,male,HS
+1350,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_29tqGQIajUZLeeE,30,male,HS
+1351,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_29tqGQIajUZLeeE,30,male,HS
+1352,irrational,right,blue,q_preference,Q5.1,,2.0,R_29tqGQIajUZLeeE,30,male,HS
+1353,irrational,right,blue,q_preference,Q7.1,,2.0,R_29tqGQIajUZLeeE,30,male,HS
+1354,rational,left,red,q_preference,Q10.1,,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1355,rational,left,red,q_preference,Q12.1,,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1356,rational,left,red,q_preference,Q14.1,,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1357,rational,left,red,q_preference,Q16.1,,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1358,rational,left,red,q_preference,Q18.1,,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1359,rational,left,red,q_preference,prefer,choice,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1360,rational,left,red,q_preference,portfolio,choice,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1361,rational,left,red,q_preference,member,choice,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1362,rational,left,red,q_preference,analyst,choice,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1363,rational,left,red,q_preference,bartender,choice,1.0,R_29tqGQIajUZLeeE,30,male,HS
+1364,rational,left,red,preference,average,,0.7142857142857143,R_29tqGQIajUZLeeE,30,male,HS
+1365,rational,left,red,preference,std,,0.0,R_29tqGQIajUZLeeE,30,male,HS
+1366,irrational,right,blue,preference,average,,0.2857142857142857,R_29tqGQIajUZLeeE,30,male,HS
+1367,irrational,right,blue,preference,std,,0.0,R_29tqGQIajUZLeeE,30,male,HS
+1368,,,participant,NARS,S1,Situations and Interactions with Robots,18.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1369,,,participant,NARS,S2,Social Influence of Robots,16.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1370,,,participant,NARS,S3,Emotions in Interaction with Robots,12.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1371,,,participant,BFI,S1,Extraversion,2.125,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1372,,,participant,BFI,S2,Agreeableness,5.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1373,,,participant,BFI,S3,Conscientiousness,4.777777777777778,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1374,,,participant,BFI,S4,Neuroticism,2.5,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1375,,,participant,BFI,S5,Openness,3.9,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1376,rational,left,red,GODSPEED2,S1,Anthropomorphism,1.8,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1377,rational,left,red,GODSPEED2,S2,Animacy,2.5,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1378,rational,left,red,GODSPEED2,S3,Likeability,4.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1379,rational,left,red,GODSPEED2,S4,Perceived Intelligence,4.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1380,rational,left,red,GODSPEED2,S5,Perceived Safety,2.6666666666666665,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1381,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1382,irrational,right,blue,GODSPEED1,S2,Animacy,2.5,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1383,irrational,right,blue,GODSPEED1,S3,Likeability,4.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1384,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1385,irrational,right,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1386,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1387,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1388,rational,left,red,q_preference,Q5.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1389,rational,left,red,q_preference,Q7.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1390,rational,left,red,q_preference,Q10.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1391,rational,left,red,q_preference,Q12.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1392,rational,left,red,q_preference,Q14.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1393,rational,left,red,q_preference,Q16.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1394,rational,left,red,q_preference,Q18.1,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1395,rational,left,red,q_preference,prefer,choice,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1396,rational,left,red,q_preference,portfolio,choice,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1397,rational,left,red,q_preference,member,choice,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1398,rational,left,red,q_preference,analyst,choice,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1399,irrational,right,blue,q_preference,bartender,choice,2.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1400,rational,left,red,preference,average,,1.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1401,rational,left,red,preference,std,,0.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1402,irrational,right,blue,preference,average,,0.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1403,irrational,right,blue,preference,std,,0.0,R_2tJziYe9uwnAkKg,51,female,Associate degree
+1404,,,participant,NARS,S1,Situations and Interactions with Robots,7.0,R_9WWazB6nQFvh22l,49,male,HS
+1405,,,participant,NARS,S2,Social Influence of Robots,10.0,R_9WWazB6nQFvh22l,49,male,HS
+1406,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_9WWazB6nQFvh22l,49,male,HS
+1407,,,participant,BFI,S1,Extraversion,4.625,R_9WWazB6nQFvh22l,49,male,HS
+1408,,,participant,BFI,S2,Agreeableness,4.555555555555555,R_9WWazB6nQFvh22l,49,male,HS
+1409,,,participant,BFI,S3,Conscientiousness,4.888888888888889,R_9WWazB6nQFvh22l,49,male,HS
+1410,,,participant,BFI,S4,Neuroticism,1.875,R_9WWazB6nQFvh22l,49,male,HS
+1411,,,participant,BFI,S5,Openness,4.6,R_9WWazB6nQFvh22l,49,male,HS
+1412,rational,left,red,GODSPEED2,S1,Anthropomorphism,1.6,R_9WWazB6nQFvh22l,49,male,HS
+1413,rational,left,red,GODSPEED2,S2,Animacy,2.1666666666666665,R_9WWazB6nQFvh22l,49,male,HS
+1414,rational,left,red,GODSPEED2,S3,Likeability,3.6,R_9WWazB6nQFvh22l,49,male,HS
+1415,rational,left,red,GODSPEED2,S4,Perceived Intelligence,2.4,R_9WWazB6nQFvh22l,49,male,HS
+1416,rational,left,red,GODSPEED2,S5,Perceived Safety,3.0,R_9WWazB6nQFvh22l,49,male,HS
+1417,irrational,right,blue,GODSPEED1,S1,Anthropomorphism,1.6,R_9WWazB6nQFvh22l,49,male,HS
+1418,irrational,right,blue,GODSPEED1,S2,Animacy,2.1666666666666665,R_9WWazB6nQFvh22l,49,male,HS
+1419,irrational,right,blue,GODSPEED1,S3,Likeability,3.6,R_9WWazB6nQFvh22l,49,male,HS
+1420,irrational,right,blue,GODSPEED1,S4,Perceived Intelligence,2.2,R_9WWazB6nQFvh22l,49,male,HS
+1421,irrational,right,blue,GODSPEED1,S5,Perceived Safety,3.0,R_9WWazB6nQFvh22l,49,male,HS
+1422,rational,left,red,r_preference,summary,Count (Normalized) participant chose this robot,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1423,irrational,right,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.0,R_9WWazB6nQFvh22l,49,male,HS
+1424,rational,left,red,q_preference,Q5.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1425,rational,left,red,q_preference,Q7.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1426,rational,left,red,q_preference,Q10.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1427,rational,left,red,q_preference,Q12.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1428,rational,left,red,q_preference,Q14.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1429,rational,left,red,q_preference,Q16.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1430,rational,left,red,q_preference,Q18.1,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1431,rational,left,red,q_preference,prefer,choice,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1432,rational,left,red,q_preference,portfolio,choice,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1433,rational,left,red,q_preference,member,choice,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1434,rational,left,red,q_preference,analyst,choice,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1435,rational,left,red,q_preference,bartender,choice,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1436,rational,left,red,preference,average,,1.0,R_9WWazB6nQFvh22l,49,male,HS
+1437,rational,left,red,preference,std,,0.0,R_9WWazB6nQFvh22l,49,male,HS
+1438,irrational,right,blue,preference,average,,0.0,R_9WWazB6nQFvh22l,49,male,HS
+1439,irrational,right,blue,preference,std,,0.0,R_9WWazB6nQFvh22l,49,male,HS
+1440,,,participant,NARS,S1,Situations and Interactions with Robots,12.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1441,,,participant,NARS,S2,Social Influence of Robots,14.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1442,,,participant,NARS,S3,Emotions in Interaction with Robots,12.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1443,,,participant,BFI,S1,Extraversion,2.25,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1444,,,participant,BFI,S2,Agreeableness,4.444444444444445,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1445,,,participant,BFI,S3,Conscientiousness,4.666666666666667,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1446,,,participant,BFI,S4,Neuroticism,1.125,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1447,,,participant,BFI,S5,Openness,3.3,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1448,irrational,right,red,GODSPEED2,S1,Anthropomorphism,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1449,irrational,right,red,GODSPEED2,S2,Animacy,2.5,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1450,irrational,right,red,GODSPEED2,S3,Likeability,3.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1451,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,3.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1452,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1453,rational,left,blue,GODSPEED1,S1,Anthropomorphism,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1454,rational,left,blue,GODSPEED1,S2,Animacy,2.5,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1455,rational,left,blue,GODSPEED1,S3,Likeability,3.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1456,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,2.2,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1457,rational,left,blue,GODSPEED1,S5,Perceived Safety,3.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1458,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1459,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1460,rational,left,blue,q_preference,Q5.1,,2.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1461,rational,left,blue,q_preference,Q7.1,,2.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1462,irrational,right,red,q_preference,Q10.1,,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1463,irrational,right,red,q_preference,Q12.1,,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1464,irrational,right,red,q_preference,Q14.1,,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1465,irrational,right,red,q_preference,Q16.1,,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1466,irrational,right,red,q_preference,Q18.1,,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1467,irrational,right,red,q_preference,prefer,choice,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1468,irrational,right,red,q_preference,portfolio,choice,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1469,irrational,right,red,q_preference,member,choice,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1470,irrational,right,red,q_preference,analyst,choice,1.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1471,rational,left,blue,q_preference,bartender,choice,2.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1472,irrational,right,red,preference,average,,0.7142857142857143,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1473,irrational,right,red,preference,std,,0.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1474,rational,left,blue,preference,average,,0.2857142857142857,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1475,rational,left,blue,preference,std,,0.0,R_3qTJSADRUn7a3j2,33,male,Associate degree
+1476,,,participant,NARS,S1,Situations and Interactions with Robots,20.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1477,,,participant,NARS,S2,Social Influence of Robots,14.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1478,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1479,,,participant,BFI,S1,Extraversion,2.5,R_2RRoxZuuBYPUMJT,28,male,BA
+1480,,,participant,BFI,S2,Agreeableness,3.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1481,,,participant,BFI,S3,Conscientiousness,2.6666666666666665,R_2RRoxZuuBYPUMJT,28,male,BA
+1482,,,participant,BFI,S4,Neuroticism,3.25,R_2RRoxZuuBYPUMJT,28,male,BA
+1483,,,participant,BFI,S5,Openness,3.3,R_2RRoxZuuBYPUMJT,28,male,BA
+1484,irrational,right,red,GODSPEED2,S1,Anthropomorphism,2.6,R_2RRoxZuuBYPUMJT,28,male,BA
+1485,irrational,right,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_2RRoxZuuBYPUMJT,28,male,BA
+1486,irrational,right,red,GODSPEED2,S3,Likeability,3.2,R_2RRoxZuuBYPUMJT,28,male,BA
+1487,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,2.4,R_2RRoxZuuBYPUMJT,28,male,BA
+1488,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.6666666666666665,R_2RRoxZuuBYPUMJT,28,male,BA
+1489,rational,left,blue,GODSPEED1,S1,Anthropomorphism,3.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1490,rational,left,blue,GODSPEED1,S2,Animacy,3.1666666666666665,R_2RRoxZuuBYPUMJT,28,male,BA
+1491,rational,left,blue,GODSPEED1,S3,Likeability,2.6,R_2RRoxZuuBYPUMJT,28,male,BA
+1492,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,2.4,R_2RRoxZuuBYPUMJT,28,male,BA
+1493,rational,left,blue,GODSPEED1,S5,Perceived Safety,2.3333333333333335,R_2RRoxZuuBYPUMJT,28,male,BA
+1494,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2RRoxZuuBYPUMJT,28,male,BA
+1495,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2RRoxZuuBYPUMJT,28,male,BA
+1496,irrational,right,red,q_preference,Q5.1,,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1497,irrational,right,red,q_preference,Q7.1,,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1498,rational,left,blue,q_preference,Q10.1,,2.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1499,rational,left,blue,q_preference,Q12.1,,2.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1500,irrational,right,red,q_preference,Q14.1,,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1501,irrational,right,red,q_preference,Q16.1,,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1502,irrational,right,red,q_preference,Q18.1,,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1503,irrational,right,red,q_preference,prefer,choice,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1504,rational,left,blue,q_preference,portfolio,choice,2.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1505,irrational,right,red,q_preference,member,choice,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1506,rational,left,blue,q_preference,analyst,choice,2.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1507,irrational,right,red,q_preference,bartender,choice,1.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1508,irrational,right,red,preference,average,,0.7142857142857143,R_2RRoxZuuBYPUMJT,28,male,BA
+1509,irrational,right,red,preference,std,,0.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1510,rational,left,blue,preference,average,,0.2857142857142857,R_2RRoxZuuBYPUMJT,28,male,BA
+1511,rational,left,blue,preference,std,,0.0,R_2RRoxZuuBYPUMJT,28,male,BA
+1512,,,participant,NARS,S1,Situations and Interactions with Robots,26.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1513,,,participant,NARS,S2,Social Influence of Robots,20.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1514,,,participant,NARS,S3,Emotions in Interaction with Robots,6.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1515,,,participant,BFI,S1,Extraversion,3.25,R_2c57Hvsm5Asf1bS,50,male,BA
+1516,,,participant,BFI,S2,Agreeableness,3.2222222222222223,R_2c57Hvsm5Asf1bS,50,male,BA
+1517,,,participant,BFI,S3,Conscientiousness,3.3333333333333335,R_2c57Hvsm5Asf1bS,50,male,BA
+1518,,,participant,BFI,S4,Neuroticism,3.25,R_2c57Hvsm5Asf1bS,50,male,BA
+1519,,,participant,BFI,S5,Openness,4.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1520,irrational,right,red,GODSPEED2,S1,Anthropomorphism,2.8,R_2c57Hvsm5Asf1bS,50,male,BA
+1521,irrational,right,red,GODSPEED2,S2,Animacy,3.6666666666666665,R_2c57Hvsm5Asf1bS,50,male,BA
+1522,irrational,right,red,GODSPEED2,S3,Likeability,3.4,R_2c57Hvsm5Asf1bS,50,male,BA
+1523,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,2.6,R_2c57Hvsm5Asf1bS,50,male,BA
+1524,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.6666666666666665,R_2c57Hvsm5Asf1bS,50,male,BA
+1525,rational,left,blue,GODSPEED1,S1,Anthropomorphism,4.2,R_2c57Hvsm5Asf1bS,50,male,BA
+1526,rational,left,blue,GODSPEED1,S2,Animacy,3.1666666666666665,R_2c57Hvsm5Asf1bS,50,male,BA
+1527,rational,left,blue,GODSPEED1,S3,Likeability,3.6,R_2c57Hvsm5Asf1bS,50,male,BA
+1528,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,4.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1529,rational,left,blue,GODSPEED1,S5,Perceived Safety,3.6666666666666665,R_2c57Hvsm5Asf1bS,50,male,BA
+1530,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.8571428571428571,R_2c57Hvsm5Asf1bS,50,male,BA
+1531,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_2c57Hvsm5Asf1bS,50,male,BA
+1532,irrational,right,red,q_preference,Q5.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1533,irrational,right,red,q_preference,Q7.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1534,irrational,right,red,q_preference,Q10.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1535,irrational,right,red,q_preference,Q12.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1536,rational,left,blue,q_preference,Q14.1,,2.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1537,irrational,right,red,q_preference,Q16.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1538,irrational,right,red,q_preference,Q18.1,,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1539,irrational,right,red,q_preference,prefer,choice,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1540,irrational,right,red,q_preference,portfolio,choice,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1541,irrational,right,red,q_preference,member,choice,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1542,irrational,right,red,q_preference,analyst,choice,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1543,irrational,right,red,q_preference,bartender,choice,1.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1544,irrational,right,red,preference,average,,0.8571428571428571,R_2c57Hvsm5Asf1bS,50,male,BA
+1545,irrational,right,red,preference,std,,0.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1546,rational,left,blue,preference,average,,0.14285714285714285,R_2c57Hvsm5Asf1bS,50,male,BA
+1547,rational,left,blue,preference,std,,0.0,R_2c57Hvsm5Asf1bS,50,male,BA
+1548,,,participant,NARS,S1,Situations and Interactions with Robots,15.0,R_1gSznyOVNi7tr7h,24,male,BA
+1549,,,participant,NARS,S2,Social Influence of Robots,16.0,R_1gSznyOVNi7tr7h,24,male,BA
+1550,,,participant,NARS,S3,Emotions in Interaction with Robots,9.0,R_1gSznyOVNi7tr7h,24,male,BA
+1551,,,participant,BFI,S1,Extraversion,2.375,R_1gSznyOVNi7tr7h,24,male,BA
+1552,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_1gSznyOVNi7tr7h,24,male,BA
+1553,,,participant,BFI,S3,Conscientiousness,3.0,R_1gSznyOVNi7tr7h,24,male,BA
+1554,,,participant,BFI,S4,Neuroticism,3.125,R_1gSznyOVNi7tr7h,24,male,BA
+1555,,,participant,BFI,S5,Openness,2.6,R_1gSznyOVNi7tr7h,24,male,BA
+1556,irrational,right,red,GODSPEED2,S1,Anthropomorphism,1.4,R_1gSznyOVNi7tr7h,24,male,BA
+1557,irrational,right,red,GODSPEED2,S2,Animacy,0.6666666666666666,R_1gSznyOVNi7tr7h,24,male,BA
+1558,irrational,right,red,GODSPEED2,S3,Likeability,1.6,R_1gSznyOVNi7tr7h,24,male,BA
+1559,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,1.4,R_1gSznyOVNi7tr7h,24,male,BA
+1560,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.3333333333333335,R_1gSznyOVNi7tr7h,24,male,BA
+1561,rational,left,blue,GODSPEED1,S1,Anthropomorphism,1.4,R_1gSznyOVNi7tr7h,24,male,BA
+1562,rational,left,blue,GODSPEED1,S2,Animacy,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1563,rational,left,blue,GODSPEED1,S3,Likeability,1.2,R_1gSznyOVNi7tr7h,24,male,BA
+1564,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,1.4,R_1gSznyOVNi7tr7h,24,male,BA
+1565,rational,left,blue,GODSPEED1,S5,Perceived Safety,3.3333333333333335,R_1gSznyOVNi7tr7h,24,male,BA
+1566,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_1gSznyOVNi7tr7h,24,male,BA
+1567,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1gSznyOVNi7tr7h,24,male,BA
+1568,irrational,right,red,q_preference,Q5.1,,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1569,irrational,right,red,q_preference,Q7.1,,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1570,rational,left,blue,q_preference,Q10.1,,2.0,R_1gSznyOVNi7tr7h,24,male,BA
+1571,irrational,right,red,q_preference,Q12.1,,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1572,rational,left,blue,q_preference,Q14.1,,2.0,R_1gSznyOVNi7tr7h,24,male,BA
+1573,irrational,right,red,q_preference,Q16.1,,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1574,irrational,right,red,q_preference,Q18.1,,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1575,irrational,right,red,q_preference,prefer,choice,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1576,irrational,right,red,q_preference,portfolio,choice,1.0,R_1gSznyOVNi7tr7h,24,male,BA
+1577,rational,left,blue,q_preference,member,choice,2.0,R_1gSznyOVNi7tr7h,24,male,BA
+1578,rational,left,blue,q_preference,analyst,choice,2.0,R_1gSznyOVNi7tr7h,24,male,BA
+1579,rational,left,blue,q_preference,bartender,choice,2.0,R_1gSznyOVNi7tr7h,24,male,BA
+1580,irrational,right,red,preference,average,,0.7142857142857143,R_1gSznyOVNi7tr7h,24,male,BA
+1581,irrational,right,red,preference,std,,0.0,R_1gSznyOVNi7tr7h,24,male,BA
+1582,rational,left,blue,preference,average,,0.2857142857142857,R_1gSznyOVNi7tr7h,24,male,BA
+1583,rational,left,blue,preference,std,,0.0,R_1gSznyOVNi7tr7h,24,male,BA
+1584,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_AEySi3L8fyqNGlb,28,female,BA
+1585,,,participant,NARS,S2,Social Influence of Robots,14.0,R_AEySi3L8fyqNGlb,28,female,BA
+1586,,,participant,NARS,S3,Emotions in Interaction with Robots,9.0,R_AEySi3L8fyqNGlb,28,female,BA
+1587,,,participant,BFI,S1,Extraversion,2.125,R_AEySi3L8fyqNGlb,28,female,BA
+1588,,,participant,BFI,S2,Agreeableness,2.888888888888889,R_AEySi3L8fyqNGlb,28,female,BA
+1589,,,participant,BFI,S3,Conscientiousness,3.111111111111111,R_AEySi3L8fyqNGlb,28,female,BA
+1590,,,participant,BFI,S4,Neuroticism,3.625,R_AEySi3L8fyqNGlb,28,female,BA
+1591,,,participant,BFI,S5,Openness,3.9,R_AEySi3L8fyqNGlb,28,female,BA
+1592,irrational,right,red,GODSPEED2,S1,Anthropomorphism,2.4,R_AEySi3L8fyqNGlb,28,female,BA
+1593,irrational,right,red,GODSPEED2,S2,Animacy,3.5,R_AEySi3L8fyqNGlb,28,female,BA
+1594,irrational,right,red,GODSPEED2,S3,Likeability,3.4,R_AEySi3L8fyqNGlb,28,female,BA
+1595,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,3.2,R_AEySi3L8fyqNGlb,28,female,BA
+1596,irrational,right,red,GODSPEED2,S5,Perceived Safety,3.0,R_AEySi3L8fyqNGlb,28,female,BA
+1597,rational,left,blue,GODSPEED1,S1,Anthropomorphism,2.6,R_AEySi3L8fyqNGlb,28,female,BA
+1598,rational,left,blue,GODSPEED1,S2,Animacy,3.0,R_AEySi3L8fyqNGlb,28,female,BA
+1599,rational,left,blue,GODSPEED1,S3,Likeability,3.6,R_AEySi3L8fyqNGlb,28,female,BA
+1600,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.6,R_AEySi3L8fyqNGlb,28,female,BA
+1601,rational,left,blue,GODSPEED1,S5,Perceived Safety,3.0,R_AEySi3L8fyqNGlb,28,female,BA
+1602,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_AEySi3L8fyqNGlb,28,female,BA
+1603,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_AEySi3L8fyqNGlb,28,female,BA
+1604,irrational,right,red,q_preference,Q5.1,,1.0,R_AEySi3L8fyqNGlb,28,female,BA
+1605,rational,left,blue,q_preference,Q7.1,,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1606,rational,left,blue,q_preference,Q10.1,,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1607,rational,left,blue,q_preference,Q12.1,,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1608,rational,left,blue,q_preference,Q14.1,,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1609,rational,left,blue,q_preference,Q16.1,,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1610,irrational,right,red,q_preference,Q18.1,,1.0,R_AEySi3L8fyqNGlb,28,female,BA
+1611,rational,left,blue,q_preference,prefer,choice,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1612,rational,left,blue,q_preference,portfolio,choice,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1613,rational,left,blue,q_preference,member,choice,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1614,irrational,right,red,q_preference,analyst,choice,1.0,R_AEySi3L8fyqNGlb,28,female,BA
+1615,rational,left,blue,q_preference,bartender,choice,2.0,R_AEySi3L8fyqNGlb,28,female,BA
+1616,irrational,right,red,preference,average,,0.2857142857142857,R_AEySi3L8fyqNGlb,28,female,BA
+1617,irrational,right,red,preference,std,,0.0,R_AEySi3L8fyqNGlb,28,female,BA
+1618,rational,left,blue,preference,average,,0.7142857142857143,R_AEySi3L8fyqNGlb,28,female,BA
+1619,rational,left,blue,preference,std,,0.0,R_AEySi3L8fyqNGlb,28,female,BA
+1620,,,participant,NARS,S1,Situations and Interactions with Robots,10.0,R_43cMexxUEdZFOvL,46,female,BA
+1621,,,participant,NARS,S2,Social Influence of Robots,10.0,R_43cMexxUEdZFOvL,46,female,BA
+1622,,,participant,NARS,S3,Emotions in Interaction with Robots,8.0,R_43cMexxUEdZFOvL,46,female,BA
+1623,,,participant,BFI,S1,Extraversion,2.0,R_43cMexxUEdZFOvL,46,female,BA
+1624,,,participant,BFI,S2,Agreeableness,4.111111111111111,R_43cMexxUEdZFOvL,46,female,BA
+1625,,,participant,BFI,S3,Conscientiousness,4.0,R_43cMexxUEdZFOvL,46,female,BA
+1626,,,participant,BFI,S4,Neuroticism,1.5,R_43cMexxUEdZFOvL,46,female,BA
+1627,,,participant,BFI,S5,Openness,4.0,R_43cMexxUEdZFOvL,46,female,BA
+1628,irrational,right,red,GODSPEED2,S1,Anthropomorphism,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1629,irrational,right,red,GODSPEED2,S2,Animacy,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1630,irrational,right,red,GODSPEED2,S3,Likeability,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1631,irrational,right,red,GODSPEED2,S4,Perceived Intelligence,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1632,irrational,right,red,GODSPEED2,S5,Perceived Safety,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1633,rational,left,blue,GODSPEED1,S1,Anthropomorphism,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1634,rational,left,blue,GODSPEED1,S2,Animacy,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1635,rational,left,blue,GODSPEED1,S3,Likeability,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1636,rational,left,blue,GODSPEED1,S4,Perceived Intelligence,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1637,rational,left,blue,GODSPEED1,S5,Perceived Safety,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1638,irrational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_43cMexxUEdZFOvL,46,female,BA
+1639,rational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.14285714285714285,R_43cMexxUEdZFOvL,46,female,BA
+1640,irrational,right,red,q_preference,Q5.1,,1.0,R_43cMexxUEdZFOvL,46,female,BA
+1641,rational,left,blue,q_preference,Q7.1,,2.0,R_43cMexxUEdZFOvL,46,female,BA
+1642,,,,q_preference,Q10.1,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1643,,,,q_preference,Q12.1,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1644,,,,q_preference,Q14.1,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1645,,,,q_preference,Q16.1,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1646,,,,q_preference,Q18.1,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1647,,,,q_preference,prefer,choice,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1648,,,,q_preference,portfolio,choice,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1649,,,,q_preference,member,choice,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1650,,,,q_preference,analyst,choice,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1651,,,,q_preference,bartender,choice,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1652,irrational,right,red,preference,average,,0.14285714285714285,R_43cMexxUEdZFOvL,46,female,BA
+1653,irrational,right,red,preference,std,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1654,rational,left,blue,preference,average,,0.14285714285714285,R_43cMexxUEdZFOvL,46,female,BA
+1655,rational,left,blue,preference,std,,0.0,R_43cMexxUEdZFOvL,46,female,BA
+1656,,,participant,NARS,S1,Situations and Interactions with Robots,14.0,R_1gvGFbzDteCjD5W,32,male,BA
+1657,,,participant,NARS,S2,Social Influence of Robots,14.0,R_1gvGFbzDteCjD5W,32,male,BA
+1658,,,participant,NARS,S3,Emotions in Interaction with Robots,7.0,R_1gvGFbzDteCjD5W,32,male,BA
+1659,,,participant,BFI,S1,Extraversion,3.375,R_1gvGFbzDteCjD5W,32,male,BA
+1660,,,participant,BFI,S2,Agreeableness,3.2222222222222223,R_1gvGFbzDteCjD5W,32,male,BA
+1661,,,participant,BFI,S3,Conscientiousness,3.6666666666666665,R_1gvGFbzDteCjD5W,32,male,BA
+1662,,,participant,BFI,S4,Neuroticism,2.75,R_1gvGFbzDteCjD5W,32,male,BA
+1663,,,participant,BFI,S5,Openness,3.0,R_1gvGFbzDteCjD5W,32,male,BA
+1664,rational,right,red,GODSPEED2,S1,Anthropomorphism,3.0,R_1gvGFbzDteCjD5W,32,male,BA
+1665,rational,right,red,GODSPEED2,S2,Animacy,2.1666666666666665,R_1gvGFbzDteCjD5W,32,male,BA
+1666,rational,right,red,GODSPEED2,S3,Likeability,3.0,R_1gvGFbzDteCjD5W,32,male,BA
+1667,rational,right,red,GODSPEED2,S4,Perceived Intelligence,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1668,rational,right,red,GODSPEED2,S5,Perceived Safety,2.6666666666666665,R_1gvGFbzDteCjD5W,32,male,BA
+1669,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,2.4,R_1gvGFbzDteCjD5W,32,male,BA
+1670,irrational,left,blue,GODSPEED1,S2,Animacy,1.8333333333333333,R_1gvGFbzDteCjD5W,32,male,BA
+1671,irrational,left,blue,GODSPEED1,S3,Likeability,2.8,R_1gvGFbzDteCjD5W,32,male,BA
+1672,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,1.8,R_1gvGFbzDteCjD5W,32,male,BA
+1673,irrational,left,blue,GODSPEED1,S5,Perceived Safety,3.6666666666666665,R_1gvGFbzDteCjD5W,32,male,BA
+1674,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_1gvGFbzDteCjD5W,32,male,BA
+1675,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_1gvGFbzDteCjD5W,32,male,BA
+1676,rational,right,red,q_preference,Q5.1,,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1677,rational,right,red,q_preference,Q7.1,,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1678,rational,right,red,q_preference,Q10.1,,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1679,rational,right,red,q_preference,Q12.1,,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1680,rational,right,red,q_preference,Q14.1,,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1681,irrational,left,blue,q_preference,Q16.1,,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1682,irrational,left,blue,q_preference,Q18.1,,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1683,irrational,left,blue,q_preference,prefer,choice,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1684,irrational,left,blue,q_preference,portfolio,choice,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1685,rational,right,red,q_preference,member,choice,1.0,R_1gvGFbzDteCjD5W,32,male,BA
+1686,irrational,left,blue,q_preference,analyst,choice,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1687,irrational,left,blue,q_preference,bartender,choice,2.0,R_1gvGFbzDteCjD5W,32,male,BA
+1688,rational,right,red,preference,average,,0.7142857142857143,R_1gvGFbzDteCjD5W,32,male,BA
+1689,rational,right,red,preference,std,,0.0,R_1gvGFbzDteCjD5W,32,male,BA
+1690,irrational,left,blue,preference,average,,0.2857142857142857,R_1gvGFbzDteCjD5W,32,male,BA
+1691,irrational,left,blue,preference,std,,0.0,R_1gvGFbzDteCjD5W,32,male,BA
+1692,,,participant,NARS,S1,Situations and Interactions with Robots,21.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1693,,,participant,NARS,S2,Social Influence of Robots,13.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1694,,,participant,NARS,S3,Emotions in Interaction with Robots,11.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1695,,,participant,BFI,S1,Extraversion,3.375,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1696,,,participant,BFI,S2,Agreeableness,3.111111111111111,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1697,,,participant,BFI,S3,Conscientiousness,4.111111111111111,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1698,,,participant,BFI,S4,Neuroticism,3.125,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1699,,,participant,BFI,S5,Openness,3.2,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1700,rational,right,red,GODSPEED2,S1,Anthropomorphism,2.6,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1701,rational,right,red,GODSPEED2,S2,Animacy,2.6666666666666665,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1702,rational,right,red,GODSPEED2,S3,Likeability,3.2,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1703,rational,right,red,GODSPEED2,S4,Perceived Intelligence,2.4,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1704,rational,right,red,GODSPEED2,S5,Perceived Safety,2.6666666666666665,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1705,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,3.2,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1706,irrational,left,blue,GODSPEED1,S2,Animacy,2.8333333333333335,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1707,irrational,left,blue,GODSPEED1,S3,Likeability,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1708,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,2.6,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1709,irrational,left,blue,GODSPEED1,S5,Perceived Safety,2.6666666666666665,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1710,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.5714285714285714,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1711,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.42857142857142855,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1712,irrational,left,blue,q_preference,Q5.1,,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1713,rational,right,red,q_preference,Q7.1,,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1714,rational,right,red,q_preference,Q10.1,,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1715,rational,right,red,q_preference,Q12.1,,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1716,irrational,left,blue,q_preference,Q14.1,,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1717,rational,right,red,q_preference,Q16.1,,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1718,irrational,left,blue,q_preference,Q18.1,,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1719,irrational,left,blue,q_preference,prefer,choice,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1720,rational,right,red,q_preference,portfolio,choice,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1721,irrational,left,blue,q_preference,member,choice,2.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1722,rational,right,red,q_preference,analyst,choice,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1723,rational,right,red,q_preference,bartender,choice,1.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1724,rational,right,red,preference,average,,0.5714285714285714,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1725,rational,right,red,preference,std,,0.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1726,irrational,left,blue,preference,average,,0.42857142857142855,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1727,irrational,left,blue,preference,std,,0.0,R_O1Zv6hG8jcH7cyZ,32,male,BA
+1728,,,participant,NARS,S1,Situations and Interactions with Robots,13.0,R_2b3qU4SNylWBJvw,41,male,HS
+1729,,,participant,NARS,S2,Social Influence of Robots,18.0,R_2b3qU4SNylWBJvw,41,male,HS
+1730,,,participant,NARS,S3,Emotions in Interaction with Robots,12.0,R_2b3qU4SNylWBJvw,41,male,HS
+1731,,,participant,BFI,S1,Extraversion,3.75,R_2b3qU4SNylWBJvw,41,male,HS
+1732,,,participant,BFI,S2,Agreeableness,4.888888888888889,R_2b3qU4SNylWBJvw,41,male,HS
+1733,,,participant,BFI,S3,Conscientiousness,4.111111111111111,R_2b3qU4SNylWBJvw,41,male,HS
+1734,,,participant,BFI,S4,Neuroticism,2.25,R_2b3qU4SNylWBJvw,41,male,HS
+1735,,,participant,BFI,S5,Openness,4.2,R_2b3qU4SNylWBJvw,41,male,HS
+1736,rational,right,red,GODSPEED2,S1,Anthropomorphism,1.6,R_2b3qU4SNylWBJvw,41,male,HS
+1737,rational,right,red,GODSPEED2,S2,Animacy,3.1666666666666665,R_2b3qU4SNylWBJvw,41,male,HS
+1738,rational,right,red,GODSPEED2,S3,Likeability,4.8,R_2b3qU4SNylWBJvw,41,male,HS
+1739,rational,right,red,GODSPEED2,S4,Perceived Intelligence,4.6,R_2b3qU4SNylWBJvw,41,male,HS
+1740,rational,right,red,GODSPEED2,S5,Perceived Safety,4.333333333333333,R_2b3qU4SNylWBJvw,41,male,HS
+1741,irrational,left,blue,GODSPEED1,S1,Anthropomorphism,2.0,R_2b3qU4SNylWBJvw,41,male,HS
+1742,irrational,left,blue,GODSPEED1,S2,Animacy,2.6666666666666665,R_2b3qU4SNylWBJvw,41,male,HS
+1743,irrational,left,blue,GODSPEED1,S3,Likeability,4.0,R_2b3qU4SNylWBJvw,41,male,HS
+1744,irrational,left,blue,GODSPEED1,S4,Perceived Intelligence,3.2,R_2b3qU4SNylWBJvw,41,male,HS
+1745,irrational,left,blue,GODSPEED1,S5,Perceived Safety,3.6666666666666665,R_2b3qU4SNylWBJvw,41,male,HS
+1746,rational,right,red,r_preference,summary,Count (Normalized) participant chose this robot,0.7142857142857143,R_2b3qU4SNylWBJvw,41,male,HS
+1747,irrational,left,blue,r_preference,summary,Count (Normalized) participant chose this robot,0.2857142857142857,R_2b3qU4SNylWBJvw,41,male,HS
+1748,rational,right,red,q_preference,Q5.1,,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1749,irrational,left,blue,q_preference,Q7.1,,2.0,R_2b3qU4SNylWBJvw,41,male,HS
+1750,rational,right,red,q_preference,Q10.1,,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1751,rational,right,red,q_preference,Q12.1,,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1752,rational,right,red,q_preference,Q14.1,,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1753,rational,right,red,q_preference,Q16.1,,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1754,irrational,left,blue,q_preference,Q18.1,,2.0,R_2b3qU4SNylWBJvw,41,male,HS
+1755,rational,right,red,q_preference,prefer,choice,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1756,rational,right,red,q_preference,portfolio,choice,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1757,rational,right,red,q_preference,member,choice,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1758,rational,right,red,q_preference,analyst,choice,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1759,rational,right,red,q_preference,bartender,choice,1.0,R_2b3qU4SNylWBJvw,41,male,HS
+1760,rational,right,red,preference,average,,0.7142857142857143,R_2b3qU4SNylWBJvw,41,male,HS
+1761,rational,right,red,preference,std,,0.0,R_2b3qU4SNylWBJvw,41,male,HS
+1762,irrational,left,blue,preference,average,,0.2857142857142857,R_2b3qU4SNylWBJvw,41,male,HS
+1763,irrational,left,blue,preference,std,,0.0,R_2b3qU4SNylWBJvw,41,male,HS

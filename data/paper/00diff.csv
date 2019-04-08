@@ -1,0 +1,7 @@
+,measurement,rational (mean+sem),irrational (mean+sem),test_type,test_value,p_value
+0,Anthropomorphism,2.73 + 0.06,2.49 + 0.06,mannwhitneyu,21764.5,0.0020676779035009676
+0,Animacy,2.91 + 0.05,2.79 + 0.05,mannwhitneyu,23313.0,0.039349282543788444
+0,Likability,3.58 + 0.05,3.42 + 0.06,mannwhitneyu,22985.5,0.02301793793883274
+0,Intelligence,3.56 + 0.05,3.17 + 0.05,mannwhitneyu,18736.0,2.2696186679416992e-07
+0,Safety,3.33 + 0.04,3.28 + 0.04,mannwhitneyu,24798.5,0.24180281760649447
+0,agree2rational,0.29 + 0.47,0.00 + 0.00,wilcoxon,3904.5,4.4963910738215706e-20

@@ -1,0 +1,66 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.110
+Model:                             OLS   Adj. R-squared:                  0.073
+Method:                  Least Squares   F-statistic:                     2.966
+Date:                 Thu, 17 Jan 2019   Prob (F-statistic):            0.00240
+Time:                         10:07:12   Log-Likelihood:                -236.93
+No. Observations:                  225   AIC:                             493.9
+Df Residuals:                      215   BIC:                             528.0
+Df Model:                            9                                         
+Covariance Type:             nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Intercept            -0.5968      0.618     -0.965      0.336      -1.816       0.622
+agree2rational        0.4994      0.105      4.745      0.000       0.292       0.707
+Interactions          0.0230      0.014      1.625      0.106      -0.005       0.051
+Social_Influence      0.0134      0.017      0.787      0.432      -0.020       0.047
+Emotions              0.0152      0.023      0.667      0.506      -0.030       0.060
+Extroversion          0.0074      0.057      0.130      0.897      -0.105       0.120
+Agreeableness        -0.0511      0.076     -0.674      0.501      -0.200       0.098
+Conscientiousness    -0.0102      0.076     -0.134      0.894      -0.161       0.141
+Neuroticism          -0.0770      0.059     -1.294      0.197      -0.194       0.040
+Openness              0.0943      0.077      1.227      0.221      -0.057       0.246
+==============================================================================
+Omnibus:                       84.783   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              409.972
+Skew:                           1.414   Prob(JB):                     9.46e-90
+Kurtosis:                       8.978   Cond. No.                         317.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.110
+Model:                             OLS   Adj. R-squared:                  0.073
+Method:                  Least Squares   F-statistic:                     2.966
+Date:                 Sun, 20 Jan 2019   Prob (F-statistic):            0.00240
+Time:                         14:19:35   Log-Likelihood:                -236.93
+No. Observations:                  225   AIC:                             493.9
+Df Residuals:                      215   BIC:                             528.0
+Df Model:                            9                                         
+Covariance Type:             nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Intercept            -0.5968      0.618     -0.965      0.336      -1.816       0.622
+agree2rational        0.4994      0.105      4.745      0.000       0.292       0.707
+Interactions          0.0230      0.014      1.625      0.106      -0.005       0.051
+Social_Influence      0.0134      0.017      0.787      0.432      -0.020       0.047
+Emotions              0.0152      0.023      0.667      0.506      -0.030       0.060
+Extroversion          0.0074      0.057      0.130      0.897      -0.105       0.120
+Agreeableness        -0.0511      0.076     -0.674      0.501      -0.200       0.098
+Conscientiousness    -0.0102      0.076     -0.134      0.894      -0.161       0.141
+Neuroticism          -0.0770      0.059     -1.294      0.197      -0.194       0.040
+Openness              0.0943      0.077      1.227      0.221      -0.057       0.246
+==============================================================================
+Omnibus:                       84.783   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              409.972
+Skew:                           1.414   Prob(JB):                     9.46e-90
+Kurtosis:                       8.978   Cond. No.                         317.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

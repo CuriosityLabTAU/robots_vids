@@ -1,0 +1,52 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.125
+Model:                             OLS   Adj. R-squared:                  0.118
+Method:                  Least Squares   F-statistic:                     16.06
+Date:                 Thu, 17 Jan 2019   Prob (F-statistic):           3.04e-07
+Time:                         10:07:11   Log-Likelihood:                -236.25
+No. Observations:                  227   AIC:                             478.5
+Df Residuals:                      224   BIC:                             488.8
+Df Model:                            2                                         
+Covariance Type:             nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          0.2173      0.077      2.819      0.005       0.065       0.369
+agree2rational     0.2078      0.119      1.750      0.081      -0.026       0.442
+prefer            -0.4234      0.122     -3.473      0.001      -0.664      -0.183
+==============================================================================
+Omnibus:                      110.141   Durbin-Watson:                   2.068
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              746.269
+Skew:                           1.772   Prob(JB):                    8.91e-163
+Kurtosis:                      11.145   Cond. No.                         3.89
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Likability2rational   R-squared:                       0.125
+Model:                             OLS   Adj. R-squared:                  0.118
+Method:                  Least Squares   F-statistic:                     16.06
+Date:                 Sun, 20 Jan 2019   Prob (F-statistic):           3.04e-07
+Time:                         14:19:35   Log-Likelihood:                -236.25
+No. Observations:                  227   AIC:                             478.5
+Df Residuals:                      224   BIC:                             488.8
+Df Model:                            2                                         
+Covariance Type:             nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          0.2173      0.077      2.819      0.005       0.065       0.369
+agree2rational     0.2078      0.119      1.750      0.081      -0.026       0.442
+prefer            -0.4234      0.122     -3.473      0.001      -0.664      -0.183
+==============================================================================
+Omnibus:                      110.141   Durbin-Watson:                   2.068
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              746.269
+Skew:                           1.772   Prob(JB):                    8.91e-163
+Kurtosis:                      11.145   Cond. No.                         3.89
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
