@@ -97,21 +97,21 @@ def response_times(raw_df):
 
 
 # old quesionnaire guide
-questions = {'conj': [6, 8, 12],
-             'disj': [10, 14, 16, 18],
-             'trap': 21,
-             'fpath': 'Emma_ranking_options.csv'}
+# questions = {'conj': [6, 8, 12],
+#              'disj': [10, 14, 16, 18],
+#              'trap': 21,
+#              'fpath': 'Emma_ranking_options.csv'}
 
-# ### new questionnaire
-# questions = {'conj': [9, 11, 18, 22],
-#              'disj': [14, 16, 20],
-#              'trap': 13,
-#              'fpath': 'Emma_ranking_options_v1.csv',
-#              'BFI': 7,
-#              'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
-#              'Gender': 'Q3',
-#              'Age' : 'Q4',
-#              'Education' : 'Q5',}
+### new questionnaire
+questions = {'conj': [9, 11, 18, 22],
+             'disj': [14, 16, 20],
+             'trap': 13,
+             'fpath': 'Emma_ranking_options_v4.csv',
+             'BFI': 7,
+             'BFI_sub': ['Extroversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness'],
+             'Gender': 'Q3',
+             'Age' : 'Q4',
+             'Education' : 'Q5',}
 # load the data.
 raw_df = pd.read_csv(questions['fpath'])
 
@@ -130,6 +130,17 @@ bfi_cols = raw_df.columns[raw_df.columns.str.contains(str(questions['BFI']) + '_
 df_bfi = BFI_data(raw_df, bfi_cols)
 
 raw_df = pd.concat((raw_df, df_bfi), axis=1)
+
+raw_df.to_csv('00ranking_options.csv')
+
+cs = raw_df.columns ### df columns
+cnames = ['Q' + str(x) +'_' for x in questions['conj'] + questions['disj']] ### the columns I'm intersted in.
+cnames = [i for e in cnames for i in cs if e in i]
+cnames = [x for x in cnames if 'rate' not in x]
+
+### choose onlty the columns of answers for the questions and drop unfinished answers.
+df4goren = raw_df[cnames].dropna()
+df4goren.to_csv('00ranking_options4goren.csv')
 
 ### calculate fallacy rates
 fal_rate, conj_rate, disj_rate = total_fallacy_rate(raw_df, dict(filter(lambda i:i[0] in ['conj', 'disj'], questions.items())))
