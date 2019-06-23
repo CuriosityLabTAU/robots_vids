@@ -9,6 +9,7 @@ import statsmodels.formula.api as smf
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy import stats
+from paper_plots_analysis import save_table
 
 
 # questions organizer.
