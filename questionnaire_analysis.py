@@ -4,7 +4,6 @@ from paper_plots_analysis import *
 import pickle
 from matplotlib import style
 import seaborn as sns
-from sklearn.preprocessing import PowerTransformer
 
 
 sns.set_context('paper')
